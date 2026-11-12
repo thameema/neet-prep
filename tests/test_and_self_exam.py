@@ -132,17 +132,36 @@ COACH_SOLVED_TARGETS = {
 }
 
 
+def normalize_choice_text(s: str) -> str:
+    """Convert LaTeX choice text into normalized human-readable form for substring matching."""
+    out = s.strip()
+    out = out.replace("$", "")
+    out = re.sub(r"\\text\{([^{}]*)\}", r"\1", out)
+    out = re.sub(r"\\sqrt\{([^{}]*)\}", r"sqrt(\1)", out)
+    out = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"\1 / \2", out)
+    out = out.replace("\\cdot", "·").replace("^\\circ", "°").replace("\\Omega", "Ω").replace("\\to", "->")
+    out = out.replace("\\%", "%").replace("\\ ", " ")
+    out = re.sub(r"_\{([^{}]*)\}", r"\1", out)
+    out = re.sub(r"_([A-Za-z0-9]+)", r"\1", out)
+    out = re.sub(r"\^\{([^{}]*)\}", r"^\1", out)
+    out = re.sub(r"\s+", " ", out).strip()
+    return out
+
+
 def pick_bubble_from_choices(q: dict, target_substr: str) -> str:
+    norm_target = normalize_choice_text(target_substr)
     matches = []
     for ch in q["choices"]:
-        txt = ch["text_en"]
-        if txt == target_substr or target_substr in txt:
+        raw = ch["text_en"]
+        norm = normalize_choice_text(raw)
+        if raw == target_substr or target_substr in raw or norm == norm_target or norm_target in norm:
             matches.append(ch["letter"])
     if len(matches) == 1:
         return matches[0]
-    # Exact match fallback for short strings like "1" or "4v"
     for ch in q["choices"]:
-        if ch["text_en"].strip() == target_substr.strip():
+        raw = ch["text_en"].strip()
+        norm = normalize_choice_text(raw)
+        if raw == target_substr.strip() or norm == norm_target:
             return ch["letter"]
     raise AssertionError(f"Ambiguous or missing target '{target_substr}' in Q{q['id']}: {q['choices']}")
 
@@ -262,7 +281,7 @@ def main():
         "/api/chat",
         {
             "student_id": "tn_aspirant_demo",
-            "student_name": "Ananya",
+            "student_name": "NEET Aspirant",
             "question_data": q_by_id[307],
             "question_number": 7,
             "user_choice": "A",
@@ -281,7 +300,7 @@ def main():
         "/api/chat",
         {
             "student_id": "tn_aspirant_demo",
-            "student_name": "Ananya",
+            "student_name": "NEET Aspirant",
             "question_data": q_by_id[101],
             "question_number": 1,
             "user_choice": "B",
@@ -298,7 +317,7 @@ def main():
         "/api/chat",
         {
             "student_id": "tn_aspirant_demo",
-            "student_name": "Ananya",
+            "student_name": "NEET Aspirant",
             "question_data": q_by_id[207],
             "question_number": 27,
             "user_choice": "A",

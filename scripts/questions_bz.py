@@ -263,18 +263,18 @@ BOTANY_QUESTIONS = [
         "pyqTag": "NEET Official PYQ",
         "questionType": "Numerical MCQ",
         "difficulty": "Medium",
-        "stem_en": "To synthesize ONE molecule of glucose (C6H12O6) via the Calvin cycle in a C3 plant, how many molecules of CO2, ATP, and NADPH are required respectively?",
-        "stem_ta": "C3 தாவரத்தில் கால்வின் சுழற்சியின் வழியே ஒரு குளுக்கோஸ் (C6H12O6) மூலக்கூறை உருவாக்கத் தேவைப்படும் CO2, ATP மற்றும் NADPH மூலக்கூறுகளின் எண்ணிக்கை முறையே:",
+        "stem_en": "To synthesize ONE molecule of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) via the Calvin cycle in a $\\text{C}_3$ plant, how many molecules of $\\text{CO}_2$, $\\text{ATP}$, and $\\text{NADPH}$ are required respectively?",
+        "stem_ta": "$\\text{C}_3$ தாவரத்தில் கால்வின் சுழற்சியின் வழியே ஒரு குளுக்கோஸ் ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) மூலக்கூறை உருவாக்கத் தேவைப்படும் $\\text{CO}_2$, $\\text{ATP}$ மற்றும் $\\text{NADPH}$ மூலக்கூறுகளின் எண்ணிக்கை முறையே:",
         "choices": [
-            {"letter": "A", "text_en": "6 CO2, 18 ATP, 12 NADPH", "text_ta": "6 CO2, 18 ATP, 12 NADPH"},
-            {"letter": "B", "text_en": "6 CO2, 30 ATP, 12 NADPH", "text_ta": "6 CO2, 30 ATP, 12 NADPH"},
-            {"letter": "C", "text_en": "6 CO2, 12 ATP, 18 NADPH", "text_ta": "6 CO2, 12 ATP, 18 NADPH"},
-            {"letter": "D", "text_en": "1 CO2, 3 ATP, 2 NADPH", "text_ta": "1 CO2, 3 ATP, 2 NADPH"}
+            {"letter": "A", "text_en": "$6\\ \\text{CO}_2$, $18\\ \\text{ATP}$, $12\\ \\text{NADPH}$", "text_ta": "$6\\ \\text{CO}_2$, $18\\ \\text{ATP}$, $12\\ \\text{NADPH}$"},
+            {"letter": "B", "text_en": "$6\\ \\text{CO}_2$, $30\\ \\text{ATP}$, $12\\ \\text{NADPH}$", "text_ta": "$6\\ \\text{CO}_2$, $30\\ \\text{ATP}$, $12\\ \\text{NADPH}$"},
+            {"letter": "C", "text_en": "$6\\ \\text{CO}_2$, $12\\ \\text{ATP}$, $18\\ \\text{NADPH}$", "text_ta": "$6\\ \\text{CO}_2$, $12\\ \\text{ATP}$, $18\\ \\text{NADPH}$"},
+            {"letter": "D", "text_en": "$1\\ \\text{CO}_2$, $3\\ \\text{ATP}$, $2\\ \\text{NADPH}$", "text_ta": "$1\\ \\text{CO}_2$, $3\\ \\text{ATP}$, $2\\ \\text{NADPH}$"}
         ],
         "correct": "A",
-        "explanation_en": "Per CO2 fixed in C3 Calvin cycle: 3 ATP (2 in reduction + 1 in regeneration) and 2 NADPH are used. For 1 glucose (6 carbons = 6 turns of Calvin cycle): 6 CO2, 6 * 3 = 18 ATP, and 6 * 2 = 12 NADPH! (In C4 plants, 2 extra ATP per CO2 are used for PEP regeneration -> 30 ATP + 12 NADPH).",
-        "explanation_ta": "C3 சுழற்சியில் ஒரு CO2 நிலைநிறுத்த 3 ATP மற்றும் 2 NADPH தேவை. எனவே 1 குளுக்கோஸ் உருவாக்க (6 சுற்றுகள்): 6 CO2, 18 ATP மற்றும் 12 NADPH தேவை! (C4 தாவரத்தில் 30 ATP, 12 NADPH தேவை).",
-        "ncert_key_point": "1 Glucose in C3 => 18 ATP, 12 NADPH. 1 Glucose in C4 => 30 ATP, 12 NADPH.",
+        "explanation_en": "Per $\\text{CO}_2$ fixed in the $\\text{C}_3$ Calvin cycle: $3\\ \\text{ATP}$ ($2$ in reduction $+\\ 1$ in regeneration) and $2\\ \\text{NADPH}$ are used. For $1$ glucose ($6$ carbons $= 6$ turns of Calvin cycle): $6\\ \\text{CO}_2$, $6 \\times 3 = 18\\ \\text{ATP}$, and $6 \\times 2 = 12\\ \\text{NADPH}$! (In $\\text{C}_4$ plants, $2$ extra $\\text{ATP}$ per $\\text{CO}_2$ are used for PEP regeneration $\\to 30\\ \\text{ATP} + 12\\ \\text{NADPH}$).",
+        "explanation_ta": "$\\text{C}_3$ சுழற்சியில் ஒரு $\\text{CO}_2$ நிலைநிறுத்த $3\\ \\text{ATP}$ மற்றும் $2\\ \\text{NADPH}$ தேவை. எனவே $1$ குளுக்கோஸ் உருவாக்க ($6$ சுற்றுகள்): $6\\ \\text{CO}_2$, $18\\ \\text{ATP}$ மற்றும் $12\\ \\text{NADPH}$ தேவை! ($\\text{C}_4$ தாவரத்தில் $30\\ \\text{ATP}$, $12\\ \\text{NADPH}$ தேவை).",
+        "ncert_key_point": "$1$ Glucose in $\\text{C}_3 \\Rightarrow 18\\ \\text{ATP},\\ 12\\ \\text{NADPH}$. $1$ Glucose in $\\text{C}_4 \\Rightarrow 30\\ \\text{ATP},\\ 12\\ \\text{NADPH}$.",
         "trap_breakdown": {
             "B": "30 ATP, 12 NADPH is for C4 plants, not C3 plants!",
             "C": "Swaps ATP (18) and NADPH (12).",
@@ -386,7 +386,7 @@ BOTANY_QUESTIONS = [
         "correct": "B",
         "explanation_en": "Snapdragon flower colour shows Incomplete Dominance: F2 produces 1 Red (RR) : 2 Pink (Rr) : 1 White (rr). Therefore, BOTH phenotypic ratio and genotypic ratio are 1 : 2 : 1!",
         "explanation_ta": "ஆன்டிரைனம் மலர் நிறம் முழுமையற்ற ஓங்குத்தன்மைக்கு (Incomplete dominance) எடுத்துக்காட்டு. F2-இல் 1 சிவப்பு (RR) : 2 இளஞ்சிவப்பு (Rr) : 1 வெள்ளை (rr) கிடைப்பதால் புறத்தோற்ற மற்றும் மரபணு விகிதங்கள் இரண்டும் 1 : 2 : 1 ஆகும்!",
-        "ncert_key_point": "Identical 1 : 2 : 1 phenotypic & genotypic F2 ratio is the hallmark of BOTH Incomplete Dominance (Snapdragon) and Codominance (MN/ABO IAIB).",
+        "ncert_key_point": "Identical $1 : 2 : 1$ phenotypic & genotypic $\\text{F}_2$ ratio is the hallmark of BOTH Incomplete Dominance (Snapdragon) and Codominance (MN / ABO $I^A I^B$).",
         "trap_breakdown": {
             "A": "3 : 1 phenotypic ratio is complete Mendelian dominance (garden pea).",
             "C": "Genotypic ratio of monohybrid selfing is never 3 : 1.",
@@ -412,7 +412,7 @@ BOTANY_QUESTIONS = [
             {"letter": "D", "text_en": "A is false, but R is true", "text_ta": "A தவறு, ஆனால் R சரி"}
         ],
         "correct": "A",
-        "explanation_en": "Exact NCERT Class 12 Ch 4 Genetics mechanism: Point mutation in the 6th codon of beta-globin mRNA from GAG (codes for Glutamic acid) to GUG (codes for Valine) directly causes the Glu -> Val substitution at position 6, leading to Hb^S polymerisation under low O2 tension. Both A and R are true and R directly explains A!",
+        "explanation_en": "Exact NCERT Class 12 Ch 4 Genetics mechanism: Point mutation in the 6th codon of beta-globin mRNA from GAG (codes for Glutamic acid) to GUG (codes for Valine) directly causes the Glu $\\to$ Val substitution at position 6, leading to $\\text{Hb}^S$ polymerisation under low $\\text{O}_2$ tension. Both A and R are true and R directly explains A!",
         "explanation_ta": "பீட்டா-குளோபின் மரபணுவின் 6-வது கோடான் GAG (குளுட்டாமிக் அமிலம்) இலிருந்து GUG (வாலின்) ஆக புள்ளி சடுதிமாற்றம் அடைவதாலேயே 6-வது இடத்தில் Glu -> Val மாற்றம் ஏற்பட்டு கதிர்அரிவாள் இரத்த சோகை உண்டாகிறது. எனவே A, R இரண்டும் சரி மற்றும் R சரியான விளக்கமாகும்.",
         "ncert_key_point": "Check carefully in NEET: Glu replaced by Val (GAG -> GUG) on beta-globin 6th position (chromosome 11) — NTA often swaps Val and Glu to trap students!",
         "trap_breakdown": {
@@ -658,8 +658,8 @@ ZOOLOGY_QUESTIONS = [
         "pyqTag": "NEET 2023 / 2024 Official PYQ",
         "questionType": "Statement I & II",
         "difficulty": "Medium",
-        "stem_en": "Given below are two statements regarding enzyme action:\nStatement I: Inhibition of succinic dehydrogenase by malonate, which closely resembles the substrate succinate in structure, is an example of competitive inhibition.\nStatement II: In competitive inhibition, the inhibitor decreases the apparent affinity of enzyme for substrate (K_m increases), while V_max remains unchanged at high substrate concentration.\nChoose the correct option:",
-        "stem_ta": "நொதிச் செயல்பாடு குறித்த இரு கூற்றுகள்:\nகூற்று I: சக்சினேட்டை ஒத்த அமைப்புடைய மலோனேட்டால் சக்சினிக் டிஹைட்ரோஜினேஸ் நொதி தடுக்கப்படுவது போட்டித் தடுப்பிற்கு (Competitive inhibition) எடுத்துக்காட்டாகும்.\nகூற்று II: போட்டித் தடுப்பில் K_m மதிப்பு அதிகரிக்கிறது, ஆனால் அதிக வினைபடுபொருள் செறிவில் V_max மாறுவதில்லை.\nசரியான விடையைத் தேர்ந்தெடுக்கவும்:",
+        "stem_en": "Given below are two statements regarding enzyme action:\nStatement I: Inhibition of succinic dehydrogenase by malonate, which closely resembles the substrate succinate in structure, is an example of competitive inhibition.\nStatement II: In competitive inhibition, the inhibitor decreases the apparent affinity of enzyme for substrate ($K_m$ increases), while $V_{\\max}$ remains unchanged at high substrate concentration.\nChoose the correct option:",
+        "stem_ta": "நொதிச் செயல்பாடு குறித்த இரு கூற்றுகள்:\nகூற்று I: சக்சினேட்டை ஒத்த அமைப்புடைய மலோனேட்டால் சக்சினிக் டிஹைட்ரோஜினேஸ் நொதி தடுக்கப்படுவது போட்டித் தடுப்பிற்கு (Competitive inhibition) எடுத்துக்காட்டாகும்.\nகூற்று II: போட்டித் தடுப்பில் $K_m$ மதிப்பு அதிகரிக்கிறது, ஆனால் அதிக வினைபடுபொருள் செறிவில் $V_{\\max}$ மாறுவதில்லை.\nசரியான விடையைத் தேர்ந்தெடுக்கவும்:",
         "choices": [
             {"letter": "A", "text_en": "Both Statement I and Statement II are correct", "text_ta": "கூற்று I மற்றும் கூற்று II ஆகிய இரண்டும் சரி"},
             {"letter": "B", "text_en": "Both Statement I and Statement II are incorrect", "text_ta": "கூற்று I மற்றும் கூற்று II ஆகிய இரண்டும் தவறு"},
@@ -667,12 +667,12 @@ ZOOLOGY_QUESTIONS = [
             {"letter": "D", "text_en": "Statement I is incorrect but Statement II is correct", "text_ta": "கூற்று I தவறு, ஆனால் கூற்று II சரி"}
         ],
         "correct": "A",
-        "explanation_en": "Malonate competing with succinate for the active site of succinic dehydrogenase is NCERT's textbook example of competitive inhibition! Because flooding with excess substrate can outcompete the reversible inhibitor, V_max stays unchanged while apparent K_m increases. Both statements are correct!",
-        "explanation_ta": "சக்சினேட்டுடன் மலோனேட் போட்டியிடுவது போட்டித் தடுப்பிற்கு NCERT எடுத்துக்காட்டு. அதிக வினைபடுபொருள் சேர்க்கும்போது தடுப்பை வெல்ல முடிவதால் V_max மாறாது, ஆனால் K_m அதிகரிக்கும். இரு கூற்றுகளும் சரி!",
-        "ncert_key_point": "Competitive inhibition: K_m INCREASES, V_max UNCHANGED. Classic example: Malonate inhibits Succinic dehydrogenase.",
+        "explanation_en": "Malonate competing with succinate for the active site of succinic dehydrogenase is NCERT's textbook example of competitive inhibition! Because flooding with excess substrate can outcompete the reversible inhibitor, $V_{\\max}$ stays unchanged while apparent $K_m$ increases. Both statements are correct!",
+        "explanation_ta": "சக்சினேட்டுடன் மலோனேட் போட்டியிடுவது போட்டித் தடுப்பிற்கு NCERT எடுத்துக்காட்டு. அதிக வினைபடுபொருள் சேர்க்கும்போது தடுப்பை வெல்ல முடிவதால் $V_{\\max}$ மாறாது, ஆனால் $K_m$ அதிகரிக்கும். இரு கூற்றுகளும் சரி!",
+        "ncert_key_point": "Competitive inhibition: $K_m$ INCREASES, $V_{\\max}$ UNCHANGED. Classic example: Malonate inhibits Succinic dehydrogenase.",
         "trap_breakdown": {
             "B": "Both are verified NCERT & NEET 2023/2024 enzyme kinetics facts.",
-            "C": "Many students wrongly think competitive inhibitor lowers V_max — it raises K_m without changing V_max!",
+            "C": "Many students wrongly think competitive inhibitor lowers $V_{\\max}$ — it raises $K_m$ without changing $V_{\\max}$!",
             "D": "Malonate + succinic dehydrogenase is verbatim NCERT."
         },
         "videoTutorial": BIO_VIDEOS["zoo_physio"]
@@ -689,19 +689,19 @@ ZOOLOGY_QUESTIONS = [
         "stem_en": "Which set of physiological conditions in the pulmonary alveoli FAVOURS the formation of oxyhaemoglobin?",
         "stem_ta": "நுரையீரல் காற்று நுண்ணறைகளில் (alveoli) ஆக்சிஹீமோகுளோபின் உருவாவதற்குச் சாதகமான உடலியல் நிலைகள் எவை?",
         "choices": [
-            {"letter": "A", "text_en": "High pO2, low pCO2, lesser H^+ concentration (higher pH), and lower temperature", "text_ta": "அதிக pO2, குறைந்த pCO2, குறைந்த H^+ செறிவு (அதிக pH), மற்றும் குறைந்த வெப்பநிலை"},
-            {"letter": "B", "text_en": "Low pO2, high pCO2, high H^+ concentration, and higher temperature", "text_ta": "குறைந்த pO2, அதிக pCO2, அதிக H^+ செறிவு, மற்றும் அதிக வெப்பநிலை"},
-            {"letter": "C", "text_en": "High pO2, high pCO2, high H^+ concentration, and higher temperature", "text_ta": "அதிக pO2, அதிக pCO2, அதிக H^+ செறிவு, மற்றும் அதிக வெப்பநிலை"},
-            {"letter": "D", "text_en": "High pO2, low pCO2, high H^+ concentration (low pH), and higher temperature", "text_ta": "அதிக pO2, குறைந்த pCO2, அதிக H^+ செறிவு (குறைந்த pH), மற்றும் அதிக வெப்பநிலை"}
+            {"letter": "A", "text_en": "High $p\\text{O}_2$, low $p\\text{CO}_2$, lesser $\\text{H}^+$ concentration (higher $\\text{pH}$), and lower temperature", "text_ta": "அதிக $p\\text{O}_2$, குறைந்த $p\\text{CO}_2$, குறைந்த $\\text{H}^+$ செறிவு (அதிக $\\text{pH}$), மற்றும் குறைந்த வெப்பநிலை"},
+            {"letter": "B", "text_en": "Low $p\\text{O}_2$, high $p\\text{CO}_2$, high $\\text{H}^+$ concentration, and higher temperature", "text_ta": "குறைந்த $p\\text{O}_2$, அதிக $p\\text{CO}_2$, அதிக $\\text{H}^+$ செறிவு, மற்றும் அதிக வெப்பநிலை"},
+            {"letter": "C", "text_en": "High $p\\text{O}_2$, high $p\\text{CO}_2$, high $\\text{H}^+$ concentration, and higher temperature", "text_ta": "அதிக $p\\text{O}_2$, அதிக $p\\text{CO}_2$, அதிக $\\text{H}^+$ செறிவு, மற்றும் அதிக வெப்பநிலை"},
+            {"letter": "D", "text_en": "High $p\\text{O}_2$, low $p\\text{CO}_2$, high $\\text{H}^+$ concentration (low $\\text{pH}$), and higher temperature", "text_ta": "அதிக $p\\text{O}_2$, குறைந்த $p\\text{CO}_2$, அதிக $\\text{H}^+$ செறிவு (குறைந்த $\\text{pH}$), மற்றும் அதிக வெப்பநிலை"}
         ],
         "correct": "A",
-        "explanation_en": "Verbatim NCERT Class 11 Ch 14: In alveoli, HIGH pO2, LOW pCO2, LESSER H^+ concentration (higher pH), and LOWER temperature favour oxyhaemoglobin association (left shift). In metabolically active tissues, the exact opposite (low pO2, high pCO2, high H^+, higher T) favours O2 dissociation (right shift / Bohr effect)!",
-        "explanation_ta": "காற்று நுண்ணறைகளில் அதிக pO2, குறைந்த pCO2, குறைந்த H^+ செறிவு மற்றும் குறைந்த வெப்பநிலை ஆகியவை ஆக்சிஹீமோகுளோபின் உருவாகச் சாதகமானவை. திசுக்களில் இதற்கு நேர் எதிரான நிலைகள் O2 பிரிகையடைய உதவும்!",
-        "ncert_key_point": "Watch H^+ vs pH carefully! Lesser H^+ concentration = HIGHER pH (alkaline shift in lungs).",
+        "explanation_en": "Verbatim NCERT Class 11 Ch 14: In alveoli, HIGH $p\\text{O}_2$, LOW $p\\text{CO}_2$, LESSER $\\text{H}^+$ concentration (higher $\\text{pH}$), and LOWER temperature favour oxyhaemoglobin association (left shift). In metabolically active tissues, the exact opposite (low $p\\text{O}_2$, high $p\\text{CO}_2$, high $\\text{H}^+$, higher $T$) favours $\\text{O}_2$ dissociation (right shift / Bohr effect)!",
+        "explanation_ta": "காற்று நுண்ணறைகளில் அதிக $p\\text{O}_2$, குறைந்த $p\\text{CO}_2$, குறைந்த $\\text{H}^+$ செறிவு மற்றும் குறைந்த வெப்பநிலை ஆகியவை ஆக்சிஹீமோகுளோபின் உருவாகச் சாதகமானவை. திசுக்களில் இதற்கு நேர் எதிரான நிலைகள் $\\text{O}_2$ பிரிகையடைய உதவும்!",
+        "ncert_key_point": "Watch $\\text{H}^+$ vs $\\text{pH}$ carefully! Lesser $\\text{H}^+$ concentration $=$ HIGHER $\\text{pH}$ (alkaline shift in lungs).",
         "trap_breakdown": {
             "B": "Conditions in active tissues causing OXYHAEMOGLOBIN DISSOCIATION, not formation!",
-            "C": "High pCO2, H^+, T oppose O2 binding.",
-            "D": "High H^+ (low pH) causes Bohr dissociation."
+            "C": "High $p\\text{CO}_2$, $\\text{H}^+$, $T$ oppose $\\text{O}_2$ binding.",
+            "D": "High $\\text{H}^+$ (low $\\text{pH}$) causes Bohr dissociation."
         },
         "videoTutorial": BIO_VIDEOS["zoo_physio"]
     },
@@ -835,12 +835,12 @@ ZOOLOGY_QUESTIONS = [
             {"letter": "D", "text_en": "Epinephrine, Cortisol, and Insulin", "text_ta": "எபிநெஃப்ரின், கார்டிசால் மற்றும் இன்சுலின்"}
         ],
         "correct": "B",
-        "explanation_en": "Lipid-soluble steroid hormones (Cortisol, Testosterone, Estradiol, Progesterone) AND Iodothyronines (Thyroxine / T3, T4) cross the lipid bilayer and bind intracellular/nuclear receptors! Peptide/protein hormones (Insulin, Glucagon, FSH, LH, Oxytocin) and amino-acid derivative Epinephrine bind membrane-bound receptors and generate second messengers (cAMP, IP3, Ca^2+).",
-        "explanation_ta": "ஸ்டீராய்டு ஹார்மோன்கள் (கார்டிசால், டெஸ்டோஸ்டிரோன், எஸ்ட்ராடையால்) மற்றும் அயோடோதைரோனின்கள் (தைராக்சின்) செல் சவ்வைக் கடந்து உட்கரு ஏற்பிகளுடன் இணைகின்றன! புரத ஹார்மோன்களும் எபிநெஃப்ரினும் சவ்வு ஏற்பிகளுடன் இணைந்து இரண்டாம் நிலைத் தூதுவர்களை (cAMP, IP3, Ca^2+) உருவாக்குகின்றன.",
+        "explanation_en": "Lipid-soluble steroid hormones (Cortisol, Testosterone, Estradiol, Progesterone) AND Iodothyronines (Thyroxine / $\\text{T}_3, \\text{T}_4$) cross the lipid bilayer and bind intracellular/nuclear receptors! Peptide/protein hormones (Insulin, Glucagon, FSH, LH, Oxytocin) and amino-acid derivative Epinephrine bind membrane-bound receptors and generate second messengers (cAMP, $\\text{IP}_3$, $\\text{Ca}^{2+}$).",
+        "explanation_ta": "ஸ்டீராய்டு ஹார்மோன்கள் (கார்டிசால், டெஸ்டோஸ்டிரோன், எஸ்ட்ராடையால்) மற்றும் அயோடோதைரோனின்கள் (தைராக்சின்) செல் சவ்வைக் கடந்து உட்கரு ஏற்பிகளுடன் இணைகின்றன! புரத ஹார்மோன்களும் எபிநெஃப்ரினும் சவ்வு ஏற்பிகளுடன் இணைந்து இரண்டாம் நிலைத் தூதுவர்களை (cAMP, $\\text{IP}_3$, $\\text{Ca}^{2+}$) உருவாக்குகின்றன.",
         "ncert_key_point": "Watch the amino-acid derivative split: Thyroxine (iodothyronine) = Intracellular nuclear receptor; Epinephrine = Membrane receptor!",
         "trap_breakdown": {
             "A": "All three use membrane-bound receptors.",
-            "C": "All three are peptide/protein hormones using membrane receptors (FSH shown in NCERT diagram generating cAMP/IP3!).",
+            "C": "All three are peptide/protein hormones using membrane receptors (FSH shown in NCERT diagram generating cAMP/$\\text{IP}_3$!).",
             "D": "Insulin and Epinephrine use membrane receptors."
         },
         "videoTutorial": BIO_VIDEOS["zoo_physio"]
@@ -975,13 +975,13 @@ ZOOLOGY_QUESTIONS = [
             {"letter": "D", "text_en": "0.70 (70%)", "text_ta": "0.70 (70%)"}
         ],
         "correct": "B",
-        "explanation_en": "Given homozygous recessive genotype frequency q^2 = 0.09 => recessive allele frequency q = sqrt(0.09) = 0.3. Since p + q = 1, dominant allele frequency p = 1 - 0.3 = 0.7. Heterozygous genotype frequency = 2pq = 2 * 0.7 * 0.3 = 0.42 (42%)!",
-        "explanation_ta": "கொடுக்கப்பட்டது q^2 = 0.09 => q = sqrt(0.09) = 0.3. p + q = 1 என்பதால் p = 1 - 0.3 = 0.7. மாற்றுக் கருநிலை உயிரிகள் (Aa) = 2pq = 2 * 0.7 * 0.3 = 0.42 (42%)! (சரிபார்ப்பு: 0.49 + 0.42 + 0.09 = 1.00).",
-        "ncert_key_point": "Check total: p^2 (0.49) + 2pq (0.42) + q^2 (0.09) = 1.00! Never forget the '2' in 2pq.",
+        "explanation_en": "Given homozygous recessive genotype frequency $q^2 = 0.09 \\Rightarrow$ recessive allele frequency $q = \\sqrt{0.09} = 0.3$. Since $p + q = 1$, dominant allele frequency $p = 1 - 0.3 = 0.7$. Heterozygous genotype frequency $= 2pq = 2 \\times 0.7 \\times 0.3 = 0.42$ ($42\\%$)!",
+        "explanation_ta": "கொடுக்கப்பட்டது $q^2 = 0.09 \\Rightarrow q = \\sqrt{0.09} = 0.3$. $p + q = 1$ என்பதால் $p = 1 - 0.3 = 0.7$. மாற்றுக் கருநிலை உயிரிகள் ($Aa$) $= 2pq = 2 \\times 0.7 \\times 0.3 = 0.42$ ($42\\%$)! (சரிபார்ப்பு: $0.49 + 0.42 + 0.09 = 1.00$).",
+        "ncert_key_point": "Check total: $p^2\\ (0.49) + 2pq\\ (0.42) + q^2\\ (0.09) = 1.00$! Never forget the '$2$' in $2pq$.",
         "trap_breakdown": {
-            "A": "0.21 computes pq instead of 2pq!",
-            "C": "0.49 is p^2 (homozygous dominant AA), not heterozygotes Aa.",
-            "D": "0.70 is dominant allele frequency p, not genotype frequency."
+            "A": "$0.21$ computes $pq$ instead of $2pq$!",
+            "C": "$0.49$ is $p^2$ (homozygous dominant $AA$), not heterozygotes $Aa$.",
+            "D": "$0.70$ is dominant allele frequency $p$, not genotype frequency."
         },
         "videoTutorial": BIO_VIDEOS["zoo_physio"]
     },

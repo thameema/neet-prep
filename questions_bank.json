@@ -349,38 +349,38 @@
       "pyqTag": "NEET PYQ (2022/2024 Pattern)",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "In an experiment, the percentage errors in the measurement of physical quantities A, B, C, and D are 1%, 2%, 3%, and 4% respectively. Then the maximum percentage error in the measurement of $X$, where $X = \\frac{A^2 B^{1/2}}{C^{1/3} D^3}$, will be:",
-      "stem_ta": "ஒரு சோதனையில் A, B, C மற்றும் D ஆகிய இயற்பியல் அளவுகளின் அளவீட்டில் ஏற்படும் சதவீதப் பிழைகள் முறையே 1%, 2%, 3% மற்றும் 4% ஆகும். $X = \\frac{A^2 B^{1/2}}{C^{1/3} D^3}$ எனில், $X$-இன் அளவீட்டில் ஏற்படும் பெரும சதவீதப் பிழை என்ன?",
+      "stem_en": "In an experiment, the percentage errors in the measurement of physical quantities $A$, $B$, $C$, and $D$ are $1\\%$, $2\\%$, $3\\%$, and $4\\%$ respectively. Then the maximum percentage error in the measurement of $X$, where $X = \\frac{A^2 B^{1/2}}{C^{1/3} D^3}$, will be:",
+      "stem_ta": "ஒரு சோதனையில் $A$, $B$, $C$ மற்றும் $D$ ஆகிய இயற்பியல் அளவுகளின் அளவீட்டில் ஏற்படும் சதவீதப் பிழைகள் முறையே $1\\%$, $2\\%$, $3\\%$ மற்றும் $4\\%$ ஆகும். $X = \\frac{A^2 B^{1/2}}{C^{1/3} D^3}$ எனில், $X$-இன் அளவீட்டில் ஏற்படும் பெரும சதவீதப் பிழை என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "16%",
-          "text_ta": "16%"
+          "text_en": "$16\\%$",
+          "text_ta": "$16\\%$"
         },
         {
           "letter": "B",
-          "text_en": "10%",
-          "text_ta": "10%"
+          "text_en": "$10\\%$",
+          "text_ta": "$10\\%$"
         },
         {
           "letter": "C",
-          "text_en": "14%",
-          "text_ta": "14%"
+          "text_en": "$14\\%$",
+          "text_ta": "$14\\%$"
         },
         {
           "letter": "D",
-          "text_en": "-10%",
-          "text_ta": "-10%"
+          "text_en": "$-10\\%$",
+          "text_ta": "$-10\\%$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Relative errors ALWAYS ADD UP for both multiplication and division: $\\frac{\\Delta X}{X}\\% = 2\\left(\\frac{\\Delta A}{A}\\right) + \\frac{1}{2}\\left(\\frac{\\Delta B}{B}\\right) + \\frac{1}{3}\\left(\\frac{\\Delta C}{C}\\right) + 3\\left(\\frac{\\Delta D}{D}\\right) = 2(1\\%) + 0.5(2\\%) + \\frac{1}{3}(3\\%) + 3(4\\%) = 2\\% + 1\\% + 1\\% + 12\\% = 16\\%$.",
-      "explanation_ta": "பெருக்கல் மற்றும் வகுத்தல் ஆகிய இரண்டிற்குமே சார்புப் பிழைகளை எப்போதும் கூட்ட வேண்டும்: $\\frac{\\Delta X}{X}\\% = 2(1\\%) + \\frac{1}{2}(2\\%) + \\frac{1}{3}(3\\%) + 3(4\\%) = 2\\% + 1\\% + 1\\% + 12\\% = 16\\%$.",
-      "ncert_key_point": "Maximum fractional error adds all |power * percentage error| terms; never subtract denominator errors.",
+      "explanation_en": "Relative errors ALWAYS ADD UP for both multiplication and division: $\\frac{\\Delta X}{X} \\times 100\\% = 2\\left(\\frac{\\Delta A}{A}\\%\\right) + \\frac{1}{2}\\left(\\frac{\\Delta B}{B}\\%\\right) + \\frac{1}{3}\\left(\\frac{\\Delta C}{C}\\%\\right) + 3\\left(\\frac{\\Delta D}{D}\\%\\right) = 2(1\\%) + \\frac{1}{2}(2\\%) + \\frac{1}{3}(3\\%) + 3(4\\%) = 2\\% + 1\\% + 1\\% + 12\\% = 16\\%$.",
+      "explanation_ta": "பெருக்கல் மற்றும் வகுத்தல் ஆகிய இரண்டிற்குமே சார்புப் பிழைகளை எப்போதும் கூட்ட வேண்டும்: $\\frac{\\Delta X}{X} \\times 100\\% = 2(1\\%) + \\frac{1}{2}(2\\%) + \\frac{1}{3}(3\\%) + 3(4\\%) = 2\\% + 1\\% + 1\\% + 12\\% = 16\\%$.",
+      "ncert_key_point": "Maximum percentage error adds all $|n_i| \\times (\\text{\\% error}_i)$ terms; never subtract denominator errors.",
       "trap_breakdown": {
-        "B": "Obtained if you wrongly subtract denominator errors: |(2 + 1) - (1 + 12)| = 10%.",
-        "C": "Arithmetic slip missing the factor of 2 on A^2.",
-        "D": "Maximum percentage errors are always positive magnitudes; -10% is a classic sign trap."
+        "B": "Obtained if you wrongly subtract denominator errors: $|(2 + 1) - (1 + 12)| = 10\\%$.",
+        "C": "Arithmetic slip missing the exponent $2$ on $A^2$.",
+        "D": "Maximum percentage errors are always positive magnitudes; $-10\\%$ is a classic sign trap."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -397,8 +397,8 @@
       "pyqTag": "NEET 2023 Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "A vehicle travels half the distance with speed v and the remaining distance with speed 2v. Its average speed is:",
-      "stem_ta": "ஒரு வாகனம் மொத்தத் தொலைவில் பாதியை v என்ற வேகத்திலும், மீதமுள்ள பாதித் தொலைவை 2v என்ற வேகத்திலும் கடக்கிறது. அதன் சராசரி வேகம் என்ன?",
+      "stem_en": "A vehicle travels half the distance with speed $v$ and the remaining distance with speed $2v$. Its average speed is:",
+      "stem_ta": "ஒரு வாகனம் மொத்தத் தொலைவில் பாதியை $v$ என்ற வேகத்திலும், மீதமுள்ள பாதித் தொலைவை $2v$ என்ற வேகத்திலும் கடக்கிறது. அதன் சராசரி வேகம் என்ன?",
       "choices": [
         {
           "letter": "A",
@@ -422,13 +422,13 @@
         }
       ],
       "correct": "B",
-      "explanation_en": "For two equal half-distances with speeds v1 and v2, average speed is the harmonic mean: v_avg = 2*v1*v2 / (v1 + v2) = 2*v*(2v) / (v + 2v) = 4v^2 / 3v = 4v/3.",
-      "explanation_ta": "சம தொலைவுகளை v1 மற்றும் v2 வேகங்களில் கடக்கும்போது சராசரி வேகம் = 2*v1*v2 / (v1 + v2) = 2*v*(2v) / (v + 2v) = 4v/3.",
-      "ncert_key_point": "Equal distances -> Harmonic Mean 2v1v2/(v1+v2). Equal time intervals -> Arithmetic Mean (v1+v2)/2.",
+      "explanation_en": "For two equal half-distances with speeds $v_1$ and $v_2$, average speed is the harmonic mean: $v_{\\text{avg}} = \\frac{2v_1 v_2}{v_1 + v_2} = \\frac{2v(2v)}{v + 2v} = \\frac{4v^2}{3v} = \\frac{4v}{3}$.",
+      "explanation_ta": "சம தொலைவுகளை $v_1$ மற்றும் $v_2$ வேகங்களில் கடக்கும்போது சராசரி வேகம் $v_{\\text{avg}} = \\frac{2v_1 v_2}{v_1 + v_2} = \\frac{2v(2v)}{v + 2v} = \\frac{4v}{3}$.",
+      "ncert_key_point": "Equal distances $\\Rightarrow$ Harmonic Mean $\\frac{2v_1 v_2}{v_1 + v_2}$. Equal time intervals $\\Rightarrow$ Arithmetic Mean $\\frac{v_1 + v_2}{2}$.",
       "trap_breakdown": {
-        "A": "3v/2 = (v + 2v)/2 is the average speed for equal TIME intervals, not equal distances.",
-        "C": "Forgetting total distance is 2d instead of d.",
-        "D": "Inverting total distance / total time."
+        "A": "$\\frac{3v}{2} = \\frac{v + 2v}{2}$ is the average speed for equal TIME intervals, not equal distances.",
+        "C": "Forgetting total distance is $2d$ instead of $d$.",
+        "D": "Inverting $\\frac{\\text{total distance}}{\\text{total time}}$."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -445,38 +445,38 @@
       "pyqTag": "NEET 2023 Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "A bullet is fired from a gun at the speed of 280 m/s in the direction 30° above the horizontal. The maximum height attained by the bullet is (take g = 9.8 m/s^2, sin 30° = 0.5):",
-      "stem_ta": "ஒரு துப்பாக்கியிலிருந்து தோட்டா ஒன்று கிடைமட்டத்திலிருந்து 30° கோணத்தில் 280 m/s வேகத்தில் சுடப்படுகிறது. தோட்டா அடையும் பெரும உயரம் என்ன? (g = 9.8 m/s^2, sin 30° = 0.5):",
+      "stem_en": "A bullet is fired from a gun at the speed of $280\\text{ m/s}$ in the direction $30^\\circ$ above the horizontal. The maximum height attained by the bullet is (take $g = 9.8\\text{ m/s}^2$, $\\sin 30^\\circ = 0.5$):",
+      "stem_ta": "ஒரு துப்பாக்கியிலிருந்து தோட்டா ஒன்று கிடைமட்டத்திலிருந்து $30^\\circ$ கோணத்தில் $280\\text{ m/s}$ வேகத்தில் சுடப்படுகிறது. தோட்டா அடையும் பெரும உயரம் என்ன? ($g = 9.8\\text{ m/s}^2$, $\\sin 30^\\circ = 0.5$):",
       "choices": [
         {
           "letter": "A",
-          "text_en": "2000 m",
-          "text_ta": "2000 m"
+          "text_en": "$2000\\text{ m}$",
+          "text_ta": "$2000\\text{ m}$"
         },
         {
           "letter": "B",
-          "text_en": "1000 m",
-          "text_ta": "1000 m"
+          "text_en": "$1000\\text{ m}$",
+          "text_ta": "$1000\\text{ m}$"
         },
         {
           "letter": "C",
-          "text_en": "3000 m",
-          "text_ta": "3000 m"
+          "text_en": "$3000\\text{ m}$",
+          "text_ta": "$3000\\text{ m}$"
         },
         {
           "letter": "D",
-          "text_en": "2800 m",
-          "text_ta": "2800 m"
+          "text_en": "$2800\\text{ m}$",
+          "text_ta": "$2800\\text{ m}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "Maximum height H = (u^2 * sin^2 θ) / (2g). First compute u_y = u * sin 30° = 280 * 0.5 = 140 m/s. Then H = 140^2 / (2 * 9.8) = 19600 / 19.6 = 1000 m.",
-      "explanation_ta": "பெரும உயரம் H = (u^2 * sin^2 θ) / (2g). இங்கு செங்குத்து திசைவேகம் u_y = 280 * 0.5 = 140 m/s. எனவே H = (140 * 140) / 19.6 = 1000 m.",
-      "ncert_key_point": "Compute vertical component u_y = u sin θ first, then H = u_y^2 / (2g) for instant clean cancellation.",
+      "explanation_en": "Maximum height $H = \\frac{u^2 \\sin^2\\theta}{2g}$. First compute vertical velocity $u_y = u \\sin 30^\\circ = 280 \\times 0.5 = 140\\text{ m/s}$. Then $H = \\frac{140^2}{2 \\times 9.8} = \\frac{19600}{19.6} = 1000\\text{ m}$.",
+      "explanation_ta": "பெரும உயரம் $H = \\frac{u^2 \\sin^2\\theta}{2g}$. இங்கு செங்குத்து திசைவேகம் $u_y = 280 \\times 0.5 = 140\\text{ m/s}$. எனவே $H = \\frac{140 \\times 140}{19.6} = 1000\\text{ m}$.",
+      "ncert_key_point": "Compute vertical component $u_y = u \\sin\\theta$ first, then $H = \\frac{u_y^2}{2g}$ for instant clean cancellation.",
       "trap_breakdown": {
-        "A": "2000 m omits the factor of 2 in 2g.",
-        "C": "3000 m uses cos^2 30° = 3/4 instead of sin^2 30° = 1/4.",
-        "D": "2800 m confuses range formula with height."
+        "A": "$2000\\text{ m}$ omits the factor of $2$ in $2g$.",
+        "C": "$3000\\text{ m}$ uses $\\cos^2 30^\\circ = \\frac{3}{4}$ instead of $\\sin^2 30^\\circ = \\frac{1}{4}$.",
+        "D": "$2800\\text{ m}$ confuses horizontal range formula with maximum height."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -493,38 +493,38 @@
       "pyqTag": "NEET NCERT Exemplar / PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "A ball of mass 0.15 kg hits a vertical rigid wall horizontally at 12 m/s and rebounds horizontally along the same line at 12 m/s. The magnitude of impulse imparted by the wall to the ball is:",
-      "stem_ta": "0.15 kg நிறையுள்ள பந்து ஒன்று செங்குத்துச் சுவரின் மீது கிடைமட்டமாக 12 m/s வேகத்தில் மோதி, அதே நேர்க்கோட்டில் 12 m/s வேகத்தில் திரும்புகிறது. சுவர் பந்தின் மீது செலுத்திய கணத்தாக்கு விசையின் எண்மதிப்பு என்ன?",
+      "stem_en": "A ball of mass $0.15\\text{ kg}$ hits a vertical rigid wall horizontally at $12\\text{ m/s}$ and rebounds horizontally along the same line at $12\\text{ m/s}$. The magnitude of impulse imparted by the wall to the ball is:",
+      "stem_ta": "$0.15\\text{ kg}$ நிறையுள்ள பந்து ஒன்று செங்குத்துச் சுவரின் மீது கிடைமட்டமாக $12\\text{ m/s}$ வேகத்தில் மோதி, அதே நேர்க்கோட்டில் $12\\text{ m/s}$ வேகத்தில் திரும்புகிறது. சுவர் பந்தின் மீது செலுத்திய கணத்தாக்கு விசையின் எண்மதிப்பு என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "0 N·s",
-          "text_ta": "0 N·s"
+          "text_en": "$0\\text{ N}\\cdot\\text{s}$",
+          "text_ta": "$0\\text{ N}\\cdot\\text{s}$"
         },
         {
           "letter": "B",
-          "text_en": "1.8 N·s",
-          "text_ta": "1.8 N·s"
+          "text_en": "$1.8\\text{ N}\\cdot\\text{s}$",
+          "text_ta": "$1.8\\text{ N}\\cdot\\text{s}$"
         },
         {
           "letter": "C",
-          "text_en": "3.6 N·s",
-          "text_ta": "3.6 N·s"
+          "text_en": "$3.6\\text{ N}\\cdot\\text{s}$",
+          "text_ta": "$3.6\\text{ N}\\cdot\\text{s}$"
         },
         {
           "letter": "D",
-          "text_en": "7.2 N·s",
-          "text_ta": "7.2 N·s"
+          "text_en": "$7.2\\text{ N}\\cdot\\text{s}$",
+          "text_ta": "$7.2\\text{ N}\\cdot\\text{s}$"
         }
       ],
       "correct": "C",
-      "explanation_en": "Momentum is a vector! Taking u = +12 m/s and rebound v = -12 m/s, |Impulse| = |Δp| = m|v - u| = 0.15 * |-12 - 12| = 0.15 * 24 = 3.6 N·s.",
-      "explanation_ta": "உந்தம் ஒரு வெக்டர் அளவாகும்! u = +12 m/s, திரும்பும் திசைவேகம் v = -12 m/s. கணத்தாக்கு |J| = |Δp| = m|v - u| = 0.15 * 24 = 3.6 N·s.",
-      "ncert_key_point": "For normal elastic rebound at speed u, magnitude of momentum change is always 2mu, never zero.",
+      "explanation_en": "Momentum is a vector! Taking incident velocity $u = +12\\text{ m/s}$ and rebound velocity $v = -12\\text{ m/s}$, $|\\vec{J}| = |\\Delta \\vec{p}| = m|v - u| = 0.15 \\times |-12 - 12| = 0.15 \\times 24 = 3.6\\text{ N}\\cdot\\text{s}$.",
+      "explanation_ta": "உந்தம் ஒரு வெக்டர் அளவாகும்! $u = +12\\text{ m/s}$, திரும்பும் திசைவேகம் $v = -12\\text{ m/s}$. கணத்தாக்கு $|\\vec{J}| = |\\Delta \\vec{p}| = m|v - u| = 0.15 \\times 24 = 3.6\\text{ N}\\cdot\\text{s}$.",
+      "ncert_key_point": "For normal elastic rebound at speed $u$, the magnitude of momentum change is always $2mu$, never zero.",
       "trap_breakdown": {
-        "A": "0 N·s treats momentum as scalar (mv - mu = 0), ignoring direction reversal.",
-        "B": "1.8 N·s computes mu instead of 2mu.",
-        "D": "7.2 N·s doubles 2mu a second time."
+        "A": "$0\\text{ N}\\cdot\\text{s}$ treats momentum as a scalar ($mv - mu = 0$), ignoring direction reversal.",
+        "B": "$1.8\\text{ N}\\cdot\\text{s}$ computes $mu$ instead of $2mu$.",
+        "D": "$7.2\\text{ N}\\cdot\\text{s}$ doubles $2mu$ a second time."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -541,38 +541,38 @@
       "pyqTag": "NEET High-Frequency PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "If the kinetic energy of a body increases by 300%, the percentage increase in its linear momentum will be:",
-      "stem_ta": "ஒரு பொருளின் இயக்க ஆற்றல் 300% அதிகரித்தால், அதன் நேர்க்கோட்டு உந்தத்தில் ஏற்படும் சதவீத அதிகரிப்பு என்ன?",
+      "stem_en": "If the kinetic energy of a body increases by $300\\%$, the percentage increase in its linear momentum will be:",
+      "stem_ta": "ஒரு பொருளின் இயக்க ஆற்றல் $300\\%$ அதிகரித்தால், அதன் நேர்க்கோட்டு உந்தத்தில் ஏற்படும் சதவீத அதிகரிப்பு என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "100%",
-          "text_ta": "100%"
+          "text_en": "$100\\%$",
+          "text_ta": "$100\\%$"
         },
         {
           "letter": "B",
-          "text_en": "150%",
-          "text_ta": "150%"
+          "text_en": "$150\\%$",
+          "text_ta": "$150\\%$"
         },
         {
           "letter": "C",
-          "text_en": "200%",
-          "text_ta": "200%"
+          "text_en": "$200\\%$",
+          "text_ta": "$200\\%$"
         },
         {
           "letter": "D",
-          "text_en": "300%",
-          "text_ta": "300%"
+          "text_en": "$300\\%$",
+          "text_ta": "$300\\%$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Initial KE = K. 'Increases BY 300%' means final K' = K + 3K = 4K. Since p = sqrt(2mK), p'/p = sqrt(K'/K) = sqrt(4) = 2. Percentage increase = ((2p - p)/p) * 100% = 100%.",
-      "explanation_ta": "ஆரம்ப இயக்க ஆற்றல் = K. 300% அதிகரிப்பு என்றால் இறுதி K' = K + 3K = 4K. p = sqrt(2mK) என்பதால் p'/p = sqrt(4) = 2. எனவே சதவீத அதிகரிப்பு = ((2p - p)/p) * 100% = 100%.",
-      "ncert_key_point": "Never use calculus approximation Δp/p = (1/2)ΔK/K when percentage change exceeds 5%!",
+      "explanation_en": "Initial kinetic energy $= K$. 'Increases BY $300\\%$' means final $K' = K + 3K = 4K$. Since $p = \\sqrt{2mK}$, $\\frac{p'}{p} = \\sqrt{\\frac{K'}{K}} = \\sqrt{4} = 2$. Percentage increase $= \\frac{2p - p}{p} \\times 100\\% = 100\\%$.",
+      "explanation_ta": "ஆரம்ப இயக்க ஆற்றல் $= K$. $300\\%$ அதிகரிப்பு என்றால் இறுதி $K' = K + 3K = 4K$. $p = \\sqrt{2mK}$ என்பதால் $\\frac{p'}{p} = \\sqrt{4} = 2$. எனவே சதவீத அதிகரிப்பு $= \\frac{2p - p}{p} \\times 100\\% = 100\\%$.",
+      "ncert_key_point": "Never use calculus approximation $\\frac{\\Delta p}{p} = \\frac{1}{2}\\frac{\\Delta K}{K}$ when percentage change exceeds $5\\%$!",
       "trap_breakdown": {
-        "B": "150% wrongly applies small-error formula (1/2)*(300%).",
-        "C": "200% reports final momentum percentage (200% of initial) without subtracting initial 100%.",
-        "D": "300% assumes p is linearly proportional to K."
+        "B": "$150\\%$ wrongly applies the small-error formula $\\frac{1}{2}(300\\%)$.",
+        "C": "$200\\%$ reports final momentum percentage ($200\\%$ of initial) without subtracting the initial $100\\%$.",
+        "D": "$300\\%$ assumes $p$ is linearly proportional to $K$."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -616,11 +616,11 @@
       "correct": "B",
       "explanation_en": "About central normal axis: $I_1 = \\frac{1}{2}MR^2 \\Rightarrow K_1 = \\frac{R}{\\sqrt{2}}$. About diameter (perpendicular axis theorem): $I_2 = \\frac{1}{4}MR^2 \\Rightarrow K_2 = \\frac{R}{2}$. Therefore $K_1 : K_2 = \\frac{R/\\sqrt{2}}{R/2} = \\sqrt{2} : 1$.",
       "explanation_ta": "செங்குத்து அச்சில் $I_1 = \\frac{1}{2}MR^2 \\Rightarrow K_1 = \\frac{R}{\\sqrt{2}}$. விட்டத்தைப் பற்றி $I_2 = \\frac{1}{4}MR^2 \\Rightarrow K_2 = \\frac{R}{2}$. எனவே $K_1 : K_2 = \\sqrt{2} : 1$.",
-      "ncert_key_point": "Read carefully: Radius of Gyration K = sqrt(I/M), whereas Moment of Inertia ratio I_1 : I_2 is 2 : 1.",
+      "ncert_key_point": "Read carefully: Radius of Gyration $K = \\sqrt{\\frac{I}{M}}$, whereas Moment of Inertia ratio $I_1 : I_2$ is $2 : 1$.",
       "trap_breakdown": {
-        "A": "2 : 1 is the ratio of Moments of Inertia I_1 : I_2, forgetting the square root for K.",
-        "C": "Squaring instead of taking square root.",
-        "D": "Inverting the order of the two axes."
+        "A": "$2 : 1$ is the ratio of Moments of Inertia $I_1 : I_2$, forgetting the square root for $K$.",
+        "C": "Squaring instead of taking the square root.",
+        "D": "Inverting the order of the two axes ($K_2 : K_1$)."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -637,38 +637,38 @@
       "pyqTag": "NEET PYQ (2021/2024 Pattern)",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "The escape velocity from the Earth's surface is v. The escape velocity from the surface of another planet having a radius four times that of Earth and the same mean mass density is:",
-      "stem_ta": "பூமியின் மேற்பரப்பிலிருந்து விடுபடு திசைவேகம் v ஆகும். பூமியின் அதே சராசரி அடர்த்தியும், பூமியின் ஆரத்தைப் போல 4 மடங்கு ஆரமும் கொண்ட மற்றொரு கோளின் விடுபடு திசைவேகம் என்ன?",
+      "stem_en": "The escape velocity from the Earth's surface is $v$. The escape velocity from the surface of another planet having a radius four times that of Earth and the same mean mass density is:",
+      "stem_ta": "பூமியின் மேற்பரப்பிலிருந்து விடுபடு திசைவேகம் $v$ ஆகும். பூமியின் அதே சராசரி அடர்த்தியும், பூமியின் ஆரத்தைப் போல $4$ மடங்கு ஆரமும் கொண்ட மற்றொரு கோளின் விடுபடு திசைவேகம் என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "v",
-          "text_ta": "v"
+          "text_en": "$v$",
+          "text_ta": "$v$"
         },
         {
           "letter": "B",
-          "text_en": "2v",
-          "text_ta": "2v"
+          "text_en": "$2v$",
+          "text_ta": "$2v$"
         },
         {
           "letter": "C",
-          "text_en": "v / 2",
-          "text_ta": "v / 2"
+          "text_en": "$\\frac{v}{2}$",
+          "text_ta": "$\\frac{v}{2}$"
         },
         {
           "letter": "D",
-          "text_en": "4v",
-          "text_ta": "4v"
+          "text_en": "$4v$",
+          "text_ta": "$4v$"
         }
       ],
       "correct": "D",
-      "explanation_en": "v_e = sqrt(2GM/R). Since density ρ is constant, substitute M = (4/3)πR^3 ρ: v_e = sqrt((8/3)πGρR^2) = R * sqrt((8/3)πGρ). Thus v_e ∝ R at constant density. Since R' = 4R, v_e' = 4v.",
-      "explanation_ta": "v_e = sqrt(2GM/R). அடர்த்தி ρ மாறிலி என்பதால் M = (4/3)πR^3 ρ எனப் பிரதியிட v_e ∝ R. எனவே R' = 4R எனில் v_e' = 4v.",
-      "ncert_key_point": "Constant Mass M => v_e ∝ 1/sqrt(R). Constant Density ρ => v_e ∝ R.",
+      "explanation_en": "$v_e = \\sqrt{\\frac{2GM}{R}}$. Since mean density $\\rho$ is constant, substitute $M = \\frac{4}{3}\\pi R^3 \\rho$: $v_e = \\sqrt{\\frac{8}{3}\\pi G \\rho R^2} = R\\sqrt{\\frac{8}{3}\\pi G \\rho}$. Thus $v_e \\propto R$ at constant density. Since $R' = 4R$, $v_e' = 4v$.",
+      "explanation_ta": "$v_e = \\sqrt{\\frac{2GM}{R}}$. அடர்த்தி $\\rho$ மாறிலி என்பதால் $M = \\frac{4}{3}\\pi R^3 \\rho$ எனப் பிரதியிட $v_e = R\\sqrt{\\frac{8}{3}\\pi G \\rho} \\propto R$. எனவே $R' = 4R$ எனில் $v_e' = 4v$.",
+      "ncert_key_point": "Constant Mass $M \\Rightarrow v_e \\propto \\frac{1}{\\sqrt{R}}$. Constant Density $\\rho \\Rightarrow v_e \\propto R$.",
       "trap_breakdown": {
-        "A": "Cancelling R completely.",
-        "B": "2v assumes g is constant (v_e = sqrt(2gR)), whereas here density ρ is constant so g' = 4g!",
-        "C": "v/2 assumes mass M is constant instead of density ρ."
+        "A": "Cancelling $R$ completely.",
+        "B": "$2v$ assumes surface gravity $g$ is constant ($v_e = \\sqrt{2gR}$), whereas at constant density $\\rho$, $g' = 4g$!",
+        "C": "$\\frac{v}{2}$ assumes planet mass $M$ is constant instead of density $\\rho$."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -685,38 +685,38 @@
       "pyqTag": "NEET 2023 Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "A Carnot engine has an efficiency of 50% when its source is at a temperature of 327°C. The temperature of the sink is:",
-      "stem_ta": "கார்னோ (Carnot) வெப்ப இயந்திரம் ஒன்றின் வெப்ப மூலம் 327°C வெப்பநிலையில் உள்ளபோது அதன் பயனுறுதிறன் 50% ஆகும். வெப்ப ஏற்பியின் (sink) வெப்பநிலை என்ன?",
+      "stem_en": "A Carnot engine has an efficiency of $50\\%$ when its source is at a temperature of $327^\\circ\\text{C}$. The temperature of the sink is:",
+      "stem_ta": "கார்னோ (Carnot) வெப்ப இயந்திரம் ஒன்றின் வெப்ப மூலம் $327^\\circ\\text{C}$ வெப்பநிலையில் உள்ளபோது அதன் பயனுறுதிறன் $50\\%$ ஆகும். வெப்ப ஏற்பியின் (sink) வெப்பநிலை என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "27°C",
-          "text_ta": "27°C"
+          "text_en": "$27^\\circ\\text{C}$",
+          "text_ta": "$27^\\circ\\text{C}$"
         },
         {
           "letter": "B",
-          "text_en": "15°C",
-          "text_ta": "15°C"
+          "text_en": "$15^\\circ\\text{C}$",
+          "text_ta": "$15^\\circ\\text{C}$"
         },
         {
           "letter": "C",
-          "text_en": "100°C",
-          "text_ta": "100°C"
+          "text_en": "$100^\\circ\\text{C}$",
+          "text_ta": "$100^\\circ\\text{C}$"
         },
         {
           "letter": "D",
-          "text_en": "163.5°C",
-          "text_ta": "163.5°C"
+          "text_en": "$163.5^\\circ\\text{C}$",
+          "text_ta": "$163.5^\\circ\\text{C}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Convert source temperature to Kelvin: T_1 = 327 + 273 = 600 K. Efficiency η = 1 - (T_2 / T_1) = 0.5 => T_2 / 600 = 0.5 => T_2 = 300 K. In Celsius: t_2 = 300 - 273 = 27°C.",
-      "explanation_ta": "வெப்பநிலையை முதலில் கெல்வினுக்கு மாற்றவும்: T_1 = 327 + 273 = 600 K. η = 1 - (T_2/T_1) = 0.5 => T_2 = 300 K = 300 - 273 = 27°C.",
-      "ncert_key_point": "Always convert °C to Kelvin (K = °C + 273) BEFORE using η = 1 - T_sink / T_source.",
+      "explanation_en": "Convert source temperature to Kelvin: $T_1 = 327 + 273 = 600\\text{ K}$. Efficiency $\\eta = 1 - \\frac{T_2}{T_1} = 0.5 \\Rightarrow \\frac{T_2}{600} = 0.5 \\Rightarrow T_2 = 300\\text{ K}$. In Celsius: $t_2 = 300 - 273 = 27^\\circ\\text{C}$.",
+      "explanation_ta": "வெப்பநிலையை முதலில் கெல்வினுக்கு மாற்றவும்: $T_1 = 327 + 273 = 600\\text{ K}$. $\\eta = 1 - \\frac{T_2}{T_1} = 0.5 \\Rightarrow T_2 = 300\\text{ K} = 300 - 273 = 27^\\circ\\text{C}$.",
+      "ncert_key_point": "Always convert $^\\circ\\text{C}$ to Kelvin ($T\\text{ (K)} = t\\text{ }(^\\circ\\text{C}) + 273$) BEFORE using $\\eta = 1 - \\frac{T_{\\text{sink}}}{T_{\\text{source}}}$.",
       "trap_breakdown": {
-        "B": "Subtraction slip when converting 300 K to °C.",
+        "B": "Subtraction slip when converting $300\\text{ K}$ to $^\\circ\\text{C}$.",
         "C": "Guessing round Celsius values.",
-        "D": "163.5°C is half of 327°C — the classic mistake of forgetting to convert to Kelvin!"
+        "D": "$163.5^\\circ\\text{C}$ is half of $327^\\circ\\text{C}$ — the classic mistake of forgetting to convert to Kelvin!"
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -733,8 +733,8 @@
       "pyqTag": "NEET PYQ Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "A particle executes linear simple harmonic motion with amplitude A. At what displacement from the mean position is its kinetic energy equal to its potential energy?",
-      "stem_ta": "துகள் ஒன்று A என்ற வீச்சுடன் நேர்க்கோட்டு தனிச்சீரான இயக்கத்தை (SHM) மேற்கொள்கிறது. மையப்புள்ளியிலிருந்து எந்த இடப்பெயர்ச்சியில் அதன் இயக்க ஆற்றலும் நிலை ஆற்றலும் சமமாக இருக்கும்?",
+      "stem_en": "A particle executes linear simple harmonic motion with amplitude $A$. At what displacement from the mean position is its kinetic energy equal to its potential energy?",
+      "stem_ta": "துகள் ஒன்று $A$ என்ற வீச்சுடன் நேர்க்கோட்டு தனிச்சீரான இயக்கத்தை (SHM) மேற்கொள்கிறது. மையப்புள்ளியிலிருந்து எந்த இடப்பெயர்ச்சியில் அதன் இயக்க ஆற்றலும் நிலை ஆற்றலும் சமமாக இருக்கும்?",
       "choices": [
         {
           "letter": "A",
@@ -760,11 +760,11 @@
       "correct": "B",
       "explanation_en": "$KE = \\frac{1}{2}m\\omega^2(A^2 - x^2)$ and $PE = \\frac{1}{2}m\\omega^2 x^2$. Equating $KE = PE$ gives $A^2 - x^2 = x^2 \\Rightarrow 2x^2 = A^2 \\Rightarrow x = \\frac{A}{\\sqrt{2}}$.",
       "explanation_ta": "$KE = \\frac{1}{2}m\\omega^2(A^2 - x^2)$ மற்றும் $PE = \\frac{1}{2}m\\omega^2 x^2$. இரண்டும் சமம் எனில் $A^2 - x^2 = x^2 \\Rightarrow x = \\frac{A}{\\sqrt{2}}$.",
-      "ncert_key_point": "Since PE ∝ x^2, PE equals 50% of total energy at x = A/sqrt(2) ≈ 0.707 A, not A/2.",
+      "ncert_key_point": "Since $PE \\propto x^2$, $PE$ equals $50\\%$ of total energy at $x = \\frac{A}{\\sqrt{2}} \\approx 0.707A$, not $\\frac{A}{2}$.",
       "trap_breakdown": {
-        "A": "At x = A/2, PE is 25% and KE is 75% of total energy.",
-        "C": "At x = A/sqrt(3), KE = 2 * PE.",
-        "D": "At x = A*sqrt(3)/2, PE = 3 * KE."
+        "A": "At $x = \\frac{A}{2}$, $PE$ is $25\\%$ and $KE$ is $75\\%$ of total energy.",
+        "C": "At $x = \\frac{A}{\\sqrt{3}}$, $KE = 2 \\times PE$.",
+        "D": "At $x = \\frac{\\sqrt{3}A}{2}$, $PE = 3 \\times KE$."
       },
       "videoTutorial": {
         "title": "NEET Physics Mechanics & Laws of Motion One-Shot (Tamil + NCERT)",
@@ -781,28 +781,28 @@
       "pyqTag": "NEET 2020 / 2024 Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "An air-filled parallel plate capacitor has capacitance 15 pF. When the separation between plates is doubled and the space is completely filled with a dielectric medium of dielectric constant K = 4, the new capacitance becomes:",
-      "stem_ta": "காற்று நிரப்பப்பட்ட இணைத்தட்டு மின்தேக்கியின் மின்தேக்குத்திறன் 15 pF ஆகும். தட்டுகளுக்கு இடையிலான தொலைவு இருமடங்காக்கப்பட்டு, K = 4 கொண்ட மின்காப்பு ஊடகத்தால் நிரப்பப்பட்டால் புதிய மின்தேக்குத்திறன் என்ன?",
+      "stem_en": "An air-filled parallel plate capacitor has capacitance $15\\text{ pF}$. When the separation between plates is doubled and the space is completely filled with a dielectric medium of dielectric constant $K = 4$, the new capacitance becomes:",
+      "stem_ta": "காற்று நிரப்பப்பட்ட இணைத்தட்டு மின்தேக்கியின் மின்தேக்குத்திறன் $15\\text{ pF}$ ஆகும். தட்டுகளுக்கு இடையிலான தொலைவு இருமடங்காக்கப்பட்டு, $K = 4$ கொண்ட மின்காப்பு ஊடகத்தால் நிரப்பப்பட்டால் புதிய மின்தேக்குத்திறன் என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "30 pF",
-          "text_ta": "30 pF"
+          "text_en": "$30\\text{ pF}$",
+          "text_ta": "$30\\text{ pF}$"
         },
         {
           "letter": "B",
-          "text_en": "60 pF",
-          "text_ta": "60 pF"
+          "text_en": "$60\\text{ pF}$",
+          "text_ta": "$60\\text{ pF}$"
         },
         {
           "letter": "C",
-          "text_en": "7.5 pF",
-          "text_ta": "7.5 pF"
+          "text_en": "$7.5\\text{ pF}$",
+          "text_ta": "$7.5\\text{ pF}$"
         },
         {
           "letter": "D",
-          "text_en": "120 pF",
-          "text_ta": "120 pF"
+          "text_en": "$120\\text{ pF}$",
+          "text_ta": "$120\\text{ pF}$"
         }
       ],
       "correct": "A",
@@ -810,9 +810,9 @@
       "explanation_ta": "$C_0 = \\frac{\\varepsilon_0 A}{d} = 15\\text{ pF}$. $d' = 2d$ மற்றும் $K = 4$ எனில், $C' = \\frac{4}{2} \\times 15\\text{ pF} = 30\\text{ pF}$.",
       "ncert_key_point": "$C = \\frac{K \\varepsilon_0 A}{d}$: scale initial $C_0$ directly by $\\frac{K_{\\text{new}}}{K_{\\text{old}}} \\times \\frac{d_{\\text{old}}}{d_{\\text{new}}}$.",
       "trap_breakdown": {
-        "B": "60 pF multiplies by K=4 without dividing by 2 for doubled plate separation.",
-        "C": "7.5 pF divides by K instead of multiplying.",
-        "D": "120 pF multiplies by both 4 and 2."
+        "B": "$60\\text{ pF}$ multiplies by $K = 4$ without dividing by $2$ for doubled plate separation.",
+        "C": "$7.5\\text{ pF}$ divides by $K$ instead of multiplying.",
+        "D": "$120\\text{ pF}$ multiplies by both $4$ and $2$."
       },
       "videoTutorial": {
         "title": "Current Electricity & Electrostatics Complete PYQs",
@@ -829,18 +829,18 @@
       "pyqTag": "NEET High-Frequency PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "A wire of resistance 10 Ω is uniformly stretched so that its length becomes 3 times its original length (volume remaining constant). Its new resistance is:",
-      "stem_ta": "10 Ω மின்தடை கொண்ட கம்பி ஒன்று அதன் பருமன் மாறாமல் நீளம் மும்மடங்காகுமாறு சீராக இழுக்கப்படுகிறது. அதன் புதிய மின்தடை என்ன?",
+      "stem_en": "A wire of resistance $10\\ \\Omega$ is uniformly stretched so that its length becomes $3$ times its original length (volume remaining constant). Its new resistance is:",
+      "stem_ta": "$10\\ \\Omega$ மின்தடை கொண்ட கம்பி ஒன்று அதன் பருமன் மாறாமல் நீளம் மும்மடங்காகுமாறு சீராக இழுக்கப்படுகிறது. அதன் புதிய மின்தடை என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "30 Ω",
-          "text_ta": "30 Ω"
+          "text_en": "$30\\ \\Omega$",
+          "text_ta": "$30\\ \\Omega$"
         },
         {
           "letter": "B",
-          "text_en": "90 Ω",
-          "text_ta": "90 Ω"
+          "text_en": "$90\\ \\Omega$",
+          "text_ta": "$90\\ \\Omega$"
         },
         {
           "letter": "C",
@@ -849,18 +849,18 @@
         },
         {
           "letter": "D",
-          "text_en": "60 Ω",
-          "text_ta": "60 Ω"
+          "text_en": "$60\\ \\Omega$",
+          "text_ta": "$60\\ \\Omega$"
         }
       ],
       "correct": "B",
-      "explanation_en": "At constant volume V = A * L, stretching L' = 3L causes cross-sectional area to become A' = A/3. Hence R' = ρ L' / A' = 9 * (ρ L / A) = 3^2 * 10 Ω = 90 Ω.",
-      "explanation_ta": "பருமன் மாறாமல் கம்பியை n மடங்கு நீட்டும்போது பரப்பு A' = A/n ஆகும். எனவே புதிய மின்தடை R' = n^2 * R = 3^2 * 10 Ω = 90 Ω.",
-      "ncert_key_point": "Stretched to n times length => R' = n^2 R. Stretched to 1/n radius => R' = n^4 R.",
+      "explanation_en": "At constant volume $V = A L$, stretching $L' = 3L$ causes cross-sectional area to become $A' = \\frac{A}{3}$. Hence $R' = \\rho \\frac{L'}{A'} = 9\\left(\\rho \\frac{L}{A}\\right) = 3^2 \\times 10\\ \\Omega = 90\\ \\Omega$.",
+      "explanation_ta": "பருமன் மாறாமல் கம்பியை $n$ மடங்கு நீட்டும்போது பரப்பு $A' = \\frac{A}{n}$ ஆகும். எனவே புதிய மின்தடை $R' = n^2 R = 3^2 \\times 10\\ \\Omega = 90\\ \\Omega$.",
+      "ncert_key_point": "Stretched to $n$ times length $\\Rightarrow R' = n^2 R$. Stretched to $\\frac{1}{n}$ radius $\\Rightarrow R' = n^4 R$.",
       "trap_breakdown": {
-        "A": "30 Ω uses R' = nR, ignoring that area shrinks by factor 3.",
+        "A": "$30\\ \\Omega$ uses $R' = nR$, ignoring that cross-sectional area shrinks by factor $3$.",
         "C": "Dividing instead of multiplying.",
-        "D": "Using 2n instead of n^2."
+        "D": "Using $2n$ instead of $n^2$."
       },
       "videoTutorial": {
         "title": "Current Electricity & Electrostatics Complete PYQs",
@@ -877,38 +877,38 @@
       "pyqTag": "NEET 2024 Official Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "In a Wheatstone bridge, the upper branch has 4 Ω and 6 Ω resistors in series, the lower branch has 8 Ω and 12 Ω resistors in series, and a 10 Ω galvanometer connects their midpoints. If an ideal 20 V battery is connected across the bridge ends, the total current drawn from the battery is:",
-      "stem_ta": "வீட்ஸ்டோன் சமனச்சுற்றில் மேல் கிளையில் 4 Ω, 6 Ω மின்தடைகள் தொடரிணைப்பிலும், கீழ் கிளையில் 8 Ω, 12 Ω மின்தடைகள் தொடரிணைப்பிலும் உள்ளன. அவற்றின் நடுப்புள்ளிகளுக்கிடையே 10 Ω கால்வனாமீட்டரும், முனைகளில் 20 V மின்கலமும் இணைக்கப்பட்டால் மின்கலத்திலிருந்து பாயும் மொத்த மின்னோட்டம்:",
+      "stem_en": "In a Wheatstone bridge, the upper branch has $4\\ \\Omega$ and $6\\ \\Omega$ resistors in series, the lower branch has $8\\ \\Omega$ and $12\\ \\Omega$ resistors in series, and a $10\\ \\Omega$ galvanometer connects their midpoints. If an ideal $20\\text{ V}$ battery is connected across the bridge ends, the total current drawn from the battery is:",
+      "stem_ta": "வீட்ஸ்டோன் சமனச்சுற்றில் மேல் கிளையில் $4\\ \\Omega$, $6\\ \\Omega$ மின்தடைகள் தொடரிணைப்பிலும், கீழ் கிளையில் $8\\ \\Omega$, $12\\ \\Omega$ மின்தடைகள் தொடரிணைப்பிலும் உள்ளன. அவற்றின் நடுப்புள்ளிகளுக்கிடையே $10\\ \\Omega$ கால்வனாமீட்டரும், முனைகளில் $20\\text{ V}$ மின்கலமும் இணைக்கப்பட்டால் மின்கலத்திலிருந்து பாயும் மொத்த மின்னோட்டம்:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "3.0 A",
-          "text_ta": "3.0 A"
+          "text_en": "$3.0\\text{ A}$",
+          "text_ta": "$3.0\\text{ A}$"
         },
         {
           "letter": "B",
-          "text_en": "2.0 A",
-          "text_ta": "2.0 A"
+          "text_en": "$2.0\\text{ A}$",
+          "text_ta": "$2.0\\text{ A}$"
         },
         {
           "letter": "C",
-          "text_en": "1.5 A",
-          "text_ta": "1.5 A"
+          "text_en": "$1.5\\text{ A}$",
+          "text_ta": "$1.5\\text{ A}$"
         },
         {
           "letter": "D",
-          "text_en": "4.0 A",
-          "text_ta": "4.0 A"
+          "text_en": "$4.0\\text{ A}$",
+          "text_ta": "$4.0\\text{ A}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Ratio check: 4 / 6 = 2/3 and 8 / 12 = 2/3. Because the bridge is balanced, zero current flows through the 10 Ω galvanometer (remove it!). Upper series branch = 4 + 6 = 10 Ω; lower series branch = 8 + 12 = 20 Ω in parallel. R_eq = (10 * 20)/(10 + 20) = 20/3 Ω. Total current I = V / R_eq = 20 / (20/3) = 3.0 A.",
-      "explanation_ta": "4/6 = 8/12 = 2/3 என்பதால் சமனச்சுற்று சமநிலையில் உள்ளது; 10 Ω வழியே மின்னோட்டம் பாயாது. மேல் கிளை = 10 Ω, கீழ் கிளை = 20 Ω பக்க இணைப்பில் உள்ளன. R_eq = 20/3 Ω. எனவே I = 20 / (20/3) = 3.0 A.",
-      "ncert_key_point": "Always check P/Q = R/S first before attempting Kirchhoff's loop equations!",
+      "explanation_en": "Ratio check: $\\frac{4}{6} = \\frac{2}{3}$ and $\\frac{8}{12} = \\frac{2}{3}$. Because the bridge is balanced, zero current flows through the $10\\ \\Omega$ galvanometer (remove it!). Upper series branch $= 4 + 6 = 10\\ \\Omega$; lower series branch $= 8 + 12 = 20\\ \\Omega$ in parallel. $R_{\\text{eq}} = \\frac{10 \\times 20}{10 + 20} = \\frac{20}{3}\\ \\Omega$. Total current $I = \\frac{V}{R_{\\text{eq}}} = \\frac{20}{20/3} = 3.0\\text{ A}$.",
+      "explanation_ta": "$\\frac{4}{6} = \\frac{8}{12} = \\frac{2}{3}$ என்பதால் சமனச்சுற்று சமநிலையில் உள்ளது; $10\\ \\Omega$ வழியே மின்னோட்டம் பாயாது. மேல் கிளை $= 10\\ \\Omega$, கீழ் கிளை $= 20\\ \\Omega$ பக்க இணைப்பில் உள்ளன. $R_{\\text{eq}} = \\frac{20}{3}\\ \\Omega$. எனவே $I = \\frac{20}{20/3} = 3.0\\text{ A}$.",
+      "ncert_key_point": "Always check $\\frac{P}{Q} = \\frac{R}{S}$ first before attempting Kirchhoff's loop equations!",
       "trap_breakdown": {
-        "B": "2.0 A considers only the 10 Ω upper branch.",
-        "C": "1.5 A miscalculates parallel combination.",
-        "D": "4.0 A includes the central 10 Ω resistor in parallel."
+        "B": "$2.0\\text{ A}$ considers only the $10\\ \\Omega$ upper branch.",
+        "C": "$1.5\\text{ A}$ miscalculates the parallel combination.",
+        "D": "$4.0\\text{ A}$ includes the central $10\\ \\Omega$ resistor in parallel."
       },
       "videoTutorial": {
         "title": "Current Electricity & Electrostatics Complete PYQs",
@@ -925,38 +925,38 @@
       "pyqTag": "NEET Classic PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Medium",
-      "stem_en": "A proton and an alpha particle enter a uniform magnetic field perpendicular to their velocities with the same kinetic energy. The ratio of the radii of their circular paths (r_proton : r_alpha) is:",
-      "stem_ta": "புரோட்டான் ஒன்றும் ஆல்பா துகள் ஒன்றும் சம இயக்க ஆற்றலுடன் சீரான காந்தப்புலத்திற்குச் செங்குத்தாக நுழைகின்றன. அவற்றின் வட்டப் பாதைகளின் ஆரங்களின் விகிதம் (r_புரோட்டான் : r_ஆல்பா):",
+      "stem_en": "A proton and an alpha particle enter a uniform magnetic field perpendicular to their velocities with the same kinetic energy. The ratio of the radii of their circular paths ($r_p : r_\\alpha$) is:",
+      "stem_ta": "புரோட்டான் ஒன்றும் ஆல்பா துகள் ஒன்றும் சம இயக்க ஆற்றலுடன் சீரான காந்தப்புலத்திற்குச் செங்குத்தாக நுழைகின்றன. அவற்றின் வட்டப் பாதைகளின் ஆரங்களின் விகிதம் ($r_p : r_\\alpha$):",
       "choices": [
         {
           "letter": "A",
-          "text_en": "1 : 1",
-          "text_ta": "1 : 1"
+          "text_en": "$1 : 1$",
+          "text_ta": "$1 : 1$"
         },
         {
           "letter": "B",
-          "text_en": "1 : 2",
-          "text_ta": "1 : 2"
+          "text_en": "$1 : 2$",
+          "text_ta": "$1 : 2$"
         },
         {
           "letter": "C",
-          "text_en": "2 : 1",
-          "text_ta": "2 : 1"
+          "text_en": "$2 : 1$",
+          "text_ta": "$2 : 1$"
         },
         {
           "letter": "D",
-          "text_en": "1 : 4",
-          "text_ta": "1 : 4"
+          "text_en": "$1 : 4$",
+          "text_ta": "$1 : 4$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Radius in magnetic field in terms of kinetic energy K is r = sqrt(2mK) / (qB). For alpha particle, m_α = 4 m_p and q_α = 2 q_p. At same K and B, r_p / r_α = [sqrt(m_p) / q_p] / [sqrt(4 m_p) / (2 q_p)] = 1 / (2/2) = 1 : 1.",
-      "explanation_ta": "காந்தப்புலத்தில் ஆரம் r = sqrt(2mK) / (qB). ஆல்பா துகளுக்கு m_α = 4 m_p மற்றும் q_α = 2 q_p. K, B சமம் எனில் r_α = sqrt(4)/2 * r_p = r_p. எனவே விகிதம் 1 : 1.",
-      "ncert_key_point": "Same KE => r_p : r_d : r_α = 1 : sqrt(2) : 1. Same velocity => r ∝ m/q => 1 : 2 : 2.",
+      "explanation_en": "Radius in a magnetic field in terms of kinetic energy $K$ is $r = \\frac{\\sqrt{2mK}}{qB}$. For an alpha particle ($^4_2\\text{He}^{2+}$), $m_\\alpha = 4m_p$ and $q_\\alpha = 2q_p$. At equal $K$ and $B$, $\\frac{r_p}{r_\\alpha} = \\frac{\\sqrt{m_p}/q_p}{\\sqrt{4m_p}/(2q_p)} = \\frac{1}{2/2} = 1 : 1$.",
+      "explanation_ta": "காந்தப்புலத்தில் ஆரம் $r = \\frac{\\sqrt{2mK}}{qB}$. ஆல்பா துகளுக்கு $m_\\alpha = 4m_p$ மற்றும் $q_\\alpha = 2q_p$. $K$, $B$ சமம் எனில் $r_\\alpha = \\frac{\\sqrt{4}}{2} r_p = r_p$. எனவே விகிதம் $r_p : r_\\alpha = 1 : 1$.",
+      "ncert_key_point": "Same KE $\\Rightarrow r \\propto \\frac{\\sqrt{m}}{q} \\Rightarrow r_p : r_d : r_\\alpha = 1 : \\sqrt{2} : 1$. Same velocity $\\Rightarrow r \\propto \\frac{m}{q} \\Rightarrow 1 : 2 : 2$. Same potential $V \\Rightarrow r \\propto \\sqrt{\\frac{m}{q}} \\Rightarrow 1 : \\sqrt{2} : \\sqrt{2}$.",
       "trap_breakdown": {
-        "B": "1 : 2 is the ratio when they enter with the SAME VELOCITY, not same kinetic energy!",
-        "C": "2 : 1 is the ratio when accelerated through the SAME POTENTIAL DIFFERENCE (r ∝ sqrt(m)/q => 1 : 1/sqrt(2), or inverted).",
-        "D": "1 : 4 forgets both square root on mass and factor 2 on charge."
+        "B": "$1 : 2$ is the ratio when they enter with the SAME VELOCITY ($r \\propto \\frac{m}{q}$), not same kinetic energy!",
+        "C": "$2 : 1$ forgets that the alpha particle carries twice the proton charge ($q_\\alpha = 2q_p$), or inverts the equal-velocity ratio.",
+        "D": "$1 : 4$ forgets both the square root on mass and the factor $2$ on charge."
       },
       "videoTutorial": {
         "title": "Current Electricity & Electrostatics Complete PYQs",
@@ -973,38 +973,38 @@
       "pyqTag": "NEET 2023 / 2024 PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "A series LCR circuit has inductance L = 10 mH, capacitance C = 1 μF, and resistance R = 50 Ω. The angular frequency (ω_0) at which resonance occurs is:",
-      "stem_ta": "தொடர் LCR சுற்றில் மின்தூண்டல் L = 10 mH, மின்தேக்குத்திறன் C = 1 μF மற்றும் மின்தடை R = 50 Ω உள்ளது. ஒத்ததிர்வு நிகழும் கோண அதிர்வெண் (ω_0) என்ன?",
+      "stem_en": "A series LCR circuit has inductance $L = 10\\text{ mH}$, capacitance $C = 1\\ \\mu\\text{F}$, and resistance $R = 50\\ \\Omega$. The angular frequency ($\\omega_0$) at which resonance occurs is:",
+      "stem_ta": "தொடர் LCR சுற்றில் மின்தூண்டல் $L = 10\\text{ mH}$, மின்தேக்குத்திறன் $C = 1\\ \\mu\\text{F}$ மற்றும் மின்தடை $R = 50\\ \\Omega$ உள்ளது. ஒத்ததிர்வு நிகழும் கோண அதிர்வெண் ($\\omega_0$) என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "10^4 rad/s",
-          "text_ta": "10^4 rad/s"
+          "text_en": "$10^4\\text{ rad/s}$",
+          "text_ta": "$10^4\\text{ rad/s}$"
         },
         {
           "letter": "B",
-          "text_en": "10^5 rad/s",
-          "text_ta": "10^5 rad/s"
+          "text_en": "$10^5\\text{ rad/s}$",
+          "text_ta": "$10^5\\text{ rad/s}$"
         },
         {
           "letter": "C",
-          "text_en": "10^3 rad/s",
-          "text_ta": "10^3 rad/s"
+          "text_en": "$10^3\\text{ rad/s}$",
+          "text_ta": "$10^3\\text{ rad/s}$"
         },
         {
           "letter": "D",
-          "text_en": "2 * 10^4 rad/s",
-          "text_ta": "2 * 10^4 rad/s"
+          "text_en": "$2 \\times 10^4\\text{ rad/s}$",
+          "text_ta": "$2 \\times 10^4\\text{ rad/s}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Resonant angular frequency ω_0 = 1 / sqrt(LC) is independent of R! Here L = 10 * 10^-3 H = 10^-2 H and C = 10^-6 F, so LC = 10^-8 s^2. Thus ω_0 = 1 / sqrt(10^-8) = 10^4 rad/s.",
-      "explanation_ta": "ஒத்ததிர்வு கோண அதிர்வெண் ω_0 = 1 / sqrt(LC) (R-ஐச் சார்ந்ததல்ல). L = 10^-2 H, C = 10^-6 F => LC = 10^-8 => ω_0 = 10^4 rad/s.",
-      "ncert_key_point": "Watch units: 10 mH = 10^-2 H (not 10^-3 H!), and distinguish ω_0 (rad/s) from f_0 = ω_0 / (2π) (Hz).",
+      "explanation_en": "Resonant angular frequency $\\omega_0 = \\frac{1}{\\sqrt{LC}}$ is independent of $R$! Here $L = 10 \\times 10^{-3}\\text{ H} = 10^{-2}\\text{ H}$ and $C = 10^{-6}\\text{ F}$, so $LC = 10^{-8}\\text{ s}^2$. Thus $\\omega_0 = \\frac{1}{\\sqrt{10^{-8}}} = 10^4\\text{ rad/s}$.",
+      "explanation_ta": "ஒத்ததிர்வு கோண அதிர்வெண் $\\omega_0 = \\frac{1}{\\sqrt{LC}}$ ($R$-ஐச் சார்ந்ததல்ல). $L = 10^{-2}\\text{ H}$, $C = 10^{-6}\\text{ F} \\Rightarrow LC = 10^{-8}\\text{ s}^2 \\Rightarrow \\omega_0 = 10^4\\text{ rad/s}$.",
+      "ncert_key_point": "Watch units: $10\\text{ mH} = 10^{-2}\\text{ H}$ (not $10^{-3}\\text{ H}$!), and distinguish $\\omega_0\\text{ (rad/s)}$ from $f_0 = \\frac{\\omega_0}{2\\pi}\\text{ (Hz)}$.",
       "trap_breakdown": {
-        "B": "10^5 rad/s misreads 10 mH as 10^-4 H.",
-        "C": "10^3 rad/s misreads 1 μF as 10^-4 F.",
-        "D": "Unnecessary factor from R = 50 Ω."
+        "B": "$10^5\\text{ rad/s}$ misreads $10\\text{ mH}$ as $10^{-4}\\text{ H}$.",
+        "C": "$10^3\\text{ rad/s}$ misreads $1\\ \\mu\\text{F}$ as $10^{-4}\\text{ F}$.",
+        "D": "Unnecessary factor introduced from $R = 50\\ \\Omega$."
       },
       "videoTutorial": {
         "title": "Current Electricity & Electrostatics Complete PYQs",
@@ -1021,38 +1021,38 @@
       "pyqTag": "NEET 2023 / 2025 Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "A biconvex lens made of glass (refractive index n_g = 1.5) has focal length 20 cm in air. When completely immersed in a transparent liquid of refractive index n_l = 1.25, its focal length becomes:",
-      "stem_ta": "கண்ணாடியால் (ஒளிவிலகல் எண் n_g = 1.5) செய்யப்பட்ட இருகுவி லென்ஸின் காற்றில் குவியத்தூரம் 20 cm ஆகும். n_l = 1.25 ஒளிவிலகல் எண் கொண்ட திரவத்தில் முழுமையாக மூழ்கடிக்கப்படும்போது அதன் புதிய குவியத்தூரம்:",
+      "stem_en": "A biconvex lens made of glass (refractive index $n_g = 1.5$) has focal length $20\\text{ cm}$ in air. When completely immersed in a transparent liquid of refractive index $n_l = 1.25$, its focal length becomes:",
+      "stem_ta": "கண்ணாடியால் (ஒளிவிலகல் எண் $n_g = 1.5$) செய்யப்பட்ட இருகுவி லென்ஸின் காற்றில் குவியத்தூரம் $20\\text{ cm}$ ஆகும். $n_l = 1.25$ ஒளிவிலகல் எண் கொண்ட திரவத்தில் முழுமையாக மூழ்கடிக்கப்படும்போது அதன் புதிய குவியத்தூரம்:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "+50 cm",
-          "text_ta": "+50 cm"
+          "text_en": "$+50\\text{ cm}$",
+          "text_ta": "$+50\\text{ cm}$"
         },
         {
           "letter": "B",
-          "text_en": "+25 cm",
-          "text_ta": "+25 cm"
+          "text_en": "$+25\\text{ cm}$",
+          "text_ta": "$+25\\text{ cm}$"
         },
         {
           "letter": "C",
-          "text_en": "-50 cm",
-          "text_ta": "-50 cm"
+          "text_en": "$-50\\text{ cm}$",
+          "text_ta": "$-50\\text{ cm}$"
         },
         {
           "letter": "D",
-          "text_en": "+40 cm",
-          "text_ta": "+40 cm"
+          "text_en": "$+40\\text{ cm}$",
+          "text_ta": "$+40\\text{ cm}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "By Lens Maker's formula: (1/f_air) / (1/f_liq) = f_liq / f_air = (n_g - 1) / ((n_g / n_l) - 1). Here n_g - 1 = 0.5, and (1.5 / 1.25) - 1 = 1.2 - 1 = 0.2. So f_liq / 20 = 0.5 / 0.2 = 2.5 => f_liq = +50 cm.",
-      "explanation_ta": "லென்ஸ் உருவாக்குபவர் சமன்பாட்டின்படி: f_திரவம் / f_காற்று = (n_g - 1) / ((n_g / n_l) - 1) = (1.5 - 1) / ((1.5/1.25) - 1) = 0.5 / 0.2 = 2.5. எனவே f_திரவம் = 2.5 * 20 = +50 cm.",
-      "ncert_key_point": "When n_liquid < n_glass, a convex lens stays converging (+f) with a LARGER focal length; if n_liquid > n_glass, it turns diverging (-f)!",
+      "explanation_en": "By Lens Maker's formula: $\\frac{f_{\\text{liq}}}{f_{\\text{air}}} = \\frac{n_g - 1}{(n_g / n_l) - 1}$. Here $n_g - 1 = 0.5$, and $\\frac{1.5}{1.25} - 1 = 1.2 - 1 = 0.2$. So $\\frac{f_{\\text{liq}}}{20} = \\frac{0.5}{0.2} = 2.5 \\Rightarrow f_{\\text{liq}} = +50\\text{ cm}$.",
+      "explanation_ta": "லென்ஸ் உருவாக்குபவர் சமன்பாட்டின்படி: $\\frac{f_{\\text{liq}}}{f_{\\text{air}}} = \\frac{n_g - 1}{(n_g / n_l) - 1} = \\frac{1.5 - 1}{(1.5 / 1.25) - 1} = \\frac{0.5}{0.2} = 2.5$. எனவே திரவத்தில் குவியத்தூரம் $f_{\\text{liq}} = 2.5 \\times 20\\text{ cm} = +50\\text{ cm}$.",
+      "ncert_key_point": "When $n_{\\text{liq}} < n_g$, a convex lens stays converging ($+f$) with a LARGER focal length; if $n_{\\text{liq}} > n_g$, it turns diverging ($-f$)!",
       "trap_breakdown": {
-        "B": "25 cm uses n_g - n_l = 0.25 instead of (n_g / n_l) - 1 = 0.20!",
-        "C": "-50 cm wrongly flips sign (sign flips only if n_l > 1.5).",
-        "D": "40 cm doubles focal length by guessing."
+        "B": "$+25\\text{ cm}$ uses $n_g - n_l = 0.25$ instead of $\\frac{n_g}{n_l} - 1 = 0.20$!",
+        "C": "$-50\\text{ cm}$ wrongly flips sign (sign flips only if $n_l > 1.5$).",
+        "D": "$+40\\text{ cm}$ doubles focal length by guessing."
       },
       "videoTutorial": {
         "title": "Optics, Modern Physics & Semiconductors High-Yield Shortcuts (Tamil)",
@@ -1069,38 +1069,38 @@
       "pyqTag": "NEET 2024 Official Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "In Young's double-slit experiment, the slit separation is 1.0 mm and the screen is placed 1.5 m away. When monochromatic light of wavelength 600 nm is used, the fringe width is:",
-      "stem_ta": "யங் இரட்டைப் பிளவு சோதனையில் பிளவுகளுக்கு இடையிலான தொலைவு 1.0 mm மற்றும் திரை 1.5 m தொலைவில் உள்ளது. 600 nm அலைநீளம் கொண்ட ஒற்றைநிற ஒளி பயன்படுத்தப்படும்போது பட்டை அகலம் (fringe width) என்ன?",
+      "stem_en": "In Young's double-slit experiment, the slit separation is $1.0\\text{ mm}$ and the screen is placed $1.5\\text{ m}$ away. When monochromatic light of wavelength $600\\text{ nm}$ is used, the fringe width is:",
+      "stem_ta": "யங் இரட்டைப் பிளவு சோதனையில் பிளவுகளுக்கு இடையிலான தொலைவு $1.0\\text{ mm}$ மற்றும் திரை $1.5\\text{ m}$ தொலைவில் உள்ளது. $600\\text{ nm}$ அலைநீளம் கொண்ட ஒற்றைநிற ஒளி பயன்படுத்தப்படும்போது பட்டை அகலம் (fringe width) என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "0.9 mm",
-          "text_ta": "0.9 mm"
+          "text_en": "$0.9\\text{ mm}$",
+          "text_ta": "$0.9\\text{ mm}$"
         },
         {
           "letter": "B",
-          "text_en": "0.6 mm",
-          "text_ta": "0.6 mm"
+          "text_en": "$0.6\\text{ mm}$",
+          "text_ta": "$0.6\\text{ mm}$"
         },
         {
           "letter": "C",
-          "text_en": "1.2 mm",
-          "text_ta": "1.2 mm"
+          "text_en": "$1.2\\text{ mm}$",
+          "text_ta": "$1.2\\text{ mm}$"
         },
         {
           "letter": "D",
-          "text_en": "0.4 mm",
-          "text_ta": "0.4 mm"
+          "text_en": "$0.4\\text{ mm}$",
+          "text_ta": "$0.4\\text{ mm}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Fringe width β = λD / d = (600 * 10^-9 m * 1.5 m) / (1.0 * 10^-3 m) = 900 * 10^-6 m = 0.9 * 10^-3 m = 0.9 mm.",
-      "explanation_ta": "பட்டை அகலம் β = λD / d = (600 * 10^-9 * 1.5) / (1.0 * 10^-3) = 0.9 * 10^-3 m = 0.9 mm.",
-      "ncert_key_point": "β = λD / d: convert nm (10^-9 m) and mm (10^-3 m) cleanly before multiplying.",
+      "explanation_en": "Fringe width $\\beta = \\frac{\\lambda D}{d} = \\frac{600 \\times 10^{-9}\\text{ m} \\times 1.5\\text{ m}}{1.0 \\times 10^{-3}\\text{ m}} = 900 \\times 10^{-6}\\text{ m} = 0.9 \\times 10^{-3}\\text{ m} = 0.9\\text{ mm}$.",
+      "explanation_ta": "பட்டை அகலம் $\\beta = \\frac{\\lambda D}{d} = \\frac{600 \\times 10^{-9} \\times 1.5}{1.0 \\times 10^{-3}} = 0.9 \\times 10^{-3}\\text{ m} = 0.9\\text{ mm}$.",
+      "ncert_key_point": "$\\beta = \\frac{\\lambda D}{d}$: convert $\\text{nm}$ ($10^{-9}\\text{ m}$) and $\\text{mm}$ ($10^{-3}\\text{ m}$) cleanly before multiplying.",
       "trap_breakdown": {
-        "B": "0.6 mm forgets to multiply by D = 1.5 m.",
-        "C": "1.2 mm multiplies by 2 instead of 1.5.",
-        "D": "0.4 mm divides by 1.5 instead of multiplying."
+        "B": "$0.6\\text{ mm}$ forgets to multiply by $D = 1.5\\text{ m}$.",
+        "C": "$1.2\\text{ mm}$ multiplies by $2$ instead of $1.5$.",
+        "D": "$0.4\\text{ mm}$ divides by $1.5$ instead of multiplying."
       },
       "videoTutorial": {
         "title": "Optics, Modern Physics & Semiconductors High-Yield Shortcuts (Tamil)",
@@ -1117,38 +1117,38 @@
       "pyqTag": "NEET 2023 Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "The work function of Caesium is 2.14 eV. If incident light has photon energy 3.54 eV, the stopping potential (V_0) of the emitted photoelectrons is:",
-      "stem_ta": "சீசியத்தின் வெளியேற்று ஆற்றல் (work function) 2.14 eV ஆகும். படும் ஒளியின் ஃபோட்டான் ஆற்றல் 3.54 eV எனில், உமிழப்படும் ஒளி எலக்ட்ரான்களின் நிறுத்து மின்னழுத்தம் (stopping potential V_0) என்ன?",
+      "stem_en": "The work function of Caesium is $2.14\\text{ eV}$. If incident light has photon energy $3.54\\text{ eV}$, the stopping potential ($V_0$) of the emitted photoelectrons is:",
+      "stem_ta": "சீசியத்தின் வெளியேற்று ஆற்றல் (work function) $2.14\\text{ eV}$ ஆகும். படும் ஒளியின் ஃபோட்டான் ஆற்றல் $3.54\\text{ eV}$ எனில், உமிழப்படும் ஒளி எலக்ட்ரான்களின் நிறுத்து மின்னழுத்தம் (stopping potential $V_0$) என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "1.40 V",
-          "text_ta": "1.40 V"
+          "text_en": "$1.40\\text{ V}$",
+          "text_ta": "$1.40\\text{ V}$"
         },
         {
           "letter": "B",
-          "text_en": "5.68 V",
-          "text_ta": "5.68 V"
+          "text_en": "$5.68\\text{ V}$",
+          "text_ta": "$5.68\\text{ V}$"
         },
         {
           "letter": "C",
-          "text_en": "2.14 V",
-          "text_ta": "2.14 V"
+          "text_en": "$2.14\\text{ V}$",
+          "text_ta": "$2.14\\text{ V}$"
         },
         {
           "letter": "D",
-          "text_en": "0.70 V",
-          "text_ta": "0.70 V"
+          "text_en": "$0.70\\text{ V}$",
+          "text_ta": "$0.70\\text{ V}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "By Einstein's photoelectric equation: K_max = e * V_0 = hν - φ_0 = 3.54 eV - 2.14 eV = 1.40 eV. Dividing by elementary charge e gives V_0 = 1.40 V.",
-      "explanation_ta": "ஐன்ஸ்டீனின் ஒளிமின் சமன்பாட்டின்படி: e * V_0 = hν - φ_0 = 3.54 eV - 2.14 eV = 1.40 eV. எனவே நிறுத்து மின்னழுத்தம் V_0 = 1.40 V.",
-      "ncert_key_point": "When K_max is in electron-volts (eV), stopping potential V_0 in Volts has the exact same numerical value!",
+      "explanation_en": "By Einstein's photoelectric equation: $K_{\\max} = eV_0 = h\\nu - \\phi_0 = 3.54\\text{ eV} - 2.14\\text{ eV} = 1.40\\text{ eV}$. Dividing by elementary charge $e$ gives $V_0 = 1.40\\text{ V}$.",
+      "explanation_ta": "ஐன்ஸ்டீனின் ஒளிமின் சமன்பாட்டின்படி: $eV_0 = h\\nu - \\phi_0 = 3.54\\text{ eV} - 2.14\\text{ eV} = 1.40\\text{ eV}$. எனவே நிறுத்து மின்னழுத்தம் $V_0 = 1.40\\text{ V}$.",
+      "ncert_key_point": "When $K_{\\max}$ is in electron-volts ($\\text{eV}$), stopping potential $V_0$ in Volts ($\\text{V}$) has the exact same numerical value!",
       "trap_breakdown": {
-        "B": "5.68 V adds hν and φ_0 instead of subtracting.",
-        "C": "2.14 V confuses threshold energy with stopping potential.",
-        "D": "0.70 V divides K_max by 2."
+        "B": "$5.68\\text{ V}$ adds $h\\nu$ and $\\phi_0$ instead of subtracting.",
+        "C": "$2.14\\text{ V}$ confuses work function $\\phi_0$ with stopping potential $V_0$.",
+        "D": "$0.70\\text{ V}$ divides $K_{\\max}$ by $2$."
       },
       "videoTutorial": {
         "title": "Optics, Modern Physics & Semiconductors High-Yield Shortcuts (Tamil)",
@@ -1165,38 +1165,38 @@
       "pyqTag": "NEET PYQ Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "The ground state energy of a hydrogen atom is -13.6 eV. The energy required to excite the electron from the ground state (n = 1) to the first excited state (n = 2) is:",
-      "stem_ta": "ஹைட்ரஜன் அணுவின் அடிநிலை ஆற்றல் -13.6 eV ஆகும். எலக்ட்ரானை அடிநிலையிலிருந்து (n = 1) முதல் கிளர்வு நிலைக்கு (n = 2) கிளர்வுறச் செய்யத் தேவைப்படும் ஆற்றல்:",
+      "stem_en": "The ground state energy of a hydrogen atom is $-13.6\\text{ eV}$. The energy required to excite the electron from the ground state ($n = 1$) to the first excited state ($n = 2$) is:",
+      "stem_ta": "ஹைட்ரஜன் அணுவின் அடிநிலை ஆற்றல் $-13.6\\text{ eV}$ ஆகும். எலக்ட்ரானை அடிநிலையிலிருந்து ($n = 1$) முதல் கிளர்வு நிலைக்கு ($n = 2$) கிளர்வுறச் செய்யத் தேவைப்படும் ஆற்றல்:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "3.4 eV",
-          "text_ta": "3.4 eV"
+          "text_en": "$3.4\\text{ eV}$",
+          "text_ta": "$3.4\\text{ eV}$"
         },
         {
           "letter": "B",
-          "text_en": "10.2 eV",
-          "text_ta": "10.2 eV"
+          "text_en": "$10.2\\text{ eV}$",
+          "text_ta": "$10.2\\text{ eV}$"
         },
         {
           "letter": "C",
-          "text_en": "12.09 eV",
-          "text_ta": "12.09 eV"
+          "text_en": "$12.09\\text{ eV}$",
+          "text_ta": "$12.09\\text{ eV}$"
         },
         {
           "letter": "D",
-          "text_en": "13.6 eV",
-          "text_ta": "13.6 eV"
+          "text_en": "$13.6\\text{ eV}$",
+          "text_ta": "$13.6\\text{ eV}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "First excited state corresponds to n = 2 (NOT n = 1!). E_2 = -13.6 / 2^2 = -3.4 eV. Excitation energy ΔE = E_2 - E_1 = -3.4 - (-13.6) = +10.2 eV.",
-      "explanation_ta": "முதல் கிளர்வு நிலை என்பது n = 2 ஆகும்! E_2 = -13.6 / 4 = -3.4 eV. தேவைப்படும் ஆற்றல் ΔE = E_2 - E_1 = -3.4 - (-13.6) = 10.2 eV.",
-      "ncert_key_point": "First excited state = n=2 (+10.2 eV); Second excited state = n=3 (+12.09 eV); Ionization = n=∞ (+13.6 eV).",
+      "explanation_en": "First excited state corresponds to $n = 2$ (NOT $n = 1$!). $E_2 = -\\frac{13.6}{2^2} = -3.4\\text{ eV}$. Excitation energy $\\Delta E = E_2 - E_1 = -3.4 - (-13.6) = +10.2\\text{ eV}$.",
+      "explanation_ta": "முதல் கிளர்வு நிலை என்பது $n = 2$ ஆகும்! $E_2 = -\\frac{13.6}{2^2} = -3.4\\text{ eV}$. தேவைப்படும் ஆற்றல் $\\Delta E = E_2 - E_1 = -3.4 - (-13.6) = 10.2\\text{ eV}$.",
+      "ncert_key_point": "First excited state $= n=2$ ($+10.2\\text{ eV}$); Second excited state $= n=3$ ($+12.09\\text{ eV}$); Ionization $= n=\\infty$ ($+13.6\\text{ eV}$).",
       "trap_breakdown": {
-        "A": "3.4 eV is |E_2| (binding energy of n=2), not E_2 - E_1!",
-        "C": "12.09 eV is excitation to the SECOND excited state (n = 3).",
-        "D": "13.6 eV is the ionization energy from ground state."
+        "A": "$3.4\\text{ eV}$ is $|E_2|$ (binding energy of $n = 2$), not $E_2 - E_1$!",
+        "C": "$12.09\\text{ eV}$ is excitation to the SECOND excited state ($n = 3$).",
+        "D": "$13.6\\text{ eV}$ is the ionization energy from the ground state."
       },
       "videoTutorial": {
         "title": "Optics, Modern Physics & Semiconductors High-Yield Shortcuts (Tamil)",
@@ -1213,38 +1213,38 @@
       "pyqTag": "NEET 2022 Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "Two nuclei have mass numbers in the ratio 27 : 125. What is the ratio of their nuclear radii?",
-      "stem_ta": "இரண்டு அணுக்கருக்களின் நிறை எண்களின் விகிதம் 27 : 125 எனில், அவற்றின் அணுக்கரு ஆரங்களின் விகிதம் என்ன?",
+      "stem_en": "Two nuclei have mass numbers in the ratio $27 : 125$. What is the ratio of their nuclear radii?",
+      "stem_ta": "இரண்டு அணுக்கருக்களின் நிறை எண்களின் விகிதம் $27 : 125$ எனில், அவற்றின் அணுக்கரு ஆரங்களின் விகிதம் என்ன?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "3 : 5",
-          "text_ta": "3 : 5"
+          "text_en": "$3 : 5$",
+          "text_ta": "$3 : 5$"
         },
         {
           "letter": "B",
-          "text_en": "9 : 25",
-          "text_ta": "9 : 25"
+          "text_en": "$9 : 25$",
+          "text_ta": "$9 : 25$"
         },
         {
           "letter": "C",
-          "text_en": "27 : 125",
-          "text_ta": "27 : 125"
+          "text_en": "$27 : 125$",
+          "text_ta": "$27 : 125$"
         },
         {
           "letter": "D",
-          "text_en": "1 : 1",
-          "text_ta": "1 : 1"
+          "text_en": "$1 : 1$",
+          "text_ta": "$1 : 1$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Nuclear radius R = R_0 * A^(1/3). Hence R_1 / R_2 = (A_1 / A_2)^(1/3) = (27 / 125)^(1/3) = 3 / 5.",
-      "explanation_ta": "அணுக்கரு ஆரம் R = R_0 * A^(1/3). எனவே R_1 / R_2 = (27 / 125)^(1/3) = 3 : 5. (அணுக்கரு அடர்த்தி 1 : 1 மாறிலியாக இருக்கும்!)",
-      "ncert_key_point": "Nuclear radius R ∝ A^(1/3), surface area ∝ A^(2/3), volume ∝ A, and nuclear density is CONSTANT (1 : 1) independent of A!",
+      "explanation_en": "Nuclear radius $R = R_0 A^{1/3}$. Hence $\\frac{R_1}{R_2} = \\left(\\frac{A_1}{A_2}\\right)^{1/3} = \\left(\\frac{27}{125}\\right)^{1/3} = \\frac{3}{5} = 3 : 5$.",
+      "explanation_ta": "அணுக்கரு ஆரம் $R = R_0 A^{1/3}$. எனவே $\\frac{R_1}{R_2} = \\left(\\frac{27}{125}\\right)^{1/3} = 3 : 5$. (அணுக்கரு அடர்த்தி $1 : 1$ மாறிலியாக இருக்கும்!)",
+      "ncert_key_point": "Nuclear radius $R \\propto A^{1/3}$, surface area $\\propto A^{2/3}$, volume $\\propto A$, and nuclear density is CONSTANT ($1 : 1$) independent of $A$!",
       "trap_breakdown": {
-        "B": "9 : 25 is the ratio of nuclear surface areas (A^(2/3)).",
-        "C": "27 : 125 is the ratio of nuclear volumes (A).",
-        "D": "1 : 1 is the ratio of nuclear DENSITIES, not radii!"
+        "B": "$9 : 25$ is the ratio of nuclear surface areas ($A^{2/3}$).",
+        "C": "$27 : 125$ is the ratio of nuclear volumes ($A$).",
+        "D": "$1 : 1$ is the ratio of nuclear DENSITIES, not radii!"
       },
       "videoTutorial": {
         "title": "Optics, Modern Physics & Semiconductors High-Yield Shortcuts (Tamil)",
@@ -1286,13 +1286,13 @@
         }
       ],
       "correct": "A",
-      "explanation_en": "Output of NOR gate is Y_1 = NOT(A + B). Passing Y_1 through a NOT gate inverts it again: Y = NOT(NOT(A + B)) = A + B, which is the Boolean expression of an OR gate!",
-      "explanation_ta": "NOR வாயிலின் வெளியீடு Y_1 = பார்(A + B). இதை NOT வாயில் வழியே செலுத்தினால் Y = இரட்டை பார்(A + B) = A + B, இது OR வாயிலுக்குச் சமம்!",
-      "ncert_key_point": "Always verify logic gate MCQs in 10 seconds by plugging the 4 truth-table rows (00, 01, 10, 11).",
+      "explanation_en": "Output of a NOR gate is $Y_1 = \\overline{A + B}$. Passing $Y_1$ through a NOT gate inverts it again: $Y = \\overline{Y_1} = \\overline{\\overline{A + B}} = A + B$, which is the Boolean expression of an OR gate!",
+      "explanation_ta": "NOR வாயிலின் வெளியீடு $Y_1 = \\overline{A + B}$. இதை NOT வாயில் வழியே செலுத்தினால் $Y = \\overline{\\overline{A + B}} = A + B$, இது OR வாயிலுக்குச் சமம்!",
+      "ncert_key_point": "Always verify logic gate MCQs in 10 seconds by plugging the 4 truth-table rows ($00, 01, 10, 11$).",
       "trap_breakdown": {
-        "B": "AND gate comes from NAND followed by NOT.",
-        "C": "NAND is NOT(A·B).",
-        "D": "Forgetting the final NOT inversion."
+        "B": "AND gate ($A \\cdot B$) comes from a NAND gate ($\\overline{A \\cdot B}$) followed by a NOT gate.",
+        "C": "NAND gate has Boolean expression $Y = \\overline{A \\cdot B}$.",
+        "D": "Forgetting the final NOT inversion leaves $Y_1 = \\overline{A + B}$."
       },
       "videoTutorial": {
         "title": "Optics, Modern Physics & Semiconductors High-Yield Shortcuts (Tamil)",
@@ -1309,37 +1309,37 @@
       "pyqTag": "NEET 2022 Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "What mass of 95% pure CaCO3 will be required to neutralize 50 mL of 0.5 M HCl solution according to the reaction: CaCO3(s) + 2HCl(aq) -> CaCl2(aq) + CO2(g) + H2O(l)? [Molar mass of CaCO3 = 100 g/mol]",
-      "stem_ta": "CaCO3(s) + 2HCl(aq) -> CaCl2(aq) + CO2(g) + H2O(l) என்ற வினையின்படி, 50 mL அளவுள்ள 0.5 M HCl கரைசலை நடுநிலையாக்க 95% தூய்மையான CaCO3 எவ்வளவு நிறை தேவைப்படும்? [CaCO3 மோலார் நிறை = 100 g/mol]",
+      "stem_en": "What mass of $95\\%$ pure $\\text{CaCO}_3$ will be required to neutralize $50\\text{ mL}$ of $0.5\\text{ M}\\ \\text{HCl}$ solution according to the reaction: $\\text{CaCO}_3(s) + 2\\text{HCl}(aq) \\to \\text{CaCl}_2(aq) + \\text{CO}_2(g) + \\text{H}_2\\text{O}(l)$? [Molar mass of $\\text{CaCO}_3 = 100\\text{ g/mol}$]",
+      "stem_ta": "$\\text{CaCO}_3(s) + 2\\text{HCl}(aq) \\to \\text{CaCl}_2(aq) + \\text{CO}_2(g) + \\text{H}_2\\text{O}(l)$ என்ற வினையின்படி, $50\\text{ mL}$ அளவுள்ள $0.5\\text{ M}\\ \\text{HCl}$ கரைசலை நடுநிலையாக்க $95\\%$ தூய்மையான $\\text{CaCO}_3$ எவ்வளவு நிறை தேவைப்படும்? [$\\text{CaCO}_3$ மோலார் நிறை $= 100\\text{ g/mol}$]",
       "choices": [
         {
           "letter": "A",
-          "text_en": "1.25 g",
-          "text_ta": "1.25 g"
+          "text_en": "$1.25\\text{ g}$",
+          "text_ta": "$1.25\\text{ g}$"
         },
         {
           "letter": "B",
-          "text_en": "1.32 g",
-          "text_ta": "1.32 g"
+          "text_en": "$1.32\\text{ g}$",
+          "text_ta": "$1.32\\text{ g}$"
         },
         {
           "letter": "C",
-          "text_en": "3.65 g",
-          "text_ta": "3.65 g"
+          "text_en": "$3.65\\text{ g}$",
+          "text_ta": "$3.65\\text{ g}$"
         },
         {
           "letter": "D",
-          "text_en": "9.50 g",
-          "text_ta": "9.50 g"
+          "text_en": "$9.50\\text{ g}$",
+          "text_ta": "$9.50\\text{ g}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "Moles of HCl = M * V(L) = 0.5 * 0.050 = 0.025 mol. From stoichiometry, 1 mol CaCO3 reacts with 2 mol HCl, so pure CaCO3 needed = 0.025 / 2 = 0.0125 mol = 0.0125 * 100 g = 1.25 g. Since sample is 95% pure, required sample mass = 1.25 / 0.95 = 1.3158 g ≈ 1.32 g.",
-      "explanation_ta": "HCl மோல்கள் = 0.5 * 0.050 = 0.025 mol. தூய CaCO3 மோல்கள் = 0.025 / 2 = 0.0125 mol = 1.25 g. மாதிரி 95% தூய்மையானது என்பதால் தேவையான நிறை = 1.25 / 0.95 = 1.316 g ≈ 1.32 g.",
-      "ncert_key_point": "Impure sample mass is ALWAYS greater than pure reactant mass: divide pure mass by (% purity / 100).",
+      "explanation_en": "Moles of $\\text{HCl} = M \\times V(\\text{L}) = 0.5 \\times 0.050 = 0.025\\text{ mol}$. From stoichiometry, $1\\text{ mol}\\ \\text{CaCO}_3$ reacts with $2\\text{ mol}\\ \\text{HCl}$, so pure $\\text{CaCO}_3$ needed $= \\frac{0.025}{2} = 0.0125\\text{ mol} = 0.0125 \\times 100\\text{ g} = 1.25\\text{ g}$. Since the sample is $95\\%$ pure, required sample mass $= \\frac{1.25}{0.95} = 1.3158\\text{ g} \\approx 1.32\\text{ g}$.",
+      "explanation_ta": "$\\text{HCl}$ மோல்கள் $= 0.5 \\times 0.050 = 0.025\\text{ mol}$. தூய $\\text{CaCO}_3$ மோல்கள் $= \\frac{0.025}{2} = 0.0125\\text{ mol} = 1.25\\text{ g}$. மாதிரி $95\\%$ தூய்மையானது என்பதால் தேவையான நிறை $= \\frac{1.25}{0.95} = 1.316\\text{ g} \\approx 1.32\\text{ g}$.",
+      "ncert_key_point": "Impure sample mass is ALWAYS greater than pure reactant mass: $m_{\\text{sample}} = \\frac{m_{\\text{pure}}}{\\text{\\% purity} / 100}$.",
       "trap_breakdown": {
-        "A": "1.25 g stops at pure CaCO3 mass and forgets to account for 95% purity!",
-        "C": "Confuses molar mass of HCl (36.5) with CaCO3.",
+        "A": "$1.25\\text{ g}$ stops at pure $\\text{CaCO}_3$ mass and forgets to divide by $0.95$ for $95\\%$ purity!",
+        "C": "Confuses molar mass of $\\text{HCl}$ ($36.5\\text{ g/mol}$) with $\\text{CaCO}_3$ ($100\\text{ g/mol}$).",
         "D": "Decimal shift error."
       },
       "videoTutorial": {
@@ -1357,38 +1357,38 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "What is the maximum number of orbitals that can be identified with the following quantum numbers: n = 3, l = 1, m_l = 0?",
-      "stem_ta": "n = 3, l = 1, m_l = 0 ஆகிய குவாண்டம் எண்களால் அடையாளம் காணக்கூடிய அதிகபட்ச ஆர்பிட்டால்களின் எண்ணிக்கை எவ்வளவு?",
+      "stem_en": "What is the maximum number of orbitals that can be identified with the following quantum numbers: $n = 3$, $l = 1$, $m_l = 0$?",
+      "stem_ta": "$n = 3$, $l = 1$, $m_l = 0$ ஆகிய குவாண்டம் எண்களால் அடையாளம் காணக்கூடிய அதிகபட்ச ஆர்பிட்டால்களின் எண்ணிக்கை எவ்வளவு?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "1",
-          "text_ta": "1"
+          "text_en": "$1$",
+          "text_ta": "$1$"
         },
         {
           "letter": "B",
-          "text_en": "2",
-          "text_ta": "2"
+          "text_en": "$2$",
+          "text_ta": "$2$"
         },
         {
           "letter": "C",
-          "text_en": "3",
-          "text_ta": "3"
+          "text_en": "$3$",
+          "text_ta": "$3$"
         },
         {
           "letter": "D",
-          "text_en": "4",
-          "text_ta": "4"
+          "text_en": "$4$",
+          "text_ta": "$4$"
         }
       ],
       "correct": "A",
-      "explanation_en": "A specific set of three quantum numbers (n, l, m_l) uniquely identifies ONE single orbital (here, the 3p_z orbital). That 1 orbital can hold up to 2 electrons (m_s = +1/2, -1/2), so number of ORBITALS = 1.",
-      "explanation_ta": "(n, l, m_l) ஆகிய மூன்று குவாண்டம் எண்களின் குறிப்பிட்ட தொகுப்பு ஒரே ஒரு ஆர்பிட்டாலை (3p_z) மட்டுமே குறிக்கும். இதில் அதிகபட்சம் 2 எலக்ட்ரான்கள் இருக்கலாம், ஆனால் ஆர்பிட்டாலின் எண்ணிக்கை = 1.",
-      "ncert_key_point": "Read the noun carefully: (n, l, m_l) -> 1 orbital, max 2 electrons!",
+      "explanation_en": "A specific set of three quantum numbers $(n, l, m_l)$ uniquely identifies ONE single orbital (here, the $3p_z$ orbital). That $1$ orbital can hold up to $2$ electrons ($m_s = +\\frac{1}{2}, -\\frac{1}{2}$), so the number of ORBITALS $= 1$.",
+      "explanation_ta": "$(n, l, m_l)$ ஆகிய மூன்று குவாண்டம் எண்களின் குறிப்பிட்ட தொகுப்பு ஒரே ஒரு ஆர்பிட்டாலை ($3p_z$) மட்டுமே குறிக்கும். இதில் அதிகபட்சம் $2$ எலக்ட்ரான்கள் ($m_s = \\pm\\frac{1}{2}$) இருக்கலாம், ஆனால் ஆர்பிட்டாலின் எண்ணிக்கை $= 1$.",
+      "ncert_key_point": "Read the noun carefully: $(n, l, m_l) \\to 1$ orbital, maximum $2$ electrons!",
       "trap_breakdown": {
-        "B": "2 is the maximum number of ELECTRONS in that orbital, not orbitals!",
-        "C": "3 is the total number of orbitals in the entire 3p subshell (m_l = -1, 0, +1).",
-        "D": "Confusing with l + 3."
+        "B": "$2$ is the maximum number of ELECTRONS in that orbital, not orbitals!",
+        "C": "$3$ is the total number of orbitals in the entire $3p$ subshell ($m_l = -1, 0, +1$).",
+        "D": "Confusing with $l + 3$."
       },
       "videoTutorial": {
         "title": "Physical Chemistry Formulas & Numericals Masterclass",
@@ -1405,38 +1405,38 @@
       "pyqTag": "NEET High-Frequency PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "Among the isoelectronic species N^3-, O^2-, F^-, and Na^+, the correct decreasing order of ionic radius is:",
-      "stem_ta": "ஒத்த எலக்ட்ரான் எண்ணிக்கை கொண்ட N^3-, O^2-, F^- மற்றும் Na^+ அயனிகளில், அயனி ஆரத்தின் சரியான இறங்கு வரிசை எது?",
+      "stem_en": "Among the isoelectronic species $\\text{N}^{3-}$, $\\text{O}^{2-}$, $\\text{F}^-$, and $\\text{Na}^+$, the correct decreasing order of ionic radius is:",
+      "stem_ta": "ஒத்த எலக்ட்ரான் எண்ணிக்கை கொண்ட $\\text{N}^{3-}$, $\\text{O}^{2-}$, $\\text{F}^-$ மற்றும் $\\text{Na}^+$ அயனிகளில், அயனி ஆரத்தின் சரியான இறங்கு வரிசை எது?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "Na^+ > F^- > O^2- > N^3-",
-          "text_ta": "Na^+ > F^- > O^2- > N^3-"
+          "text_en": "$\\text{Na}^+ > \\text{F}^- > \\text{O}^{2-} > \\text{N}^{3-}$",
+          "text_ta": "$\\text{Na}^+ > \\text{F}^- > \\text{O}^{2-} > \\text{N}^{3-}$"
         },
         {
           "letter": "B",
-          "text_en": "N^3- > O^2- > F^- > Na^+",
-          "text_ta": "N^3- > O^2- > F^- > Na^+"
+          "text_en": "$\\text{N}^{3-} > \\text{O}^{2-} > \\text{F}^- > \\text{Na}^+$",
+          "text_ta": "$\\text{N}^{3-} > \\text{O}^{2-} > \\text{F}^- > \\text{Na}^+$"
         },
         {
           "letter": "C",
-          "text_en": "O^2- > N^3- > F^- > Na^+",
-          "text_ta": "O^2- > N^3- > F^- > Na^+"
+          "text_en": "$\\text{O}^{2-} > \\text{N}^{3-} > \\text{F}^- > \\text{Na}^+$",
+          "text_ta": "$\\text{O}^{2-} > \\text{N}^{3-} > \\text{F}^- > \\text{Na}^+$"
         },
         {
           "letter": "D",
-          "text_en": "N^3- > F^- > O^2- > Na^+",
-          "text_ta": "N^3- > F^- > O^2- > Na^+"
+          "text_en": "$\\text{N}^{3-} > \\text{F}^- > \\text{O}^{2-} > \\text{Na}^+$",
+          "text_ta": "$\\text{N}^{3-} > \\text{F}^- > \\text{O}^{2-} > \\text{Na}^+$"
         }
       ],
       "correct": "B",
-      "explanation_en": "All four ions have 10 electrons. For isoelectronic species, ionic radius is inversely proportional to nuclear charge (Z): N^3- (Z=7) > O^2- (Z=8) > F^- (Z=9) > Na^+ (Z=11).",
-      "explanation_ta": "நான்கு அயனிகளிலும் 10 எலக்ட்ரான்கள் உள்ளன. ஒத்த எலக்ட்ரான் அயனிகளில் அணு எண் (Z) அதிகரிக்கும்போது அயனி ஆரம் குறையும்: N^3- (Z=7) > O^2- (Z=8) > F^- (Z=9) > Na^+ (Z=11).",
-      "ncert_key_point": "Isoelectronic species: More negative charge = Larger size; More positive charge = Smaller size.",
+      "explanation_en": "All four ions have $10$ electrons. For isoelectronic species, ionic radius is inversely proportional to nuclear charge ($Z$): $\\text{N}^{3-}\\ (Z=7) > \\text{O}^{2-}\\ (Z=8) > \\text{F}^-\\ (Z=9) > \\text{Na}^+\\ (Z=11)$.",
+      "explanation_ta": "நான்கு அயனிகளிலும் $10$ எலக்ட்ரான்கள் உள்ளன. ஒத்த எலக்ட்ரான் அயனிகளில் அணு எண் ($Z$) அதிகரிக்கும்போது அயனி ஆரம் குறையும்: $\\text{N}^{3-}\\ (Z=7) > \\text{O}^{2-}\\ (Z=8) > \\text{F}^-\\ (Z=9) > \\text{Na}^+\\ (Z=11)$.",
+      "ncert_key_point": "Isoelectronic species ($r \\propto \\frac{1}{Z}$): More negative charge $=$ Larger size; More positive charge $=$ Smaller size.",
       "trap_breakdown": {
         "A": "Exact reverse (increasing order instead of decreasing order).",
-        "C": "Swaps N^3- and O^2-.",
-        "D": "Swaps O^2- and F^-."
+        "C": "Swaps $\\text{N}^{3-}$ and $\\text{O}^{2-}$.",
+        "D": "Swaps $\\text{O}^{2-}$ and $\\text{F}^-$."
       },
       "videoTutorial": {
         "title": "Chemical Bonding & Coordination Compounds NCERT Line-by-Line (Tamil)",
@@ -1453,38 +1453,38 @@
       "pyqTag": "NEET 2023 / 2024 PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Medium",
-      "stem_en": "According to VSEPR theory, the hybridisation of central atom and molecular geometry of XeF4 are respectively:",
-      "stem_ta": "VSEPR கொள்கையின்படி, XeF4 மூலக்கூறின் மைய அணுவின் இனக்கலப்பு மற்றும் மூலக்கூறு வடிவம் முறையே:",
+      "stem_en": "According to VSEPR theory, the hybridisation of the central atom and molecular geometry of $\\text{XeF}_4$ are respectively:",
+      "stem_ta": "VSEPR கொள்கையின்படி, $\\text{XeF}_4$ மூலக்கூறின் மைய அணுவின் இனக்கலப்பு மற்றும் மூலக்கூறு வடிவம் முறையே:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "sp^3, Tetrahedral",
-          "text_ta": "sp^3, நான்முகி (Tetrahedral)"
+          "text_en": "$sp^3$, Tetrahedral",
+          "text_ta": "$sp^3$, நான்முகி (Tetrahedral)"
         },
         {
           "letter": "B",
-          "text_en": "sp^3d^2, Octahedral",
-          "text_ta": "sp^3d^2, எண்முகி (Octahedral)"
+          "text_en": "$sp^3d^2$, Octahedral",
+          "text_ta": "$sp^3d^2$, எண்முகி (Octahedral)"
         },
         {
           "letter": "C",
-          "text_en": "sp^3d^2, Square planar",
-          "text_ta": "sp^3d^2, தள சதுரம் (Square planar)"
+          "text_en": "$sp^3d^2$, Square planar",
+          "text_ta": "$sp^3d^2$, தள சதுரம் (Square planar)"
         },
         {
           "letter": "D",
-          "text_en": "sp^3d, See-saw",
-          "text_ta": "sp^3d, சீ-சா (See-saw)"
+          "text_en": "$sp^3d$, See-saw",
+          "text_ta": "$sp^3d$, சீ-சா (See-saw)"
         }
       ],
       "correct": "C",
-      "explanation_en": "Xenon has 8 valence electrons. In XeF4, there are 4 bond pairs and (8 - 4)/2 = 2 lone pairs. Steric number = 4 + 2 = 6 => sp^3d^2 hybridisation. Placing the 2 lone pairs trans (180°) to minimize repulsion gives a Square Planar molecular shape!",
-      "explanation_ta": "செனானின் இணைதிறன் எலக்ட்ரான்கள் = 8. XeF4-இல் 4 பிணைப்பு இணைகள் + 2 தனித்த இணைகள் = 6 => sp^3d^2 இனக்கலப்பு. இரு தனித்த இணைகளும் எதிர் எதிரே அமைவதால் மூலக்கூறு வடிவம் தள சதுரம் (Square planar) ஆகும்!",
-      "ncert_key_point": "Electron-pair geometry includes lone pairs (Octahedral), but Molecular geometry/shape counts ONLY atom positions (Square Planar)!",
+      "explanation_en": "Xenon has $8$ valence electrons. In $\\text{XeF}_4$, there are $4$ bond pairs and $\\frac{8 - 4}{2} = 2$ lone pairs. Steric number $= 4 + 2 = 6 \\Rightarrow sp^3d^2$ hybridisation. Placing the $2$ lone pairs *trans* ($180^\\circ$) to minimize repulsion gives a **Square planar** molecular shape!",
+      "explanation_ta": "செனானின் இணைதிறன் எலக்ட்ரான்கள் $= 8$. $\\text{XeF}_4$-இல் $4$ பிணைப்பு இணைகள் $+$ $2$ தனித்த இணைகள் $= 6 \\Rightarrow sp^3d^2$ இனக்கலப்பு. இரு தனித்த இணைகளும் எதிர் எதிரே ($180^\\circ$) அமைவதால் மூலக்கூறு வடிவம் தள சதுரம் (Square planar) ஆகும்!",
+      "ncert_key_point": "Electron-pair geometry includes lone pairs (Octahedral), but Molecular geometry/shape counts ONLY atom positions (Square planar)!",
       "trap_breakdown": {
         "A": "Ignores the two lone pairs on Xenon completely.",
         "B": "Octahedral is the electron-pair arrangement, NOT the molecular shape!",
-        "D": "sp^3d See-saw belongs to SF4 (4 BP + 1 LP), not XeF4."
+        "D": "$sp^3d$ See-saw belongs to $\\text{SF}_4$ ($4\\text{ BP} + 1\\text{ LP}$), not $\\text{XeF}_4$."
       },
       "videoTutorial": {
         "title": "Chemical Bonding & Coordination Compounds NCERT Line-by-Line (Tamil)",
@@ -1501,38 +1501,38 @@
       "pyqTag": "NEET Classic PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Medium",
-      "stem_en": "According to Molecular Orbital Theory, the correct decreasing order of bond order among O2, O2^+, O2^-, and O2^2- is:",
-      "stem_ta": "மூலக்கூறு ஆர்பிட்டால் கொள்கையின்படி (MOT), O2, O2^+, O2^- மற்றும் O2^2- ஆகியவற்றின் பிணைப்புத் தரத்தின் (bond order) சரியான இறங்கு வரிசை:",
+      "stem_en": "According to Molecular Orbital Theory, the correct decreasing order of bond order among $\\text{O}_2$, $\\text{O}_2^+$, $\\text{O}_2^-$, and $\\text{O}_2^{2-}$ is:",
+      "stem_ta": "மூலக்கூறு ஆர்பிட்டால் கொள்கையின்படி (MOT), $\\text{O}_2$, $\\text{O}_2^+$, $\\text{O}_2^-$ மற்றும் $\\text{O}_2^{2-}$ ஆகியவற்றின் பிணைப்புத் தரத்தின் (bond order) சரியான இறங்கு வரிசை:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "O2^+ > O2 > O2^- > O2^2-",
-          "text_ta": "O2^+ > O2 > O2^- > O2^2-"
+          "text_en": "$\\text{O}_2^+ > \\text{O}_2 > \\text{O}_2^- > \\text{O}_2^{2-}$",
+          "text_ta": "$\\text{O}_2^+ > \\text{O}_2 > \\text{O}_2^- > \\text{O}_2^{2-}$"
         },
         {
           "letter": "B",
-          "text_en": "O2 > O2^+ > O2^- > O2^2-",
-          "text_ta": "O2 > O2^+ > O2^- > O2^2-"
+          "text_en": "$\\text{O}_2 > \\text{O}_2^+ > \\text{O}_2^- > \\text{O}_2^{2-}$",
+          "text_ta": "$\\text{O}_2 > \\text{O}_2^+ > \\text{O}_2^- > \\text{O}_2^{2-}$"
         },
         {
           "letter": "C",
-          "text_en": "O2^2- > O2^- > O2 > O2^+",
-          "text_ta": "O2^2- > O2^- > O2 > O2^+"
+          "text_en": "$\\text{O}_2^{2-} > \\text{O}_2^- > \\text{O}_2 > \\text{O}_2^+$",
+          "text_ta": "$\\text{O}_2^{2-} > \\text{O}_2^- > \\text{O}_2 > \\text{O}_2^+$"
         },
         {
           "letter": "D",
-          "text_en": "O2^+ > O2^- > O2 > O2^2-",
-          "text_ta": "O2^+ > O2^- > O2 > O2^2-"
+          "text_en": "$\\text{O}_2^+ > \\text{O}_2^- > \\text{O}_2 > \\text{O}_2^{2-}$",
+          "text_ta": "$\\text{O}_2^+ > \\text{O}_2^- > \\text{O}_2 > \\text{O}_2^{2-}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "O2 (16 e^-) has 10 bonding and 6 antibonding electrons: BO = (10-6)/2 = 2.0. Removing an antibonding π* electron in O2^+ (15 e^-) raises BO to 2.5. Adding electrons into π* orbitals lowers BO: O2^- (17 e^-) has BO = 1.5, and O2^2- (18 e^-) has BO = 1.0.",
-      "explanation_ta": "பிணைப்புத் தரம் (BO): O2^+ (15 e^-) = 2.5; O2 (16 e^-) = 2.0; O2^- (17 e^-) = 1.5; O2^2- (18 e^-) = 1.0. எனவே சரியான இறங்கு வரிசை O2^+ > O2 > O2^- > O2^2-.",
-      "ncert_key_point": "14-electron shortcut: 14 e^- => BO = 3.0; every ±1 electron away from 14 reduces BO by 0.5 (so 15->2.5, 16->2.0, 17->1.5, 18->1.0)!",
+      "explanation_en": "$\\text{O}_2$ ($16\\ e^-$) has $10$ bonding and $6$ antibonding electrons: $\\text{BO} = \\frac{10 - 6}{2} = 2.0$. Removing an antibonding $\\pi^*$ electron in $\\text{O}_2^+$ ($15\\ e^-$) raises $\\text{BO}$ to $2.5$. Adding electrons into $\\pi^*$ orbitals lowers $\\text{BO}$: $\\text{O}_2^-$ ($17\\ e^-$) has $\\text{BO} = 1.5$, and $\\text{O}_2^{2-}$ ($18\\ e^-$) has $\\text{BO} = 1.0$.",
+      "explanation_ta": "பிணைப்புத் தரம் ($\\text{BO}$): $\\text{O}_2^+$ ($15\\ e^-$) $= 2.5$; $\\text{O}_2$ ($16\\ e^-$) $= 2.0$; $\\text{O}_2^-$ ($17\\ e^-$) $= 1.5$; $\\text{O}_2^{2-}$ ($18\\ e^-$) $= 1.0$. எனவே சரியான இறங்கு வரிசை $\\text{O}_2^+ > \\text{O}_2 > \\text{O}_2^- > \\text{O}_2^{2-}$.",
+      "ncert_key_point": "14-electron shortcut: $14\\ e^- \\Rightarrow \\text{BO} = 3.0$; every $\\pm 1$ electron away from $14$ reduces $\\text{BO}$ by $0.5$ ($15 \\to 2.5,\\ 16 \\to 2.0,\\ 17 \\to 1.5,\\ 18 \\to 1.0$)!",
       "trap_breakdown": {
-        "B": "Assumes neutral O2 has higher bond order than O2^+.",
+        "B": "Assumes neutral $\\text{O}_2$ has a higher bond order than $\\text{O}_2^+$.",
         "C": "Gives bond LENGTH order (inverse of bond order) instead of bond order!",
-        "D": "Scrambles O2 and O2^-."
+        "D": "Scrambles $\\text{O}_2$ and $\\text{O}_2^-$."
       },
       "videoTutorial": {
         "title": "Chemical Bonding & Coordination Compounds NCERT Line-by-Line (Tamil)",
@@ -1549,8 +1549,8 @@
       "pyqTag": "NEET PYQ Pattern",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "For a certain reaction, ΔH = +30 kJ mol^-1 and ΔS = +100 J K^-1 mol^-1 (assumed independent of temperature). The reaction will be spontaneous at:",
-      "stem_ta": "ஒரு வேதிவினைக்கு ΔH = +30 kJ mol^-1 மற்றும் ΔS = +100 J K^-1 mol^-1 ஆகும். இந்த வினை எப்போது தன்னிச்சையாக (spontaneous) நிகழும்?",
+      "stem_en": "For a certain reaction, $\\Delta H = +30\\text{ kJ mol}^{-1}$ and $\\Delta S = +100\\text{ J K}^{-1}\\text{ mol}^{-1}$ (assumed independent of temperature). The reaction will be spontaneous at:",
+      "stem_ta": "ஒரு வேதிவினைக்கு $\\Delta H = +30\\text{ kJ mol}^{-1}$ மற்றும் $\\Delta S = +100\\text{ J K}^{-1}\\text{ mol}^{-1}$ ஆகும். இந்த வினை எப்போது தன்னிச்சையாக (spontaneous) நிகழும்?",
       "choices": [
         {
           "letter": "A",
@@ -1559,28 +1559,28 @@
         },
         {
           "letter": "B",
-          "text_en": "Temperatures above 300 K",
-          "text_ta": "300 K-க்கு அதிகமான வெப்பநிலையில்"
+          "text_en": "Temperatures above $300\\text{ K}$",
+          "text_ta": "$300\\text{ K}$-க்கு அதிகமான வெப்பநிலையில்"
         },
         {
           "letter": "C",
-          "text_en": "Temperatures below 300 K",
-          "text_ta": "300 K-க்கு குறைவான வெப்பநிலையில்"
+          "text_en": "Temperatures below $300\\text{ K}$",
+          "text_ta": "$300\\text{ K}$-க்கு குறைவான வெப்பநிலையில்"
         },
         {
           "letter": "D",
-          "text_en": "Temperatures above 0.3 K",
-          "text_ta": "0.3 K-க்கு அதிகமான வெப்பநிலையில்"
+          "text_en": "Temperatures above $0.3\\text{ K}$",
+          "text_ta": "$0.3\\text{ K}$-க்கு அதிகமான வெப்பநிலையில்"
         }
       ],
       "correct": "B",
-      "explanation_en": "Convert ΔH to Joules! ΔH = +30,000 J mol^-1, ΔS = +100 J K^-1 mol^-1. For spontaneity, ΔG = ΔH - TΔS < 0 => TΔS > ΔH => T > 30000 / 100 => T > 300 K.",
-      "explanation_ta": "முதலில் ΔH-ஐ ஜூலுக்கு மாற்றவும்: ΔH = 30,000 J mol^-1. தன்னிச்சை வினைக்கு ΔG = ΔH - TΔS < 0 => T > ΔH / ΔS = 30000 / 100 = 300 K.",
-      "ncert_key_point": "#1 NEET Thermodynamics trap: ΔH is given in kJ while ΔS is given in J! Always multiply ΔH by 1000.",
+      "explanation_en": "Convert $\\Delta H$ to Joules! $\\Delta H = +30{,}000\\text{ J mol}^{-1}$, $\\Delta S = +100\\text{ J K}^{-1}\\text{ mol}^{-1}$. For spontaneity, $\\Delta G = \\Delta H - T\\Delta S < 0 \\Rightarrow T\\Delta S > \\Delta H \\Rightarrow T > \\frac{30{,}000}{100} \\Rightarrow T > 300\\text{ K}$.",
+      "explanation_ta": "முதலில் $\\Delta H$-ஐ ஜூலுக்கு மாற்றவும்: $\\Delta H = 30{,}000\\text{ J mol}^{-1}$. தன்னிச்சை வினைக்கு $\\Delta G = \\Delta H - T\\Delta S < 0 \\Rightarrow T > \\frac{\\Delta H}{\\Delta S} = \\frac{30{,}000}{100} = 300\\text{ K}$.",
+      "ncert_key_point": "#1 NEET Thermodynamics trap: $\\Delta H$ is given in $\\text{kJ}$ while $\\Delta S$ is given in $\\text{J}$! Always multiply $\\Delta H$ by $1000$.",
       "trap_breakdown": {
-        "A": "Spontaneous at all T requires ΔH < 0 and ΔS > 0.",
-        "C": "Reverses the inequality sign.",
-        "D": "0.3 K forgets to convert 30 kJ into 30,000 J!"
+        "A": "Spontaneous at all $T$ requires $\\Delta H < 0$ and $\\Delta S > 0$.",
+        "C": "Reverses the inequality sign ($\\Delta G < 0 \\Rightarrow T > \\frac{\\Delta H}{\\Delta S}$ when $\\Delta S > 0$).",
+        "D": "$0.3\\text{ K}$ forgets to convert $30\\text{ kJ}$ into $30{,}000\\text{ J}$!"
       },
       "videoTutorial": {
         "title": "Physical Chemistry Formulas & Numericals Masterclass",
@@ -1597,38 +1597,38 @@
       "pyqTag": "NEET Classic NCERT Trap",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "The pH of a very dilute 10^-8 M aqueous HCl solution at 25°C is approximately:",
-      "stem_ta": "25°C வெப்பநிலையில் மிக நீர்த்த 10^-8 M HCl நீர்க்கரைசலின் pH மதிப்பு தோராயமாக:",
+      "stem_en": "The $\\text{pH}$ of a very dilute $10^{-8}\\text{ M}$ aqueous $\\text{HCl}$ solution at $25^\\circ\\text{C}$ is approximately:",
+      "stem_ta": "$25^\\circ\\text{C}$ வெப்பநிலையில் மிக நீர்த்த $10^{-8}\\text{ M}\\ \\text{HCl}$ நீர்க்கரைசலின் $\\text{pH}$ மதிப்பு தோராயமாக:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "8.00",
-          "text_ta": "8.00"
+          "text_en": "$8.00$",
+          "text_ta": "$8.00$"
         },
         {
           "letter": "B",
-          "text_en": "6.98",
-          "text_ta": "6.98"
+          "text_en": "$6.98$",
+          "text_ta": "$6.98$"
         },
         {
           "letter": "C",
-          "text_en": "7.02",
-          "text_ta": "7.02"
+          "text_en": "$7.02$",
+          "text_ta": "$7.02$"
         },
         {
           "letter": "D",
-          "text_en": "6.00",
-          "text_ta": "6.00"
+          "text_en": "$6.00$",
+          "text_ta": "$6.00$"
         }
       ],
       "correct": "B",
-      "explanation_en": "An acid diluted in pure water at 25°C can NEVER become basic (pH > 7)! When [HCl] = 10^-8 M, H^+ from auto-ionization of water (~10^-7 M) must be included. Solving [H^+]([H^+] - 10^-8) = 10^-14 gives [H^+] ≈ 1.051 * 10^-7 M, so pH = -log(1.051 * 10^-7) ≈ 6.98.",
-      "explanation_ta": "அமிலக் கரைசலின் pH எப்போதும் 7-ஐ விடக் குறைவாகவே இருக்கும் (காரமாக மாறாது)! நீரின் சுய அயனியாக்கத்திலிருந்து கிடைக்கும் H^+ (~10^-7 M) சேர்க்கப்படும்போது மொத்த [H^+] ≈ 1.05 * 10^-7 M => pH ≈ 6.98.",
-      "ncert_key_point": "Very dilute strong acid (10^-8 M HCl) => pH just below 7 (~6.98). Very dilute strong base (10^-8 M NaOH) => pH just above 7 (~7.02).",
+      "explanation_en": "An acid diluted in pure water at $25^\\circ\\text{C}$ can NEVER become basic ($\\text{pH} > 7$)! When $[\\text{HCl}] = 10^{-8}\\text{ M}$, $\\text{H}^+$ from auto-ionization of water ($\\approx 10^{-7}\\text{ M}$) must be included. Solving $[\\text{H}^+]([\\text{H}^+] - 10^{-8}) = 10^{-14}$ gives $[\\text{H}^+] \\approx 1.051 \\times 10^{-7}\\text{ M}$, so $\\text{pH} = -\\log_{10}(1.051 \\times 10^{-7}) \\approx 6.98$.",
+      "explanation_ta": "அமிலக் கரைசலின் $\\text{pH}$ எப்போதும் $7$-ஐ விடக் குறைவாகவே இருக்கும் (காரமாக மாறாது)! நீரின் சுய அயனியாக்கத்திலிருந்து கிடைக்கும் $\\text{H}^+$ ($\\approx 10^{-7}\\text{ M}$) சேர்க்கப்படும்போது மொத்த $[\\text{H}^+] \\approx 1.051 \\times 10^{-7}\\text{ M} \\Rightarrow \\text{pH} \\approx 6.98$.",
+      "ncert_key_point": "Very dilute strong acid ($10^{-8}\\text{ M}\\ \\text{HCl}$) $\\Rightarrow \\text{pH} \\approx 6.98$ (just below $7$). Very dilute strong base ($10^{-8}\\text{ M}\\ \\text{NaOH}$) $\\Rightarrow \\text{pH} \\approx 7.02$.",
       "trap_breakdown": {
-        "A": "8.00 blindly applies -log(10^-8) = 8, absurdly claiming HCl in water is basic!",
-        "C": "7.02 is for 10^-8 M NaOH, not HCl.",
-        "D": "6.00 overestimates H^+ concentration by 10x."
+        "A": "$8.00$ blindly applies $-\\log_{10}(10^{-8}) = 8$, absurdly claiming $\\text{HCl}$ in water is basic!",
+        "C": "$7.02$ is for $10^{-8}\\text{ M}\\ \\text{NaOH}$, not $\\text{HCl}$.",
+        "D": "$6.00$ overestimates $[\\text{H}^+]$ by $10\\times$."
       },
       "videoTutorial": {
         "title": "Physical Chemistry Formulas & Numericals Masterclass",
@@ -1645,38 +1645,38 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "How many Faradays of electricity are required for the complete reduction of 1 mole of permanganate ions (MnO4^-) to Mn^2+ ions in acidic medium?",
-      "stem_ta": "அமில ஊடகத்தில் 1 மோல் பெர்மாங்கனேட் அயனிகளை (MnO4^-) முழுமையாக Mn^2+ அயனிகளாக ஒடுக்க எத்தனை பாரடே (Faraday) மின்சாரம் தேவை?",
+      "stem_en": "How many Faradays of electricity are required for the complete reduction of $1\\text{ mole}$ of permanganate ions ($\\text{MnO}_4^-$) to $\\text{Mn}^{2+}$ ions in acidic medium?",
+      "stem_ta": "அமில ஊடகத்தில் $1\\text{ மோல்}$ பெர்மாங்கனேட் அயனிகளை ($\\text{MnO}_4^-$) முழுமையாக $\\text{Mn}^{2+}$ அயனிகளாக ஒடுக்க எத்தனை பாரடே (Faraday) மின்சாரம் தேவை?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "5 F",
-          "text_ta": "5 F"
+          "text_en": "$5\\text{ F}$",
+          "text_ta": "$5\\text{ F}$"
         },
         {
           "letter": "B",
-          "text_en": "3 F",
-          "text_ta": "3 F"
+          "text_en": "$3\\text{ F}$",
+          "text_ta": "$3\\text{ F}$"
         },
         {
           "letter": "C",
-          "text_en": "7 F",
-          "text_ta": "7 F"
+          "text_en": "$7\\text{ F}$",
+          "text_ta": "$7\\text{ F}$"
         },
         {
           "letter": "D",
-          "text_en": "2 F",
-          "text_ta": "2 F"
+          "text_en": "$2\\text{ F}$",
+          "text_ta": "$2\\text{ F}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Half-reaction: MnO4^- + 8H^+ + 5e^- -> Mn^2+ + 4H2O. Oxidation state of Mn changes from +7 (in MnO4^-) to +2 (in Mn^2+), requiring 5 moles of electrons per mole of MnO4^-, which equals 5 Faradays (5 F).",
-      "explanation_ta": "MnO4^- இல் Mn-இன் ஆக்சிஜனேற்ற எண் +7. இது Mn^2+ (+2) ஆக மாற 1 மோலுக்கு 5 மோல் எலக்ட்ரான்கள் தேவை. எனவே தேவையான மின்னூட்டம் = 5 பாரடே (5 F).",
-      "ncert_key_point": "Charge in Faradays per mole = |Change in oxidation number per formula unit|.",
+      "explanation_en": "Half-reaction: $\\text{MnO}_4^- + 8\\text{H}^+ + 5e^- \\to \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$. Oxidation state of $\\text{Mn}$ changes from $+7$ (in $\\text{MnO}_4^-$) to $+2$ (in $\\text{Mn}^{2+}$), requiring $5\\text{ moles}$ of electrons per mole of $\\text{MnO}_4^-$, which equals $5\\text{ Faradays}$ ($5\\text{ F}$).",
+      "explanation_ta": "$\\text{MnO}_4^-$-இல் $\\text{Mn}$-இன் ஆக்சிஜனேற்ற எண் $+7$. இது $\\text{Mn}^{2+}$ ($+2$) ஆக மாற $1\\text{ மோலுக்கு}$ $5\\text{ மோல்}$ எலக்ட்ரான்கள் தேவை ($\\text{MnO}_4^- + 8\\text{H}^+ + 5e^- \\to \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$). எனவே தேவையான மின்னூட்டம் $= 5\\text{ F}$.",
+      "ncert_key_point": "Charge in Faradays per mole $= |\\text{Change in oxidation number per formula unit}|$.",
       "trap_breakdown": {
-        "B": "3 F is for reduction of MnO4^- to MnO2 (+4) in neutral/faintly alkaline medium.",
-        "C": "7 F confuses oxidation state +7 with change in oxidation state (+7 to +2 = 5).",
-        "D": "2 F confuses final charge +2 with electrons transferred."
+        "B": "$3\\text{ F}$ is for reduction of $\\text{MnO}_4^-$ to $\\text{MnO}_2$ ($+4$) in neutral/faintly alkaline medium.",
+        "C": "$7\\text{ F}$ confuses initial oxidation state $+7$ with change in oxidation state ($7 - 2 = 5$).",
+        "D": "$2\\text{ F}$ confuses final charge $+2$ with electrons transferred."
       },
       "videoTutorial": {
         "title": "Physical Chemistry Formulas & Numericals Masterclass",
@@ -1693,38 +1693,38 @@
       "pyqTag": "NEET 2023 / 2024 Pattern",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "Assuming 100% dissociation of strong electrolytes, which of the following 0.1 m aqueous solutions will have the HIGHEST boiling point?",
-      "stem_ta": "வலிமையான மின்பகுளிகள் 100% பிரிகையடைகின்றன எனக் கொண்டால், பின்வரும் 0.1 m நீர்க்கரைசல்களில் எதற்குக் கொதிநிலை மிக அதிகமாக இருக்கும்?",
+      "stem_en": "Assuming $100\\%$ dissociation of strong electrolytes, which of the following $0.1\\text{ m}$ aqueous solutions will have the HIGHEST boiling point?",
+      "stem_ta": "வலிமையான மின்பகுளிகள் $100\\%$ பிரிகையடைகின்றன எனக் கொண்டால், பின்வரும் $0.1\\text{ m}$ நீர்க்கரைசல்களில் எதற்குக் கொதிநிலை மிக அதிகமாக இருக்கும்?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "0.1 m Glucose",
-          "text_ta": "0.1 m குளுக்கோஸ்"
+          "text_en": "$0.1\\text{ m}$ Glucose",
+          "text_ta": "$0.1\\text{ m}$ குளுக்கோஸ்"
         },
         {
           "letter": "B",
-          "text_en": "0.1 m NaCl",
-          "text_ta": "0.1 m NaCl"
+          "text_en": "$0.1\\text{ m}\\ \\text{NaCl}$",
+          "text_ta": "$0.1\\text{ m}\\ \\text{NaCl}$"
         },
         {
           "letter": "C",
-          "text_en": "0.1 m BaCl2",
-          "text_ta": "0.1 m BaCl2"
+          "text_en": "$0.1\\text{ m}\\ \\text{BaCl}_2$",
+          "text_ta": "$0.1\\text{ m}\\ \\text{BaCl}_2$"
         },
         {
           "letter": "D",
-          "text_en": "0.1 m Al2(SO4)3",
-          "text_ta": "0.1 m Al2(SO4)3"
+          "text_en": "$0.1\\text{ m}\\ \\text{Al}_2(\\text{SO}_4)_3$",
+          "text_ta": "$0.1\\text{ m}\\ \\text{Al}_2(\\text{SO}_4)_3$"
         }
       ],
       "correct": "D",
-      "explanation_en": "Boiling point elevation ΔT_b = i * K_b * m. At equal molality (0.1 m), larger van 't Hoff factor i gives higher ΔT_b and highest boiling point. Glucose: i = 1; NaCl: i = 2; BaCl2: i = 3; Al2(SO4)3 -> 2 Al^3+ + 3 SO4^2- gives i = 5 (highest!).",
-      "explanation_ta": "கொதிநிலை ஏற்றம் ΔT_b = i * K_b * m. சம மோலாலிட்டியில் i மதிப்பு அதிகமாக உள்ள கரைசலின் கொதிநிலை அதிகமாக இருக்கும். Al2(SO4)3 -> 2 Al^3+ + 3 SO4^2- (i = 5), எனவே இதற்கே அதிக கொதிநிலை!",
-      "ncert_key_point": "Highest i => Highest boiling point & osmotic pressure, BUT LOWEST freezing point & vapour pressure! Read carefully!",
+      "explanation_en": "Boiling point elevation $\\Delta T_b = i K_b m$. At equal molality ($0.1\\text{ m}$), a larger van 't Hoff factor $i$ gives higher $\\Delta T_b$ and the highest boiling point. Glucose: $i = 1$; $\\text{NaCl}$: $i = 2$; $\\text{BaCl}_2$: $i = 3$; $\\text{Al}_2(\\text{SO}_4)_3 \\to 2\\text{Al}^{3+} + 3\\text{SO}_4^{2-}$ gives $i = 5$ (highest!).",
+      "explanation_ta": "கொதிநிலை ஏற்றம் $\\Delta T_b = i K_b m$. சம மோலாலிட்டியில் $i$ மதிப்பு அதிகமாக உள்ள கரைசலின் கொதிநிலை அதிகமாக இருக்கும். $\\text{Al}_2(\\text{SO}_4)_3 \\to 2\\text{Al}^{3+} + 3\\text{SO}_4^{2-}$ ($i = 5$), எனவே இதற்கே அதிக கொதிநிலை!",
+      "ncert_key_point": "Highest $i \\Rightarrow$ Highest boiling point & osmotic pressure, BUT LOWEST freezing point & vapour pressure! Read carefully!",
       "trap_breakdown": {
-        "A": "Glucose (i=1) has the HIGHEST freezing point / vapour pressure, but LOWEST boiling point.",
-        "B": "NaCl has i = 2.",
-        "C": "BaCl2 has i = 3."
+        "A": "Glucose ($i = 1$) has the HIGHEST freezing point / vapour pressure, but LOWEST boiling point.",
+        "B": "$\\text{NaCl}$ has $i = 2$.",
+        "C": "$\\text{BaCl}_2$ has $i = 3$."
       },
       "videoTutorial": {
         "title": "Physical Chemistry Formulas & Numericals Masterclass",
@@ -1741,38 +1741,38 @@
       "pyqTag": "NEET High-Frequency PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "A first-order reaction is 50% complete in 20 minutes. The time required for 87.5% completion of the same reaction is:",
-      "stem_ta": "முதல் வகை வினை ஒன்று 50% நிறைவடைய 20 நிமிடங்கள் ஆகிறது. அதே வினை 87.5% நிறைவடைய ஆகும் நேரம் எவ்வளவு?",
+      "stem_en": "A first-order reaction is $50\\%$ complete in $20\\text{ minutes}$. The time required for $87.5\\%$ completion of the same reaction is:",
+      "stem_ta": "முதல் வகை வினை ஒன்று $50\\%$ நிறைவடைய $20\\text{ நிமிடங்கள்}$ ஆகிறது. அதே வினை $87.5\\%$ நிறைவடைய ஆகும் நேரம் எவ்வளவு?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "40 minutes",
-          "text_ta": "40 நிமிடங்கள்"
+          "text_en": "$40\\text{ minutes}$",
+          "text_ta": "$40\\text{ நிமிடங்கள்}$"
         },
         {
           "letter": "B",
-          "text_en": "60 minutes",
-          "text_ta": "60 நிமிடங்கள்"
+          "text_en": "$60\\text{ minutes}$",
+          "text_ta": "$60\\text{ நிமிடங்கள்}$"
         },
         {
           "letter": "C",
-          "text_en": "80 minutes",
-          "text_ta": "80 நிமிடங்கள்"
+          "text_en": "$80\\text{ minutes}$",
+          "text_ta": "$80\\text{ நிமிடங்கள்}$"
         },
         {
           "letter": "D",
-          "text_en": "35 minutes",
-          "text_ta": "35 நிமிடங்கள்"
+          "text_en": "$35\\text{ minutes}$",
+          "text_ta": "$35\\text{ நிமிடங்கள்}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "For a first-order reaction, half-life t_1/2 = 20 min is constant. 87.5% completion means 12.5% = (1/2)^3 of reactant remains! 100% -> 50% (20 min) -> 25% (40 min) -> 12.5% (60 min). Thus t_87.5% = 3 * t_1/2 = 60 minutes.",
-      "explanation_ta": "முதல் வகை வினையின் அரைவாழ்வுக் காலம் t_1/2 = 20 நிமிடம். 87.5% நிறைவு என்றால் 12.5% மீதமுள்ளது: 100% -> 50% -> 25% -> 12.5% (3 அரைவாழ்வுக் காலங்கள்). எனவே நேரம் = 3 * 20 = 60 நிமிடங்கள்.",
-      "ncert_key_point": "Memorize first-order ratios: t_75% = 2 t_1/2; t_87.5% = 3 t_1/2; t_99.9% ≈ 10 t_1/2.",
+      "explanation_en": "For a first-order reaction, half-life $t_{1/2} = 20\\text{ min}$ is independent of initial concentration. $87.5\\%$ completion means $12.5\\% = \\left(\\frac{1}{2}\\right)^3$ of reactant remains! $100\\% \\to 50\\%\\ (20\\text{ min}) \\to 25\\%\\ (40\\text{ min}) \\to 12.5\\%\\ (60\\text{ min})$. Thus $t_{87.5\\%} = 3 \\times t_{1/2} = 60\\text{ minutes}$.",
+      "explanation_ta": "முதல் வகை வினையின் அரைவாழ்வுக் காலம் $t_{1/2} = 20\\text{ நிமிடம்}$. $87.5\\%$ நிறைவு என்றால் $12.5\\% = \\left(\\frac{1}{2}\\right)^3$ மீதமுள்ளது: $100\\% \\to 50\\% \\to 25\\% \\to 12.5\\%$ ($3$ அரைவாழ்வுக் காலங்கள்). எனவே $t_{87.5\\%} = 3 \\times 20 = 60\\text{ நிமிடங்கள்}$.",
+      "ncert_key_point": "Memorize first-order ratios: $t_{75\\%} = 2\\,t_{1/2}$; $t_{87.5\\%} = 3\\,t_{1/2}$; $t_{99.9\\%} \\approx 10\\,t_{1/2}$.",
       "trap_breakdown": {
-        "A": "40 minutes gives 75% completion (25% remaining).",
-        "C": "80 minutes gives 93.75% completion (6.25% remaining).",
-        "D": "35 minutes wrongly assumes zero-order linear proportionality (20 * 87.5 / 50)."
+        "A": "$40\\text{ minutes}$ ($2\\,t_{1/2}$) gives $75\\%$ completion ($25\\%$ remaining).",
+        "C": "$80\\text{ minutes}$ ($4\\,t_{1/2}$) gives $93.75\\%$ completion ($6.25\\%$ remaining).",
+        "D": "$35\\text{ minutes}$ wrongly assumes zero-order linear proportionality ($20 \\times \\frac{87.5}{50}$)."
       },
       "videoTutorial": {
         "title": "Physical Chemistry Formulas & Numericals Masterclass",
@@ -1789,38 +1789,38 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Easy",
-      "stem_en": "The spin-only magnetic moment of divalent Mn^2+ ion (atomic number Z = 25) in aqueous solution is:",
-      "stem_ta": "நீர்க்கரைசலில் ஈரிணைதிறன் கொண்ட Mn^2+ அயனியின் (அணு எண் Z = 25) தற்சுழற்சி காந்தத் திருப்புத்திறன் (spin-only magnetic moment) மதிப்பு:",
+      "stem_en": "The spin-only magnetic moment of divalent $\\text{Mn}^{2+}$ ion (atomic number $Z = 25$) in aqueous solution is:",
+      "stem_ta": "நீர்க்கரைசலில் ஈரிணைதிறன் கொண்ட $\\text{Mn}^{2+}$ அயனியின் (அணு எண் $Z = 25$) தற்சுழற்சி காந்தத் திருப்புத்திறன் (spin-only magnetic moment) மதிப்பு:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "4.90 BM",
-          "text_ta": "4.90 BM"
+          "text_en": "$4.90\\text{ BM}$",
+          "text_ta": "$4.90\\text{ BM}$"
         },
         {
           "letter": "B",
-          "text_en": "5.92 BM",
-          "text_ta": "5.92 BM"
+          "text_en": "$5.92\\text{ BM}$",
+          "text_ta": "$5.92\\text{ BM}$"
         },
         {
           "letter": "C",
-          "text_en": "3.87 BM",
-          "text_ta": "3.87 BM"
+          "text_en": "$3.87\\text{ BM}$",
+          "text_ta": "$3.87\\text{ BM}$"
         },
         {
           "letter": "D",
-          "text_en": "2.84 BM",
-          "text_ta": "2.84 BM"
+          "text_en": "$2.84\\text{ BM}$",
+          "text_ta": "$2.84\\text{ BM}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "Ground state Mn (Z=25) is [Ar] 3d^5 4s^2. Losing two 4s electrons gives Mn^2+ = [Ar] 3d^5 with n = 5 unpaired electrons. Spin-only magnetic moment μ = sqrt(n(n+2)) = sqrt(5 * 7) = sqrt(35) ≈ 5.92 BM.",
-      "explanation_ta": "Mn (Z=25): [Ar] 3d^5 4s^2 => Mn^2+: [Ar] 3d^5. தனித்த எலக்ட்ரான்கள் n = 5. காந்தத் திருப்புத்திறன் μ = sqrt(n(n+2)) = sqrt(35) ≈ 5.92 BM.",
-      "ncert_key_point": "Integer shortcut: integer part of μ = sqrt(n(n+2)) ALWAYS equals n! (n=1 -> 1.73, n=2 -> 2.84, n=3 -> 3.87, n=4 -> 4.90, n=5 -> 5.92 BM).",
+      "explanation_en": "Ground state $\\text{Mn}$ ($Z = 25$) is $[\\text{Ar}]\\,3d^5 4s^2$. Losing two $4s$ electrons gives $\\text{Mn}^{2+} = [\\text{Ar}]\\,3d^5$ with $n = 5$ unpaired electrons. Spin-only magnetic moment $\\mu = \\sqrt{n(n + 2)} = \\sqrt{5 \\times 7} = \\sqrt{35} \\approx 5.92\\text{ BM}$.",
+      "explanation_ta": "$\\text{Mn}$ ($Z = 25$): $[\\text{Ar}]\\,3d^5 4s^2 \\Rightarrow \\text{Mn}^{2+}$: $[\\text{Ar}]\\,3d^5$. தனித்த எலக்ட்ரான்கள் $n = 5$. காந்தத் திருப்புத்திறன் $\\mu = \\sqrt{n(n + 2)} = \\sqrt{35} \\approx 5.92\\text{ BM}$.",
+      "ncert_key_point": "Integer shortcut: integer part of $\\mu = \\sqrt{n(n+2)}$ ALWAYS equals $n$! ($n=1 \\to 1.73,\\ n=2 \\to 2.84,\\ n=3 \\to 3.87,\\ n=4 \\to 4.90,\\ n=5 \\to 5.92\\text{ BM}$).",
       "trap_breakdown": {
-        "A": "4.90 BM corresponds to n = 4 (e.g., Fe^2+ or Cr^2+).",
-        "C": "3.87 BM corresponds to n = 3 (e.g., Cr^3+ or Co^2+).",
-        "D": "2.84 BM corresponds to n = 2 (e.g., Ni^2+)."
+        "A": "$4.90\\text{ BM}$ corresponds to $n = 4$ (e.g., $\\text{Fe}^{2+}$ or $\\text{Cr}^{2+}$).",
+        "C": "$3.87\\text{ BM}$ corresponds to $n = 3$ (e.g., $\\text{Cr}^{3+}$ or $\\text{Co}^{2+}$).",
+        "D": "$2.84\\text{ BM}$ corresponds to $n = 2$ (e.g., $\\text{Ni}^{2+}$)."
       },
       "videoTutorial": {
         "title": "Chemical Bonding & Coordination Compounds NCERT Line-by-Line (Tamil)",
@@ -1837,38 +1837,38 @@
       "pyqTag": "NEET 2023 / 2024 Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Medium",
-      "stem_en": "The hybridisation, geometry, and magnetic nature of the complex ion [Ni(CN)4]^2- (atomic number of Ni = 28) are respectively:",
-      "stem_ta": "[Ni(CN)4]^2- என்ற அணைவு அயனியின் இனக்கலப்பு, வடிவியல் மற்றும் காந்தத் தன்மை முறையே (Ni அணு எண் = 28):",
+      "stem_en": "The hybridisation, geometry, and magnetic nature of the complex ion $[\\text{Ni(CN)}_4]^{2-}$ (atomic number of $\\text{Ni} = 28$) are respectively:",
+      "stem_ta": "$[\\text{Ni(CN)}_4]^{2-}$ என்ற அணைவு அயனியின் இனக்கலப்பு, வடிவியல் மற்றும் காந்தத் தன்மை முறையே ($\\text{Ni}$ அணு எண் $= 28$):",
       "choices": [
         {
           "letter": "A",
-          "text_en": "sp^3, Tetrahedral, Paramagnetic",
-          "text_ta": "sp^3, நான்முகி, பாராகாந்தத் தன்மை"
+          "text_en": "$sp^3$, Tetrahedral, Paramagnetic",
+          "text_ta": "$sp^3$, நான்முகி, பாராகாந்தத் தன்மை"
         },
         {
           "letter": "B",
-          "text_en": "dsp^2, Square planar, Diamagnetic",
-          "text_ta": "dsp^2, தள சதுரம், டயாகாந்தத் தன்மை"
+          "text_en": "$dsp^2$, Square planar, Diamagnetic",
+          "text_ta": "$dsp^2$, தள சதுரம், டயாகாந்தத் தன்மை"
         },
         {
           "letter": "C",
-          "text_en": "sp^3, Tetrahedral, Diamagnetic",
-          "text_ta": "sp^3, நான்முகி, டயாகாந்தத் தன்மை"
+          "text_en": "$sp^3$, Tetrahedral, Diamagnetic",
+          "text_ta": "$sp^3$, நான்முகி, டயாகாந்தத் தன்மை"
         },
         {
           "letter": "D",
-          "text_en": "dsp^2, Square planar, Paramagnetic",
-          "text_ta": "dsp^2, தள சதுரம், பாராகாந்தத் தன்மை"
+          "text_en": "$dsp^2$, Square planar, Paramagnetic",
+          "text_ta": "$dsp^2$, தள சதுரம், பாராகாந்தத் தன்மை"
         }
       ],
       "correct": "B",
-      "explanation_en": "In [Ni(CN)4]^2-, Nickel is in +2 state (3d^8). Cyanide (CN^-) is a strong-field ligand, forcing the 8 d-electrons to pair up in four 3d orbitals, leaving one 3d orbital vacant for dsp^2 hybridisation -> Square planar geometry and Diamagnetic (0 unpaired electrons).",
-      "explanation_ta": "[Ni(CN)4]^2- இல் Ni^2+ (3d^8) உள்ளது. CN^- வலிமையான ஈனி (strong-field ligand) என்பதால் எலக்ட்ரான்கள் இணையாகி dsp^2 இனக்கலப்பு, தள சதுர வடிவம் மற்றும் டயாகாந்தத் தன்மையைப் (0 தனித்த எலக்ட்ரான்) பெறுகிறது.",
-      "ncert_key_point": "Contrast the classic NCERT trio: [NiCl4]^2- (sp^3, tetrahedral, paramagnetic, 2 e^-), [Ni(CN)4]^2- (dsp^2, square planar, diamagnetic), [Ni(CO)4] (Ni^0 3d^10, sp^3, tetrahedral, diamagnetic)!",
+      "explanation_en": "In $[\\text{Ni(CN)}_4]^{2-}$, Nickel is in $+2$ state ($3d^8$). Cyanide ($\\text{CN}^-$) is a strong-field ligand, forcing the $8$ $d$-electrons to pair up in four $3d$ orbitals, leaving one $3d$ orbital vacant for $dsp^2$ hybridisation $\\to$ Square planar geometry and Diamagnetic ($0$ unpaired electrons).",
+      "explanation_ta": "$[\\text{Ni(CN)}_4]^{2-}$-இல் $\\text{Ni}^{2+}$ ($3d^8$) உள்ளது. $\\text{CN}^-$ வலிமையான ஈனி (strong-field ligand) என்பதால் எலக்ட்ரான்கள் இணையாகி $dsp^2$ இனக்கலப்பு, தள சதுர வடிவம் மற்றும் டயாகாந்தத் தன்மையைப் ($0$ தனித்த எலக்ட்ரான்) பெறுகிறது.",
+      "ncert_key_point": "Contrast the classic NCERT trio: $[\\text{NiCl}_4]^{2-}$ ($sp^3$, tetrahedral, paramagnetic, $2\\ e^-$), $[\\text{Ni(CN)}_4]^{2-}$ ($dsp^2$, square planar, diamagnetic), $[\\text{Ni(CO)}_4]$ ($\\text{Ni}^0\\ 3d^{10}$, $sp^3$, tetrahedral, diamagnetic)!",
       "trap_breakdown": {
-        "A": "sp^3, Tetrahedral, Paramagnetic is for [NiCl4]^2- (weak-field Cl^- ligand).",
-        "C": "sp^3, Tetrahedral, Diamagnetic is for neutral [Ni(CO)4] where Ni is in 0 oxidation state!",
-        "D": "dsp^2 Ni(II) cannot be paramagnetic because all 8 3d electrons are paired."
+        "A": "$sp^3$, Tetrahedral, Paramagnetic is for $[\\text{NiCl}_4]^{2-}$ (weak-field $\\text{Cl}^-$ ligand).",
+        "C": "$sp^3$, Tetrahedral, Diamagnetic is for neutral $[\\text{Ni(CO)}_4]$ where $\\text{Ni}$ is in $0$ oxidation state!",
+        "D": "$dsp^2$ $\\text{Ni(II)}$ cannot be paramagnetic because all $8$ $3d$ electrons are paired."
       },
       "videoTutorial": {
         "title": "Chemical Bonding & Coordination Compounds NCERT Line-by-Line (Tamil)",
@@ -1885,38 +1885,38 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Medium",
-      "stem_en": "Arrange the following compounds in decreasing order of acidic strength: (I) Phenol, (II) p-Nitrophenol, (III) p-Cresol (4-methylphenol), (IV) 2,4,6-Trinitrophenol (Picric acid).",
-      "stem_ta": "பின்வரும் சேர்மங்களை அவற்றின் அமில வலிமையின் இறங்கு வரிசையில் எழுதுக: (I) பீனால், (II) p-நைட்ரோபீனால், (III) p-கிரெசால் (4-மெத்தில்பீனால்), (IV) 2,4,6-டிரைநைட்ரோபீனால் (பிக்ரிக் அமிலம்).",
+      "stem_en": "Arrange the following compounds in decreasing order of acidic strength: (I) Phenol, (II) *p*-Nitrophenol, (III) *p*-Cresol (4-methylphenol), (IV) 2,4,6-Trinitrophenol (Picric acid).",
+      "stem_ta": "பின்வரும் சேர்மங்களை அவற்றின் அமில வலிமையின் இறங்கு வரிசையில் எழுதுக: (I) பீனால், (II) *p*-நைட்ரோபீனால், (III) *p*-கிரெசால் (4-மெத்தில்பீனால்), (IV) 2,4,6-டிரைநைட்ரோபீனால் (பிக்ரிக் அமிலம்).",
       "choices": [
         {
           "letter": "A",
-          "text_en": "IV > II > I > III",
-          "text_ta": "IV > II > I > III"
+          "text_en": "$\\text{IV} > \\text{II} > \\text{I} > \\text{III}$",
+          "text_ta": "$\\text{IV} > \\text{II} > \\text{I} > \\text{III}$"
         },
         {
           "letter": "B",
-          "text_en": "II > IV > I > III",
-          "text_ta": "II > IV > I > III"
+          "text_en": "$\\text{II} > \\text{IV} > \\text{I} > \\text{III}$",
+          "text_ta": "$\\text{II} > \\text{IV} > \\text{I} > \\text{III}$"
         },
         {
           "letter": "C",
-          "text_en": "IV > II > III > I",
-          "text_ta": "IV > II > III > I"
+          "text_en": "$\\text{IV} > \\text{II} > \\text{III} > \\text{I}$",
+          "text_ta": "$\\text{IV} > \\text{II} > \\text{III} > \\text{I}$"
         },
         {
           "letter": "D",
-          "text_en": "III > I > II > IV",
-          "text_ta": "III > I > II > IV"
+          "text_en": "$\\text{III} > \\text{I} > \\text{II} > \\text{IV}$",
+          "text_ta": "$\\text{III} > \\text{I} > \\text{II} > \\text{IV}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Electron-withdrawing groups (-NO2 via -M and -I effects) disperse negative charge on the phenoxide ion and strongly INCREASE acidity; electron-donating groups (-CH3 via +I/hyperconjugation) DECREASE acidity. Thus: Picric acid (IV) > p-Nitrophenol (II) > Phenol (I) > p-Cresol (III).",
-      "explanation_ta": "எலக்ட்ரான் கவரும் தொகுதிகள் (-NO2) பீனாக்சைடு அயனியை நிலைப்படுத்தி அமிலத் தன்மையை அதிகரிக்கும்; எலக்ட்ரான் தரும் தொகுதிகள் (-CH3) அமிலத் தன்மையைக் குறைக்கும். எனவே: IV > II > I > III.",
-      "ncert_key_point": "EWG (-NO2, -CN, -X) increases acidity (lower pKa); EDG (-CH3, -OCH3) decreases acidity (higher pKa).",
+      "explanation_en": "Electron-withdrawing groups ($-\\text{NO}_2$ via $-M$ and $-I$ effects) disperse negative charge on the phenoxide ion and strongly INCREASE acidity; electron-donating groups ($-\\text{CH}_3$ via $+I$ and hyperconjugation) DECREASE acidity. Thus: Picric acid (IV) $>$ *p*-Nitrophenol (II) $>$ Phenol (I) $>$ *p*-Cresol (III).",
+      "explanation_ta": "எலக்ட்ரான் கவரும் தொகுதிகள் ($-\\text{NO}_2$) பீனாக்சைடு அயனியை நிலைப்படுத்தி அமிலத் தன்மையை அதிகரிக்கும்; எலக்ட்ரான் தரும் தொகுதிகள் ($-\\text{CH}_3$) அமிலத் தன்மையைக் குறைக்கும். எனவே: $\\text{IV} > \\text{II} > \\text{I} > \\text{III}$.",
+      "ncert_key_point": "EWG ($-\\text{NO}_2, -\\text{CN}, -\\text{X}$) increases acidity (lower $\\text{p}K_a$); EDG ($-\\text{CH}_3, -\\text{OCH}_3$) decreases acidity (higher $\\text{p}K_a$).",
       "trap_breakdown": {
-        "B": "3 nitro groups stabilize phenoxide far more than 1 nitro group.",
-        "C": "Places p-cresol above phenol despite destabilizing +I methyl group.",
-        "D": "Gives decreasing pKa^-1 / increasing pKa order instead of acidic strength."
+        "B": "Three $-\\text{NO}_2$ groups stabilize phenoxide far more than one $-\\text{NO}_2$ group.",
+        "C": "Places *p*-cresol above phenol despite its destabilizing $+I$ methyl group.",
+        "D": "Gives increasing order of acidic strength (decreasing $\\text{p}K_a$ reversed) instead of decreasing acidic strength."
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -1933,8 +1933,8 @@
       "pyqTag": "NEET High-Frequency PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Medium",
-      "stem_en": "Reductive ozonolysis ((i) O3, (ii) Zn/H2O) of an alkene 'X' gives an equimolar mixture of ethanal (CH3CHO) and propanone (CH3COCH3). The IUPAC name of alkene 'X' is:",
-      "stem_ta": "ஆல்கீன் 'X' ஆனது ஒடுக்க ஓசோனேற்றம் ((i) O3, (ii) Zn/H2O) அடையும்போது எத்தனல் (CH3CHO) மற்றும் புரோப்பனோன் (CH3COCH3) ஆகியவற்றை சம மோலார் அளவில் தருகிறது. 'X'-இன் IUPAC பெயர் என்ன?",
+      "stem_en": "Reductive ozonolysis ((i) $\\text{O}_3$, (ii) $\\text{Zn}/\\text{H}_2\\text{O}$) of an alkene 'X' gives an equimolar mixture of ethanal ($\\text{CH}_3\\text{CHO}$) and propanone ($\\text{CH}_3\\text{COCH}_3$). The IUPAC name of alkene 'X' is:",
+      "stem_ta": "ஆல்கீன் 'X' ஆனது ஒடுக்க ஓசோனேற்றம் ((i) $\\text{O}_3$, (ii) $\\text{Zn}/\\text{H}_2\\text{O}$) அடையும்போது எத்தனல் ($\\text{CH}_3\\text{CHO}$) மற்றும் புரோப்பனோன் ($\\text{CH}_3\\text{COCH}_3$) ஆகியவற்றை சம மோலார் அளவில் தருகிறது. 'X'-இன் IUPAC பெயர் என்ன?",
       "choices": [
         {
           "letter": "A",
@@ -1958,13 +1958,13 @@
         }
       ],
       "correct": "A",
-      "explanation_en": "Shortcut: place the carbonyl oxygens face-to-face: (CH3)2C=O + O=CH-CH3, erase both O atoms, and join with a double bond => (CH3)2C=CH-CH3. Numbering the 4-carbon chain from the left gives double bond at C2 and methyl branch at C2: 2-Methylbut-2-ene.",
-      "explanation_ta": "(CH3)2C=O மற்றும் O=CH-CH3 ஆகியவற்றின் ஆக்சிஜன்களை நீக்கி இரட்டைப் பிணைப்பால் இணைத்தால் (CH3)2C=CH-CH3 கிடைக்கும். இதன் IUPAC பெயர் 2-மெத்தில்பியூட்-2-ஈன்.",
-      "ncert_key_point": "Reverse ozonolysis trick: point the two C=O groups at each other, delete O + O, and weld C=C.",
+      "explanation_en": "Shortcut: place the carbonyl oxygens face-to-face: $(\\text{CH}_3)_2\\text{C=O} + \\text{O=CH–CH}_3$, erase both $\\text{O}$ atoms, and join with a double bond $\\Rightarrow (\\text{CH}_3)_2\\text{C=CH–CH}_3$. Numbering the 4-carbon chain from the left gives the double bond at $\\text{C}_2$ and methyl branch at $\\text{C}_2$: **2-Methylbut-2-ene**.",
+      "explanation_ta": "$(\\text{CH}_3)_2\\text{C=O}$ மற்றும் $\\text{O=CH–CH}_3$ ஆகியவற்றின் ஆக்சிஜன்களை நீக்கி இரட்டைப் பிணைப்பால் இணைத்தால் $(\\text{CH}_3)_2\\text{C=CH–CH}_3$ கிடைக்கும். இதன் IUPAC பெயர் **2-மெத்தில்பியூட்-2-ஈன்**.",
+      "ncert_key_point": "Reverse ozonolysis trick: point the two $\\text{C=O}$ groups at each other, delete $\\text{O} + \\text{O}$, and weld $\\text{C=C}$.",
       "trap_breakdown": {
-        "B": "2-Methylbut-1-ene gives methanal (HCHO) + butan-2-one.",
-        "C": "Pent-2-ene gives ethanal + propanal (two aldehydes, no ketone).",
-        "D": "2,3-Dimethylbut-2-ene gives 2 moles of propanone only."
+        "B": "2-Methylbut-1-ene gives methanal ($\\text{HCHO}$) $+$ butan-2-one.",
+        "C": "Pent-2-ene gives ethanal $+$ propanal (two aldehydes, no ketone).",
+        "D": "2,3-Dimethylbut-2-ene gives $2\\text{ moles}$ of propanone only."
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -1981,38 +1981,38 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "Which of the following alkyl bromides undergoes nucleophilic substitution by the SN1 mechanism at the FASTEST rate?",
-      "stem_ta": "பின்வரும் ஆல்கைல் புரோமைடுகளில் எது SN1 வினைவழிமுறையின் மூலம் மிக வேகமாக கருக்கவர் பதிலீட்டு வினைக்கு உட்படும்?",
+      "stem_en": "Which of the following alkyl bromides undergoes nucleophilic substitution by the $\\text{S}_{\\text{N}}1$ mechanism at the FASTEST rate?",
+      "stem_ta": "பின்வரும் ஆல்கைல் புரோமைடுகளில் எது $\\text{S}_{\\text{N}}1$ வினைவழிமுறையின் மூலம் மிக வேகமாக கருக்கவர் பதிலீட்டு வினைக்கு உட்படும்?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "CH3CH2Br",
-          "text_ta": "CH3CH2Br"
+          "text_en": "$\\text{CH}_3\\text{CH}_2\\text{Br}$",
+          "text_ta": "$\\text{CH}_3\\text{CH}_2\\text{Br}$"
         },
         {
           "letter": "B",
-          "text_en": "(CH3)2CHBr",
-          "text_ta": "(CH3)2CHBr"
+          "text_en": "$(\\text{CH}_3)_2\\text{CHBr}$",
+          "text_ta": "$(\\text{CH}_3)_2\\text{CHBr}$"
         },
         {
           "letter": "C",
-          "text_en": "(CH3)3CBr",
-          "text_ta": "(CH3)3CBr"
+          "text_en": "$(\\text{CH}_3)_3\\text{CBr}$",
+          "text_ta": "$(\\text{CH}_3)_3\\text{CBr}$"
         },
         {
           "letter": "D",
-          "text_en": "CH3Br",
-          "text_ta": "CH3Br"
+          "text_en": "$\\text{CH}_3\\text{Br}$",
+          "text_ta": "$\\text{CH}_3\\text{Br}$"
         }
       ],
       "correct": "C",
-      "explanation_en": "The rate-determining step of SN1 is unimolecular C-Br bond cleavage to form a carbocation intermediate. Tertiary carbocation (CH3)3C^+ is stabilized by 9 α-C-H hyperconjugative structures + +I effect, so 3° halide (CH3)3CBr reacts fastest via SN1!",
-      "explanation_ta": "SN1 வினையின் வேகம் உருவாகும் கார்பன் நேர் அயனியின் (carbocation) நிலைப்புத்தன்மையைப் பொறுத்தது. மூவிணைய (3°) கார்பன் நேர் அயனி (CH3)3C^+ மிகவும் நிலைப்புத்தன்மை உடையதால் (CH3)3CBr மிக வேகமாக வினைபுரியும்!",
-      "ncert_key_point": "Alkyl halide reactivity: SN1 => 3° > 2° > 1° > CH3X; SN2 => CH3X > 1° > 2° > 3°.",
+      "explanation_en": "The rate-determining step of $\\text{S}_{\\text{N}}1$ is unimolecular $\\text{C–Br}$ bond cleavage to form a carbocation intermediate. Tertiary carbocation $(\\text{CH}_3)_3\\text{C}^+$ is stabilized by $9$ $\\alpha$-$\\text{C–H}$ hyperconjugative structures $+\\ +I$ effect, so $3^\\circ$ halide $(\\text{CH}_3)_3\\text{CBr}$ reacts fastest via $\\text{S}_{\\text{N}}1$!",
+      "explanation_ta": "$\\text{S}_{\\text{N}}1$ வினையின் வேகம் உருவாகும் கார்பன் நேர் அயனியின் (carbocation) நிலைப்புத்தன்மையைப் பொறுத்தது. மூவிணைய ($3^\\circ$) கார்பன் நேர் அயனி $(\\text{CH}_3)_3\\text{C}^+$ மிகவும் நிலைப்புத்தன்மை உடையதால் $(\\text{CH}_3)_3\\text{CBr}$ மிக வேகமாக வினைபுரியும்!",
+      "ncert_key_point": "Alkyl halide reactivity: $\\text{S}_{\\text{N}}1 \\Rightarrow 3^\\circ > 2^\\circ > 1^\\circ > \\text{CH}_3\\text{X}$; $\\text{S}_{\\text{N}}2 \\Rightarrow \\text{CH}_3\\text{X} > 1^\\circ > 2^\\circ > 3^\\circ$.",
       "trap_breakdown": {
-        "A": "1° halide prefers SN2.",
-        "B": "2° carbocation is less stable than 3°.",
-        "D": "CH3Br reacts fastest via SN2, and slowest via SN1!"
+        "A": "$1^\\circ$ halide ($\\text{CH}_3\\text{CH}_2\\text{Br}$) prefers $\\text{S}_{\\text{N}}2$.",
+        "B": "$2^\\circ$ carbocation is less stable than $3^\\circ$.",
+        "D": "$\\text{CH}_3\\text{Br}$ reacts fastest via $\\text{S}_{\\text{N}}2$, and slowest via $\\text{S}_{\\text{N}}1$!"
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -2029,8 +2029,8 @@
       "pyqTag": "NEET 2022 / 2024 Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "When phenol is treated with chloroform (CHCl3) and aqueous NaOH followed by acidification, the major product obtained is (Reimer-Tiemann reaction):",
-      "stem_ta": "பீனாலை குளோரோஃபார்ம் (CHCl3) மற்றும் நீர்த்த NaOH உடன் வினைப்படுத்தி, பின் அமிலமாக்கும்போது கிடைக்கும் முதன்மை விளைபொருள் எது (ரைமர்-டீமன் வினை)?",
+      "stem_en": "When phenol is treated with chloroform ($\\text{CHCl}_3$) and aqueous $\\text{NaOH}$ followed by acidification, the major product obtained is (Reimer–Tiemann reaction):",
+      "stem_ta": "பீனாலை குளோரோஃபார்ம் ($\\text{CHCl}_3$) மற்றும் நீர்த்த $\\text{NaOH}$ உடன் வினைப்படுத்தி, பின் அமிலமாக்கும்போது கிடைக்கும் முதன்மை விளைபொருள் எது (ரைமர்-டீமன் வினை)?",
       "choices": [
         {
           "letter": "A",
@@ -2054,13 +2054,13 @@
         }
       ],
       "correct": "B",
-      "explanation_en": "In the Reimer-Tiemann reaction, CHCl3 + NaOH generates the electrophile dichlorocarbene (:CCl2), which attacks the ortho position of phenoxide ion, hydrolyzes to -CHO, and upon acidification yields Salicylaldehyde (2-hydroxybenzaldehyde).",
-      "explanation_ta": "ரைமர்-டீமன் வினையில் CHCl3 + NaOH வினைபுரிந்து டைகுளோரோகார்பீன் (:CCl2) எலக்ட்ரான் கவர் காரணியை உருவாக்கி, சாலிசிலால்டிஹைடை (2-ஹைட்ராக்சிபென்சால்டிஹைடு) முதன்மை விளைபொருளாகத் தருகிறது.",
-      "ncert_key_point": "Phenol + CHCl3/NaOH => Salicylaldehyde (Reimer-Tiemann); Phenol + CO2/NaOH => Salicylic acid (Kolbe's reaction); Phenol + Zn dust => Benzene.",
+      "explanation_en": "In the Reimer–Tiemann reaction, $\\text{CHCl}_3 + \\text{NaOH}$ generates the electrophile dichlorocarbene ($:\\!\\text{CCl}_2$), which attacks the *ortho* position of phenoxide ion, hydrolyzes to $-\\text{CHO}$, and upon acidification yields **Salicylaldehyde** (2-hydroxybenzaldehyde).",
+      "explanation_ta": "ரைமர்-டீமன் வினையில் $\\text{CHCl}_3 + \\text{NaOH}$ வினைபுரிந்து டைகுளோரோகார்பீன் ($:\\!\\text{CCl}_2$) எலக்ட்ரான் கவர் காரணியை உருவாக்கி, **சாலிசிலால்டிஹைடை** (2-ஹைட்ராக்சிபென்சால்டிஹைடு) முதன்மை விளைபொருளாகத் தருகிறது.",
+      "ncert_key_point": "Phenol $+\\ \\text{CHCl}_3/\\text{NaOH} \\to$ Salicylaldehyde (Reimer–Tiemann); Phenol $+\\ \\text{CO}_2/\\text{NaOH} \\to$ Salicylic acid (Kolbe's reaction); Phenol $+\\ \\text{Zn}$ dust $\\to$ Benzene.",
       "trap_breakdown": {
-        "A": "Salicylic acid is formed in Kolbe's reaction (CO2 + NaOH) or if CCl4 is used instead of CHCl3!",
-        "C": "Benzoquinone is formed on oxidation of phenol with Na2Cr2O7 / H2SO4.",
-        "D": "Phenol's -OH group remains intact; Zn dust is not used here."
+        "A": "Salicylic acid is formed in Kolbe's reaction ($\\text{CO}_2 + \\text{NaOH}$) or if $\\text{CCl}_4$ is used instead of $\\text{CHCl}_3$!",
+        "C": "Benzoquinone is formed on oxidation of phenol with $\\text{Na}_2\\text{Cr}_2\\text{O}_7 / \\text{H}_2\\text{SO}_4$.",
+        "D": "Phenol's $-\\text{OH}$ group remains intact; $\\text{Zn}$ dust is not used here."
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -2077,38 +2077,38 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "Which of the following aldehydes will undergo Cannizzaro disproportionation reaction on heating with concentrated NaOH?",
-      "stem_ta": "பின்வரும் ஆல்டிஹைடுகளில் எது அடர் NaOH உடன் வெப்பப்படுத்தும்போது கன்னிசாரோ (Cannizzaro) விகிதச்சிதைவு வினைக்கு உட்படும்?",
+      "stem_en": "Which of the following aldehydes will undergo Cannizzaro disproportionation reaction on heating with concentrated $\\text{NaOH}$?",
+      "stem_ta": "பின்வரும் ஆல்டிஹைடுகளில் எது அடர் $\\text{NaOH}$ உடன் வெப்பப்படுத்தும்போது கன்னிசாரோ (Cannizzaro) விகிதச்சிதைவு வினைக்கு உட்படும்?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "Ethanal (CH3CHO)",
-          "text_ta": "எத்தனல் (CH3CHO)"
+          "text_en": "Ethanal ($\\text{CH}_3\\text{CHO}$)",
+          "text_ta": "எத்தனல் ($\\text{CH}_3\\text{CHO}$)"
         },
         {
           "letter": "B",
-          "text_en": "Propanal (CH3CH2CHO)",
-          "text_ta": "புரோப்பனல் (CH3CH2CHO)"
+          "text_en": "Propanal ($\\text{CH}_3\\text{CH}_2\\text{CHO}$)",
+          "text_ta": "புரோப்பனல் ($\\text{CH}_3\\text{CH}_2\\text{CHO}$)"
         },
         {
           "letter": "C",
-          "text_en": "Benzaldehyde (C6H5CHO)",
-          "text_ta": "பென்சால்டிஹைடு (C6H5CHO)"
+          "text_en": "Benzaldehyde ($\\text{C}_6\\text{H}_5\\text{CHO}$)",
+          "text_ta": "பென்சால்டிஹைடு ($\\text{C}_6\\text{H}_5\\text{CHO}$)"
         },
         {
           "letter": "D",
-          "text_en": "Phenylacetaldehyde (C6H5CH2CHO)",
-          "text_ta": "பினைல்அசிட்டால்டிஹைடு (C6H5CH2CHO)"
+          "text_en": "Phenylacetaldehyde ($\\text{C}_6\\text{H}_5\\text{CH}_2\\text{CHO}$)",
+          "text_ta": "பினைல்அசிட்டால்டிஹைடு ($\\text{C}_6\\text{H}_5\\text{CH}_2\\text{CHO}$)"
         }
       ],
       "correct": "C",
-      "explanation_en": "Cannizzaro reaction is given ONLY by aldehydes that have NO α-hydrogen atom! In Benzaldehyde (C6H5-CHO), the carbon attached to -CHO is a ring sp^2 carbon bearing zero hydrogens, so it disproportionates into Benzyl alcohol + Sodium benzoate.",
-      "explanation_ta": "ஆல்பா-ஹைட்ரஜன் (α-H) இல்லாத ஆல்டிஹைடுகள் மட்டுமே கன்னிசாரோ வினைக்கு உட்படும்! பென்சால்டிஹைடில் (C6H5CHO) α-ஹைட்ரஜன் இல்லை என்பதால் அது பென்சைல் ஆல்கஹால் மற்றும் சோடியம் பென்சோயேட்டைத் தருகிறது.",
-      "ncert_key_point": "Has α-H => Aldol condensation (dilute alkali). Zero α-H (HCHO, C6H5CHO, (CH3)3CCHO) => Cannizzaro reaction (conc. alkali).",
+      "explanation_en": "Cannizzaro reaction is given ONLY by aldehydes that have NO $\\alpha$-hydrogen atom! In Benzaldehyde ($\\text{C}_6\\text{H}_5\\text{CHO}$), the carbon attached to $-\\text{CHO}$ is a ring $sp^2$ carbon bearing zero hydrogens, so it disproportionates into Benzyl alcohol ($\\text{C}_6\\text{H}_5\\text{CH}_2\\text{OH}$) $+$ Sodium benzoate ($\\text{C}_6\\text{H}_5\\text{COONa}$).",
+      "explanation_ta": "ஆல்பா-ஹைட்ரஜன் ($\\alpha$-$\\text{H}$) இல்லாத ஆல்டிஹைடுகள் மட்டுமே கன்னிசாரோ வினைக்கு உட்படும்! பென்சால்டிஹைடில் ($\\text{C}_6\\text{H}_5\\text{CHO}$) $\\alpha$-$\\text{H}$ இல்லை என்பதால் அது பென்சைல் ஆல்கஹால் மற்றும் சோடியம் பென்சோயேட்டைத் தருகிறது.",
+      "ncert_key_point": "Has $\\alpha$-$\\text{H} \\Rightarrow$ Aldol condensation (dilute alkali). Zero $\\alpha$-$\\text{H}$ ($\\text{HCHO}$, $\\text{C}_6\\text{H}_5\\text{CHO}$, $(\\text{CH}_3)_3\\text{CCHO}$) $\\Rightarrow$ Cannizzaro reaction (conc. alkali).",
       "trap_breakdown": {
-        "A": "Ethanal has 3 α-hydrogens -> undergoes Aldol.",
-        "B": "Propanal has 2 α-hydrogens -> undergoes Aldol.",
-        "D": "Phenylacetaldehyde has 2 benzylic α-hydrogens (-CH2-) -> undergoes Aldol!"
+        "A": "Ethanal has $3$ $\\alpha$-hydrogens $\\to$ undergoes Aldol condensation.",
+        "B": "Propanal has $2$ $\\alpha$-hydrogens $\\to$ undergoes Aldol condensation.",
+        "D": "Phenylacetaldehyde has $2$ benzylic $\\alpha$-hydrogens ($-\\text{CH}_2-$) $\\to$ undergoes Aldol condensation!"
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -2125,38 +2125,38 @@
       "pyqTag": "NEET 2023 / 2024 Official PYQ",
       "questionType": "Single Choice MCQ",
       "difficulty": "Easy",
-      "stem_en": "Which reagent converts Ethanamide (CH3CONH2) directly into Methanamine (CH3NH2) with one carbon atom less?",
-      "stem_ta": "எத்தனமைடை (CH3CONH2) ஒரு கார்பன் அணு குறைவான மெத்தனமீனாக (CH3NH2) நேரடியாக மாற்றும் வினைக்காரணி எது?",
+      "stem_en": "Which reagent converts Ethanamide ($\\text{CH}_3\\text{CONH}_2$) directly into Methanamine ($\\text{CH}_3\\text{NH}_2$) with one carbon atom less?",
+      "stem_ta": "எத்தனமைடை ($\\text{CH}_3\\text{CONH}_2$) ஒரு கார்பன் அணு குறைவான மெத்தனமீனாக ($\\text{CH}_3\\text{NH}_2$) நேரடியாக மாற்றும் வினைக்காரணி எது?",
       "choices": [
         {
           "letter": "A",
-          "text_en": "LiAlH4 followed by H2O",
-          "text_ta": "LiAlH4 மற்றும் H2O"
+          "text_en": "$\\text{LiAlH}_4$ followed by $\\text{H}_2\\text{O}$",
+          "text_ta": "$\\text{LiAlH}_4$ மற்றும் $\\text{H}_2\\text{O}$"
         },
         {
           "letter": "B",
-          "text_en": "Br2 and aqueous/ethanolic NaOH",
-          "text_ta": "Br2 மற்றும் நீர்த்த/ஆல்கஹால் கலந்த NaOH"
+          "text_en": "$\\text{Br}_2$ and aqueous/ethanolic $\\text{NaOH}$",
+          "text_ta": "$\\text{Br}_2$ மற்றும் நீர்த்த/ஆல்கஹால் கலந்த $\\text{NaOH}$"
         },
         {
           "letter": "C",
-          "text_en": "P2O5 with heating",
-          "text_ta": "P2O5 உடன் வெப்பப்படுத்துதல்"
+          "text_en": "$\\text{P}_2\\text{O}_5$ with heating",
+          "text_ta": "$\\text{P}_2\\text{O}_5$ உடன் வெப்பப்படுத்துதல்"
         },
         {
           "letter": "D",
-          "text_en": "NaNO2 + HCl",
-          "text_ta": "NaNO2 + HCl"
+          "text_en": "$\\text{NaNO}_2 + \\text{HCl}$",
+          "text_ta": "$\\text{NaNO}_2 + \\text{HCl}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "Hoffmann bromamide degradation: CH3CONH2 + Br2 + 4NaOH -> CH3NH2 + Na2CO3 + 2NaBr + 2H2O. The carbonyl carbon is lost as Na2CO3, producing a primary amine with ONE fewer carbon atom.",
-      "explanation_ta": "ஹாஃப்மன் புரோமமைடு இறக்க வினை: CH3CONH2 + Br2 + 4NaOH -> CH3NH2 + Na2CO3 + 2NaBr + 2H2O. இது ஒரு கார்பன் குறைவான ஓரிணைய அமீனைத் தருகிறது.",
-      "ncert_key_point": "Step-down amine (n-1 carbons): Br2/NaOH on amide. Same-carbon amine (n carbons): LiAlH4 reduction of amide.",
+      "explanation_en": "Hoffmann bromamide degradation: $\\text{CH}_3\\text{CONH}_2 + \\text{Br}_2 + 4\\text{NaOH} \\to \\text{CH}_3\\text{NH}_2 + \\text{Na}_2\\text{CO}_3 + 2\\text{NaBr} + 2\\text{H}_2\\text{O}$. The carbonyl carbon is lost as $\\text{Na}_2\\text{CO}_3$, producing a primary amine with ONE fewer carbon atom.",
+      "explanation_ta": "ஹாஃப்மன் புரோமமைடு இறக்க வினை: $\\text{CH}_3\\text{CONH}_2 + \\text{Br}_2 + 4\\text{NaOH} \\to \\text{CH}_3\\text{NH}_2 + \\text{Na}_2\\text{CO}_3 + 2\\text{NaBr} + 2\\text{H}_2\\text{O}$. இது ஒரு கார்பன் குறைவான ஓரிணைய அமீனைத் தருகிறது.",
+      "ncert_key_point": "Step-down amine ($n - 1$ carbons): $\\text{Br}_2/\\text{NaOH}$ on amide. Same-carbon amine ($n$ carbons): $\\text{LiAlH}_4$ reduction of amide.",
       "trap_breakdown": {
-        "A": "LiAlH4 reduces -CONH2 to -CH2NH2, giving Ethanamine (CH3CH2NH2, 2 carbons), NOT Methanamine!",
-        "C": "P2O5 dehydrates ethanamide to ethanenitrile (CH3CN).",
-        "D": "HNO2 converts amide into ethanoic acid + N2."
+        "A": "$\\text{LiAlH}_4$ reduces $-\\text{CONH}_2$ to $-\\text{CH}_2\\text{NH}_2$, giving Ethanamine ($\\text{CH}_3\\text{CH}_2\\text{NH}_2$, $2$ carbons), NOT Methanamine!",
+        "C": "$\\text{P}_2\\text{O}_5$ dehydrates ethanamide to ethanenitrile ($\\text{CH}_3\\text{CN}$).",
+        "D": "$\\text{HNO}_2$ ($\\text{NaNO}_2 + \\text{HCl}$) converts primary amide into ethanoic acid ($\\text{CH}_3\\text{COOH}$) $+\\ \\text{N}_2$."
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -2173,8 +2173,8 @@
       "pyqTag": "NEET Statement-Based PYQ",
       "questionType": "Statement I & II",
       "difficulty": "Medium",
-      "stem_en": "Given below are two statements:\nStatement I: Sucrose is a non-reducing sugar because the glycosidic linkage is between C1 of α-D-glucose and C2 of β-D-fructose, locking both reducing groups.\nStatement II: Maltose and lactose are reducing sugars.\nChoose the correct option:",
-      "stem_ta": "கீழே இரண்டு கூற்றுகள் கொடுக்கப்பட்டுள்ளன:\nகூற்று I: சுக்ரோஸில் α-D-குளுக்கோஸின் C1 மற்றும் β-D-ஃபிரக்டோஸின் C2 இடையே கிளைக்கோசிடிக் பிணைப்பு உள்ளதால் இது ஒரு ஒடுக்கா சர்க்கரை (non-reducing sugar) ஆகும்.\nகூற்று II: மால்டோஸ் மற்றும் லாக்டோஸ் ஆகியவை ஒடுக்கும் சர்க்கரைகள் (reducing sugars) ஆகும்.\nசரியான விடையைத் தேர்ந்தெடுக்கவும்:",
+      "stem_en": "Given below are two statements:\nStatement I: Sucrose is a non-reducing sugar because the glycosidic linkage is between $\\text{C}_1$ of $\\alpha$-D-glucose and $\\text{C}_2$ of $\\beta$-D-fructose, locking both reducing groups.\nStatement II: Maltose and lactose are reducing sugars.\nChoose the correct option:",
+      "stem_ta": "கீழே இரண்டு கூற்றுகள் கொடுக்கப்பட்டுள்ளன:\nகூற்று I: சுக்ரோஸில் $\\alpha$-D-குளுக்கோஸின் $\\text{C}_1$ மற்றும் $\\beta$-D-ஃபிரக்டோஸின் $\\text{C}_2$ இடையே கிளைக்கோசிடிக் பிணைப்பு உள்ளதால் இது ஒரு ஒடுக்கா சர்க்கரை (non-reducing sugar) ஆகும்.\nகூற்று II: மால்டோஸ் மற்றும் லாக்டோஸ் ஆகியவை ஒடுக்கும் சர்க்கரைகள் (reducing sugars) ஆகும்.\nசரியான விடையைத் தேர்ந்தெடுக்கவும்:",
       "choices": [
         {
           "letter": "A",
@@ -2198,13 +2198,13 @@
         }
       ],
       "correct": "A",
-      "explanation_en": "Exact NCERT Biomolecules facts: In sucrose, both anomeric carbons (C1 of α-D-glucose and C2 of β-D-fructose) participate in the glycosidic bond, so it cannot reduce Fehling's or Tollens' reagent. Maltose and lactose each retain one free hemiacetal C1 group and are reducing sugars.",
-      "explanation_ta": "NCERT உயிரிமூலக்கூறுகள் பாடத்தின்படி: சுக்ரோஸில் இரு ஒடுக்கும் தொகுதிகளும் (C1 மற்றும் C2) பிணைப்பில் ஈடுபட்டுள்ளதால் அது ஒடுக்கா சர்க்கரை ஆகும். மால்டோஸ் மற்றும் லாக்டோஸ் ஒடுக்கும் சர்க்கரைகள் ஆகும். எனவே இரு கூற்றுகளும் சரி.",
-      "ncert_key_point": "All monosaccharides + Maltose + Lactose = Reducing sugars. Sucrose = Non-reducing disaccharide!",
+      "explanation_en": "Exact NCERT Biomolecules facts: In sucrose, both anomeric carbons ($\\text{C}_1$ of $\\alpha$-D-glucose and $\\text{C}_2$ of $\\beta$-D-fructose) participate in the glycosidic bond, so it cannot reduce Fehling's or Tollens' reagent. Maltose and lactose each retain one free hemiacetal $\\text{C}_1$ group and are reducing sugars.",
+      "explanation_ta": "NCERT உயிரிமூலக்கூறுகள் பாடத்தின்படி: சுக்ரோஸில் இரு ஒடுக்கும் தொகுதிகளும் ($\\text{C}_1$ மற்றும் $\\text{C}_2$) பிணைப்பில் ஈடுபட்டுள்ளதால் அது ஒடுக்கா சர்க்கரை ஆகும். மால்டோஸ் மற்றும் லாக்டோஸ் ஒடுக்கும் சர்க்கரைகள் ஆகும். எனவே இரு கூற்றுகளும் சரி.",
+      "ncert_key_point": "All monosaccharides $+$ Maltose $+$ Lactose $=$ Reducing sugars. Sucrose $=$ Non-reducing disaccharide!",
       "trap_breakdown": {
         "B": "Contradicts NCERT disaccharide classification.",
-        "C": "Maltose and lactose DO reduce Tollens'/Fehling's solution.",
-        "D": "C1(α-glucose)–C2(β-fructose) is the exact NCERT linkage of sucrose."
+        "C": "Maltose and lactose DO reduce Tollens' and Fehling's solutions.",
+        "D": "$\\text{C}_1$($\\alpha$-D-glucose)–$\\text{C}_2$($\\beta$-D-fructose) is the exact NCERT linkage of sucrose."
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -2226,33 +2226,33 @@
       "choices": [
         {
           "letter": "A",
-          "text_en": "Na4[Fe(CN)6]",
-          "text_ta": "Na4[Fe(CN)6]"
+          "text_en": "$\\text{Na}_4[\\text{Fe(CN)}_6]$",
+          "text_ta": "$\\text{Na}_4[\\text{Fe(CN)}_6]$"
         },
         {
           "letter": "B",
-          "text_en": "Fe4[Fe(CN)6]3 · xH2O",
-          "text_ta": "Fe4[Fe(CN)6]3 · xH2O"
+          "text_en": "$\\text{Fe}_4[\\text{Fe(CN)}_6]_3 \\cdot x\\text{H}_2\\text{O}$",
+          "text_ta": "$\\text{Fe}_4[\\text{Fe(CN)}_6]_3 \\cdot x\\text{H}_2\\text{O}$"
         },
         {
           "letter": "C",
-          "text_en": "[Fe(CN)5NOS]^4-",
-          "text_ta": "[Fe(CN)5NOS]^4-"
+          "text_en": "$[\\text{Fe(CN)}_5\\text{NOS}]^{4-}$",
+          "text_ta": "$[\\text{Fe(CN)}_5\\text{NOS}]^{4-}$"
         },
         {
           "letter": "D",
-          "text_en": "[Fe(SCN)]^2+",
-          "text_ta": "[Fe(SCN)]^2+"
+          "text_en": "$[\\text{Fe(SCN)}]^{2+}$",
+          "text_ta": "$[\\text{Fe(SCN)}]^{2+}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "Sodium fusion extract contains NaCN, which reacts with Fe^2+ to form Na4[Fe(CN)6]. Upon boiling with conc. H2SO4/air, some Fe^2+ oxidizes to Fe^3+, reacting with [Fe(CN)6]^4- to form Iron(III) hexacyanoferrate(II), Fe4[Fe(CN)6]3 · xH2O (Prussian blue).",
-      "explanation_ta": "சோடியம் சாறு FeSO4 உடன் வினைபுரிந்து Na4[Fe(CN)6] உருவாக்கி, பின் Fe^3+ அயனிகளுடன் இணைந்து Fe4[Fe(CN)6]3 · xH2O (ஃபெரிக் ஃபெரோசயனைடு — புருஷியன் நீல நிறம்) தருகிறது.",
-      "ncert_key_point": "Lassaigne colours (NCERT must-memorize!): Fe4[Fe(CN)6]3 = Prussian Blue (N only); [Fe(SCN)]^2+ = Blood Red (both N & S present); [Fe(CN)5NOS]^4- = Violet (S with nitroprusside)!",
+      "explanation_en": "Sodium fusion extract contains $\\text{NaCN}$, which reacts with $\\text{Fe}^{2+}$ to form $\\text{Na}_4[\\text{Fe(CN)}_6]$. Upon boiling with conc. $\\text{H}_2\\text{SO}_4$/air, some $\\text{Fe}^{2+}$ oxidizes to $\\text{Fe}^{3+}$, reacting with $[\\text{Fe(CN)}_6]^{4-}$ to form Iron(III) hexacyanoferrate(II), $\\text{Fe}_4[\\text{Fe(CN)}_6]_3 \\cdot x\\text{H}_2\\text{O}$ (Prussian blue).",
+      "explanation_ta": "சோடியம் சாறு $\\text{FeSO}_4$ உடன் வினைபுரிந்து $\\text{Na}_4[\\text{Fe(CN)}_6]$ உருவாக்கி, பின் $\\text{Fe}^{3+}$ அயனிகளுடன் இணைந்து $\\text{Fe}_4[\\text{Fe(CN)}_6]_3 \\cdot x\\text{H}_2\\text{O}$ (ஃபெரிக் ஃபெரோசயனைடு — புருஷியன் நீல நிறம்) தருகிறது.",
+      "ncert_key_point": "Lassaigne colours (NCERT must-memorize!): $\\text{Fe}_4[\\text{Fe(CN)}_6]_3 =$ Prussian Blue ($\\text{N}$ only); $[\\text{Fe(SCN)}]^{2+} =$ Blood Red (both $\\text{N}$ & $\\text{S}$ present); $[\\text{Fe(CN)}_5\\text{NOS}]^{4-} =$ Violet ($\\text{S}$ with nitroprusside)!",
       "trap_breakdown": {
-        "A": "Na4[Fe(CN)6] is the intermediate sodium hexacyanoferrate(II), not Prussian blue.",
-        "C": "[Fe(CN)5NOS]^4- gives Violet colour in sodium nitroprusside test for Sulphur.",
-        "D": "[Fe(SCN)]^2+ gives Blood Red colour when BOTH N and S are present together."
+        "A": "$\\text{Na}_4[\\text{Fe(CN)}_6]$ is the intermediate sodium hexacyanoferrate(II), not Prussian blue.",
+        "C": "$[\\text{Fe(CN)}_5\\text{NOS}]^{4-}$ gives Violet colour in the sodium nitroprusside test for Sulphur.",
+        "D": "$[\\text{Fe(SCN)}]^{2+}$ gives Blood Red colour when BOTH $\\text{N}$ and $\\text{S}$ are present together."
       },
       "videoTutorial": {
         "title": "Organic Chemistry Named Reactions & Mechanisms (Tamil)",
@@ -2653,34 +2653,34 @@
       "pyqTag": "NEET Official PYQ",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "To synthesize ONE molecule of glucose (C6H12O6) via the Calvin cycle in a C3 plant, how many molecules of CO2, ATP, and NADPH are required respectively?",
-      "stem_ta": "C3 தாவரத்தில் கால்வின் சுழற்சியின் வழியே ஒரு குளுக்கோஸ் (C6H12O6) மூலக்கூறை உருவாக்கத் தேவைப்படும் CO2, ATP மற்றும் NADPH மூலக்கூறுகளின் எண்ணிக்கை முறையே:",
+      "stem_en": "To synthesize ONE molecule of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) via the Calvin cycle in a $\\text{C}_3$ plant, how many molecules of $\\text{CO}_2$, $\\text{ATP}$, and $\\text{NADPH}$ are required respectively?",
+      "stem_ta": "$\\text{C}_3$ தாவரத்தில் கால்வின் சுழற்சியின் வழியே ஒரு குளுக்கோஸ் ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) மூலக்கூறை உருவாக்கத் தேவைப்படும் $\\text{CO}_2$, $\\text{ATP}$ மற்றும் $\\text{NADPH}$ மூலக்கூறுகளின் எண்ணிக்கை முறையே:",
       "choices": [
         {
           "letter": "A",
-          "text_en": "6 CO2, 18 ATP, 12 NADPH",
-          "text_ta": "6 CO2, 18 ATP, 12 NADPH"
+          "text_en": "$6\\ \\text{CO}_2$, $18\\ \\text{ATP}$, $12\\ \\text{NADPH}$",
+          "text_ta": "$6\\ \\text{CO}_2$, $18\\ \\text{ATP}$, $12\\ \\text{NADPH}$"
         },
         {
           "letter": "B",
-          "text_en": "6 CO2, 30 ATP, 12 NADPH",
-          "text_ta": "6 CO2, 30 ATP, 12 NADPH"
+          "text_en": "$6\\ \\text{CO}_2$, $30\\ \\text{ATP}$, $12\\ \\text{NADPH}$",
+          "text_ta": "$6\\ \\text{CO}_2$, $30\\ \\text{ATP}$, $12\\ \\text{NADPH}$"
         },
         {
           "letter": "C",
-          "text_en": "6 CO2, 12 ATP, 18 NADPH",
-          "text_ta": "6 CO2, 12 ATP, 18 NADPH"
+          "text_en": "$6\\ \\text{CO}_2$, $12\\ \\text{ATP}$, $18\\ \\text{NADPH}$",
+          "text_ta": "$6\\ \\text{CO}_2$, $12\\ \\text{ATP}$, $18\\ \\text{NADPH}$"
         },
         {
           "letter": "D",
-          "text_en": "1 CO2, 3 ATP, 2 NADPH",
-          "text_ta": "1 CO2, 3 ATP, 2 NADPH"
+          "text_en": "$1\\ \\text{CO}_2$, $3\\ \\text{ATP}$, $2\\ \\text{NADPH}$",
+          "text_ta": "$1\\ \\text{CO}_2$, $3\\ \\text{ATP}$, $2\\ \\text{NADPH}$"
         }
       ],
       "correct": "A",
-      "explanation_en": "Per CO2 fixed in C3 Calvin cycle: 3 ATP (2 in reduction + 1 in regeneration) and 2 NADPH are used. For 1 glucose (6 carbons = 6 turns of Calvin cycle): 6 CO2, 6 * 3 = 18 ATP, and 6 * 2 = 12 NADPH! (In C4 plants, 2 extra ATP per CO2 are used for PEP regeneration -> 30 ATP + 12 NADPH).",
-      "explanation_ta": "C3 சுழற்சியில் ஒரு CO2 நிலைநிறுத்த 3 ATP மற்றும் 2 NADPH தேவை. எனவே 1 குளுக்கோஸ் உருவாக்க (6 சுற்றுகள்): 6 CO2, 18 ATP மற்றும் 12 NADPH தேவை! (C4 தாவரத்தில் 30 ATP, 12 NADPH தேவை).",
-      "ncert_key_point": "1 Glucose in C3 => 18 ATP, 12 NADPH. 1 Glucose in C4 => 30 ATP, 12 NADPH.",
+      "explanation_en": "Per $\\text{CO}_2$ fixed in the $\\text{C}_3$ Calvin cycle: $3\\ \\text{ATP}$ ($2$ in reduction $+\\ 1$ in regeneration) and $2\\ \\text{NADPH}$ are used. For $1$ glucose ($6$ carbons $= 6$ turns of Calvin cycle): $6\\ \\text{CO}_2$, $6 \\times 3 = 18\\ \\text{ATP}$, and $6 \\times 2 = 12\\ \\text{NADPH}$! (In $\\text{C}_4$ plants, $2$ extra $\\text{ATP}$ per $\\text{CO}_2$ are used for PEP regeneration $\\to 30\\ \\text{ATP} + 12\\ \\text{NADPH}$).",
+      "explanation_ta": "$\\text{C}_3$ சுழற்சியில் ஒரு $\\text{CO}_2$ நிலைநிறுத்த $3\\ \\text{ATP}$ மற்றும் $2\\ \\text{NADPH}$ தேவை. எனவே $1$ குளுக்கோஸ் உருவாக்க ($6$ சுற்றுகள்): $6\\ \\text{CO}_2$, $18\\ \\text{ATP}$ மற்றும் $12\\ \\text{NADPH}$ தேவை! ($\\text{C}_4$ தாவரத்தில் $30\\ \\text{ATP}$, $12\\ \\text{NADPH}$ தேவை).",
+      "ncert_key_point": "$1$ Glucose in $\\text{C}_3 \\Rightarrow 18\\ \\text{ATP},\\ 12\\ \\text{NADPH}$. $1$ Glucose in $\\text{C}_4 \\Rightarrow 30\\ \\text{ATP},\\ 12\\ \\text{NADPH}$.",
       "trap_breakdown": {
         "B": "30 ATP, 12 NADPH is for C4 plants, not C3 plants!",
         "C": "Swaps ATP (18) and NADPH (12).",
@@ -2872,7 +2872,7 @@
       "correct": "B",
       "explanation_en": "Snapdragon flower colour shows Incomplete Dominance: F2 produces 1 Red (RR) : 2 Pink (Rr) : 1 White (rr). Therefore, BOTH phenotypic ratio and genotypic ratio are 1 : 2 : 1!",
       "explanation_ta": "ஆன்டிரைனம் மலர் நிறம் முழுமையற்ற ஓங்குத்தன்மைக்கு (Incomplete dominance) எடுத்துக்காட்டு. F2-இல் 1 சிவப்பு (RR) : 2 இளஞ்சிவப்பு (Rr) : 1 வெள்ளை (rr) கிடைப்பதால் புறத்தோற்ற மற்றும் மரபணு விகிதங்கள் இரண்டும் 1 : 2 : 1 ஆகும்!",
-      "ncert_key_point": "Identical 1 : 2 : 1 phenotypic & genotypic F2 ratio is the hallmark of BOTH Incomplete Dominance (Snapdragon) and Codominance (MN/ABO IAIB).",
+      "ncert_key_point": "Identical $1 : 2 : 1$ phenotypic & genotypic $\\text{F}_2$ ratio is the hallmark of BOTH Incomplete Dominance (Snapdragon) and Codominance (MN / ABO $I^A I^B$).",
       "trap_breakdown": {
         "A": "3 : 1 phenotypic ratio is complete Mendelian dominance (garden pea).",
         "C": "Genotypic ratio of monohybrid selfing is never 3 : 1.",
@@ -2918,7 +2918,7 @@
         }
       ],
       "correct": "A",
-      "explanation_en": "Exact NCERT Class 12 Ch 4 Genetics mechanism: Point mutation in the 6th codon of beta-globin mRNA from GAG (codes for Glutamic acid) to GUG (codes for Valine) directly causes the Glu -> Val substitution at position 6, leading to Hb^S polymerisation under low O2 tension. Both A and R are true and R directly explains A!",
+      "explanation_en": "Exact NCERT Class 12 Ch 4 Genetics mechanism: Point mutation in the 6th codon of beta-globin mRNA from GAG (codes for Glutamic acid) to GUG (codes for Valine) directly causes the Glu $\\to$ Val substitution at position 6, leading to $\\text{Hb}^S$ polymerisation under low $\\text{O}_2$ tension. Both A and R are true and R directly explains A!",
       "explanation_ta": "பீட்டா-குளோபின் மரபணுவின் 6-வது கோடான் GAG (குளுட்டாமிக் அமிலம்) இலிருந்து GUG (வாலின்) ஆக புள்ளி சடுதிமாற்றம் அடைவதாலேயே 6-வது இடத்தில் Glu -> Val மாற்றம் ஏற்பட்டு கதிர்அரிவாள் இரத்த சோகை உண்டாகிறது. எனவே A, R இரண்டும் சரி மற்றும் R சரியான விளக்கமாகும்.",
       "ncert_key_point": "Check carefully in NEET: Glu replaced by Val (GAG -> GUG) on beta-globin 6th position (chromosome 11) — NTA often swaps Val and Glu to trap students!",
       "trap_breakdown": {
@@ -3325,8 +3325,8 @@
       "pyqTag": "NEET 2023 / 2024 Official PYQ",
       "questionType": "Statement I & II",
       "difficulty": "Medium",
-      "stem_en": "Given below are two statements regarding enzyme action:\nStatement I: Inhibition of succinic dehydrogenase by malonate, which closely resembles the substrate succinate in structure, is an example of competitive inhibition.\nStatement II: In competitive inhibition, the inhibitor decreases the apparent affinity of enzyme for substrate (K_m increases), while V_max remains unchanged at high substrate concentration.\nChoose the correct option:",
-      "stem_ta": "நொதிச் செயல்பாடு குறித்த இரு கூற்றுகள்:\nகூற்று I: சக்சினேட்டை ஒத்த அமைப்புடைய மலோனேட்டால் சக்சினிக் டிஹைட்ரோஜினேஸ் நொதி தடுக்கப்படுவது போட்டித் தடுப்பிற்கு (Competitive inhibition) எடுத்துக்காட்டாகும்.\nகூற்று II: போட்டித் தடுப்பில் K_m மதிப்பு அதிகரிக்கிறது, ஆனால் அதிக வினைபடுபொருள் செறிவில் V_max மாறுவதில்லை.\nசரியான விடையைத் தேர்ந்தெடுக்கவும்:",
+      "stem_en": "Given below are two statements regarding enzyme action:\nStatement I: Inhibition of succinic dehydrogenase by malonate, which closely resembles the substrate succinate in structure, is an example of competitive inhibition.\nStatement II: In competitive inhibition, the inhibitor decreases the apparent affinity of enzyme for substrate ($K_m$ increases), while $V_{\\max}$ remains unchanged at high substrate concentration.\nChoose the correct option:",
+      "stem_ta": "நொதிச் செயல்பாடு குறித்த இரு கூற்றுகள்:\nகூற்று I: சக்சினேட்டை ஒத்த அமைப்புடைய மலோனேட்டால் சக்சினிக் டிஹைட்ரோஜினேஸ் நொதி தடுக்கப்படுவது போட்டித் தடுப்பிற்கு (Competitive inhibition) எடுத்துக்காட்டாகும்.\nகூற்று II: போட்டித் தடுப்பில் $K_m$ மதிப்பு அதிகரிக்கிறது, ஆனால் அதிக வினைபடுபொருள் செறிவில் $V_{\\max}$ மாறுவதில்லை.\nசரியான விடையைத் தேர்ந்தெடுக்கவும்:",
       "choices": [
         {
           "letter": "A",
@@ -3350,12 +3350,12 @@
         }
       ],
       "correct": "A",
-      "explanation_en": "Malonate competing with succinate for the active site of succinic dehydrogenase is NCERT's textbook example of competitive inhibition! Because flooding with excess substrate can outcompete the reversible inhibitor, V_max stays unchanged while apparent K_m increases. Both statements are correct!",
-      "explanation_ta": "சக்சினேட்டுடன் மலோனேட் போட்டியிடுவது போட்டித் தடுப்பிற்கு NCERT எடுத்துக்காட்டு. அதிக வினைபடுபொருள் சேர்க்கும்போது தடுப்பை வெல்ல முடிவதால் V_max மாறாது, ஆனால் K_m அதிகரிக்கும். இரு கூற்றுகளும் சரி!",
-      "ncert_key_point": "Competitive inhibition: K_m INCREASES, V_max UNCHANGED. Classic example: Malonate inhibits Succinic dehydrogenase.",
+      "explanation_en": "Malonate competing with succinate for the active site of succinic dehydrogenase is NCERT's textbook example of competitive inhibition! Because flooding with excess substrate can outcompete the reversible inhibitor, $V_{\\max}$ stays unchanged while apparent $K_m$ increases. Both statements are correct!",
+      "explanation_ta": "சக்சினேட்டுடன் மலோனேட் போட்டியிடுவது போட்டித் தடுப்பிற்கு NCERT எடுத்துக்காட்டு. அதிக வினைபடுபொருள் சேர்க்கும்போது தடுப்பை வெல்ல முடிவதால் $V_{\\max}$ மாறாது, ஆனால் $K_m$ அதிகரிக்கும். இரு கூற்றுகளும் சரி!",
+      "ncert_key_point": "Competitive inhibition: $K_m$ INCREASES, $V_{\\max}$ UNCHANGED. Classic example: Malonate inhibits Succinic dehydrogenase.",
       "trap_breakdown": {
         "B": "Both are verified NCERT & NEET 2023/2024 enzyme kinetics facts.",
-        "C": "Many students wrongly think competitive inhibitor lowers V_max — it raises K_m without changing V_max!",
+        "C": "Many students wrongly think competitive inhibitor lowers $V_{\\max}$ — it raises $K_m$ without changing $V_{\\max}$!",
         "D": "Malonate + succinic dehydrogenase is verbatim NCERT."
       },
       "videoTutorial": {
@@ -3378,33 +3378,33 @@
       "choices": [
         {
           "letter": "A",
-          "text_en": "High pO2, low pCO2, lesser H^+ concentration (higher pH), and lower temperature",
-          "text_ta": "அதிக pO2, குறைந்த pCO2, குறைந்த H^+ செறிவு (அதிக pH), மற்றும் குறைந்த வெப்பநிலை"
+          "text_en": "High $p\\text{O}_2$, low $p\\text{CO}_2$, lesser $\\text{H}^+$ concentration (higher $\\text{pH}$), and lower temperature",
+          "text_ta": "அதிக $p\\text{O}_2$, குறைந்த $p\\text{CO}_2$, குறைந்த $\\text{H}^+$ செறிவு (அதிக $\\text{pH}$), மற்றும் குறைந்த வெப்பநிலை"
         },
         {
           "letter": "B",
-          "text_en": "Low pO2, high pCO2, high H^+ concentration, and higher temperature",
-          "text_ta": "குறைந்த pO2, அதிக pCO2, அதிக H^+ செறிவு, மற்றும் அதிக வெப்பநிலை"
+          "text_en": "Low $p\\text{O}_2$, high $p\\text{CO}_2$, high $\\text{H}^+$ concentration, and higher temperature",
+          "text_ta": "குறைந்த $p\\text{O}_2$, அதிக $p\\text{CO}_2$, அதிக $\\text{H}^+$ செறிவு, மற்றும் அதிக வெப்பநிலை"
         },
         {
           "letter": "C",
-          "text_en": "High pO2, high pCO2, high H^+ concentration, and higher temperature",
-          "text_ta": "அதிக pO2, அதிக pCO2, அதிக H^+ செறிவு, மற்றும் அதிக வெப்பநிலை"
+          "text_en": "High $p\\text{O}_2$, high $p\\text{CO}_2$, high $\\text{H}^+$ concentration, and higher temperature",
+          "text_ta": "அதிக $p\\text{O}_2$, அதிக $p\\text{CO}_2$, அதிக $\\text{H}^+$ செறிவு, மற்றும் அதிக வெப்பநிலை"
         },
         {
           "letter": "D",
-          "text_en": "High pO2, low pCO2, high H^+ concentration (low pH), and higher temperature",
-          "text_ta": "அதிக pO2, குறைந்த pCO2, அதிக H^+ செறிவு (குறைந்த pH), மற்றும் அதிக வெப்பநிலை"
+          "text_en": "High $p\\text{O}_2$, low $p\\text{CO}_2$, high $\\text{H}^+$ concentration (low $\\text{pH}$), and higher temperature",
+          "text_ta": "அதிக $p\\text{O}_2$, குறைந்த $p\\text{CO}_2$, அதிக $\\text{H}^+$ செறிவு (குறைந்த $\\text{pH}$), மற்றும் அதிக வெப்பநிலை"
         }
       ],
       "correct": "A",
-      "explanation_en": "Verbatim NCERT Class 11 Ch 14: In alveoli, HIGH pO2, LOW pCO2, LESSER H^+ concentration (higher pH), and LOWER temperature favour oxyhaemoglobin association (left shift). In metabolically active tissues, the exact opposite (low pO2, high pCO2, high H^+, higher T) favours O2 dissociation (right shift / Bohr effect)!",
-      "explanation_ta": "காற்று நுண்ணறைகளில் அதிக pO2, குறைந்த pCO2, குறைந்த H^+ செறிவு மற்றும் குறைந்த வெப்பநிலை ஆகியவை ஆக்சிஹீமோகுளோபின் உருவாகச் சாதகமானவை. திசுக்களில் இதற்கு நேர் எதிரான நிலைகள் O2 பிரிகையடைய உதவும்!",
-      "ncert_key_point": "Watch H^+ vs pH carefully! Lesser H^+ concentration = HIGHER pH (alkaline shift in lungs).",
+      "explanation_en": "Verbatim NCERT Class 11 Ch 14: In alveoli, HIGH $p\\text{O}_2$, LOW $p\\text{CO}_2$, LESSER $\\text{H}^+$ concentration (higher $\\text{pH}$), and LOWER temperature favour oxyhaemoglobin association (left shift). In metabolically active tissues, the exact opposite (low $p\\text{O}_2$, high $p\\text{CO}_2$, high $\\text{H}^+$, higher $T$) favours $\\text{O}_2$ dissociation (right shift / Bohr effect)!",
+      "explanation_ta": "காற்று நுண்ணறைகளில் அதிக $p\\text{O}_2$, குறைந்த $p\\text{CO}_2$, குறைந்த $\\text{H}^+$ செறிவு மற்றும் குறைந்த வெப்பநிலை ஆகியவை ஆக்சிஹீமோகுளோபின் உருவாகச் சாதகமானவை. திசுக்களில் இதற்கு நேர் எதிரான நிலைகள் $\\text{O}_2$ பிரிகையடைய உதவும்!",
+      "ncert_key_point": "Watch $\\text{H}^+$ vs $\\text{pH}$ carefully! Lesser $\\text{H}^+$ concentration $=$ HIGHER $\\text{pH}$ (alkaline shift in lungs).",
       "trap_breakdown": {
         "B": "Conditions in active tissues causing OXYHAEMOGLOBIN DISSOCIATION, not formation!",
-        "C": "High pCO2, H^+, T oppose O2 binding.",
-        "D": "High H^+ (low pH) causes Bohr dissociation."
+        "C": "High $p\\text{CO}_2$, $\\text{H}^+$, $T$ oppose $\\text{O}_2$ binding.",
+        "D": "High $\\text{H}^+$ (low $\\text{pH}$) causes Bohr dissociation."
       },
       "videoTutorial": {
         "title": "Human Physiology NCERT Line-by-Line & PYQs (Tamil)",
@@ -3638,12 +3638,12 @@
         }
       ],
       "correct": "B",
-      "explanation_en": "Lipid-soluble steroid hormones (Cortisol, Testosterone, Estradiol, Progesterone) AND Iodothyronines (Thyroxine / T3, T4) cross the lipid bilayer and bind intracellular/nuclear receptors! Peptide/protein hormones (Insulin, Glucagon, FSH, LH, Oxytocin) and amino-acid derivative Epinephrine bind membrane-bound receptors and generate second messengers (cAMP, IP3, Ca^2+).",
-      "explanation_ta": "ஸ்டீராய்டு ஹார்மோன்கள் (கார்டிசால், டெஸ்டோஸ்டிரோன், எஸ்ட்ராடையால்) மற்றும் அயோடோதைரோனின்கள் (தைராக்சின்) செல் சவ்வைக் கடந்து உட்கரு ஏற்பிகளுடன் இணைகின்றன! புரத ஹார்மோன்களும் எபிநெஃப்ரினும் சவ்வு ஏற்பிகளுடன் இணைந்து இரண்டாம் நிலைத் தூதுவர்களை (cAMP, IP3, Ca^2+) உருவாக்குகின்றன.",
+      "explanation_en": "Lipid-soluble steroid hormones (Cortisol, Testosterone, Estradiol, Progesterone) AND Iodothyronines (Thyroxine / $\\text{T}_3, \\text{T}_4$) cross the lipid bilayer and bind intracellular/nuclear receptors! Peptide/protein hormones (Insulin, Glucagon, FSH, LH, Oxytocin) and amino-acid derivative Epinephrine bind membrane-bound receptors and generate second messengers (cAMP, $\\text{IP}_3$, $\\text{Ca}^{2+}$).",
+      "explanation_ta": "ஸ்டீராய்டு ஹார்மோன்கள் (கார்டிசால், டெஸ்டோஸ்டிரோன், எஸ்ட்ராடையால்) மற்றும் அயோடோதைரோனின்கள் (தைராக்சின்) செல் சவ்வைக் கடந்து உட்கரு ஏற்பிகளுடன் இணைகின்றன! புரத ஹார்மோன்களும் எபிநெஃப்ரினும் சவ்வு ஏற்பிகளுடன் இணைந்து இரண்டாம் நிலைத் தூதுவர்களை (cAMP, $\\text{IP}_3$, $\\text{Ca}^{2+}$) உருவாக்குகின்றன.",
       "ncert_key_point": "Watch the amino-acid derivative split: Thyroxine (iodothyronine) = Intracellular nuclear receptor; Epinephrine = Membrane receptor!",
       "trap_breakdown": {
         "A": "All three use membrane-bound receptors.",
-        "C": "All three are peptide/protein hormones using membrane receptors (FSH shown in NCERT diagram generating cAMP/IP3!).",
+        "C": "All three are peptide/protein hormones using membrane receptors (FSH shown in NCERT diagram generating cAMP/$\\text{IP}_3$!).",
         "D": "Insulin and Epinephrine use membrane receptors."
       },
       "videoTutorial": {
@@ -3878,13 +3878,13 @@
         }
       ],
       "correct": "B",
-      "explanation_en": "Given homozygous recessive genotype frequency q^2 = 0.09 => recessive allele frequency q = sqrt(0.09) = 0.3. Since p + q = 1, dominant allele frequency p = 1 - 0.3 = 0.7. Heterozygous genotype frequency = 2pq = 2 * 0.7 * 0.3 = 0.42 (42%)!",
-      "explanation_ta": "கொடுக்கப்பட்டது q^2 = 0.09 => q = sqrt(0.09) = 0.3. p + q = 1 என்பதால் p = 1 - 0.3 = 0.7. மாற்றுக் கருநிலை உயிரிகள் (Aa) = 2pq = 2 * 0.7 * 0.3 = 0.42 (42%)! (சரிபார்ப்பு: 0.49 + 0.42 + 0.09 = 1.00).",
-      "ncert_key_point": "Check total: p^2 (0.49) + 2pq (0.42) + q^2 (0.09) = 1.00! Never forget the '2' in 2pq.",
+      "explanation_en": "Given homozygous recessive genotype frequency $q^2 = 0.09 \\Rightarrow$ recessive allele frequency $q = \\sqrt{0.09} = 0.3$. Since $p + q = 1$, dominant allele frequency $p = 1 - 0.3 = 0.7$. Heterozygous genotype frequency $= 2pq = 2 \\times 0.7 \\times 0.3 = 0.42$ ($42\\%$)!",
+      "explanation_ta": "கொடுக்கப்பட்டது $q^2 = 0.09 \\Rightarrow q = \\sqrt{0.09} = 0.3$. $p + q = 1$ என்பதால் $p = 1 - 0.3 = 0.7$. மாற்றுக் கருநிலை உயிரிகள் ($Aa$) $= 2pq = 2 \\times 0.7 \\times 0.3 = 0.42$ ($42\\%$)! (சரிபார்ப்பு: $0.49 + 0.42 + 0.09 = 1.00$).",
+      "ncert_key_point": "Check total: $p^2\\ (0.49) + 2pq\\ (0.42) + q^2\\ (0.09) = 1.00$! Never forget the '$2$' in $2pq$.",
       "trap_breakdown": {
-        "A": "0.21 computes pq instead of 2pq!",
-        "C": "0.49 is p^2 (homozygous dominant AA), not heterozygotes Aa.",
-        "D": "0.70 is dominant allele frequency p, not genotype frequency."
+        "A": "$0.21$ computes $pq$ instead of $2pq$!",
+        "C": "$0.49$ is $p^2$ (homozygous dominant $AA$), not heterozygotes $Aa$.",
+        "D": "$0.70$ is dominant allele frequency $p$, not genotype frequency."
       },
       "videoTutorial": {
         "title": "Human Physiology NCERT Line-by-Line & PYQs (Tamil)",
