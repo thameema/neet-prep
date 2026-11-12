@@ -350,8 +350,8 @@ window.NEET_QUESTION_BANK = {
       "pyqTag": "NEET PYQ (2022/2024 Pattern)",
       "questionType": "Numerical MCQ",
       "difficulty": "Medium",
-      "stem_en": "In an experiment, the percentage errors in the measurement of physical quantities A, B, C, and D are 1%, 2%, 3%, and 4% respectively. Then the maximum percentage error in the measurement of X, where X = (A^2 * B^(1/2)) / (C^(1/3) * D^3), will be:",
-      "stem_ta": "ஒரு சோதனையில் A, B, C மற்றும் D ஆகிய இயற்பியல் அளவுகளின் அளவீட்டில் ஏற்படும் சதவீதப் பிழைகள் முறையே 1%, 2%, 3% மற்றும் 4% ஆகும். X = (A^2 * B^(1/2)) / (C^(1/3) * D^3) எனில், X-இன் அளவீட்டில் ஏற்படும் பெரும சதவீதப் பிழை என்ன?",
+      "stem_en": "In an experiment, the percentage errors in the measurement of physical quantities A, B, C, and D are 1%, 2%, 3%, and 4% respectively. Then the maximum percentage error in the measurement of $X$, where $X = \\frac{A^2 B^{1/2}}{C^{1/3} D^3}$, will be:",
+      "stem_ta": "ஒரு சோதனையில் A, B, C மற்றும் D ஆகிய இயற்பியல் அளவுகளின் அளவீட்டில் ஏற்படும் சதவீதப் பிழைகள் முறையே 1%, 2%, 3% மற்றும் 4% ஆகும். $X = \\frac{A^2 B^{1/2}}{C^{1/3} D^3}$ எனில், $X$-இன் அளவீட்டில் ஏற்படும் பெரும சதவீதப் பிழை என்ன?",
       "choices": [
         {
           "letter": "A",
@@ -375,8 +375,8 @@ window.NEET_QUESTION_BANK = {
         }
       ],
       "correct": "A",
-      "explanation_en": "Relative errors ALWAYS ADD UP for both multiplication and division: (ΔX/X)% = 2(ΔA/A)% + (1/2)(ΔB/B)% + (1/3)(ΔC/C)% + 3(ΔD/D)% = 2(1%) + 0.5(2%) + (1/3)(3%) + 3(4%) = 2% + 1% + 1% + 12% = 16%.",
-      "explanation_ta": "பெருக்கல் மற்றும் வகுத்தல் ஆகிய இரண்டிற்குமே சார்புப் பிழைகளை எப்போதும் கூட்ட வேண்டும்: (ΔX/X)% = 2(1%) + (1/2)(2%) + (1/3)(3%) + 3(4%) = 2% + 1% + 1% + 12% = 16%.",
+      "explanation_en": "Relative errors ALWAYS ADD UP for both multiplication and division: $\\frac{\\Delta X}{X}\\% = 2\\left(\\frac{\\Delta A}{A}\\right) + \\frac{1}{2}\\left(\\frac{\\Delta B}{B}\\right) + \\frac{1}{3}\\left(\\frac{\\Delta C}{C}\\right) + 3\\left(\\frac{\\Delta D}{D}\\right) = 2(1\\%) + 0.5(2\\%) + \\frac{1}{3}(3\\%) + 3(4\\%) = 2\\% + 1\\% + 1\\% + 12\\% = 16\\%$.",
+      "explanation_ta": "பெருக்கல் மற்றும் வகுத்தல் ஆகிய இரண்டிற்குமே சார்புப் பிழைகளை எப்போதும் கூட்ட வேண்டும்: $\\frac{\\Delta X}{X}\\% = 2(1\\%) + \\frac{1}{2}(2\\%) + \\frac{1}{3}(3\\%) + 3(4\\%) = 2\\% + 1\\% + 1\\% + 12\\% = 16\\%$.",
       "ncert_key_point": "Maximum fractional error adds all |power * percentage error| terms; never subtract denominator errors.",
       "trap_breakdown": {
         "B": "Obtained if you wrongly subtract denominator errors: |(2 + 1) - (1 + 12)| = 10%.",
@@ -403,23 +403,23 @@ window.NEET_QUESTION_BANK = {
       "choices": [
         {
           "letter": "A",
-          "text_en": "3v / 2",
-          "text_ta": "3v / 2"
+          "text_en": "$\\frac{3v}{2}$",
+          "text_ta": "$\\frac{3v}{2}$"
         },
         {
           "letter": "B",
-          "text_en": "4v / 3",
-          "text_ta": "4v / 3"
+          "text_en": "$\\frac{4v}{3}$",
+          "text_ta": "$\\frac{4v}{3}$"
         },
         {
           "letter": "C",
-          "text_en": "2v / 3",
-          "text_ta": "2v / 3"
+          "text_en": "$\\frac{2v}{3}$",
+          "text_ta": "$\\frac{2v}{3}$"
         },
         {
           "letter": "D",
-          "text_en": "3v / 4",
-          "text_ta": "3v / 4"
+          "text_en": "$\\frac{3v}{4}$",
+          "text_ta": "$\\frac{3v}{4}$"
         }
       ],
       "correct": "B",
@@ -595,28 +595,28 @@ window.NEET_QUESTION_BANK = {
       "choices": [
         {
           "letter": "A",
-          "text_en": "2 : 1",
-          "text_ta": "2 : 1"
+          "text_en": "$2 : 1$",
+          "text_ta": "$2 : 1$"
         },
         {
           "letter": "B",
-          "text_en": "sqrt(2) : 1",
-          "text_ta": "sqrt(2) : 1"
+          "text_en": "$\\sqrt{2} : 1$",
+          "text_ta": "$\\sqrt{2} : 1$"
         },
         {
           "letter": "C",
-          "text_en": "4 : 1",
-          "text_ta": "4 : 1"
+          "text_en": "$4 : 1$",
+          "text_ta": "$4 : 1$"
         },
         {
           "letter": "D",
-          "text_en": "1 : sqrt(2)",
-          "text_ta": "1 : sqrt(2)"
+          "text_en": "$1 : \\sqrt{2}$",
+          "text_ta": "$1 : \\sqrt{2}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "About central normal axis: I_1 = (1/2)MR^2 => K_1 = R/sqrt(2). About diameter (perpendicular axis theorem): I_2 = (1/4)MR^2 => K_2 = R/2. Therefore K_1 : K_2 = (R/sqrt(2)) / (R/2) = sqrt(2) : 1.",
-      "explanation_ta": "செங்குத்து அச்சில் I_1 = (1/2)MR^2 => K_1 = R/sqrt(2). விட்டத்தைப் பற்றி I_2 = (1/4)MR^2 => K_2 = R/2. எனவே K_1 : K_2 = sqrt(2) : 1.",
+      "explanation_en": "About central normal axis: $I_1 = \\frac{1}{2}MR^2 \\Rightarrow K_1 = \\frac{R}{\\sqrt{2}}$. About diameter (perpendicular axis theorem): $I_2 = \\frac{1}{4}MR^2 \\Rightarrow K_2 = \\frac{R}{2}$. Therefore $K_1 : K_2 = \\frac{R/\\sqrt{2}}{R/2} = \\sqrt{2} : 1$.",
+      "explanation_ta": "செங்குத்து அச்சில் $I_1 = \\frac{1}{2}MR^2 \\Rightarrow K_1 = \\frac{R}{\\sqrt{2}}$. விட்டத்தைப் பற்றி $I_2 = \\frac{1}{4}MR^2 \\Rightarrow K_2 = \\frac{R}{2}$. எனவே $K_1 : K_2 = \\sqrt{2} : 1$.",
       "ncert_key_point": "Read carefully: Radius of Gyration K = sqrt(I/M), whereas Moment of Inertia ratio I_1 : I_2 is 2 : 1.",
       "trap_breakdown": {
         "A": "2 : 1 is the ratio of Moments of Inertia I_1 : I_2, forgetting the square root for K.",
@@ -739,28 +739,28 @@ window.NEET_QUESTION_BANK = {
       "choices": [
         {
           "letter": "A",
-          "text_en": "A / 2",
-          "text_ta": "A / 2"
+          "text_en": "$\\frac{A}{2}$",
+          "text_ta": "$\\frac{A}{2}$"
         },
         {
           "letter": "B",
-          "text_en": "A / sqrt(2)",
-          "text_ta": "A / sqrt(2)"
+          "text_en": "$\\frac{A}{\\sqrt{2}}$",
+          "text_ta": "$\\frac{A}{\\sqrt{2}}$"
         },
         {
           "letter": "C",
-          "text_en": "A / sqrt(3)",
-          "text_ta": "A / sqrt(3)"
+          "text_en": "$\\frac{A}{\\sqrt{3}}$",
+          "text_ta": "$\\frac{A}{\\sqrt{3}}$"
         },
         {
           "letter": "D",
-          "text_en": "A * sqrt(3) / 2",
-          "text_ta": "A * sqrt(3) / 2"
+          "text_en": "$\\frac{\\sqrt{3}A}{2}$",
+          "text_ta": "$\\frac{\\sqrt{3}A}{2}$"
         }
       ],
       "correct": "B",
-      "explanation_en": "KE = (1/2)mω^2(A^2 - x^2) and PE = (1/2)mω^2 x^2. Equating KE = PE gives A^2 - x^2 = x^2 => 2x^2 = A^2 => x = A / sqrt(2).",
-      "explanation_ta": "KE = (1/2)mω^2(A^2 - x^2) மற்றும் PE = (1/2)mω^2 x^2. இரண்டும் சமம் எனில் A^2 - x^2 = x^2 => x = A / sqrt(2).",
+      "explanation_en": "$KE = \\frac{1}{2}m\\omega^2(A^2 - x^2)$ and $PE = \\frac{1}{2}m\\omega^2 x^2$. Equating $KE = PE$ gives $A^2 - x^2 = x^2 \\Rightarrow 2x^2 = A^2 \\Rightarrow x = \\frac{A}{\\sqrt{2}}$.",
+      "explanation_ta": "$KE = \\frac{1}{2}m\\omega^2(A^2 - x^2)$ மற்றும் $PE = \\frac{1}{2}m\\omega^2 x^2$. இரண்டும் சமம் எனில் $A^2 - x^2 = x^2 \\Rightarrow x = \\frac{A}{\\sqrt{2}}$.",
       "ncert_key_point": "Since PE ∝ x^2, PE equals 50% of total energy at x = A/sqrt(2) ≈ 0.707 A, not A/2.",
       "trap_breakdown": {
         "A": "At x = A/2, PE is 25% and KE is 75% of total energy.",
@@ -807,9 +807,9 @@ window.NEET_QUESTION_BANK = {
         }
       ],
       "correct": "A",
-      "explanation_en": "C_0 = ε_0 A / d = 15 pF. With d' = 2d and K = 4, C' = K ε_0 A / (2d) = (4 / 2) * C_0 = 2 * 15 pF = 30 pF.",
-      "explanation_ta": "C_0 = ε_0 A / d = 15 pF. d' = 2d மற்றும் K = 4 எனில், C' = (4 / 2) * 15 pF = 30 pF.",
-      "ncert_key_point": "C = K ε_0 A / d: scale initial C_0 directly by (K_new / K_old) * (d_old / d_new).",
+      "explanation_en": "$C_0 = \\frac{\\varepsilon_0 A}{d} = 15\\text{ pF}$. With $d' = 2d$ and $K = 4$, $C' = \\frac{K \\varepsilon_0 A}{2d} = \\frac{4}{2} C_0 = 2 \\times 15\\text{ pF} = 30\\text{ pF}$.",
+      "explanation_ta": "$C_0 = \\frac{\\varepsilon_0 A}{d} = 15\\text{ pF}$. $d' = 2d$ மற்றும் $K = 4$ எனில், $C' = \\frac{4}{2} \\times 15\\text{ pF} = 30\\text{ pF}$.",
+      "ncert_key_point": "$C = \\frac{K \\varepsilon_0 A}{d}$: scale initial $C_0$ directly by $\\frac{K_{\\text{new}}}{K_{\\text{old}}} \\times \\frac{d_{\\text{old}}}{d_{\\text{new}}}$.",
       "trap_breakdown": {
         "B": "60 pF multiplies by K=4 without dividing by 2 for doubled plate separation.",
         "C": "7.5 pF divides by K instead of multiplying.",
@@ -845,8 +845,8 @@ window.NEET_QUESTION_BANK = {
         },
         {
           "letter": "C",
-          "text_en": "10 / 3 Ω",
-          "text_ta": "10 / 3 Ω"
+          "text_en": "$\\frac{10}{3}\\ \\Omega$",
+          "text_ta": "$\\frac{10}{3}\\ \\Omega$"
         },
         {
           "letter": "D",

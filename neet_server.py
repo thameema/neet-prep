@@ -421,7 +421,8 @@ STRICT COACHING & STYLE RULES:
 - {lang_rule}
 - Directly answer what {student_label} asked in 90-200 words (unless she asks for a full practice MCQ or detailed derivation).
 - Point out how to avoid the -1 negative marking trap on this topic.
-- Use **bold** for key NCERT terms, equations, and answer letters.
+- Use **bold** for key NCERT terms and answer letters.
+- Write all mathematical and chemical formulas in clean standard LaTeX ($...$ for inline formulas, $$...$$ for standalone equations). Never wrap **bold** around $...$ (use \mathbf{...} inside LaTeX if needed). On multi-step derivations, write each step on its own short line rather than chaining 4-5 '=' signs on one wide line so equations fit cleanly on mobile screens.
 
 ACTIVE NEET QUESTION CONTEXT (Q#{question_number or q.get('id', '')}):
 - Subject & Chapter: {subj} — {chapter} ({ncert_ref})

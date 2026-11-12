@@ -33,7 +33,7 @@ def run_independent_math_verifications(by_id: dict):
     # Q102: Harmonic mean of v and 2v = 2*1*2/(1+2) = 4/3
     v_avg = (2 * 1 * 2) / (1 + 2)
     assert math.isclose(v_avg, 4 / 3)
-    assert by_id[102]["correct"] == "B" and "4v / 3" in by_id[102]["choices"][1]["text_en"]
+    assert by_id[102]["correct"] == "B" and ("4v / 3" in by_id[102]["choices"][1]["text_en"] or "\\frac{4v}{3}" in by_id[102]["choices"][1]["text_en"])
 
     # Q103: u=280, theta=30 deg, g=9.8 => H = (u sin 30)^2 / (2g)
     h_max = ((280 * math.sin(math.radians(30))) ** 2) / (2 * 9.8)
@@ -53,7 +53,7 @@ def run_independent_math_verifications(by_id: dict):
     # Q106: K_normal / K_diam = (1/sqrt(2)) / (1/2) = sqrt(2)
     k_ratio = (1 / math.sqrt(2)) / 0.5
     assert math.isclose(k_ratio, math.sqrt(2))
-    assert by_id[106]["correct"] == "B" and "sqrt(2) : 1" in by_id[106]["choices"][1]["text_en"]
+    assert by_id[106]["correct"] == "B" and ("sqrt(2) : 1" in by_id[106]["choices"][1]["text_en"] or "\\sqrt{2} : 1" in by_id[106]["choices"][1]["text_en"])
 
     # Q107: v_e prop R at constant density; R' = 4R => 4v
     assert by_id[107]["correct"] == "D" and "4v" in by_id[107]["choices"][3]["text_en"]
@@ -65,7 +65,7 @@ def run_independent_math_verifications(by_id: dict):
     assert by_id[108]["correct"] == "A" and "27°C" in by_id[108]["choices"][0]["text_en"]
 
     # Q109: SHM KE = PE => A^2 - x^2 = x^2 => x/A = 1/sqrt(2)
-    assert by_id[109]["correct"] == "B" and "A / sqrt(2)" in by_id[109]["choices"][1]["text_en"]
+    assert by_id[109]["correct"] == "B" and ("A / sqrt(2)" in by_id[109]["choices"][1]["text_en"] or "\\frac{A}{\\sqrt{2}}" in by_id[109]["choices"][1]["text_en"])
 
     # Q110: C0=15 pF, d'=2d, K=4 => C' = 15 * 4 / 2 = 30 pF
     c_new = 15.0 * 4.0 / 2.0

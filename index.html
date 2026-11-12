@@ -8,6 +8,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="manifest" href="manifest.json">
   <title>Tamil Nadu NEET-UG Mastery Hub — OMR Mock Exams, Score Tracker & Bilingual Gemini Coach</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous" onload="window.rerenderAllMath && window.rerenderAllMath()"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/mhchem.min.js" crossorigin="anonymous" onload="window.rerenderAllMath && window.rerenderAllMath()"></script>
   <style>
     :root {
       --bg: #f1f5f9;
@@ -702,9 +705,85 @@
       padding: 10px 13px;
       border-radius: 8px;
       font-size: 13.5px;
-      line-height: 1.6;
+      line-height: 1.65;
       max-width: 94%;
+      min-width: 0;
       word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* MATH, FRACTIONS & CHEMICAL FORMULA RENDERING (MOBILE + DESKTOP) */
+    .math-inline {
+      display: inline;
+      max-width: 100%;
+    }
+
+    .math-inline .katex {
+      white-space: normal;
+      font-size: 1.04em;
+    }
+
+    .math-inline .katex .base {
+      display: inline-block;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      vertical-align: middle;
+      margin: 2px 0;
+    }
+
+    .math-block {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 7px 4px;
+      margin: 6px 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .math-block .katex-display {
+      margin: 0.25em 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .fb-frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: middle;
+      padding: 0 3px;
+      font-size: 0.92em;
+      line-height: 1.15;
+    }
+
+    .fb-frac .fb-num {
+      border-bottom: 1px solid currentColor;
+      padding: 0 2px 1px;
+    }
+
+    .fb-frac .fb-den {
+      padding: 1px 2px 0;
+    }
+
+    .chat-blockquote {
+      border-left: 3px solid var(--primary);
+      background: var(--surface-alt);
+      padding: 6px 10px;
+      margin: 6px 0;
+      border-radius: 0 6px 6px 0;
+      color: var(--text-sec);
+      font-size: 13px;
+    }
+
+    .chat-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+      background: #f1f5f9;
+      padding: 1px 5px;
+      border-radius: 4px;
     }
 
     .chat-msg.coach {
@@ -1783,22 +1862,22 @@
         stemEnEl.style.display = "block";
         stemEnEl.style.fontSize = "15px";
         stemEnEl.style.color = "var(--text-main)";
-        stemEnEl.textContent = q.stem_en;
+        stemEnEl.innerHTML = renderInlineRich(q.stem_en);
         stemTaEl.style.display = "none";
       } else if (lang === "ta") {
         stemTaEl.style.display = "block";
-        stemTaEl.textContent = q.stem_ta;
+        stemTaEl.innerHTML = renderInlineRich(q.stem_ta);
         stemEnEl.style.display = "block";
         stemEnEl.style.fontSize = "13px";
         stemEnEl.style.color = "#475569";
-        stemEnEl.textContent = "[NCERT English Reference] " + q.stem_en;
+        stemEnEl.innerHTML = "<strong>[NCERT English Reference]</strong> " + renderInlineRich(q.stem_en);
       } else {
         stemEnEl.style.display = "block";
         stemEnEl.style.fontSize = "15px";
         stemEnEl.style.color = "var(--text-main)";
-        stemEnEl.textContent = q.stem_en;
+        stemEnEl.innerHTML = renderInlineRich(q.stem_en);
         stemTaEl.style.display = "block";
-        stemTaEl.textContent = q.stem_ta;
+        stemTaEl.innerHTML = renderInlineRich(q.stem_ta);
       }
 
       const selected = state.answers[q.id] || "";
@@ -1825,8 +1904,8 @@
             <div class="omr-bubble">${c.letter}</div>
             <div class="choice-texts">
               ${lang === "ta"
-                ? `<div class="choice-en">${escapeHtml(c.text_ta)}</div>${c.text_ta !== c.text_en ? `<div class="choice-ta">${escapeHtml(c.text_en)}</div>` : ""}`
-                : `<div class="choice-en">${escapeHtml(c.text_en)}</div>${showTa && c.text_ta !== c.text_en ? `<div class="choice-ta">${escapeHtml(c.text_ta)}</div>` : ""}`
+                ? `<div class="choice-en">${renderInlineRich(c.text_ta)}</div>${c.text_ta !== c.text_en ? `<div class="choice-ta">${renderInlineRich(c.text_en)}</div>` : ""}`
+                : `<div class="choice-en">${renderInlineRich(c.text_en)}</div>${showTa && c.text_ta !== c.text_en ? `<div class="choice-ta">${renderInlineRich(c.text_ta)}</div>` : ""}`
               }
             </div>
           </div>
@@ -1840,7 +1919,7 @@
         else if (selected) statusTag = `Incorrect Bubble ${selected} (-1 Mark) — Correct: ${q.correct}`;
 
         const trapRows = Object.entries(q.trap_breakdown || {}).map(
-          ([opt, txt]) => `<div><strong>Option ${escapeHtml(opt)}:</strong> ${escapeHtml(txt)}</div>`
+          ([opt, txt]) => `<div><strong>Option ${escapeHtml(opt)}:</strong> ${renderInlineRich(txt)}</div>`
         ).join("");
 
         const vid = q.videoTutorial || {};
@@ -1848,9 +1927,9 @@
         solPanel.innerHTML = `
           <h4>Verified NCERT Solution — ${statusTag}</h4>
           <div class="sol-block"><strong>Reference:</strong> ${escapeHtml(q.ncertRef)}</div>
-          <div class="sol-block"><strong>English Derivation:</strong> ${escapeHtml(q.explanation_en)}</div>
-          <div class="sol-block"><strong>தமிழ் விளக்கம்:</strong> ${escapeHtml(q.explanation_ta)}</div>
-          <div class="sol-block"><strong>Topper Rule:</strong> ${escapeHtml(q.ncert_key_point)}</div>
+          <div class="sol-block"><strong>English Derivation:</strong> ${renderInlineRich(q.explanation_en)}</div>
+          <div class="sol-block"><strong>தமிழ் விளக்கம்:</strong> ${renderInlineRich(q.explanation_ta)}</div>
+          <div class="sol-block"><strong>Topper Rule:</strong> ${renderInlineRich(q.ncert_key_point)}</div>
           <div class="trap-box">
             <div style="font-weight:700;margin-bottom:4px;color:var(--rose);">Why Other Bubbles Trigger -1 Negative Marks:</div>
             ${trapRows}
@@ -2058,19 +2137,165 @@
       `;
     }
 
-    /* MULTILINGUAL GEMINI AI COACH (3-TIER: BACKEND / TUNNEL -> DIRECT BROWSER GEMINI API -> RICH BILINGUAL NCERT ENGINE) */
-    function formatCoachMarkdown(text) {
-      let safe = escapeHtml(text || "");
-      safe = safe.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-      safe = safe.replace(/\n/g, "<br>");
-      return safe;
+    /* MATH, LATEX & CHEMICAL FORMULA ENGINE (KATEX + OFFLINE FALLBACK + PLAIN SCIENCE) */
+    const LATEX_SYM_MAP = {
+      "\\varepsilon": "ε", "\\epsilon": "ϵ", "\\alpha": "α", "\\beta": "β", "\\gamma": "γ",
+      "\\delta": "δ", "\\Delta": "Δ", "\\theta": "θ", "\\Theta": "Θ", "\\lambda": "λ",
+      "\\mu": "μ", "\\nu": "ν", "\\pi": "π", "\\rho": "ρ", "\\sigma": "σ", "\\tau": "τ",
+      "\\phi": "φ", "\\omega": "ω", "\\Omega": "Ω", "\\eta": "η",
+      "\\times": "×", "\\cdot": "·", "\\propto": "∝", "\\approx": "≈", "\\neq": "≠",
+      "\\leq": "≤", "\\le": "≤", "\\geq": "≥", "\\ge": "≥", "\\pm": "±", "\\mp": "∓",
+      "\\rightarrow": "→", "\\to": "→", "\\leftarrow": "←", "\\Rightarrow": "⇒",
+      "\\rightleftharpoons": "⇌", "\\infty": "∞", "\\circ": "°"
+    };
+
+    function renderLatexFallbackHtml(tex, displayMode) {
+      let s = String(tex || "").trim();
+      s = s.replace(/\\left\s*([()[\]|.])/g, "$1").replace(/\\right\s*([()[\]|.])/g, "$1");
+      s = escapeHtml(s);
+      s = s.replace(/\\(?:text|mathrm|textrm)\{([^{}]*)\}/g, "$1");
+      s = s.replace(/\\(?:mathbf|boldsymbol|textbf)\{([^{}]*)\}/g, "<strong>$1</strong>");
+      for (let pass = 0; pass < 4; pass++) {
+        s = s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g, '<span class="fb-frac"><span class="fb-num">$1</span><span class="fb-den">$2</span></span>');
+        s = s.replace(/\\sqrt\{([^{}]*)\}/g, "√($1)");
+      }
+      for (const [cmd, sym] of Object.entries(LATEX_SYM_MAP)) {
+        s = s.split(cmd).join(sym);
+      }
+      s = s.replace(/\\([%_{} ])/g, "$1");
+      s = s.replace(/\^\{([^{}]+)\}/g, "<sup>$1</sup>").replace(/\^([A-Za-z0-9+\-]+)/g, "<sup>$1</sup>");
+      s = s.replace(/_\{([^{}]+)\}/g, "<sub>$1</sub>").replace(/_([A-Za-z0-9+\-]+)/g, "<sub>$1</sub>");
+      return `<span class="${displayMode ? "math-block" : "math-inline"}">${s}</span>`;
     }
+
+    function renderMathTokenHtml(tex, displayMode) {
+      const cleanTex = String(tex || "").trim();
+      if (!cleanTex) return "";
+      if (window.katex && typeof window.katex.renderToString === "function") {
+        try {
+          const html = window.katex.renderToString(cleanTex, {
+            displayMode: Boolean(displayMode),
+            throwOnError: false,
+            strict: false,
+            trust: false
+          });
+          return `<span class="${displayMode ? "math-block" : "math-inline"}">${html}</span>`;
+        } catch (_) {}
+      }
+      return renderLatexFallbackHtml(cleanTex, displayMode);
+    }
+
+    function extractMathTokens(rawText) {
+      const tokens = [];
+      const pushTok = (tex, displayMode) => {
+        const key = `@@MTOK_${tokens.length}@@`;
+        tokens.push({ key, tex, displayMode });
+        return key;
+      };
+      let s = String(rawText || "");
+      s = s.replace(/\$\$([\s\S]+?)\$\$/g, (_, m) => pushTok(m, true));
+      s = s.replace(/\\\[([\s\S]+?)\\\]/g, (_, m) => pushTok(m, true));
+      s = s.replace(/\\\(([\s\S]+?)\\\)/g, (_, m) => pushTok(m, false));
+      s = s.replace(/\$([^$\n]+?)\$/g, (_, m) => pushTok(m, false));
+      return { textWithTokens: s, tokens };
+    }
+
+    function restoreMathTokens(htmlStr, tokens) {
+      let out = htmlStr;
+      for (const t of tokens) {
+        out = out.split(t.key).join(renderMathTokenHtml(t.tex, t.displayMode));
+      }
+      return out;
+    }
+
+    const MULTI_CHEM_RE = /\b(CaCO3|CaCl2|BaCl2|Na2CO3|H2SO4|HNO3|KMnO4|K2Cr2O7|CHCl3|CH3CHO|CH3COCH3|CH3CH2Br|CH3CH2CHO|C6H5CH2CHO|C6H5CHO|CH3CONH2|CH3NH2|CH3Br|LiAlH4|P2O5|NaNO2|XeF4|Fe4|Na4|Al2|MnO4|SO4|PO4|NO2|NO3|NH3|NH4|CH3|CH2|CO2|H2O|Br2|Cl2)(?=\b|\^|&|[),.;:])/g;
+
+    function beautifyPlainScienceSegment(seg) {
+      let s = seg;
+      s = s.replace(/\s-&gt;\s/g, " &rarr; ").replace(/\s=&gt;\s/g, " &rArr; ");
+      for (let pass = 0; pass < 3; pass++) {
+        s = s.replace(/sqrt\(([^()]*(?:\([^()]*\)[^()]*)*)\)/g, (_, inner) =>
+          /^[A-Za-z0-9]+$/.test(inner.trim()) ? `&radic;${inner.trim()}` : `&radic;(${inner})`
+        );
+      }
+      // Bracketed complex ion charges e.g. [Ni(CN)4]^2-
+      s = s.replace(/\]\^(\d*[+\-])/g, (_, chg) => `]<sup>${chg.replace("-", "&minus;")}</sup>`);
+      // Parenthesized exponents e.g. B^(1/2)
+      s = s.replace(/([A-Za-z0-9)\]])\^\(([^()]+)\)/g, "$1<sup>$2</sup>");
+      // Standard exponents & ion charges e.g. 10^-8, m/s^2, sp^3d^2, MnO4^-, O2^2-, Na^+
+      s = s.replace(/([A-Za-z0-9)\]])\^(-?\d+(?:\.\d+)?[+\-]?|[+\-])/g, (_, base, exp) =>
+        `${base}<sup>${exp.replace(/-/g, "&minus;")}</sup>`
+      );
+      // Explicit underscore subscripts e.g. C_0, V_0, ω_0, I_1, n_g, r_proton
+      s = s.replace(/\b([A-Za-z\u0370-\u03FF])_([A-Za-z0-9]{1,8})\b/g, "$1<sub>$2</sub>");
+      // Known multi-atom chemical formulas
+      s = s.replace(MULTI_CHEM_RE, m => m.replace(/\d+/g, "<sub>$&</sub>"));
+      // Standalone diatomic/triatomic molecules (without touching C1, C3, C4, G1, F1)
+      s = s.replace(/\b(O2|O3|N2|H2)(?=\b|<sup>|[),.;:])/g, m => m.replace(/\d+/g, "<sub>$&</sub>"));
+      // Ligand / group subscripts e.g. (CN)4, (CN)6, (SO4)3, (CH3)2, [Fe(CN)6]3
+      s = s.replace(/(\((?:CN|SO<sub>4<\/sub>|CH<sub>3<\/sub>|OH|NH<sub>3<\/sub>)\))(\d+)/g, "$1<sub>$2</sub>");
+      s = s.replace(/(\[Fe\(CN\)<sub>6<\/sub>\])(\d+)/g, "$1<sub>$2</sub>");
+      return s;
+    }
+
+    function applyPlainScienceOutsideUrlsAndTokens(escapedStr) {
+      return escapedStr
+        .split(/(@@MTOK_\d+@@|https?:\/\/[^\s<)]+)/g)
+        .map(part => (/^(@@MTOK_\d+@@|https?:\/\/)/.test(part) ? part : beautifyPlainScienceSegment(part)))
+        .join("");
+    }
+
+    function formatInlineMarkdownAndScience(escapedStr) {
+      let s = applyPlainScienceOutsideUrlsAndTokens(escapedStr);
+      // Markdown links [label](https://...)
+      s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a class="resource-link" href="$2" target="_blank" rel="noopener">$1</a>');
+      // Inline code `...`
+      s = s.replace(/`([^`]+)`/g, '<code class="chat-code">$1</code>');
+      // Bold **...** and italic *...*
+      s = s.replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>");
+      s = s.replace(/(^|[\s(])\*([^*\n]+?)\*(?=[\s).,;:!?]|$)/g, "$1<em>$2</em>");
+      return s;
+    }
+
+    function renderInlineRich(rawText) {
+      const { textWithTokens, tokens } = extractMathTokens(rawText || "");
+      let safe = escapeHtml(textWithTokens);
+      safe = formatInlineMarkdownAndScience(safe);
+      safe = safe.replace(/\n/g, "<br>");
+      return restoreMathTokens(safe, tokens);
+    }
+
+    function formatCoachMarkdown(rawText) {
+      const { textWithTokens, tokens } = extractMathTokens(rawText || "");
+      const lines = textWithTokens.split("\n");
+      const outLines = lines.map(line => {
+        const trimmed = line.trim();
+        if (/^#{1,4}\s+/.test(trimmed)) {
+          const headingText = trimmed.replace(/^#{1,4}\s+/, "");
+          return `<div style="font-weight:800;color:var(--navy);margin-top:6px;margin-bottom:2px;">${formatInlineMarkdownAndScience(escapeHtml(headingText))}</div>`;
+        }
+        if (/^>\s?/.test(trimmed)) {
+          const quoteText = trimmed.replace(/^>\s?/, "");
+          return `<div class="chat-blockquote">${formatInlineMarkdownAndScience(escapeHtml(quoteText))}</div>`;
+        }
+        return formatInlineMarkdownAndScience(escapeHtml(line));
+      });
+      const joined = outLines
+        .join("<br>")
+        .replace(/(<\/div>)<br>/g, "$1");
+      return restoreMathTokens(joined, tokens);
+    }
+
+    window.rerenderAllMath = function () {
+      try { renderCurrentQuestion(); } catch (_) {}
+      try { renderChat(); } catch (_) {}
+    };
 
     function renderChat() {
       const box = document.getElementById("coach-messages");
       box.innerHTML = chatHistory.map(m => `
         <div class="chat-msg ${m.sender === 'student' ? 'student' : 'coach'}">
-          ${m.sender === 'student' ? escapeHtml(m.text) : formatCoachMarkdown(m.text)}
+          ${m.sender === 'student' ? renderInlineRich(m.text) : formatCoachMarkdown(m.text)}
         </div>
       `).join("");
       box.scrollTop = box.scrollHeight;
@@ -2106,6 +2331,7 @@
         : "Respond clearly in English followed by a brief தமிழ் takeaway. Do not use emojis.";
 
       const prompt = `You are a senior Tamil Nadu NEET-UG Expert Coach tutoring ${profile.name}. ${langInstruction}
+Write mathematical and chemical formulas in clean LaTeX ($...$ for inline, $$...$$ for standalone equations), putting multi-step derivations on separate short lines for mobile readability.
 Active Question (${q ? q.subject + ' - ' + q.chapter : 'General NEET'}):
 Stem (EN): ${q ? q.stem_en : ''}
 Stem (TA): ${q ? q.stem_ta : ''}
