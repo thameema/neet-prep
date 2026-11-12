@@ -481,29 +481,36 @@ def call_gemini_rest_api(prompt_str: str, api_key: str):
 
 
 def call_local_agy_gemini(prompt_str: str):
-    """Calls authenticated Google Gemini models via local agy CLI when available."""
+    """Calls authenticated Google Gemini models via local agy CLI on this laptop."""
     if not os.path.exists(AGY_BIN):
         return None, None
     env = os.environ.copy()
-    for model_name in ("Gemini 3.8 Flash (Low)", "Gemini 4 Argon (Low)"):
+    scratch_dir = "/tmp/neet_gemini_scratch"
+    os.makedirs(scratch_dir, exist_ok=True)
+    for model_name in ("gemini-3.8-flash-low", "gemini-4-argon-low", "gemini-4-carbon-low"):
         try:
             proc = subprocess.run(
                 [
                     AGY_BIN,
                     "--model",
                     model_name,
+                    "--mode",
+                    "plan",
                     "--disable-slash-commands",
-                    "--settings",
-                    '{"hooks":{}}',
                     f"-p={prompt_str}",
                 ],
+                cwd=scratch_dir,
                 text=True,
                 capture_output=True,
-                timeout=25,
+                timeout=34,
                 env=env,
             )
             if proc.returncode == 0 and proc.stdout and proc.stdout.strip():
                 return proc.stdout.strip(), f"gemini_agy ({model_name})"
+            print(
+                f"agy Gemini ({model_name}) non-zero rc={proc.returncode}: {(proc.stderr or '')[:200]}",
+                file=sys.stderr,
+            )
         except Exception as exc:
             print(f"agy Gemini ({model_name}) notice: {exc}", file=sys.stderr)
     return None, None
@@ -677,6 +684,17 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
     def do_OPTIONS(self):
         self.send_response(200)
         self.end_headers()
+
+    def do_HEAD(self):
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path.startswith("/api/"):
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.end_headers()
+            return
+        if parsed.path == "/":
+            self.path = "/index.html"
+        return super().do_HEAD()
 
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
