@@ -176,7 +176,7 @@ def main():
     assert st_pyq_js == 200 and "window.NEET_PAST_PAPERS_ARCHIVE" in pyq_js_body
     st_h, health_raw = http_get("/api/health")
     health = json.loads(health_raw)
-    assert st_h == 200 and health["verified_questions"] == 3644
+    assert st_h == 200 and health["verified_questions"] == 7484
     print(f"Health OK: {health}")
 
     # Load questions WITHOUT looking at 'correct' field to simulate real exam taking
@@ -277,14 +277,19 @@ def main():
         f"Tier: {res_m2['tn_college_tier']}"
     )
 
-    print("\n=== 4B. Verifying 14-Year PYQ Archive & NTA Disputed / Dropped / Multi-Key Grading ===")
+    print("\n=== 4B. Verifying 27-Year PYQ + NCERT Exemplar + Coaching Archive & NTA Disputed / Dropped / Multi-Key Grading ===")
     with open(os.path.join(ROOT_DIR, "past_papers_archive.json"), "r", encoding="utf-8") as f:
         pyq_archive = json.load(f)
-    assert pyq_archive["metadata"]["totalQuestions"] == 3564
-    assert pyq_archive["metadata"]["totalPapers"] == 24
+    assert pyq_archive["metadata"]["totalQuestions"] == 7404
+    assert pyq_archive["metadata"]["officialPyqQuestions"] == 5968
+    assert pyq_archive["metadata"]["exemplarAndCoachingQuestions"] == 1436
+    assert pyq_archive["metadata"]["totalPapers"] == 40
+    for mod_key in ("mock_abhyas_cbt_full", "coaching_pcb_chapter_pack", "exemplar_bio_class11", "exemplar_bio_class12", "ncert_line_by_line_bio"):
+        assert mod_key in pyq_archive["modules"], f"Missing module {mod_key}"
+        assert len(pyq_archive["modules"][mod_key]["questionIds"]) >= 180
     controv_mod = pyq_archive["modules"]["pyq_controversial_2024_2026"]
     controv_qids = controv_mod["questionIds"]
-    assert len(controv_qids) == 9
+    assert len(controv_qids) == 8
     pyq_q_by_id = {q["id"]: q for q in pyq_archive["questions"]}
     controv_answers = {}
     for qid in controv_qids:
@@ -313,10 +318,10 @@ def main():
         },
     )
     assert st_m3 == 200
-    assert res_m3["correct_count"] == 9 and res_m3["wrong_count"] == 0 and res_m3["raw_score"] == 36
+    assert res_m3["correct_count"] == 8 and res_m3["wrong_count"] == 0 and res_m3["raw_score"] == 32
     print(
         f"Disputed/Dropped/SC Module Score: {res_m3['raw_score']}/{res_m3['max_score']} "
-        f"(All 9/9 awarded +4 including blank dropped Qs & secondary multi-key options!)"
+        f"(All 8/8 awarded +4 including blank dropped Qs & secondary multi-key options!)"
     )
 
     print("\n=== 5. Testing Live Bilingual Gemini AI Coach (Tamil, Tanglish, English) ===")

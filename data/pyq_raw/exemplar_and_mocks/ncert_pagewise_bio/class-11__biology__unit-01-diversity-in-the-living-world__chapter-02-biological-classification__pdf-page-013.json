@@ -1,0 +1,298 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 13,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 13,
+    "source_scope": "Only the content printed on PDF page 13 (printed page 22): the twelve end-of-chapter exercises of Chapter 2. Questions here ask what each printed exercise asks, using only the text on this page.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 15,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q001",
+      "type": "single_correct",
+      "topic": "Exercise 1",
+      "question": "Exercise 1 asks learners to discuss how classification systems have:",
+      "options": [
+        "Been replaced by one universal system",
+        "Ignored cell structure",
+        "Remained unchanged since Aristotle",
+        "Undergone several changes over a period of time"
+      ],
+      "correct_option": 3,
+      "explanation": "Exercise 1 asks learners to discuss how classification systems have undergone several changes over a period of time.",
+      "source_text": "Discuss how classification systems have undergone several changes over a period of time?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q002",
+      "type": "single_correct",
+      "topic": "Exercise 2",
+      "question": "Exercise 2 asks for two economically important uses of which two groups?",
+      "options": [
+        "Cyanobacteria and diatoms",
+        "Viruses and viroids",
+        "Fungi and protozoans",
+        "Heterotrophic bacteria and archaebacteria"
+      ],
+      "correct_option": 3,
+      "explanation": "Exercise 2 asks for two economically important uses of (a) heterotrophic bacteria and (b) archaebacteria.",
+      "source_text": "State two economically important uses of: (a) heterotrophic bacteria (b) archaebacteria",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q003",
+      "type": "single_correct",
+      "topic": "Exercise 3",
+      "question": "Exercise 3 asks about the nature of the cell walls in which organisms?",
+      "options": [
+        "Mycoplasma",
+        "Slime moulds",
+        "Diatoms",
+        "Euglenoids"
+      ],
+      "correct_option": 2,
+      "explanation": "Exercise 3 asks: What is the nature of cell-walls in diatoms?",
+      "source_text": "What is the nature of cell-walls in diatoms?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q004",
+      "type": "single_correct",
+      "topic": "Exercise 4",
+      "question": "Exercise 4 asks learners to find out what the terms signify:",
+      "options": [
+        "'Capsid' and 'capsomere'",
+        "'Phycobiont' and 'mycobiont'",
+        "'Algal bloom' and 'red-tides'",
+        "'Plasmogamy' and 'karyogamy'"
+      ],
+      "correct_option": 2,
+      "explanation": "Exercise 4 asks learners to find out what the terms 'algal bloom' and 'red-tides' signify.",
+      "source_text": "Find out what do the terms ‘algal bloom’ and ‘red-tides’ signify.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q005",
+      "type": "single_correct",
+      "topic": "Exercise 5",
+      "question": "Exercise 5 asks how which two agents differ?",
+      "options": [
+        "Bacteria and viruses",
+        "Prions and viroids",
+        "Viroids and viruses",
+        "Lichens and mycorrhiza"
+      ],
+      "correct_option": 2,
+      "explanation": "Exercise 5 asks: How are viroids different from viruses?",
+      "source_text": "How are viroids different from viruses?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q006",
+      "type": "single_correct",
+      "topic": "Exercise 6",
+      "question": "Exercise 6 asks for a brief description of:",
+      "options": [
+        "The five kingdoms",
+        "The four major groups of Protozoa",
+        "The four classes of Kingdom Fungi",
+        "The three shapes of bacteria"
+      ],
+      "correct_option": 1,
+      "explanation": "Exercise 6 asks learners to describe briefly the four major groups of Protozoa.",
+      "source_text": "Describe briefly the four major groups of Protozoa.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q007",
+      "type": "single_correct",
+      "topic": "Exercise 7",
+      "question": "Exercise 7 states that plants are autotrophic and asks for examples of plants that are:",
+      "options": [
+        "Chemosynthetic",
+        "Saprophytic",
+        "Partially heterotrophic",
+        "Holozoic"
+      ],
+      "correct_option": 2,
+      "explanation": "Exercise 7 asks learners to think of plants that are partially heterotrophic.",
+      "source_text": "Plants are autotrophic. Can you think of some plants that are partially heterotrophic?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q008",
+      "type": "single_correct",
+      "topic": "Exercise 8",
+      "question": "Exercise 8 asks what the terms signify:",
+      "options": [
+        "Plasmogamy and karyogamy",
+        "Phycobiont and mycobiont",
+        "Pellicle and plasmodium",
+        "Hyphae and mycelium"
+      ],
+      "correct_option": 1,
+      "explanation": "Exercise 8 asks: What do the terms phycobiont and mycobiont signify?",
+      "source_text": "What do the terms phycobiont and mycobiont signify?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q009",
+      "type": "multiple_correct",
+      "topic": "Exercise 9",
+      "question": "Exercise 9 asks for a comparative account of the classes of Kingdom Fungi under which headings?",
+      "options": [
+        "Habitat",
+        "Mode of reproduction",
+        "Cell wall composition",
+        "Mode of nutrition"
+      ],
+      "correct_options": [
+        1,
+        3
+      ],
+      "explanation": "Exercise 9 lists (i) mode of nutrition and (ii) mode of reproduction.",
+      "source_text": "(i) mode of nutrition (ii) mode of reproduction",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q010",
+      "type": "single_correct",
+      "topic": "Exercise 10",
+      "question": "Exercise 10 asks for the characteristic features of:",
+      "options": [
+        "Chrysophytes",
+        "Euglenoids",
+        "Slime moulds",
+        "Dinoflagellates"
+      ],
+      "correct_option": 1,
+      "explanation": "Exercise 10 asks: What are the characteristic features of Euglenoids?",
+      "source_text": "What are the characteristic features of Euglenoids?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q011",
+      "type": "single_correct",
+      "topic": "Exercise 11",
+      "question": "Exercise 11 asks for a brief account of viruses regarding their structure and nature of genetic material, and for naming how many common viral diseases?",
+      "options": [
+        "Two",
+        "Four",
+        "Three",
+        "Five"
+      ],
+      "correct_option": 1,
+      "explanation": "Exercise 11 asks learners to also name four common viral diseases.",
+      "source_text": "Also name four common viral diseases.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q012",
+      "type": "single_correct",
+      "topic": "Exercise 12",
+      "question": "Exercise 12 asks learners to organise a class discussion on the topic:",
+      "options": [
+        "Are viruses living or non-living?",
+        "Are fungi plants or animals?",
+        "Are bacteria prokaryotes or eukaryotes?",
+        "Are lichens one organism or two?"
+      ],
+      "correct_option": 0,
+      "explanation": "Exercise 12 asks learners to organise a class discussion on whether viruses are living or non-living.",
+      "source_text": "Organise a discussion in your class on the topic",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q013",
+      "type": "single_correct",
+      "topic": "Exercises",
+      "question": "Which exercise question asks learners to 'find out' the meaning of terms?",
+      "options": [
+        "Exercise 12",
+        "Exercise 4",
+        "Exercise 8",
+        "Exercise 3"
+      ],
+      "correct_option": 1,
+      "explanation": "Only Exercise 4 begins with 'Find out what do the terms'.",
+      "source_text": "Find out what do the terms",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q014",
+      "type": "multiple_correct",
+      "topic": "Exercises",
+      "question": "Which of the following topics are the subject of questions in this exercise set?",
+      "options": [
+        "Alternation of generations",
+        "Features of Euglenoids",
+        "Viroids compared with viruses",
+        "Phycobiont and mycobiont",
+        "Groups of Protozoa",
+        "Binomial nomenclature"
+      ],
+      "correct_options": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Exercises 6, 10, 8 and 5 cover these topics. Alternation of generations and binomial nomenclature are not asked.",
+      "source_text": "Describe briefly the four major groups of Protozoa. ... What are the characteristic features of Euglenoids? ... What do the terms phycobiont and mycobiont signify? ... How are viroids different from viruses?",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P013-Q015",
+      "type": "multiple_statement",
+      "topic": "Exercises",
+      "question": "Consider the following statements:\n1. Exercise 7 concerns plants that are partially heterotrophic.\n2. Exercise 3 concerns the cell walls of diatoms.\n3. Exercise 10 asks about the structure of bacteriophages.\nWhich statements are correct?",
+      "options": [
+        "1 and 3 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 1,
+      "explanation": "Statements 1 and 2 match the printed exercises. Exercise 10 asks about the characteristic features of Euglenoids, not bacteriophages.",
+      "source_text": "Can you think of some plants that are partially heterotrophic? ... What is the nature of cell-walls in diatoms? ... What are the characteristic features of Euglenoids?",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

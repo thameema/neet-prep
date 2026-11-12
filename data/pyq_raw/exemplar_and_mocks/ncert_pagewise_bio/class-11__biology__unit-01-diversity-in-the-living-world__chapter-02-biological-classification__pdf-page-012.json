@@ -1,0 +1,422 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 12,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 12,
+    "source_scope": "Only the content printed on PDF page 12 (printed page 21): the end of plant virus symptoms, Viroids, Prions, Lichens, and the first part of the chapter Summary.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q001",
+      "type": "multiple_correct",
+      "topic": "Plant virus symptoms",
+      "question": "Which symptoms of viral infection in plants are mentioned at the top of this page?",
+      "options": [
+        "Dwarfing",
+        "Silica deposition in walls",
+        "Formation of fruiting bodies",
+        "Stunted growth",
+        "Vein clearing"
+      ],
+      "correct_options": [
+        0,
+        3,
+        4
+      ],
+      "explanation": "The page continues the list of plant virus symptoms with vein clearing, dwarfing and stunted growth.",
+      "source_text": "and vein clearing, dwarfing and stunted growth.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q002",
+      "type": "single_correct",
+      "topic": "Viroids",
+      "question": "Viroids were discovered in 1971 by:",
+      "options": [
+        "Dmitri Ivanowsky",
+        "W.M. Stanley",
+        "T.O. Diener",
+        "M.W. Beijerinck"
+      ],
+      "correct_option": 2,
+      "explanation": "The page credits T.O. Diener with discovering viroids in 1971.",
+      "source_text": "Viroids : In 1971, T.O. Diener discovered a new infectious agent that was smaller than viruses",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q003",
+      "type": "single_correct",
+      "topic": "Viroids",
+      "question": "Viroids caused which disease when discovered?",
+      "options": [
+        "Citrus canker",
+        "Potato spindle tuber disease",
+        "Mosaic disease of tobacco",
+        "Mad cow disease"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the agent discovered by Diener caused potato spindle tuber disease.",
+      "source_text": "caused potato spindle tuber disease.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q004",
+      "type": "single_correct",
+      "topic": "Viroids",
+      "question": "How do viroids differ from viruses?",
+      "options": [
+        "They consist of abnormally folded protein",
+        "They have both DNA and RNA",
+        "They are free RNA lacking the protein coat found in viruses",
+        "They have a protein coat but no nucleic acid"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says the viroid was a free RNA that lacked the protein coat found in viruses, hence its name.",
+      "source_text": "It was found to be a free RNA; it lacked the protein coat that is found in viruses, hence the name viroid.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q005",
+      "type": "single_correct",
+      "topic": "Viroids",
+      "question": "The RNA of the viroid was of:",
+      "options": [
+        "Low molecular weight",
+        "Double stranded form",
+        "Variable molecular weight with DNA",
+        "High molecular weight"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the RNA of the viroid was of low molecular weight.",
+      "source_text": "The RNA of the viroid was of low molecular weight.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q006",
+      "type": "single_correct",
+      "topic": "Prions",
+      "question": "Prions are infectious agents that consist of:",
+      "options": [
+        "Algae and fungi",
+        "Abnormally folded protein",
+        "Double stranded DNA",
+        "Free RNA"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says certain infectious neurological diseases are transmitted by an agent consisting of abnormally folded protein, called prions.",
+      "source_text": "transmitted by an agent consisting of abnormally folded protein.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q007",
+      "type": "single_correct",
+      "topic": "Prions",
+      "question": "Which disease caused by prions is commonly called mad cow disease?",
+      "options": [
+        "Potato spindle tuber disease",
+        "Sleeping sickness",
+        "Bovine spongiform encephalopathy (BSE)",
+        "Creutzfeldt–Jacob disease (CJD)"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says BSE is commonly called mad cow disease in cattle, and its analogous variant in humans is CJD.",
+      "source_text": "bovine spongiform encephalopathy (BSE) commonly called mad cow disease in cattle",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q008",
+      "type": "single_correct",
+      "topic": "Prions",
+      "question": "The human disease analogous to BSE, caused by prions, is:",
+      "options": [
+        "Mumps",
+        "Creutzfeldt–Jacob disease (CJD)",
+        "Typhoid",
+        "Sleeping sickness"
+      ],
+      "correct_option": 1,
+      "explanation": "The page names Creutzfeldt-Jacob disease (CJD) as the analogous variant in humans.",
+      "source_text": "its analogous variant Creutzfeldt–Jacob disease (CJD) in humans.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q009",
+      "type": "match_the_following",
+      "topic": "Acellular agents and lichens",
+      "question": "Match each with its description from this page.",
+      "column_a": [
+        "Viroids",
+        "Prions",
+        "Lichens"
+      ],
+      "column_b": [
+        "A. Abnormally folded protein",
+        "B. Symbiotic association of algae and fungi",
+        "C. Free RNA lacking a protein coat"
+      ],
+      "options": [
+        "Viroids-C, Prions-A, Lichens-B",
+        "Viroids-A, Prions-C, Lichens-B",
+        "Viroids-C, Prions-B, Lichens-A",
+        "Viroids-B, Prions-A, Lichens-C"
+      ],
+      "correct_option": 0,
+      "explanation": "Viroids are free RNA without a protein coat, prions are abnormally folded proteins, and lichens are algae-fungus symbioses.",
+      "source_text": "It was found to be a free RNA ... an agent consisting of abnormally folded protein ... Lichens are symbiotic associations i.e. mutually useful associations, between algae and fungi.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q010",
+      "type": "single_correct",
+      "topic": "Lichens",
+      "question": "Lichens are symbiotic associations between:",
+      "options": [
+        "Algae and bacteria",
+        "Fungi and viruses",
+        "Bacteria and fungi",
+        "Algae and fungi"
+      ],
+      "correct_option": 3,
+      "explanation": "The page defines lichens as mutually useful associations between algae and fungi.",
+      "source_text": "Lichens are symbiotic associations i.e. mutually useful associations, between algae and fungi.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q011",
+      "type": "match_the_following",
+      "topic": "Lichens",
+      "question": "Match each lichen component with its name and nutritional mode.",
+      "column_a": [
+        "Algal component",
+        "Fungal component"
+      ],
+      "column_b": [
+        "A. Mycobiont (heterotrophic)",
+        "B. Phycobiont (autotrophic)"
+      ],
+      "options": [
+        "Algal component-B, Fungal component-A",
+        "Algal component-A, Fungal component-B",
+        "Algal component-B, Fungal component-B",
+        "Algal component-A, Fungal component-A"
+      ],
+      "correct_option": 0,
+      "explanation": "The algal component is the phycobiont (autotrophic) and the fungal component is the mycobiont (heterotrophic).",
+      "source_text": "The algal component is known as phycobiont and fungal component as mycobiont, which are autotrophic and heterotrophic, respectively.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q012",
+      "type": "single_correct",
+      "topic": "Lichens",
+      "question": "In a lichen, which partner prepares food, and which provides shelter and absorbs mineral nutrients and water?",
+      "options": [
+        "Fungi prepare food; algae provide shelter",
+        "Algae prepare food; fungi provide shelter and absorb minerals and water",
+        "Both partners prepare food equally",
+        "Algae absorb minerals; fungi prepare food"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says algae prepare food for fungi, and fungi provide shelter and absorb mineral nutrients and water for the partner.",
+      "source_text": "Algae prepare food for fungi and fungi provide shelter and absorb mineral nutrients and water for its partner.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q013",
+      "type": "assertion_reason",
+      "topic": "Lichens",
+      "question": "Assertion (A): Lichens are very good pollution indicators.\nReason (R): Lichens do not grow in polluted areas.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives the absence of lichens in polluted areas as the basis for their use as pollution indicators.",
+      "source_text": "are very good pollution indicators – they do not grow in polluted areas.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q014",
+      "type": "single_correct",
+      "topic": "Summary",
+      "question": "According to the summary, who first proposed biological classification of plants and animals on the basis of simple morphological characters?",
+      "options": [
+        "Aristotle",
+        "Linnaeus",
+        "Whittaker",
+        "Beijerinck"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary says classification was first proposed by Aristotle based on simple morphological characters.",
+      "source_text": "Biological classification of plants and animals was first proposed by Aristotle on the basis of simple morphological characters.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q015",
+      "type": "single_correct",
+      "topic": "Summary",
+      "question": "According to the summary, Linnaeus later classified all living organisms into how many kingdoms?",
+      "options": [
+        "Three",
+        "Six",
+        "Five",
+        "Two – Plantae and Animalia"
+      ],
+      "correct_option": 3,
+      "explanation": "The summary says Linnaeus classified all living organisms into two kingdoms, Plantae and Animalia.",
+      "source_text": "Linnaeus later classified all living organisms into two kingdoms – Plantae and Animalia.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q016",
+      "type": "multiple_correct",
+      "topic": "Summary",
+      "question": "Which of the following were the main criteria of the five kingdom classification listed in the summary?",
+      "options": [
+        "Mode of nutrition and reproduction",
+        "Cell structure",
+        "Body organisation",
+        "Geographical distribution",
+        "Phylogenetic relationships"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "The summary lists cell structure, body organisation, mode of nutrition and reproduction, and phylogenetic relationships.",
+      "source_text": "The main criteria of the five kingdom classification were cell structure, body organisation, mode of nutrition and reproduction, and phylogenetic relationships.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q017",
+      "type": "multiple_correct",
+      "topic": "Summary",
+      "question": "Which are the four classes of Kingdom Fungi listed in the summary?",
+      "options": [
+        "Phycomycetes",
+        "Dinoflagellates",
+        "Basidiomycetes",
+        "Ascomycetes",
+        "Deuteromycetes",
+        "Chrysophytes"
+      ],
+      "correct_options": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The summary names Phycomycetes, Ascomycetes, Basidiomycetes and Deuteromycetes. Chrysophytes and Dinoflagellates are Protista.",
+      "source_text": "Phycomycetes, Ascomycetes, Basidiomycetes and Deuteromycetes are the four classes under this kingdom.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q018",
+      "type": "multiple_correct",
+      "topic": "Summary",
+      "question": "According to the summary, Kingdom Protista includes single-celled eukaryotes such as:",
+      "options": [
+        "Protozoans",
+        "Slime-moulds",
+        "Mycoplasma",
+        "Euglenoids",
+        "Dinoflagellates",
+        "Chrysophytes"
+      ],
+      "correct_options": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The summary lists Chrysophytes, Dinoflagellates, Euglenoids, Slime-moulds and Protozoans.",
+      "source_text": "Kingdom Protista includes all single-celled eukaryotes such as Chrysophytes, Dinoflagellates, Euglenoids, Slime-moulds and Protozoans.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q019",
+      "type": "single_correct",
+      "topic": "Summary",
+      "question": "According to the summary, the mode of nutrition of most fungi is:",
+      "options": [
+        "Saprophytic",
+        "Chemosynthetic",
+        "Photosynthetic",
+        "Holozoic"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary says most fungi are saprophytic in their mode of nutrition.",
+      "source_text": "Most fungi are saprophytic in their mode of nutrition.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P012-Q020",
+      "type": "single_correct",
+      "topic": "Summary",
+      "question": "According to the summary, the life cycle of plants exhibits:",
+      "options": [
+        "Dikaryophase and diploid phase",
+        "Alternation of generations – gametophytic and sporophytic",
+        "Plasmogamy and karyogamy only",
+        "Fission and budding"
+      ],
+      "correct_option": 1,
+      "explanation": "The summary says plant life cycles exhibit alternation of generations between gametophytic and sporophytic generations.",
+      "source_text": "The life cycle of plants exhibit alternation of generations – gametophytic and sporophytic generations.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

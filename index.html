@@ -1150,7 +1150,7 @@
 
       <div class="desktop-nav-tabs">
         <button class="nav-tab active" data-view="workspace" onclick="switchView('workspace')">Exam & Coach Workspace</button>
-        <button class="nav-tab" data-view="pyq" onclick="switchView('pyq')">Past Papers (2013–2026)</button>
+        <button class="nav-tab" data-view="pyq" onclick="switchView('pyq')">Past Papers &amp; Exemplar (7,484 Qs)</button>
         <button class="nav-tab" data-view="tracker" onclick="switchView('tracker')">Score & Mentor Tracker</button>
         <button class="nav-tab" data-view="guide" onclick="switchView('guide')">TN NEET Guide & YouTube Hub</button>
       </div>
@@ -1274,19 +1274,20 @@
     </div>
   </section>
 
-  <!-- VIEW 1.5: 14-YEAR OFFICIAL PAST PAPERS ARCHIVE & ANALYTICS (2013–2026) -->
+  <!-- VIEW 1.5: 27-YEAR OFFICIAL PAST PAPERS, NCERT EXEMPLAR & COACHING ARCHIVE (2000–2026) -->
   <section id="view-pyq" class="view-section">
     <div class="page-scroll">
       <div class="page-container">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
           <div>
-            <h1 style="font-size:19px;color:var(--navy);">Official NTA NEET / AIPMT Past Papers Archive (2013–2026)</h1>
+            <h1 style="font-size:19px;color:var(--navy);">Official NTA NEET / AIPMT Past Papers (2000–2026) + NCERT Exemplar &amp; Coaching Archive</h1>
             <p style="font-size:12.5px;color:var(--text-sec);margin-top:3px;">
-              <strong>3,564 Verified Official Past Questions</strong> across <strong>24 Official Exam Papers</strong> (including <strong>Re-NEET 2026 June 21</strong>, <strong>NEET 2025</strong>, <strong>NEET 2024</strong>, and <strong>Official NTA தமிழ் Booklets 2018–2021</strong>) plus the <strong>NTA Disputed &amp; Supreme Court Landmark Module</strong>.
+              <strong>7,404 Archive Questions</strong> (<strong>5,968 Official PYQs</strong> across <strong>40 Official Papers 2000–2026</strong> + <strong>1,436 NCERT Exemplar, Line-by-Line &amp; NTA Abhyas / Coaching Mock Questions</strong> across <strong>5 Dedicated Modules</strong> + <strong>Disputed / Bonus / Supreme Court Module</strong>).
             </p>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="btn-outline" onclick="loadSelectedModule('pyq_controversial_2024_2026'); switchMobilePane('question');">Disputed &amp; SC Landmark Qs (9 Qs)</button>
+            <button class="btn-outline" onclick="loadSelectedModule('pyq_controversial_2024_2026'); switchMobilePane('question');">Disputed &amp; SC Landmark Qs (8 Qs)</button>
+            <button class="btn-outline" onclick="loadSelectedModule('mock_abhyas_cbt_full'); switchMobilePane('question');">NTA Abhyas 180-Q Mock</button>
             <button class="btn-primary" onclick="loadSelectedModule('pyq_reneet_2026'); switchMobilePane('question');">Launch Re-NEET 2026 Paper</button>
           </div>
         </div>
@@ -1294,20 +1295,21 @@
         <div class="kpi-grid" id="pyq-overview-kpis"></div>
 
         <div class="section-card">
-          <h2>1. Subject-Wise 14-Year PYQ Sprints &amp; Disputed NTA Answer Keys</h2>
+          <h2>1. NCERT Exemplar, Line-by-Line, Coaching Mocks, Subject Sprints &amp; Disputed NTA Keys</h2>
           <p style="font-size:12.5px;color:var(--text-sec);margin-bottom:12px;">
-            Launch a fresh 45-question subject sprint sampled across 2013–2026 official NEET papers, or practice the exact 2024–2026 questions that triggered NTA bonus drops (+4 to all), dual answer keys, and Supreme Court / IIT-Delhi rulings.
+            Practice the <strong>NCERT Exemplar &amp; Back-Exercise Level-4 Analytical Bank (709 Qs)</strong>, <strong>NCERT Line-by-Line Page-Wise Biology (342 Qs)</strong>, <strong>NTA Abhyas 180-Q Full CBT Mock</strong>, <strong>Coaching High-Yield PCB Pack (205 Qs)</strong>, <strong>27-Year Subject PYQ Sprints (45 Qs)</strong>, or the <strong>Disputed / Bonus (+4) / Supreme Court Landmark Module</strong>.
           </p>
           <div class="resource-grid" id="pyq-sprint-cards"></div>
         </div>
 
         <div class="section-card">
-          <h2>2. Launch Full Official Past NEET / Re-NEET / தமிழ் Exam Papers (2013–2026)</h2>
+          <h2>2. Launch Full Official Past NEET / Re-NEET / AIPMT / தமிழ் Exam Papers (40 Papers, 2000–2026)</h2>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
-            <button class="subj-pill active" id="pyq-filter-all" onclick="filterPyqPaperCards('all')">All 24 Official Papers</button>
+            <button class="subj-pill active" id="pyq-filter-all" onclick="filterPyqPaperCards('all')">All 40 Official Papers</button>
             <button class="subj-pill" id="pyq-filter-recent" onclick="filterPyqPaperCards('recent')">2020–2026 NTA Era</button>
             <button class="subj-pill" id="pyq-filter-ta" onclick="filterPyqPaperCards('ta')">Official NTA தமிழ் Booklets (2018–2021)</button>
-            <button class="subj-pill" id="pyq-filter-classic" onclick="filterPyqPaperCards('classic')">2013–2019 Classic NEET / AIPMT</button>
+            <button class="subj-pill" id="pyq-filter-classic" onclick="filterPyqPaperCards('classic')">2013–2019 NEET / AIPMT</button>
+            <button class="subj-pill" id="pyq-filter-aipmt" onclick="filterPyqPaperCards('aipmt')">2000–2012 Classic AIPMT (Prelims &amp; Mains)</button>
           </div>
           <div class="resource-grid" id="pyq-paper-cards"></div>
         </div>
@@ -1752,11 +1754,13 @@
       const sel = document.getElementById("module-select");
       sel.innerHTML = "";
       const groups = [
-        { label: "Core Bilingual Mastery Mocks & Chapter Drills", filter: m => !m.id.startsWith("pyq_") },
-        { label: "NTA Disputed Keys & 14-Year Subject PYQ Sprints", filter: m => m.id === "pyq_controversial_2024_2026" || m.isDynamicSubjectPyq },
-        { label: "Official Past NEET & Re-NEET Papers (2020–2026)", filter: m => m.isPastPaper && !m.id.endsWith("_ta") && (m.examYear || 0) >= 2020 },
-        { label: "Official NTA தமிழ் Booklet Past Papers (2018–2021)", filter: m => m.isPastPaper && m.id.endsWith("_ta") },
-        { label: "Official Past NEET & AIPMT Papers (2013–2019)", filter: m => m.isPastPaper && !m.id.endsWith("_ta") && (m.examYear || 0) < 2020 }
+        { label: "Core Bilingual Mastery Mocks & Chapter Drills", filter: m => !m.id.startsWith("pyq_") && !m.isExemplarOrCoaching },
+        { label: "NCERT Exemplar, Line-by-Line & Coaching Mock Series", filter: m => Boolean(m.isExemplarOrCoaching) },
+        { label: "NTA Disputed Keys & 27-Year Subject PYQ Sprints", filter: m => m.id === "pyq_controversial_2024_2026" || m.isDynamicSubjectPyq },
+        { label: "Official Past NEET & Re-NEET Papers (2020–2026)", filter: m => m.isPastPaper && !m.isControversialModule && m.paperLanguage !== "ta" && (m.examYear || 0) >= 2020 },
+        { label: "Official NTA தமிழ் Booklet Past Papers (2018–2021)", filter: m => m.isPastPaper && m.paperLanguage === "ta" },
+        { label: "Official Past NEET & AIPMT Papers (2013–2019)", filter: m => m.isPastPaper && m.paperLanguage !== "ta" && (m.examYear || 0) >= 2013 && (m.examYear || 0) < 2020 },
+        { label: "Classic CBSE AIPMT Past Papers (2000–2012 Prelims & Mains)", filter: m => m.isPastPaper && m.paperLanguage !== "ta" && (m.examYear || 0) < 2013 }
       ];
       const allMods = Object.values(BANK.modules);
       groups.forEach(g => {
@@ -2820,7 +2824,7 @@ Student Question: ${studentMsg}`;
       }
     }
 
-    /* PAST PAPERS ARCHIVE HUB (2013-2026) */
+    /* PAST PAPERS, NCERT EXEMPLAR & COACHING ARCHIVE HUB (2000-2026) */
     let currentPyqPaperFilter = "all";
 
     function renderPyqArchiveHub() {
@@ -2830,29 +2834,31 @@ Student Question: ${studentMsg}`;
       if (!kpiWrap) return;
 
       const totalPyq = meta.totalQuestions || (PYQ_ARCHIVE.questions || []).length;
-      const totalPapers = meta.totalPapers || 24;
+      const officialPyq = meta.officialPyqQuestions || 5968;
+      const exCoachCount = meta.exemplarAndCoachingQuestions || 1436;
+      const totalPapers = meta.totalPapers || 40;
       const subjCounts = meta.subjectCounts || analytics.subjectTotals || {};
 
       kpiWrap.innerHTML = `
         <div class="kpi-card">
-          <div class="kpi-label">Official Past Questions</div>
+          <div class="kpi-label">Total Archive Questions</div>
           <div class="kpi-value" style="color:var(--primary);">${totalPyq.toLocaleString()}</div>
-          <div class="kpi-note">${totalPapers} Official Exam Booklets (2013–2026)</div>
+          <div class="kpi-note">${officialPyq.toLocaleString()} Official PYQs + ${exCoachCount.toLocaleString()} Exemplar/Mocks</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Biology PYQs (Bot + Zoo)</div>
+          <div class="kpi-label">Official Past Booklets</div>
+          <div class="kpi-value">${totalPapers} Papers</div>
+          <div class="kpi-note">2000–2026 NEET, Re-NEET, AIPMT &amp; தமிழ் (${meta.tamilBookletQuestions || 651} Qs)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Biology Pool (Bot + Zoo)</div>
           <div class="kpi-value">${((subjCounts.Botany || 0) + (subjCounts.Zoology || 0)).toLocaleString()}</div>
           <div class="kpi-note">Botany: ${subjCounts.Botany || 0} • Zoology: ${subjCounts.Zoology || 0}</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Physics &amp; Chemistry PYQs</div>
+          <div class="kpi-label">Physics &amp; Chemistry Pool</div>
           <div class="kpi-value">${((subjCounts.Physics || 0) + (subjCounts.Chemistry || 0)).toLocaleString()}</div>
           <div class="kpi-note">Physics: ${subjCounts.Physics || 0} • Chemistry: ${subjCounts.Chemistry || 0}</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Official NTA தமிழ் PYQs</div>
-          <div class="kpi-value" style="color:var(--amber);">${meta.tamilBookletQuestions || 651}</div>
-          <div class="kpi-note">2018–2021 Bilingual NTA Booklets</div>
         </div>
       `;
 
@@ -2860,6 +2866,11 @@ Student Question: ${studentMsg}`;
       if (sprintWrap) {
         const sprintIds = [
           "pyq_controversial_2024_2026",
+          "mock_abhyas_cbt_full",
+          "coaching_pcb_chapter_pack",
+          "exemplar_bio_class11",
+          "exemplar_bio_class12",
+          "ncert_line_by_line_bio",
           "pyq_sprint_botany",
           "pyq_sprint_zoology",
           "pyq_sprint_chemistry",
@@ -2870,7 +2881,9 @@ Student Question: ${studentMsg}`;
           if (!m) return "";
           const badge = id === "pyq_controversial_2024_2026"
             ? "NTA BONUS / MULTI-KEY / SUPREME COURT"
-            : `14-YEAR ${escapeHtml((m.targetSubject || "").toUpperCase())} PYQ POOL`;
+            : (m.isExemplarOrCoaching
+              ? "NCERT EXEMPLAR / LINE-BY-LINE / COACHING MOCK"
+              : `27-YEAR ${escapeHtml((m.targetSubject || "").toUpperCase())} PYQ POOL`);
           return `
             <div class="resource-item" style="display:flex;flex-direction:column;justify-content:space-between;">
               <div>
@@ -2878,7 +2891,7 @@ Student Question: ${studentMsg}`;
                 <h4>${escapeHtml(m.title)}</h4>
                 <p style="margin-bottom:10px;">${escapeHtml(m.description || "")}</p>
               </div>
-              <button class="btn-primary" style="width:100%;font-size:12px;" onclick="loadSelectedModule('${escapeHtml(m.id)}'); switchMobilePane('question');">Start Practice Sprint &rarr;</button>
+              <button class="btn-primary" style="width:100%;font-size:12px;" onclick="loadSelectedModule('${escapeHtml(m.id)}'); switchMobilePane('question');">Start Module &rarr;</button>
             </div>
           `;
         }).join("");
@@ -2888,11 +2901,11 @@ Student Question: ${studentMsg}`;
 
       const yearTbody = document.getElementById("pyq-year-format-tbody");
       if (yearTbody && analytics.questionTypeByYear) {
-        const years = Object.keys(analytics.questionTypeByYear).sort((a, b) => Number(b) - Number(a));
+        const years = Object.keys(analytics.questionTypeByYear).filter(yr => Number(yr) >= 2013).sort((a, b) => Number(b) - Number(a));
         yearTbody.innerHTML = years.map(yr => {
           const r = analytics.questionTypeByYear[yr] || {};
           const qt = r.counts || {};
-          const paperId = yr === "2026" ? "pyq_reneet_2026" : (yr === "2022" ? "pyq_2022_p1" : (yr === "2016" ? "pyq_2016_p1" : (yr === "2015" ? "pyq_2015_retest" : `pyq_${yr}`)));
+          const paperId = yr === "2026" ? "pyq_reneet_2026" : (yr === "2022" ? "pyq_2022_p1" : (yr === "2016" ? "pyq_2016_p1" : (yr === "2015" ? "pyq_2015_re" : `pyq_${yr}`)));
           return `
             <tr>
               <td><a href="javascript:void(0)" style="color:var(--primary);font-weight:700;text-decoration:none;" onclick="loadSelectedModule('${escapeHtml(paperId)}'); switchMobilePane('question');">NEET ${escapeHtml(yr)}</a></td>
@@ -2925,11 +2938,11 @@ Student Question: ${studentMsg}`;
       if (dossierGrid && Array.isArray(analytics.disputedQuestionsDossier)) {
         dossierGrid.innerHTML = analytics.disputedQuestionsDossier.map(d => `
           <div class="resource-item">
-            <div style="font-size:10.5px;font-weight:800;color:var(--rose);margin-bottom:4px;">${escapeHtml(d.exam)}</div>
-            <h4>${escapeHtml(d.questionRef)}</h4>
-            <p style="margin-bottom:6px;"><strong>Dispute / Issue:</strong> ${escapeHtml(d.issue)}</p>
-            <p style="margin-bottom:6px;"><strong>Official Resolution:</strong> ${escapeHtml(d.resolution)}</p>
-            <div style="font-size:11.5px;color:var(--primary);font-weight:700;">Rule: ${escapeHtml(d.takeaway)}</div>
+            <div style="font-size:10.5px;font-weight:800;color:var(--rose);margin-bottom:4px;">${escapeHtml(d.exam || "")}</div>
+            <h4>${escapeHtml(d.qNum || d.questionRef || "")}</h4>
+            <p style="margin-bottom:6px;"><strong>Dispute / Context:</strong> ${escapeHtml(d.summary || d.issue || "")}</p>
+            <p style="margin-bottom:6px;"><strong>Official Key / Ruling:</strong> ${escapeHtml(d.acceptedKey || d.resolution || "")}</p>
+            <div style="font-size:11.5px;color:var(--primary);font-weight:700;">Status: ${escapeHtml(d.status || d.takeaway || "")}</div>
           </div>
         `).join("");
       }
@@ -2937,22 +2950,24 @@ Student Question: ${studentMsg}`;
 
     function filterPyqPaperCards(filterKey) {
       currentPyqPaperFilter = filterKey;
-      ["all", "recent", "ta", "classic"].forEach(k => {
+      ["all", "recent", "ta", "classic", "aipmt"].forEach(k => {
         const btn = document.getElementById(`pyq-filter-${k}`);
         if (btn) btn.classList.toggle("active", k === filterKey);
       });
       const wrap = document.getElementById("pyq-paper-cards");
       if (!wrap) return;
-      const papers = Object.values(BANK.modules).filter(m => m.isPastPaper);
+      const papers = Object.values(BANK.modules).filter(m => m.isPastPaper && !m.isControversialModule);
       const filtered = papers.filter(m => {
-        if (filterKey === "recent") return !m.id.endsWith("_ta") && (m.examYear || 0) >= 2020;
-        if (filterKey === "ta") return m.id.endsWith("_ta");
-        if (filterKey === "classic") return !m.id.endsWith("_ta") && (m.examYear || 0) < 2020;
+        const isTa = m.paperLanguage === "ta" || m.id.startsWith("pyq_ta_") || m.id.endsWith("_ta");
+        if (filterKey === "recent") return !isTa && (m.examYear || 0) >= 2020;
+        if (filterKey === "ta") return isTa;
+        if (filterKey === "classic") return !isTa && (m.examYear || 0) >= 2013 && (m.examYear || 0) < 2020;
+        if (filterKey === "aipmt") return !isTa && (m.examYear || 0) < 2013;
         return true;
       });
       wrap.innerHTML = filtered.map(m => {
         const qCount = (m.questionIds || []).length;
-        const isTa = m.id.endsWith("_ta");
+        const isTa = m.paperLanguage === "ta" || m.id.startsWith("pyq_ta_") || m.id.endsWith("_ta");
         return `
           <div class="resource-item" style="display:flex;flex-direction:column;justify-content:space-between;">
             <div>

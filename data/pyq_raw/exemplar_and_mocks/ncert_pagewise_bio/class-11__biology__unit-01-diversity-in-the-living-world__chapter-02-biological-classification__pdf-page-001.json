@@ -1,0 +1,265 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 1,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 1,
+    "source_scope": "Only the content printed on PDF page 1 (printed page 10): Chapter 2 opening passage on early attempts at classification, Aristotle, the Two Kingdom system, and the chapter section list.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 13,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q001",
+      "type": "single_correct",
+      "topic": "Early classification",
+      "question": "Who was the earliest to attempt a more scientific basis for classification of living organisms?",
+      "options": [
+        "Linnaeus",
+        "Whittaker",
+        "Aristotle",
+        "Darwin"
+      ],
+      "correct_option": 2,
+      "explanation": "The chapter opening states that Aristotle was the earliest to attempt a more scientific basis for classification.",
+      "source_text": "Aristotle was the earliest to attempt a more scientific basis for classification.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q002",
+      "type": "single_correct",
+      "topic": "Aristotle's classification",
+      "question": "Aristotle used simple morphological characters to classify plants into:",
+      "options": [
+        "Prokaryotes and eukaryotes",
+        "Monocots and dicots",
+        "Trees, shrubs and herbs",
+        "Algae, fungi and mosses"
+      ],
+      "correct_option": 2,
+      "explanation": "Aristotle's plant groups were trees, shrubs and herbs, based on simple morphological characters.",
+      "source_text": "He used simple morphological characters to classify plants into trees, shrubs and herbs.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q003",
+      "type": "single_correct",
+      "topic": "Aristotle's classification",
+      "question": "Aristotle divided animals into two groups on the basis of:",
+      "options": [
+        "Presence or absence of a cell wall",
+        "Presence or absence of a backbone",
+        "Presence or absence of red blood",
+        "Aquatic or terrestrial habitat"
+      ],
+      "correct_option": 2,
+      "explanation": "He divided animals into those which had red blood and those that did not.",
+      "source_text": "He also divided animals into two groups, those which had red blood and those that did not.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q004",
+      "type": "single_correct",
+      "topic": "Early classification",
+      "question": "Early attempts to classify organisms were instinctive and mainly arose from the need to:",
+      "options": [
+        "Study evolutionary relationships",
+        "Compare cell structure under a microscope",
+        "Use organisms for food, shelter and clothing",
+        "Separate prokaryotes from eukaryotes"
+      ],
+      "correct_option": 2,
+      "explanation": "The passage says early classification did not use scientific criteria but came from a need to use organisms for food, shelter and clothing.",
+      "source_text": "borne out of a need to use organisms for our own use – for food, shelter and clothing.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q005",
+      "type": "single_correct",
+      "topic": "Two Kingdom system",
+      "question": "In Linnaeus' time, the Two Kingdom system of classification recognised which kingdoms?",
+      "options": [
+        "Protista and Animalia",
+        "Monera and Protista",
+        "Plantae and Animalia",
+        "Fungi and Plantae"
+      ],
+      "correct_option": 2,
+      "explanation": "The Two Kingdom system included all plants and animals under Plantae and Animalia respectively.",
+      "source_text": "a Two Kingdom system of classification with Plantae and Animalia kingdoms was developed",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q006",
+      "type": "multiple_correct",
+      "topic": "Limits of Two Kingdom system",
+      "question": "The Two Kingdom classification did not distinguish between which of the following pairs?",
+      "options": [
+        "Unicellular and multicellular organisms",
+        "Vertebrates and invertebrates",
+        "Plants and animals",
+        "Eukaryotes and prokaryotes",
+        "Photosynthetic (green algae) and non-photosynthetic (fungi) organisms"
+      ],
+      "correct_options": [
+        0,
+        3,
+        4
+      ],
+      "explanation": "The page lists these three pairs as distinctions the system failed to make. Plants and animals were the two kingdoms it did recognise.",
+      "source_text": "This system did not distinguish between the eukaryotes and prokaryotes, unicellular and multicellular organisms",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q007",
+      "type": "single_correct",
+      "topic": "Limits of Two Kingdom system",
+      "question": "Why was the two kingdom classification found inadequate?",
+      "options": [
+        "It had too many kingdoms to remember",
+        "A large number of organisms did not fall into either the plant or the animal category",
+        "It was based only on molecular data",
+        "It separated bacteria from fungi"
+      ],
+      "correct_option": 1,
+      "explanation": "The passage says many organisms fitted neither category, so the system was found inadequate.",
+      "source_text": "a large number of organisms did not fall into either category.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q008",
+      "type": "multiple_correct",
+      "topic": "Basis of classification",
+      "question": "Besides gross morphology, which characteristics were felt necessary for classifying organisms?",
+      "options": [
+        "Methods of reproduction",
+        "Local or common names",
+        "Nature of cell wall",
+        "Cell structure",
+        "Mode of nutrition",
+        "Evolutionary relationships"
+      ],
+      "correct_options": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The passage lists cell structure, nature of wall, mode of nutrition, habitat, methods of reproduction and evolutionary relationships. Local names are not mentioned.",
+      "source_text": "a need was also felt for including other characteristics like cell structure, nature of wall, mode of nutrition",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q009",
+      "type": "single_correct",
+      "topic": "Kingdoms across systems",
+      "question": "Which kingdoms have remained a constant under all the different classification systems?",
+      "options": [
+        "Plantae and Animalia",
+        "Protista and Fungi",
+        "Fungi and Monera",
+        "Monera and Protista"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the plant and animal kingdoms have been a constant, though the groups included under them have changed.",
+      "source_text": "Though plant and animal kingdoms have been a constant under all different systems",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q010",
+      "type": "single_correct",
+      "topic": "Changing classification",
+      "question": "Which statement about classification systems is supported by the passage?",
+      "options": [
+        "Classification has never needed to change",
+        "The number and nature of kingdoms have been understood differently by different scientists over time",
+        "All systems have recognised exactly two kingdoms",
+        "The plant and animal kingdoms were replaced entirely in later systems"
+      ],
+      "correct_option": 1,
+      "explanation": "The passage says classification systems have undergone several changes and views on the number and nature of other kingdoms have differed.",
+      "source_text": "the number and nature of other kingdoms have also been understood differently by different scientists over the time.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q011",
+      "type": "assertion_reason",
+      "topic": "Two Kingdom system",
+      "question": "Assertion (A): The Two Kingdom classification was found inadequate.\nReason (R): A large number of organisms did not fall into either the plant or the animal category.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "Both statements are given on the page, and the second is the reason the first was concluded.",
+      "source_text": "a large number of organisms did not fall into either category.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q012",
+      "type": "multiple_statement",
+      "topic": "Aristotle and Linnaeus",
+      "question": "Consider the following statements:\n1. Aristotle used simple morphological characters to classify plants.\n2. Aristotle divided animals into those with red blood and those without.\n3. Linnaeus' Two Kingdom system clearly distinguished prokaryotes from eukaryotes.\nWhich statements are correct?",
+      "options": [
+        "1 and 3 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 1,
+      "explanation": "Statements 1 and 2 match the passage. Statement 3 is false because the Two Kingdom system did not distinguish eukaryotes from prokaryotes.",
+      "source_text": "He used simple morphological characters to classify plants ... those which had red blood and those that did not. ... This system did not distinguish between the eukaryotes and prokaryotes",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P001-Q013",
+      "type": "single_correct",
+      "topic": "Chapter contents",
+      "question": "According to the section list on the chapter opening page, section 2.4 is:",
+      "options": [
+        "Kingdom Fungi",
+        "Viruses, Viroids and Lichens",
+        "Kingdom Plantae",
+        "Kingdom Animalia"
+      ],
+      "correct_option": 2,
+      "explanation": "The opening list runs from 2.1 Kingdom Monera to 2.6 Viruses, Viroids and Lichens, with 2.4 being Kingdom Plantae.",
+      "source_text": "2.4 Kingdom Plantae",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

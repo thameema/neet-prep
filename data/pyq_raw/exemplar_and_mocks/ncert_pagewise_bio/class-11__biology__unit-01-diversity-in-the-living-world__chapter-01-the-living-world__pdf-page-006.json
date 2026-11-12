@@ -1,0 +1,399 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 6,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 4,
+    "source_scope": "Only the content printed on PDF page 6: systematics and evolutionary relationships; taxonomic categories and hierarchy; taxon; common categories and lowest category; characters used in classification; and the definition and examples of species.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q001",
+      "type": "single_correct",
+      "topic": "Systema Naturae",
+      "question": "Which title of publication is mentioned on this page in connection with Linnaeus?",
+      "options": [
+        "Systema Naturae",
+        "Origin of Species",
+        "Historia Naturalis",
+        "Species Plantarum"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says Linnaeus used Systema Naturae as the title of his publication.",
+      "source_text": "used Systema Naturae as the title of his publication",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q002",
+      "type": "multiple_correct",
+      "topic": "Scope of systematics",
+      "question": "According to the page, which areas were later included in the enlarged scope of systematics?",
+      "options": [
+        "Identification",
+        "Nomenclature",
+        "Classification",
+        "Photosynthesis",
+        "Digestion"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The page states that systematics later expanded to include identification, nomenclature and classification.",
+      "source_text": "The scope of systematics was later enlarged to include identification, nomenclature and classification.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q003",
+      "type": "single_correct",
+      "topic": "Systematics",
+      "question": "Which relationship does systematics take into account according to the page?",
+      "options": [
+        "Evolutionary relationships between organisms",
+        "Only similarities in colour",
+        "Only local names",
+        "Relationships between habitats and weather"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explicitly says systematics considers evolutionary relationships between organisms.",
+      "source_text": "Systematics takes into account evolutionary relationships between organisms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q004",
+      "type": "single_correct",
+      "topic": "Classification hierarchy",
+      "question": "According to the page, classification is:",
+      "options": [
+        "A hierarchy of steps, not a single-step process",
+        "A single step only",
+        "Only the naming of organisms",
+        "A method based only on habitat"
+      ],
+      "correct_option": 0,
+      "explanation": "The text explains that classification involves a hierarchy of steps.",
+      "source_text": "Classification is not a single step process but involves hierarchy of steps",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q005",
+      "type": "single_correct",
+      "topic": "Rank or category",
+      "question": "What does each step in the classification hierarchy represent?",
+      "options": [
+        "A rank or category",
+        "A scientific author",
+        "A habitat",
+        "A local name"
+      ],
+      "correct_option": 0,
+      "explanation": "Each step represents a rank or category.",
+      "source_text": "each step represents a rank or category",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q006",
+      "type": "single_correct",
+      "topic": "Taxonomic category",
+      "question": "Why is a category called a taxonomic category in the passage?",
+      "options": [
+        "It is part of the overall taxonomic arrangement",
+        "It is always the lowest level",
+        "It only describes a plant",
+        "It is a local-language name"
+      ],
+      "correct_option": 0,
+      "explanation": "The page links the term taxonomic category to its place in the overall taxonomic arrangement.",
+      "source_text": "Since the category is a part of overall taxonomic arrangement, it is called the taxonomic category",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q007",
+      "type": "single_correct",
+      "topic": "Taxonomic hierarchy",
+      "question": "What do all taxonomic categories together constitute?",
+      "options": [
+        "Taxonomic hierarchy",
+        "Systema Naturae",
+        "A species epithet",
+        "A morphological aggregate"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says all categories together constitute the taxonomic hierarchy.",
+      "source_text": "all categories together constitute the taxonomic hierarchy",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q008",
+      "type": "single_correct",
+      "topic": "Taxon",
+      "question": "A category, as a unit of classification, is commonly termed a:",
+      "options": [
+        "Taxon",
+        "Genus only",
+        "Species epithet",
+        "Habitat"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage says a category is commonly termed a taxon, plural taxa.",
+      "source_text": "Each category, referred to as a unit of classification, in fact, represents a rank and is commonly termed as taxon (pl.: taxa).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q009",
+      "type": "single_correct",
+      "topic": "Insects as an example",
+      "question": "Which shared feature of insects is given as an example on the page?",
+      "options": [
+        "Three pairs of jointed legs",
+        "Two pairs of wings in every insect",
+        "Four pairs of jointed legs",
+        "A backbone"
+      ],
+      "correct_option": 0,
+      "explanation": "The page uses three pairs of jointed legs as a common feature of insects.",
+      "source_text": "Insects represent a group of organisms sharing common features like three pairs of jointed legs.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q010",
+      "type": "single_correct",
+      "topic": "Category and rank",
+      "question": "In the page's explanation, what does a category further denote?",
+      "options": [
+        "Rank",
+        "Habitat",
+        "Author name",
+        "Specific epithet"
+      ],
+      "correct_option": 0,
+      "explanation": "The page directly states that category denotes rank.",
+      "source_text": "Category further denotes rank.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q011",
+      "type": "single_correct",
+      "topic": "Taxonomic groups",
+      "question": "How are taxonomic groups or categories described on this page?",
+      "options": [
+        "Distinct biological entities, not merely morphological aggregates",
+        "Only groups of organisms with identical appearance",
+        "Only names used in local languages",
+        "Collections based solely on size"
+      ],
+      "correct_option": 0,
+      "explanation": "The page distinguishes taxonomic groups as biological entities rather than mere morphological aggregates.",
+      "source_text": "These taxonomic groups/categories are distinct biological entities and not merely morphological aggregates.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q012",
+      "type": "multiple_correct",
+      "topic": "Common taxonomic categories",
+      "question": "Which common categories are listed on the page?",
+      "options": [
+        "Kingdom",
+        "Phylum or division (for plants)",
+        "Class",
+        "Order",
+        "Family",
+        "Genus",
+        "Species",
+        "Population only"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The page lists kingdom, phylum or division for plants, class, order, family, genus and species.",
+      "source_text": "kingdom, phylum or division (for plants), class, order, family, genus and species",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q013",
+      "type": "single_correct",
+      "topic": "Lowest taxonomic category",
+      "question": "What does the page identify as the lowest category in both plant and animal kingdoms?",
+      "options": [
+        "Species",
+        "Genus",
+        "Family",
+        "Order"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says all organisms, including plants and animals, have species as the lowest category.",
+      "source_text": "All organisms, including those in the plant and animal kingdoms have species as the lowest category.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q014",
+      "type": "single_correct",
+      "topic": "Placing organisms in categories",
+      "question": "What is the basic requirement for placing an organism in various categories?",
+      "options": [
+        "Knowledge of the characters of an individual or group of organisms",
+        "Knowing only the organism's local name",
+        "Knowing only its habitat",
+        "Knowing the author's abbreviation"
+      ],
+      "correct_option": 0,
+      "explanation": "The page identifies knowledge of organism characters as the basic requirement.",
+      "source_text": "The basic requirement is the knowledge of characters of an individual or group of organisms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q015",
+      "type": "single_correct",
+      "topic": "Similarities and dissimilarities",
+      "question": "Knowledge of organism characters helps identify what, according to the page?",
+      "options": [
+        "Similarities and dissimilarities among organisms",
+        "Only the age of organisms",
+        "Only the number of organisms",
+        "Only the organisms' local names"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says characters help identify similarities and differences within the same kind and among different kinds of organisms.",
+      "source_text": "This helps in identifying similarities and dissimilarities among the individuals of the same kind of organisms as well as of other kinds of organisms.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q016",
+      "type": "single_correct",
+      "topic": "Species definition",
+      "question": "A group of individual organisms with what feature is considered a species in this passage?",
+      "options": [
+        "Fundamental similarities",
+        "The same local name only",
+        "Different kingdoms in every case",
+        "No shared characters"
+      ],
+      "correct_option": 0,
+      "explanation": "The page describes a species as a group of individual organisms with fundamental similarities.",
+      "source_text": "Taxonomic studies consider a group of individual organisms with fundamental similarities as a species.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q017",
+      "type": "single_correct",
+      "topic": "Distinguishing species",
+      "question": "According to the page, closely related species should be distinguished based on:",
+      "options": [
+        "Distinct morphological differences",
+        "Their local names alone",
+        "The author's name alone",
+        "Their geographic distance only"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says closely related species can be distinguished by distinct morphological differences.",
+      "source_text": "One should be able to distinguish one species from the other closely related species based on the distinct morphological differences.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q018",
+      "type": "multiple_correct",
+      "topic": "Examples of scientific names",
+      "question": "Which scientific names are used as examples in the species section on this page?",
+      "options": [
+        "Mangifera indica",
+        "Solanum tuberosum",
+        "Panthera leo",
+        "Panthera aquila"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The page gives mango, potato and lion as Mangifera indica, Solanum tuberosum and Panthera leo.",
+      "source_text": "Mangifera indica, Solanum tuberosum (potato) and Panthera leo (lion).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q019",
+      "type": "single_correct",
+      "topic": "Genus and specific epithet",
+      "question": "In Mangifera indica, Solanum tuberosum and Panthera leo, which set contains the specific epithets identified on the page?",
+      "options": [
+        "indica, tuberosum and leo",
+        "Mangifera, Solanum and Panthera",
+        "indica, Solanum and leo",
+        "Mangifera, tuberosum and Panthera"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explicitly identifies indica, tuberosum and leo as specific epithets.",
+      "source_text": "All the three names, indica, tuberosum and leo, represent the specific epithets",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P006-Q020",
+      "type": "single_correct",
+      "topic": "Genus as a higher category",
+      "question": "Which words are identified as genera in the examples Mangifera indica, Solanum tuberosum and Panthera leo?",
+      "options": [
+        "Mangifera, Solanum and Panthera",
+        "indica, tuberosum and leo",
+        "tuberosum, Panthera and indica",
+        "leo, Mangifera and Solanum"
+      ],
+      "correct_option": 0,
+      "explanation": "The first words in these scientific names—Mangifera, Solanum and Panthera—are identified as genera.",
+      "source_text": "while the first words Mangifera, Solanum and Panthera are genera",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 4,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 2,
+    "source_scope": "Only the content printed on PDF page 4: continuation of section 1.1 on newly identified organisms, local and scientific names, identification, nomenclature, ICBN, ICZN, binomial nomenclature and naming rules.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q001",
+      "type": "single_correct",
+      "topic": "New organisms",
+      "question": "According to the page, what happens as people explore new areas and even areas already explored?",
+      "options": [
+        "New organisms continue to be identified",
+        "All organisms become extinct",
+        "No additional organisms are found",
+        "Only plants are identified"
+      ],
+      "correct_option": 0,
+      "explanation": "The page states that new organisms are continuously being identified as areas are explored.",
+      "source_text": "as we explore new areas, and even old ones, new organisms are continuously being identified",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q002",
+      "type": "single_correct",
+      "topic": "Local names",
+      "question": "Why can local names of plants and animals cause confusion when people communicate across places?",
+      "options": [
+        "They vary from place to place",
+        "They are always written in italics",
+        "They are identical worldwide",
+        "They only apply to animals"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says local names vary between places, even within one country, creating confusion when referring to organisms.",
+      "source_text": "These local names would vary from place to place, even within a country",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q003",
+      "type": "single_correct",
+      "topic": "Nomenclature",
+      "question": "What is the process of standardising the naming of living organisms so an organism has the same name worldwide called?",
+      "options": [
+        "Nomenclature",
+        "Identification",
+        "Classification",
+        "Observation"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines nomenclature as the process of naming organisms in a standardised way.",
+      "source_text": "This process is called nomenclature",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q004",
+      "type": "single_correct",
+      "topic": "Identification",
+      "question": "According to the page, nomenclature is possible only when the organism is:",
+      "options": [
+        "Correctly described and linked to its name",
+        "Found only in one country",
+        "Visible to the naked eye",
+        "Already extinct"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says the organism must be correctly described and it must be known which organism the name is attached to; this is identification.",
+      "source_text": "nomenclature or naming is only possible when the organism is described correctly and we know to what organism the name is attached to. This is identification.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q005",
+      "type": "single_correct",
+      "topic": "Identification",
+      "question": "The page uses the term identification for knowing:",
+      "options": [
+        "To which organism a name is attached",
+        "How many habitats exist",
+        "The purpose of life",
+        "The local name in every language"
+      ],
+      "correct_option": 0,
+      "explanation": "Identification means knowing what organism a name refers to, after correct description.",
+      "source_text": "we know to what organism the name is attached to. This is identification.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q006",
+      "type": "single_correct",
+      "topic": "Scientific naming",
+      "question": "Why have scientists established procedures to assign scientific names to known organisms?",
+      "options": [
+        "To make names acceptable to biologists worldwide",
+        "To give each place a different local name",
+        "To avoid describing organisms",
+        "To ensure every organism has many names"
+      ],
+      "correct_option": 0,
+      "explanation": "The procedures provide scientific names that biologists around the world accept.",
+      "source_text": "scientists have established procedures to assign a scientific name to each known organism. This is acceptable to biologists all over the world.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q007",
+      "type": "single_correct",
+      "topic": "Botanical nomenclature",
+      "question": "Which code does the page identify as providing agreed principles and criteria for scientific names of plants?",
+      "options": [
+        "International Code for Botanical Nomenclature (ICBN)",
+        "International Code of Zoological Nomenclature (ICZN)",
+        "Binomial Code of Animals",
+        "Universal Species Register"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says plant scientific names are based on principles in the ICBN.",
+      "source_text": "International Code for Botanical Nomenclature (ICBN)",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q008",
+      "type": "single_correct",
+      "topic": "Zoological nomenclature",
+      "question": "Which code does the page say animal taxonomists have evolved?",
+      "options": [
+        "International Code of Zoological Nomenclature (ICZN)",
+        "International Code for Botanical Nomenclature (ICBN)",
+        "International Code of Habitats",
+        "Binomial Code of Plants"
+      ],
+      "correct_option": 0,
+      "explanation": "The page names ICZN as the code evolved by animal taxonomists.",
+      "source_text": "Animal taxonomists have evolved International Code of Zoological Nomenclature (ICZN).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q009",
+      "type": "single_correct",
+      "topic": "Purpose of scientific names",
+      "question": "Which outcome of scientific names is explicitly stated on the page?",
+      "options": [
+        "Each organism has only one name",
+        "Every organism has a local name only",
+        "A name can be reused for many known organisms",
+        "Names differ in every country"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says scientific names ensure that each organism has only one name.",
+      "source_text": "The scientific names ensure that each organism has only one name.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q010",
+      "type": "multiple_correct",
+      "topic": "Scientific description",
+      "question": "According to the page, which outcomes should a description and scientific name help ensure?",
+      "options": [
+        "People anywhere in the world arrive at the same name",
+        "The name has not been used for another known organism",
+        "The organism has a different name in each region",
+        "Local names replace scientific names"
+      ],
+      "correct_options": [
+        0,
+        1
+      ],
+      "explanation": "The page says descriptions should lead people worldwide to the same name and ensure that the name has not already been used for another known organism.",
+      "source_text": "Description of any organism should enable the people (in any part of the world) to arrive at the same name. They also ensure that such a name has not been used for any other known organism.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q011",
+      "type": "single_correct",
+      "topic": "Binomial nomenclature",
+      "question": "How many components does each scientific name have in the system described on the page?",
+      "options": [
+        "Two",
+        "One",
+        "Three",
+        "Four"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says each name has a generic name and a specific epithet.",
+      "source_text": "Each name has two components – the Generic name and the specific epithet.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q012",
+      "type": "single_correct",
+      "topic": "Binomial nomenclature",
+      "question": "What is the system of naming an organism using two components called?",
+      "options": [
+        "Binomial nomenclature",
+        "Identification",
+        "Nomenclature of habitats",
+        "Taxonomic category"
+      ],
+      "correct_option": 0,
+      "explanation": "A name with two components is called binomial nomenclature.",
+      "source_text": "This system of providing a name with two components is called Binomial nomenclature.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q013",
+      "type": "single_correct",
+      "topic": "Carolus Linnaeus",
+      "question": "Who is credited on the page with giving the binomial naming system?",
+      "options": [
+        "Carolus Linnaeus",
+        "Charles Darwin",
+        "Ernst Mayr",
+        "Gregor Mendel"
+      ],
+      "correct_option": 0,
+      "explanation": "The text attributes this naming system to Carolus Linnaeus.",
+      "source_text": "This naming system given by Carolus Linnaeus is being practised by biologists all over the world.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q014",
+      "type": "single_correct",
+      "topic": "Mango scientific name",
+      "question": "Which scientific name for mango is given in the page?",
+      "options": [
+        "Mangifera indica",
+        "Indica mangifera",
+        "Mangifera Mangifera",
+        "Mango indica"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives the mango scientific name as Mangifera indica.",
+      "source_text": "The scientific name of mango is written as Mangifera indica.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q015",
+      "type": "single_correct",
+      "topic": "Mango scientific name",
+      "question": "In the name Mangifera indica, which word represents the genus according to the page?",
+      "options": [
+        "Mangifera",
+        "indica",
+        "Both words are the genus",
+        "Neither word is the genus"
+      ],
+      "correct_option": 0,
+      "explanation": "The text explicitly identifies Mangifera as the genus.",
+      "source_text": "Mangifera represents the genus while indica, is a particular species, or a specific epithet.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q016",
+      "type": "single_correct",
+      "topic": "Mango scientific name",
+      "question": "In Mangifera indica, the word indica is the:",
+      "options": [
+        "Specific epithet",
+        "Generic name",
+        "Family name",
+        "Order name"
+      ],
+      "correct_option": 0,
+      "explanation": "The page identifies indica as the specific epithet.",
+      "source_text": "Mangifera represents the genus while indica, is a particular species, or a specific epithet.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q017",
+      "type": "multiple_correct",
+      "topic": "Formatting biological names",
+      "question": "Which statements about biological names are stated on the page?",
+      "options": [
+        "They are generally in Latin",
+        "They are written in italics when printed",
+        "They are Latinised or derived from Latin irrespective of origin",
+        "They must always be written in capital letters"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first rule states that biological names are generally Latin, italicised in print, and Latinised or derived from Latin regardless of origin.",
+      "source_text": "Biological names are generally in Latin and written in italics. They are Latinised or derived from Latin irrespective of their origin.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q018",
+      "type": "single_correct",
+      "topic": "Parts of a biological name",
+      "question": "Which component comes first in a biological name, according to the rules on the page?",
+      "options": [
+        "The genus",
+        "The specific epithet",
+        "The family",
+        "The order"
+      ],
+      "correct_option": 0,
+      "explanation": "The first word represents the genus and the second component denotes the specific epithet.",
+      "source_text": "The first word in a biological name represents the genus while the second component denotes the specific epithet.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q019",
+      "type": "single_correct",
+      "topic": "Handwritten biological names",
+      "question": "How should the two words of a biological name be written by hand, according to the page?",
+      "options": [
+        "Separately underlined",
+        "Both underlined together as one continuous line",
+        "In quotation marks",
+        "Only the second word underlined"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says both words are separately underlined when handwritten.",
+      "source_text": "Both the words in a biological name, when handwritten, are separately underlined",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P004-Q020",
+      "type": "single_correct",
+      "topic": "Printed biological names",
+      "question": "How are biological names indicated in print, according to the page?",
+      "options": [
+        "By using italics",
+        "By using bold capitals only",
+        "By placing them in quotation marks",
+        "By using numerals"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says printed biological names are written in italics.",
+      "source_text": "or printed in italics to indicate their Latin origin",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

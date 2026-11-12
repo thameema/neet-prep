@@ -1,0 +1,370 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 2,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 2,
+    "source_scope": "Only the content printed on PDF page 2 (printed page 11): Table 2.1 (characteristics of the five kingdoms), Whittaker's Five Kingdom Classification, the three-domain system, and the start of the discussion of earlier classification systems.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 18,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q001",
+      "type": "single_correct",
+      "topic": "Five Kingdom Classification",
+      "question": "Who proposed the Five Kingdom Classification?",
+      "options": [
+        "R.H. Whittaker",
+        "Aristotle",
+        "Carl Linnaeus",
+        "Charles Darwin"
+      ],
+      "correct_option": 0,
+      "explanation": "The page states that R.H. Whittaker proposed the Five Kingdom Classification.",
+      "source_text": "R.H. Whittaker (1969) proposed a Five Kingdom Classification.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q002",
+      "type": "single_correct",
+      "topic": "Five Kingdom Classification",
+      "question": "In which year was the Five Kingdom Classification proposed by Whittaker?",
+      "options": [
+        "1869",
+        "1769",
+        "1969",
+        "1959"
+      ],
+      "correct_option": 2,
+      "explanation": "The page gives 1969 for Whittaker's proposal.",
+      "source_text": "R.H. Whittaker (1969) proposed a Five Kingdom Classification.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q003",
+      "type": "single_correct",
+      "topic": "Five Kingdom Classification",
+      "question": "Which of the following is NOT one of the five kingdoms named by Whittaker?",
+      "options": [
+        "Protista",
+        "Archaea",
+        "Fungi",
+        "Monera"
+      ],
+      "correct_option": 1,
+      "explanation": "The five kingdoms named were Monera, Protista, Fungi, Plantae and Animalia.",
+      "source_text": "The kingdoms defined by him were named Monera, Protista, Fungi, Plantae and Animalia.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q004",
+      "type": "multiple_correct",
+      "topic": "Criteria of classification",
+      "question": "Which criteria did Whittaker mainly use for his classification?",
+      "options": [
+        "Geographical distribution",
+        "Reproduction",
+        "Cell structure",
+        "Phylogenetic relationships",
+        "Body organisation",
+        "Mode of nutrition"
+      ],
+      "correct_options": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The page lists cell structure, body organisation, mode of nutrition, reproduction and phylogenetic relationships.",
+      "source_text": "The main criteria for classification used by him include cell structure, body organisation, mode of nutrition, reproduction and phylogenetic relationships.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q005",
+      "type": "single_correct",
+      "topic": "Three-domain system",
+      "question": "The three-domain system divides which kingdom into two domains?",
+      "options": [
+        "Kingdom Animalia",
+        "Kingdom Protista",
+        "Kingdom Monera",
+        "Kingdom Fungi"
+      ],
+      "correct_option": 2,
+      "explanation": "The three-domain system splits Monera into two domains and leaves the eukaryotic kingdoms in the third domain.",
+      "source_text": "divides the Kingdom Monera into two domains, leaving the remaining eukaryotic kingdoms in the third domain",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q006",
+      "type": "single_correct",
+      "topic": "Three-domain system",
+      "question": "The three-domain proposal leads to how many kingdoms in total, as described on this page?",
+      "options": [
+        "Four",
+        "Six",
+        "Three",
+        "Seven"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the three-domain system gives a six kingdom classification.",
+      "source_text": "in the third domain and thereby a six kingdom classification.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q007",
+      "type": "single_correct",
+      "topic": "Table 2.1 – cell type",
+      "question": "Which kingdom in Table 2.1 has prokaryotic cells with no nuclear membrane?",
+      "options": [
+        "Animalia",
+        "Protista",
+        "Monera",
+        "Fungi"
+      ],
+      "correct_option": 2,
+      "explanation": "Table 2.1 lists Monera as prokaryotic with the nuclear membrane absent; the other four kingdoms are eukaryotic with a nuclear membrane present.",
+      "source_text": "Table 2.1: Cell type - Monera: Prokaryotic; Nuclear membrane - Monera: Absent",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q008",
+      "type": "match_the_following",
+      "topic": "Table 2.1 – cell wall",
+      "question": "Match each kingdom with its cell wall as given in Table 2.1.",
+      "column_a": [
+        "Monera",
+        "Fungi",
+        "Plantae",
+        "Animalia"
+      ],
+      "column_b": [
+        "A. Absent",
+        "B. Present with chitin",
+        "C. Present (cellulose)",
+        "D. Noncellulosic (polysaccharide + amino acid)"
+      ],
+      "options": [
+        "Monera-D, Fungi-B, Plantae-C, Animalia-A",
+        "Monera-B, Fungi-D, Plantae-C, Animalia-A",
+        "Monera-D, Fungi-C, Plantae-B, Animalia-A",
+        "Monera-A, Fungi-B, Plantae-C, Animalia-D"
+      ],
+      "correct_option": 0,
+      "explanation": "Table 2.1: Monera noncellulosic (polysaccharide + amino acid), Fungi with chitin, Plantae cellulose, Animalia absent.",
+      "source_text": "Table 2.1: Cell wall - Monera: Noncellulosic (Polysaccharide + amino acid); Fungi: Present with chitin; Plantae: Present (cellulose); Animalia: Absent",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q009",
+      "type": "single_correct",
+      "topic": "Table 2.1 – cell wall",
+      "question": "According to Table 2.1, the cell wall in Kingdom Protista is:",
+      "options": [
+        "Absent in all members",
+        "Present in some",
+        "Always cellulosic",
+        "Always chitinous"
+      ],
+      "correct_option": 1,
+      "explanation": "Table 2.1 gives 'Present in some' for the cell wall of Protista.",
+      "source_text": "Table 2.1: Cell wall - Protista: Present in some",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q010",
+      "type": "single_correct",
+      "topic": "Table 2.1 – body organisation",
+      "question": "According to Table 2.1, the body organisation of Kingdom Fungi is:",
+      "options": [
+        "Multicellular/loose tissue",
+        "Cellular",
+        "Tissue/organ",
+        "Tissue/organ/organ system"
+      ],
+      "correct_option": 0,
+      "explanation": "Table 2.1 gives multicellular/loose tissue for Fungi. Cellular is given for Monera and Protista.",
+      "source_text": "Table 2.1: Body organisation - Fungi: Multiceullar/loose tissue",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q011",
+      "type": "single_correct",
+      "topic": "Table 2.1 – body organisation",
+      "question": "Which kingdom has the tissue/organ/organ system level of body organisation in Table 2.1?",
+      "options": [
+        "Animalia",
+        "Protista",
+        "Fungi",
+        "Plantae"
+      ],
+      "correct_option": 0,
+      "explanation": "Table 2.1 gives tissue/organ/organ system for Animalia and tissue/organ for Plantae.",
+      "source_text": "Table 2.1: Body organisation - Plantae: Tissue/organ; Animalia: Tissue/organ/organ system",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q012",
+      "type": "single_correct",
+      "topic": "Table 2.1 – mode of nutrition",
+      "question": "According to Table 2.1, which kingdom includes chemosynthetic and photosynthetic autotrophs as well as heterotrophs?",
+      "options": [
+        "Plantae",
+        "Fungi",
+        "Animalia",
+        "Monera"
+      ],
+      "correct_option": 3,
+      "explanation": "Table 2.1 lists Monera as autotrophic (chemosynthetic and photosynthetic) and heterotrophic (saprophytic/parasitic).",
+      "source_text": "Table 2.1: Mode of nutrition - Monera: Autotrophic (chemosynthetic and photosynthetic) and Heterotrophic (saprophytic/parasitic)",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q013",
+      "type": "single_correct",
+      "topic": "Table 2.1 – mode of nutrition",
+      "question": "According to Table 2.1, the mode of nutrition of Kingdom Fungi is:",
+      "options": [
+        "Autotrophic (photosynthetic)",
+        "Autotrophic (chemosynthetic)",
+        "Heterotrophic (saprophytic/parasitic)",
+        "Heterotrophic (holozoic)"
+      ],
+      "correct_option": 2,
+      "explanation": "Table 2.1 lists Fungi as heterotrophic, saprophytic or parasitic. Holozoic is listed for Animalia.",
+      "source_text": "Table 2.1: Mode of nutrition - Fungi: Heterotrophic (Saprophytic/Parasitic); Animalia: Heterotrophic (Holozoic/Saprophytic etc.)",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q014",
+      "type": "single_correct",
+      "topic": "Earlier classification",
+      "question": "In the earlier classification, the character that unified all organisms placed under 'Plants' was:",
+      "options": [
+        "Presence of a cell wall",
+        "Photosynthetic mode of nutrition",
+        "Presence of chlorophyll",
+        "Eukaryotic organisation"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says all organisms in that kingdom had a cell wall, which placed together groups that differed widely in other characteristics.",
+      "source_text": "The character that unified this whole kingdom was that all the organisms included had a cell wall in their cells.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q015",
+      "type": "multiple_correct",
+      "topic": "Earlier classification",
+      "question": "Which of the following were included under 'Plants' in earlier classification systems?",
+      "options": [
+        "Ferns",
+        "Fungi",
+        "Mosses",
+        "Insects",
+        "Bacteria",
+        "Blue green algae"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "explanation": "The page lists bacteria, blue green algae, fungi, mosses, ferns, gymnosperms and angiosperms. Insects are not mentioned.",
+      "source_text": "Earlier classification systems included bacteria, blue green algae, fungi, mosses, ferns, gymnosperms and the angiosperms under",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q016",
+      "type": "single_correct",
+      "topic": "Earlier classification",
+      "question": "Chlamydomonas and Spirogyra are cited as an example of the earlier grouping of:",
+      "options": [
+        "Plants and animals together",
+        "Autotrophs and heterotrophs together",
+        "Prokaryotes and eukaryotes together",
+        "Unicellular and multicellular organisms together under algae"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says the earlier system grouped unicellular and multicellular organisms together, for example Chlamydomonas and Spirogyra under algae.",
+      "source_text": "It also grouped together the unicellular organisms and the multicellular ones, say, for example, Chlamydomonas and Spirogyra were placed together under algae.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q017",
+      "type": "single_correct",
+      "topic": "Earlier classification",
+      "question": "The earlier classification did not differentiate between which two groups, despite their different wall composition?",
+      "options": [
+        "Heterotrophic fungi and autotrophic green plants",
+        "Bacteria and blue green algae",
+        "Mosses and ferns",
+        "Gymnosperms and angiosperms"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the system did not differentiate the heterotrophic fungi from the autotrophic green plants.",
+      "source_text": "The classification did not differentiate between the heterotrophic group – fungi, and the autotrophic green plants",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P002-Q018",
+      "type": "assertion_reason",
+      "topic": "Earlier classification",
+      "question": "Assertion (A): The earlier 'Plants' category brought together prokaryotic bacteria and cyanobacteria with eukaryotic groups.\nReason (R): All the organisms in that category were unified by the presence of a cell wall.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "Because the unifying character was just a cell wall, groups that were widely different, including prokaryotes and eukaryotes, were placed together.",
+      "source_text": "This placed together groups which widely differed in other characteristics. It brought together the prokaryotic bacteria and the blue green algae (cyanobacteria) with other groups which were eukaryotic.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

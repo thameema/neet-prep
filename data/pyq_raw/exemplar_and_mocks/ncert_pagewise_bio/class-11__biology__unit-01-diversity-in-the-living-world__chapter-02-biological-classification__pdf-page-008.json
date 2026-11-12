@@ -1,0 +1,354 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 8,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 8,
+    "source_scope": "Only the content printed on PDF page 8 (printed page 17): fungal spores and fruiting bodies, the three steps of the sexual cycle, the dikaryotic stage, the basis for classes of fungi, Section 2.3.1 Phycomycetes, the start of 2.3.2 Ascomycetes, and Figure 2.5.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 18,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q001",
+      "type": "single_correct",
+      "topic": "Fungal spores",
+      "question": "Which of the following are asexual spores of fungi as listed on the page?",
+      "options": [
+        "Oospores, ascospores and basidiospores",
+        "Conidia, sporangiospores and zoospores",
+        "Ascospores and zoospores",
+        "Conidia and oospores"
+      ],
+      "correct_option": 1,
+      "explanation": "The page lists conidia, sporangiospores and zoospores for asexual reproduction, and oospores, ascospores and basidiospores for sexual reproduction.",
+      "source_text": "called conidia or sporangiospores or zoospores, and sexual reproduction is by oospores, ascospores and basidiospores.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q002",
+      "type": "single_correct",
+      "topic": "Fungal spores",
+      "question": "Which are the spores produced by sexual reproduction in fungi?",
+      "options": [
+        "Zoospores and aplanospores",
+        "Conidia, sporangiospores and zoospores",
+        "Conidia only",
+        "Oospores, ascospores and basidiospores"
+      ],
+      "correct_option": 3,
+      "explanation": "The page lists oospores, ascospores and basidiospores as the sexual spores.",
+      "source_text": "sexual reproduction is by oospores, ascospores and basidiospores.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q003",
+      "type": "single_correct",
+      "topic": "Fungal spores",
+      "question": "The various fungal spores are produced in distinct structures called:",
+      "options": [
+        "Fruiting bodies",
+        "Sporophytes",
+        "Mycelia",
+        "Hyphae"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says spores are produced in distinct structures called fruiting bodies.",
+      "source_text": "The various spores are produced in distinct structures called fruiting bodies.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q004",
+      "type": "single_correct",
+      "topic": "Sexual cycle",
+      "question": "Fusion of protoplasms between two motile or non-motile gametes in the fungal sexual cycle is called:",
+      "options": [
+        "Plasmogamy",
+        "Karyogamy",
+        "Dikaryophase",
+        "Meiosis"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives plasmogamy as step (i) of the sexual cycle.",
+      "source_text": "Fusion of protoplasms between two motile or non-motile gametes called plasmogamy.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q005",
+      "type": "single_correct",
+      "topic": "Sexual cycle",
+      "question": "Fusion of two nuclei in the fungal sexual cycle is called:",
+      "options": [
+        "Dikaryon",
+        "Plasmogamy",
+        "Karyogamy",
+        "Budding"
+      ],
+      "correct_option": 2,
+      "explanation": "The page gives karyogamy as step (ii) of the sexual cycle.",
+      "source_text": "Fusion of two nuclei called karyogamy.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q006",
+      "type": "single_correct",
+      "topic": "Sexual cycle",
+      "question": "Which is the correct sequence of the three steps of the fungal sexual cycle?",
+      "options": [
+        "Karyogamy, plasmogamy, meiosis in zygote",
+        "Meiosis in zygote, plasmogamy, karyogamy",
+        "Plasmogamy, karyogamy, meiosis in zygote",
+        "Plasmogamy, meiosis in zygote, karyogamy"
+      ],
+      "correct_option": 2,
+      "explanation": "The page lists plasmogamy (i), karyogamy (ii) and meiosis in zygote resulting in haploid spores (iii).",
+      "source_text": "(i) Fusion of protoplasms ... plasmogamy. (ii) Fusion of two nuclei called karyogamy. (iii) Meiosis in zygote resulting in haploid spores.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q007",
+      "type": "single_correct",
+      "topic": "Dikaryon",
+      "question": "A dikaryon is a stage with:",
+      "options": [
+        "No nucleus",
+        "Two nuclei per cell (n + n)",
+        "One diploid nucleus (2n)",
+        "One haploid nucleus (n)"
+      ],
+      "correct_option": 1,
+      "explanation": "The page defines the dikaryotic stage as n + n, that is two nuclei per cell, and the phase is called dikaryophase.",
+      "source_text": "an intervening dikaryotic stage (n + n, i.e., two nuclei per cell) occurs; such a condition is called a dikaryon",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q008",
+      "type": "single_correct",
+      "topic": "Dikaryon",
+      "question": "Which fungi show an intervening dikaryotic stage in sexual reproduction, as per the page?",
+      "options": [
+        "Ascomycetes and basidiomycetes",
+        "Phycomycetes and basidiomycetes",
+        "Phycomycetes and ascomycetes",
+        "All fungi"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says this occurs in ascomycetes and basidiomycetes, while in some other fungi fusion of haploid cells immediately gives diploid cells.",
+      "source_text": "in other fungi (ascomycetes and basidiomycetes), an intervening dikaryotic stage",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q009",
+      "type": "single_correct",
+      "topic": "Fungal classification",
+      "question": "The basis for dividing Kingdom Fungi into various classes is:",
+      "options": [
+        "Morphology of the mycelium, mode of spore formation and fruiting bodies",
+        "Mode of nutrition alone",
+        "Presence or absence of chitin in the cell wall",
+        "Habitat alone"
+      ],
+      "correct_option": 0,
+      "explanation": "The page lists morphology of mycelium, mode of spore formation and fruiting bodies as the basis for division into classes.",
+      "source_text": "The morphology of the mycelium, mode of spore formation and fruiting bodies form the basis for the division of the kingdom into various classes.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q010",
+      "type": "single_correct",
+      "topic": "Phycomycetes",
+      "question": "In phycomycetes the mycelium is:",
+      "options": [
+        "Branched and septate",
+        "Aseptate and coenocytic",
+        "Dikaryotic and septate",
+        "Absent"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the mycelium of phycomycetes is aseptate and coenocytic.",
+      "source_text": "The mycelium is aseptate and coenocytic.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q011",
+      "type": "single_correct",
+      "topic": "Phycomycetes",
+      "question": "In phycomycetes, asexual reproduction takes place by:",
+      "options": [
+        "Ascospores in asci",
+        "Conidia produced exogenously",
+        "Basidiospores",
+        "Zoospores (motile) or aplanospores (non-motile)"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says zoospores (motile) or aplanospores (non-motile), endogenously produced in sporangium.",
+      "source_text": "Asexual reproduction takes place by zoospores (motile) or by aplanospores (non-motile).",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q012",
+      "type": "single_correct",
+      "topic": "Phycomycetes",
+      "question": "In phycomycetes, a zygospore is formed by:",
+      "options": [
+        "Meiosis in a basidium",
+        "Budding of a hypha",
+        "Fusion of two gametes",
+        "Fragmentation of mycelium"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says a zygospore is formed by fusion of two gametes, which may be isogamous, anisogamous or oogamous.",
+      "source_text": "A zygospore is formed by fusion of two gametes.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q013",
+      "type": "multiple_correct",
+      "topic": "Phycomycetes",
+      "question": "Which of the following are examples of phycomycetes given on the page?",
+      "options": [
+        "Agaricus",
+        "Mucor",
+        "Penicillium",
+        "Rhizopus",
+        "Albugo"
+      ],
+      "correct_options": [
+        1,
+        3,
+        4
+      ],
+      "explanation": "The page gives Mucor, Rhizopus and Albugo as examples. Penicillium is placed with ascomycetes, and Agaricus is shown in Figure 2.5c.",
+      "source_text": "Some common examples are Mucor (Figure 2.5a), Rhizopus (the bread mould mentioned earlier) and Albugo",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q014",
+      "type": "single_correct",
+      "topic": "Phycomycetes",
+      "question": "Albugo, a phycomycete, is a parasitic fungus on:",
+      "options": [
+        "Dung",
+        "Mustard",
+        "Wheat",
+        "Bread"
+      ],
+      "correct_option": 1,
+      "explanation": "The page describes Albugo as the parasitic fungi on mustard.",
+      "source_text": "Albugo (the parasitic fungi on mustard).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q015",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "Ascomycetes are commonly known as:",
+      "options": [
+        "Imperfect fungi",
+        "Algal fungi",
+        "Sac-fungi",
+        "Club fungi"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says ascomycetes are commonly known as sac-fungi.",
+      "source_text": "Commonly known as sac-fungi",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q016",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "A rarely unicellular ascomycete given on the page is:",
+      "options": [
+        "Rhizopus",
+        "Mucor",
+        "Yeast (Saccharomyces)",
+        "Penicillium"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says ascomycetes are mostly multicellular (e.g. Penicillium) or rarely unicellular (e.g. yeast, Saccharomyces).",
+      "source_text": "or rarely unicellular, e.g., yeast (Saccharomyces).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q017",
+      "type": "multiple_correct",
+      "topic": "Ascomycetes",
+      "question": "Ascomycetes can be which of the following?",
+      "options": [
+        "Parasitic",
+        "Decomposers",
+        "Lichen-forming algae",
+        "Coprophilous (growing on dung)",
+        "Saprophytic",
+        "Obligate photosynthetic autotrophs"
+      ],
+      "correct_options": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "explanation": "The page lists saprophytic, decomposers, parasitic or coprophilous.",
+      "source_text": "parasitic or coprophilous (growing on dung).",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P008-Q018",
+      "type": "assertion_reason",
+      "topic": "Dikaryotic stage",
+      "question": "Assertion (A): In all fungi, fusion of two haploid cells immediately results in diploid (2n) cells.\nReason (R): Ascomycetes and basidiomycetes show an intervening dikaryotic (n + n) stage.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 3,
+      "explanation": "A is false: the page says only in some fungi does fusion immediately give diploid cells. R is true, as ascomycetes and basidiomycetes have a dikaryotic stage.",
+      "source_text": "In some fungi the fusion of two haploid cells immediately results in diploid cells (2n). However, in other fungi (ascomycetes and basidiomycetes), an intervening dikaryotic stage",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

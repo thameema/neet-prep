@@ -1,0 +1,400 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 9,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 7,
+    "source_scope": "Only the content printed on PDF page 9: chapter summary and the ten end-of-chapter exercises, including the displayed scientific-name and taxonomic-sequence options.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q001",
+      "type": "single_correct",
+      "topic": "Living-world diversity",
+      "question": "According to the summary, what is true about the variety of plants and animals?",
+      "options": [
+        "Millions have been identified and described, but many remain unknown",
+        "All plants and animals have been identified",
+        "Only animals have been described",
+        "There is little variety among organisms"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary says millions of plants and animals have been identified and described, while many remain unknown.",
+      "source_text": "Millions of plants and animals have been identified and described but a large number still remains unknown.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q002",
+      "type": "multiple_correct",
+      "topic": "Organism diversity",
+      "question": "Which kinds of variation in organisms are mentioned in the summary?",
+      "options": [
+        "Size",
+        "Colour",
+        "Habitat",
+        "Physiological features",
+        "Morphological features",
+        "Favourite food"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The summary names size, colour, habitat, physiological features and morphological features as dimensions of organismal variety.",
+      "source_text": "The very range of organisms in terms of size, colour, habitat, physiological and morphological features",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q003",
+      "type": "single_correct",
+      "topic": "Taxonomy",
+      "question": "The branch of knowledge dealing with identification, nomenclature and classification is called:",
+      "options": [
+        "Taxonomy",
+        "Ecology",
+        "Physiology",
+        "Anatomy"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary defines taxonomy as the branch dealing with these aspects.",
+      "source_text": "The branch of knowledge dealing with these aspects is referred to as taxonomy.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q004",
+      "type": "multiple_correct",
+      "topic": "Uses of taxonomy",
+      "question": "According to the summary, taxonomic studies are useful in which areas?",
+      "options": [
+        "Agriculture",
+        "Forestry",
+        "Industry",
+        "Knowing bio-resources and their diversity",
+        "Astronomy"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four listed uses are explicitly mentioned in the summary.",
+      "source_text": "useful in agriculture, forestry, industry and in general for knowing our bio-resources and their diversity.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q005",
+      "type": "single_correct",
+      "topic": "International codes",
+      "question": "What does the summary say about the basics of taxonomy such as identification, naming and classification?",
+      "options": [
+        "They are universally evolved under international codes",
+        "They are different in every individual classroom",
+        "They apply only to plants",
+        "They do not use rules or principles"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary states that these basics are universally evolved under international codes.",
+      "source_text": "The basics of taxonomy like identification, naming and classification of organisms are universally evolved under international codes.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q006",
+      "type": "single_correct",
+      "topic": "Binomial nomenclature",
+      "question": "How many words comprise the scientific/biological name described in the summary?",
+      "options": [
+        "Two",
+        "One",
+        "Three",
+        "Four"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary describes the binomial name as comprising two words.",
+      "source_text": "a correct scientific/biological name comprising two words as per the binomial system of nomenclature.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q007",
+      "type": "single_correct",
+      "topic": "Scientific naming",
+      "question": "According to the summary, organisms are identified and assigned a correct scientific name based on:",
+      "options": [
+        "Resemblances and distinct differences",
+        "Only the colour of the organism",
+        "Only the habitat",
+        "Only local names"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary explicitly connects correct identification and naming with resemblances and distinct differences.",
+      "source_text": "Based on the resemblances and distinct differences, each organism is identified and assigned a correct scientific/biological name",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q008",
+      "type": "single_correct",
+      "topic": "Taxonomic hierarchy",
+      "question": "What do all taxonomic categories together constitute?",
+      "options": [
+        "A taxonomic hierarchy",
+        "A scientific epithet",
+        "An international code",
+        "A single genus"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary says all categories together form a taxonomic hierarchy.",
+      "source_text": "All the categories constitute a taxonomic hierarchy.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q009",
+      "type": "single_correct",
+      "topic": "NCERT exercise: classification",
+      "question": "Which question is explicitly asked in the exercise section on this page?",
+      "options": [
+        "Why are living organisms classified?",
+        "Why do all organisms have the same habitat?",
+        "Why are all species identical?",
+        "Why do plants belong to Animalia?"
+      ],
+      "correct_option": 0,
+      "explanation": "Exercise question 1 asks why living organisms are classified.",
+      "source_text": "Why are living organisms classified?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q010",
+      "type": "single_correct",
+      "topic": "NCERT exercise: changing systems",
+      "question": "Which issue about classification systems is raised in exercise question 2?",
+      "options": [
+        "Why classification systems keep changing",
+        "Why organisms never change",
+        "Why scientific names contain three words",
+        "Why habitats are always similar"
+      ],
+      "correct_option": 0,
+      "explanation": "Exercise question 2 asks why classification systems change from time to time.",
+      "source_text": "Why are the classification systems changing every now and then?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q011",
+      "type": "single_correct",
+      "topic": "NCERT exercise: people classification",
+      "question": "What does exercise question 3 ask the learner to choose?",
+      "options": [
+        "Criteria to classify people they meet often",
+        "A scientific name for every person",
+        "A new kingdom for people",
+        "A code for naming plants"
+      ],
+      "correct_option": 0,
+      "explanation": "The third exercise asks what criteria one would choose to classify people met often.",
+      "source_text": "What different criteria would you choose to classify people that you meet often?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q012",
+      "type": "single_correct",
+      "topic": "NCERT exercise: identification",
+      "question": "Exercise question 4 asks what we learn from identification of:",
+      "options": [
+        "Individuals and populations",
+        "Only kingdoms",
+        "Only plant families",
+        "Only scientific authors"
+      ],
+      "correct_option": 0,
+      "explanation": "The exercise explicitly refers to identification of individuals and populations.",
+      "source_text": "What do we learn from identification of individuals and populations?",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q013",
+      "type": "single_correct",
+      "topic": "Correct mango name",
+      "question": "Which mango scientific name is written correctly in exercise question 5?",
+      "options": [
+        "Mangifera indica",
+        "Mangifera Indica",
+        "mangifera Indica",
+        "MANGIFERA INDICA"
+      ],
+      "correct_option": 0,
+      "explanation": "The exercise contrasts Mangifera Indica with Mangifera indica; the latter follows the naming rule described earlier in the chapter.",
+      "source_text": "Mangifera Indica; Mangifera indica",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q014",
+      "type": "single_correct",
+      "topic": "Taxon",
+      "question": "Which task about taxon is requested in exercise question 6?",
+      "options": [
+        "Define a taxon and give examples at different hierarchical levels",
+        "List only local names of plants",
+        "Describe how insects fly",
+        "Explain photosynthesis"
+      ],
+      "correct_option": 0,
+      "explanation": "Exercise question 6 asks for the definition of a taxon and examples at different hierarchical levels.",
+      "source_text": "Define a taxon. Give some examples of taxa at different hierarchical levels.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q015",
+      "type": "single_correct",
+      "topic": "Taxonomic sequence",
+      "question": "Which option is the correct sequence among the choices printed in exercise question 7?",
+      "options": [
+        "Species → Genus → Order → Phylum",
+        "Species → Order → Phylum → Kingdom",
+        "Genus → Species → Order → Kingdom",
+        "All listed options are correct"
+      ],
+      "correct_option": 0,
+      "explanation": "Of the three printed choices, option (c)—Species, Genus, Order, Phylum—follows ascending order among those categories.",
+      "source_text": "(c) Species → Genus → Order → Phylum",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q016",
+      "type": "single_correct",
+      "topic": "Species meanings",
+      "question": "What does exercise question 8 ask learners to collect and discuss?",
+      "options": [
+        "Currently accepted meanings of species",
+        "Names of every known plant",
+        "Only the names of kingdoms",
+        "All Latin words in the chapter"
+      ],
+      "correct_option": 0,
+      "explanation": "Exercise question 8 asks learners to collect meanings of species and discuss differences in meaning for higher plants and animals versus bacteria.",
+      "source_text": "Try to collect all the currently accepted meanings for the word ‘species’.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q017",
+      "type": "multiple_correct",
+      "topic": "Terms to define",
+      "question": "Which terms are listed in exercise question 9 for learners to define and understand?",
+      "options": [
+        "Phylum",
+        "Class",
+        "Family",
+        "Order",
+        "Genus",
+        "Nomenclature only"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The exercise lists phylum, class, family, order and genus.",
+      "source_text": "(i) Phylum (ii) Class (iii) Family (iv) Order (v) Genus",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q018",
+      "type": "single_correct",
+      "topic": "Taxonomic hierarchy exercise",
+      "question": "What does exercise question 10 ask learners to illustrate?",
+      "options": [
+        "Taxonomical hierarchy with suitable plant and animal examples",
+        "The life cycle of a housefly",
+        "The structure of a cell",
+        "Only the kingdom Plantae"
+      ],
+      "correct_option": 0,
+      "explanation": "The last exercise asks learners to illustrate the hierarchy with a plant and an animal example.",
+      "source_text": "Illustrate the taxonomical hierarchy with suitable examples of a plant and an animal.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q019",
+      "type": "single_correct",
+      "topic": "Taxonomy and biodiversity",
+      "question": "Which statement best combines two points from the summary?",
+      "options": [
+        "Taxonomy helps study organism diversity through identification, naming and classification",
+        "Taxonomy is only the study of habitats",
+        "Taxonomy replaces scientific names with local names",
+        "Taxonomy deals only with animals"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary connects taxonomy with identification, nomenclature, classification and studying kinds and diversity of organisms.",
+      "source_text": "In order to facilitate the study of kinds and diversity of organisms, biologists have evolved certain rules and principles for identification, nomenclature and classification of organisms.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P009-Q020",
+      "type": "single_correct",
+      "topic": "Taxonomic position",
+      "question": "According to the summary, an organism in a classification system represents or occupies a:",
+      "options": [
+        "Place or position",
+        "Specific habitat only",
+        "Single physiological feature",
+        "Local name"
+      ],
+      "correct_option": 0,
+      "explanation": "The summary says an organism occupies a place or position in the classification system.",
+      "source_text": "An organism represents/occupies a place or position in the system of classification.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

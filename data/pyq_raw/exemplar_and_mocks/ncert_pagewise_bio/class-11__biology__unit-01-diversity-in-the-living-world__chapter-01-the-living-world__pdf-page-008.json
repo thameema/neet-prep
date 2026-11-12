@@ -1,0 +1,390 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 8,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 6,
+    "source_scope": "Only the content printed on PDF page 8: Chordata and plant Division; kingdoms Animalia and Plantae; ascending taxonomic hierarchy, sub-categories and common-character trends; Table 1.1 entries for man, housefly, mango and wheat.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q001",
+      "type": "single_correct",
+      "topic": "Chordata",
+      "question": "Which two features are mentioned on this page as common features supporting placement in phylum Chordata?",
+      "options": [
+        "Notochord and dorsal hollow neural system",
+        "Three pairs of jointed legs",
+        "External ears and body hair",
+        "Roots and flowers"
+      ],
+      "correct_option": 0,
+      "explanation": "The page names the notochord and dorsal hollow neural system as common features for this placement.",
+      "source_text": "presence of notochord and dorsal hollow neural system, are included in phylum Chordata",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q002",
+      "type": "single_correct",
+      "topic": "Plant classification",
+      "question": "What is the higher category called when plant classes with a few similar characters are grouped together?",
+      "options": [
+        "Division",
+        "Phylum",
+        "Family",
+        "Genus"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage states that in plants, the higher category is called Division.",
+      "source_text": "In case of plants, classes with a few similar characters are assigned to a higher category called Division.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q003",
+      "type": "single_correct",
+      "topic": "Kingdom Animalia",
+      "question": "Which organisms are assigned to Kingdom Animalia in the classification system described?",
+      "options": [
+        "Animals belonging to various phyla",
+        "All plants from various divisions",
+        "Only mammals",
+        "Only insects"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says all animals belonging to various phyla are assigned to Kingdom Animalia.",
+      "source_text": "All animals belonging to various phyla are assigned to the highest category called Kingdom Animalia",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q004",
+      "type": "single_correct",
+      "topic": "Kingdom Plantae",
+      "question": "What does Kingdom Plantae comprise according to the page?",
+      "options": [
+        "All plants from various divisions",
+        "Animals belonging to all phyla",
+        "Only flowering plants",
+        "Only plants in one division"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage says Kingdom Plantae comprises all plants from various divisions.",
+      "source_text": "The Kingdom Plantae, on the other hand, is distinct, and comprises all plants from various divisions.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q005",
+      "type": "single_correct",
+      "topic": "Highest category",
+      "question": "Which taxonomic category is described as the highest category in the animal classification system?",
+      "options": [
+        "Kingdom Animalia",
+        "Phylum Chordata",
+        "Class Mammalia",
+        "Order Primata"
+      ],
+      "correct_option": 0,
+      "explanation": "The page calls Kingdom Animalia the highest category in animal classification.",
+      "source_text": "the highest category called Kingdom Animalia in the classification system of animals",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q006",
+      "type": "single_correct",
+      "topic": "Ascending taxonomic order",
+      "question": "Which taxonomic category is at the bottom of Figure 1.1, with the hierarchy ascending toward kingdom?",
+      "options": [
+        "Species",
+        "Genus",
+        "Family",
+        "Order"
+      ],
+      "correct_option": 0,
+      "explanation": "Figure 1.1 shows species at the bottom and kingdom at the top in ascending order.",
+      "source_text": "shown in ascending order starting with species in Figure 1.1",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q007",
+      "type": "single_correct",
+      "topic": "Taxonomic hierarchy",
+      "question": "Which sequence correctly follows the ascending order shown in Figure 1.1?",
+      "options": [
+        "Species → Genus → Family → Order → Class → Phylum/Division → Kingdom",
+        "Kingdom → Species → Genus → Class → Family → Order",
+        "Species → Family → Genus → Kingdom → Order → Class",
+        "Genus → Species → Family → Phylum → Kingdom"
+      ],
+      "correct_option": 0,
+      "explanation": "The figure lists the categories from species upward to kingdom in this order.",
+      "source_text": "Kingdom; Phylum or Division; Class; Order; Family; Genus; Species",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q008",
+      "type": "single_correct",
+      "topic": "Sub-categories",
+      "question": "Why have taxonomists developed sub-categories within the hierarchy, according to the page?",
+      "options": [
+        "To facilitate more sound and scientific placement of taxa",
+        "To eliminate all taxonomic categories",
+        "To make all organisms members of one genus",
+        "To replace species with local names"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage says sub-categories help place taxa more soundly and scientifically.",
+      "source_text": "taxonomists have also developed sub-categories in this hierarchy to facilitate more sound and scientific placement of various taxa.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q009",
+      "type": "single_correct",
+      "topic": "Common characteristics",
+      "question": "As one moves upward from species to kingdom, what happens to the number of common characteristics?",
+      "options": [
+        "It decreases",
+        "It increases",
+        "It remains exactly the same",
+        "It becomes zero at species level"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explicitly says common characteristics decrease higher up the hierarchy.",
+      "source_text": "as we go higher from species to kingdom, the number of common characteristics goes on decreasing.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q010",
+      "type": "single_correct",
+      "topic": "Lower taxa",
+      "question": "Members within a lower taxon share:",
+      "options": [
+        "More characteristics",
+        "Fewer characteristics than every higher taxon",
+        "No characteristics",
+        "Only different characteristics"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage states that lower taxa share more characteristics among their members.",
+      "source_text": "Lower the taxa, more are the characteristics that the members within the taxon share.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q011",
+      "type": "single_correct",
+      "topic": "Higher categories",
+      "question": "According to the page, why is it harder to determine relationships among taxa at the same level in higher categories?",
+      "options": [
+        "There are fewer common characteristics to guide comparison",
+        "Higher taxa contain only one organism",
+        "All higher taxa have identical characters",
+        "Their scientific names are not available"
+      ],
+      "correct_option": 0,
+      "explanation": "The text links higher categories with fewer common characteristics and greater difficulty determining relationships among taxa at the same level.",
+      "source_text": "Higher the category, greater is the difficulty of determining the relationship to other taxa at the same level.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q012",
+      "type": "single_correct",
+      "topic": "Classification complexity",
+      "question": "What happens to the problem of classification as taxonomic categories become higher, according to the page?",
+      "options": [
+        "It becomes more complex",
+        "It becomes simpler in every case",
+        "It disappears",
+        "It becomes only a naming problem"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage concludes that classification becomes more complex at higher categories.",
+      "source_text": "Hence, the problem of classification becomes more complex.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q013",
+      "type": "single_correct",
+      "topic": "Table 1.1",
+      "question": "Which organisms are compared in Table 1.1 for their taxonomic categories?",
+      "options": [
+        "Man, housefly, mango and wheat",
+        "Lion, tiger, potato and brinjal",
+        "Cat, dog, monkey and gorilla",
+        "Rice, maize, rose and pea"
+      ],
+      "correct_option": 0,
+      "explanation": "Table 1.1 lists man, housefly, mango and wheat.",
+      "source_text": "some common organisms like housefly, man, mango and wheat",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q014",
+      "type": "single_correct",
+      "topic": "Human taxonomy",
+      "question": "Which genus and family are listed for Man in Table 1.1?",
+      "options": [
+        "Homo and Hominidae",
+        "Musca and Muscidae",
+        "Mangifera and Anacardiaceae",
+        "Triticum and Poaceae"
+      ],
+      "correct_option": 0,
+      "explanation": "The table gives Homo as genus and Hominidae as family for Man.",
+      "source_text": "Man Homo sapiens Homo Hominidae Primata Mammalia Chordata",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q015",
+      "type": "single_correct",
+      "topic": "Housefly taxonomy",
+      "question": "Which order is listed for the housefly in Table 1.1?",
+      "options": [
+        "Diptera",
+        "Primata",
+        "Sapindales",
+        "Poales"
+      ],
+      "correct_option": 0,
+      "explanation": "The housefly row lists Diptera under Order.",
+      "source_text": "Housefly Musca domestica Musca Muscidae Diptera Insecta Arthropoda",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q016",
+      "type": "single_correct",
+      "topic": "Mango taxonomy",
+      "question": "Which family is listed for mango in Table 1.1?",
+      "options": [
+        "Anacardiaceae",
+        "Poaceae",
+        "Hominidae",
+        "Muscidae"
+      ],
+      "correct_option": 0,
+      "explanation": "The table lists Anacardiaceae as the family for mango.",
+      "source_text": "Mango Mangifera indica Mangifera Anacardiaceae Sapindales Dicotyledonae Angiospermae",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q017",
+      "type": "single_correct",
+      "topic": "Wheat taxonomy",
+      "question": "Which genus is listed for wheat in Table 1.1?",
+      "options": [
+        "Triticum",
+        "Mangifera",
+        "Musca",
+        "Homo"
+      ],
+      "correct_option": 0,
+      "explanation": "The wheat row lists Triticum as the genus.",
+      "source_text": "Wheat Triticum aestivum Triticum Poaceae Poales Monocotyledonae Angiospermae",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q018",
+      "type": "single_correct",
+      "topic": "Mango and wheat division",
+      "question": "Which Phylum/Division entry is listed for both mango and wheat in Table 1.1?",
+      "options": [
+        "Angiospermae",
+        "Chordata",
+        "Arthropoda",
+        "Mammalia"
+      ],
+      "correct_option": 0,
+      "explanation": "Both mango and wheat rows show Angiospermae in the Phylum/Division column.",
+      "source_text": "Mango ... Angiospermae; Wheat ... Angiospermae",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q019",
+      "type": "multiple_correct",
+      "topic": "Taxonomic table",
+      "question": "Which organism-to-order matches are correct according to Table 1.1?",
+      "options": [
+        "Man — Primata",
+        "Housefly — Diptera",
+        "Mango — Sapindales",
+        "Wheat — Poales",
+        "Mango — Carnivora"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Table 1.1 lists Primata for man, Diptera for housefly, Sapindales for mango and Poales for wheat.",
+      "source_text": "Man ... Primata; Housefly ... Diptera; Mango ... Sapindales; Wheat ... Poales",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P008-Q020",
+      "type": "multiple_correct",
+      "topic": "Taxonomic table",
+      "question": "Which organism-to-class matches are shown in Table 1.1?",
+      "options": [
+        "Man — Mammalia",
+        "Housefly — Insecta",
+        "Mango — Dicotyledonae",
+        "Wheat — Monocotyledonae",
+        "Wheat — Mammalia"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "These are the class entries printed in the table for the four organisms.",
+      "source_text": "Mammalia; Insecta; Dicotyledonae; Monocotyledonae",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

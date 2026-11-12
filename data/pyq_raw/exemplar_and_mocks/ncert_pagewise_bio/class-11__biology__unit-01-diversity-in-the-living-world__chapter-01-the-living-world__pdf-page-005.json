@@ -1,0 +1,396 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 5,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 3,
+    "source_scope": "Only the content printed on PDF page 5: scientific-name capitalisation and author citation; classification, taxa, taxonomy, the basis of modern taxonomic studies, early classification by uses, and systematics.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q001",
+      "type": "single_correct",
+      "topic": "Capitalisation",
+      "question": "In a biological name, how should the first word denoting the genus begin?",
+      "options": [
+        "With a capital letter",
+        "With a small letter",
+        "With a numeral",
+        "With a symbol"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the genus begins with a capital letter.",
+      "source_text": "The first word denoting the genus starts with a capital letter",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q002",
+      "type": "single_correct",
+      "topic": "Capitalisation",
+      "question": "In Mangifera indica, how does the specific epithet indica begin?",
+      "options": [
+        "With a small letter",
+        "With a capital letter",
+        "With a numeral",
+        "With a symbol"
+      ],
+      "correct_option": 0,
+      "explanation": "The specific epithet starts with a small letter.",
+      "source_text": "the specific epithet starts with a small letter",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q003",
+      "type": "single_correct",
+      "topic": "Author citation",
+      "question": "Where does the author's abbreviated name appear in a biological name, according to the page?",
+      "options": [
+        "After the specific epithet",
+        "Before the genus",
+        "Between the genus and specific epithet",
+        "At the beginning of the chapter"
+      ],
+      "correct_option": 0,
+      "explanation": "The author name appears after the specific epithet, at the end of the biological name.",
+      "source_text": "Name of the author appears after the specific epithet, i.e., at the end of the biological name",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q004",
+      "type": "single_correct",
+      "topic": "Author citation",
+      "question": "In the example Mangifera indica Linn., what does Linn. indicate according to the page?",
+      "options": [
+        "The species was first described by Linnaeus",
+        "The species is a type of animal",
+        "The specific epithet is Linn.",
+        "The plant originated in Latin"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explains that Linn. indicates the species was first described by Linnaeus.",
+      "source_text": "Mangifera indica Linn. It indicates that this species was first described by Linnaeus.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q005",
+      "type": "single_correct",
+      "topic": "Classification",
+      "question": "Why does the page say it is necessary to devise a means to study living organisms?",
+      "options": [
+        "It is nearly impossible to study all living organisms",
+        "There are no differences among organisms",
+        "Only animals need to be studied",
+        "All organisms are already classified"
+      ],
+      "correct_option": 0,
+      "explanation": "Because studying all living organisms is nearly impossible, a workable method is needed.",
+      "source_text": "Since it is nearly impossible to study all the living organisms, it is necessary to devise some means to make this possible.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q006",
+      "type": "single_correct",
+      "topic": "Classification",
+      "question": "Classification is defined on the page as the process by which things are:",
+      "options": [
+        "Grouped into convenient categories based on easily observable characters",
+        "Given local names only",
+        "Arranged by colour alone",
+        "Separated according to habitat only"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines classification as grouping into convenient categories using easily observable characters.",
+      "source_text": "Classification is the process by which anything is grouped into convenient categories based on some easily observable characters.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q007",
+      "type": "multiple_correct",
+      "topic": "Examples of groups",
+      "question": "Which examples of organism groups are mentioned when explaining classification?",
+      "options": [
+        "Plants",
+        "Animals",
+        "Dogs and cats",
+        "Insects",
+        "Clouds"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The page lists plants, animals, dogs, cats and insects as familiar groups.",
+      "source_text": "we easily recognise groups such as plants or animals or dogs, cats or insects",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q008",
+      "type": "single_correct",
+      "topic": "Classification and characters",
+      "question": "When people use a group term, such as dog, what does the page say they associate with organisms in that group?",
+      "options": [
+        "Certain characters",
+        "Only a scientific author name",
+        "A unique habitat in every case",
+        "No common features"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says group names make us associate certain characters with organisms in that group.",
+      "source_text": "The moment we use any of these terms, we associate certain characters with the organism in that group.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q009",
+      "type": "single_correct",
+      "topic": "Taxa",
+      "question": "What is the scientific term for convenient categories used to study organisms?",
+      "options": [
+        "Taxa",
+        "Nomenclature",
+        "Systema",
+        "Identification"
+      ],
+      "correct_option": 0,
+      "explanation": "The page identifies these categories as taxa.",
+      "source_text": "The scientific term for these categories is taxa.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q010",
+      "type": "single_correct",
+      "topic": "Taxa at different levels",
+      "question": "According to the page, which statement about taxa is correct?",
+      "options": [
+        "Taxa can indicate categories at very different levels",
+        "Only species can be taxa",
+        "Plants are taxa but wheat is not",
+        "All taxa represent the same level"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explicitly says taxa can represent categories at different levels.",
+      "source_text": "taxa can indicate categories at very different levels",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q011",
+      "type": "single_correct",
+      "topic": "Taxa hierarchy examples",
+      "question": "Which relationship is described on the page?",
+      "options": [
+        "A dog is a mammal, and mammals are animals",
+        "Animals are dogs, and dogs are plants",
+        "Wheat is a type of cat",
+        "Mammals are a type of wheat"
+      ],
+      "correct_option": 0,
+      "explanation": "The page uses the nested example dog → mammal → animal to show different taxonomic levels.",
+      "source_text": "a dog is a mammal and mammals are animals",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q012",
+      "type": "single_correct",
+      "topic": "Taxonomy",
+      "question": "The process of classifying living organisms into different taxa based on characteristics is called:",
+      "options": [
+        "Taxonomy",
+        "Nomenclature",
+        "Systematics",
+        "Identification"
+      ],
+      "correct_option": 0,
+      "explanation": "The page calls this process taxonomy.",
+      "source_text": "based on characteristics, all living organisms can be classified into different taxa. This process of classification is taxonomy.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q013",
+      "type": "multiple_correct",
+      "topic": "Modern taxonomic studies",
+      "question": "Which types of information does the page say form the basis of modern taxonomic studies?",
+      "options": [
+        "External structure",
+        "Internal structure",
+        "Structure of the cell",
+        "Development process",
+        "Ecological information",
+        "Only local names"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The page lists external and internal structure, cell structure, development process and ecological information.",
+      "source_text": "External and internal structure, along with the structure of cell, development process and ecological information of organisms are essential and form the basis of modern taxonomic studies.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q014",
+      "type": "single_correct",
+      "topic": "Processes basic to taxonomy",
+      "question": "Which set contains the processes the page says are basic to taxonomy?",
+      "options": [
+        "Characterisation, identification, classification and nomenclature",
+        "Respiration, digestion, circulation and excretion",
+        "Growth, movement, reproduction and death",
+        "Observation, drawing, counting and memorising"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explicitly lists these four processes as basic to taxonomy.",
+      "source_text": "characterisation, identification, classification and nomenclature are the processes that are basic to taxonomy.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q015",
+      "type": "single_correct",
+      "topic": "Early classification",
+      "question": "According to the page, what was the basis of the earliest classifications?",
+      "options": [
+        "Uses of various organisms",
+        "Their scientific names",
+        "Their cell structures",
+        "Their evolutionary ages"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says early classifications were based on the uses of organisms for basic needs.",
+      "source_text": "the earliest classifications were based on the ‘uses’ of various organisms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q016",
+      "type": "multiple_correct",
+      "topic": "Basic human needs",
+      "question": "Which basic human needs are named as reasons people sought useful organisms in early days?",
+      "options": [
+        "Food",
+        "Clothing",
+        "Shelter",
+        "Electricity"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The passage identifies food, clothing and shelter as basic needs.",
+      "source_text": "human beings needed to find sources for their basic needs of food, clothing and shelter",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q017",
+      "type": "single_correct",
+      "topic": "Systematics",
+      "question": "What additional interest, beyond organism diversity, is said to have led to the study called systematics?",
+      "options": [
+        "Relationships among organisms",
+        "Only the local names of plants",
+        "Only the uses of organisms",
+        "The number of habitats on Earth"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says people were interested not only in kinds and diversity but also in relationships among organisms.",
+      "source_text": "interested in knowing more about different kinds of organisms and their diversities, but also the relationships among them. This branch of study was referred to as systematics.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q018",
+      "type": "single_correct",
+      "topic": "Word origin",
+      "question": "The word systematics is derived from which Latin word, according to the page?",
+      "options": [
+        "systema",
+        "species",
+        "taxa",
+        "indica"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives systema as the Latin origin of systematics.",
+      "source_text": "The word systematics is derived from the Latin word ‘systema’",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q019",
+      "type": "single_correct",
+      "topic": "Meaning of systema",
+      "question": "What meaning does the page give for the Latin word systema?",
+      "options": [
+        "Systematic arrangement of organisms",
+        "Naming plants in italics",
+        "Grouping by colour only",
+        "Study of cell development"
+      ],
+      "correct_option": 0,
+      "explanation": "The page glosses systema as systematic arrangement of organisms.",
+      "source_text": "‘systema’ which means systematic arrangement of organisms",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P005-Q020",
+      "type": "single_correct",
+      "topic": "Distinguishing taxonomy and systematics",
+      "question": "Which statement best matches the distinctions made on this page?",
+      "options": [
+        "Taxonomy concerns classification into taxa; systematics is linked with studying relationships among organisms",
+        "Taxonomy means local naming; systematics means italicising names",
+        "Both terms are defined only as author abbreviations",
+        "Systematics refers only to early classification by uses"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines taxonomy through classification into taxa and describes systematics as the branch concerned with relationships among organisms.",
+      "source_text": "This process of classification is taxonomy. ... the relationships among them. This branch of study was referred to as systematics.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

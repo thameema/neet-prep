@@ -1,0 +1,466 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Unit introduction",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 1,
+    "chapter": null,
+    "chapter_page": null,
+    "source_scope": "Only the content printed on PDF page 1; this is unit front matter, not Chapter 1.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 24,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q001",
+      "type": "single_correct",
+      "topic": "Definition of Biology",
+      "question": "Biology is the science of:",
+      "options": [
+        "Life forms and living processes",
+        "Only the classification of animals",
+        "Only human beings",
+        "Inanimate matter alone"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines Biology as the science of life forms and living processes.",
+      "source_text": "Biology is the science of life forms and living processes.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q002",
+      "type": "single_correct",
+      "topic": "Diversity of life",
+      "question": "The living world comprises:",
+      "options": [
+        "A single kind of organism",
+        "An amazing diversity of living organisms",
+        "Only plants and animals visible to humans",
+        "Only organisms that have been classified"
+      ],
+      "correct_option": 1,
+      "explanation": "The introductory paragraph describes the living world as comprising an amazing diversity of living organisms.",
+      "source_text": "The living world comprises an amazing diversity of living organisms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q003",
+      "type": "single_correct",
+      "topic": "Early man's observations",
+      "question": "Early man could easily perceive the difference between:",
+      "options": [
+        "Plants and fungi",
+        "Inanimate matter and living organisms",
+        "Different animal species",
+        "Different taxonomic categories"
+      ],
+      "correct_option": 1,
+      "explanation": "The page specifically mentions the difference between inanimate matter and living organisms.",
+      "source_text": "Early man could easily perceive the difference between inanimate matter and living organisms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q004",
+      "type": "multiple_correct",
+      "topic": "Examples of inanimate matter",
+      "question": "Which of the following are given as examples of inanimate matter in the passage?",
+      "options": [
+        "Wind",
+        "Sea",
+        "Fire",
+        "Birds"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The passage lists wind, sea and fire as examples of inanimate matter.",
+      "source_text": "some of the inanimate matter (wind, sea, fire etc.)",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q005",
+      "type": "single_correct",
+      "topic": "Early man's beliefs",
+      "question": "According to the passage, early man deified some inanimate matter and some:",
+      "options": [
+        "Rocks and metals only",
+        "Animals and plants",
+        "Modern scientific instruments",
+        "Taxonomic categories"
+      ],
+      "correct_option": 1,
+      "explanation": "The text says early man deified some inanimate matter and some among animals and plants.",
+      "source_text": "some among the animals and plants",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q006",
+      "type": "single_correct",
+      "topic": "Awe or fear",
+      "question": "What common feature did the mentioned inanimate and animate objects evoke?",
+      "options": [
+        "A desire to classify them",
+        "A sense of awe or fear",
+        "A scientific explanation",
+        "A shared biological structure"
+      ],
+      "correct_option": 1,
+      "explanation": "The common feature mentioned is the sense of awe or fear evoked by those objects.",
+      "source_text": "A common feature ... was the sense of awe or fear that they evoked.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q007",
+      "type": "single_correct",
+      "topic": "Historical development of biological description",
+      "question": "The description of living organisms, including human beings, began:",
+      "options": [
+        "Before early man existed",
+        "Much later in human history",
+        "At the same time as the first use of fire",
+        "Only after the development of modern genetics"
+      ],
+      "correct_option": 1,
+      "explanation": "The page states that descriptions of living organisms began much later in human history.",
+      "source_text": "The description of living organisms including human beings began much later in human history.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q008",
+      "type": "single_correct",
+      "topic": "Anthropocentric view",
+      "question": "Societies that indulged in an anthropocentric view of biology could register:",
+      "options": [
+        "Unlimited progress in biological knowledge",
+        "Limited progress in biological knowledge",
+        "No interest in human beings",
+        "Complete classification of all organisms"
+      ],
+      "correct_option": 1,
+      "explanation": "According to the passage, such societies could register limited progress in biological knowledge.",
+      "source_text": "Societies which indulged in anthropocentric view of biology could register limited progress in biological knowledge.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q009",
+      "type": "single_correct",
+      "topic": "Systems developed to study life forms",
+      "question": "Systematic and monumental description of life forms led to detailed systems of:",
+      "options": [
+        "Identification, nomenclature and classification",
+        "Respiration, digestion and excretion",
+        "Growth, nutrition and movement",
+        "Observation, experimentation and measurement only"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage names identification, nomenclature and classification as the systems developed out of necessity.",
+      "source_text": "detailed systems of identification, nomenclature and classification",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q010",
+      "type": "single_correct",
+      "topic": "Similarities among organisms",
+      "question": "The recognition of similarities among living organisms was described as occurring:",
+      "options": [
+        "Only horizontally",
+        "Only vertically",
+        "Both horizontally and vertically",
+        "Neither horizontally nor vertically"
+      ],
+      "correct_option": 2,
+      "explanation": "The text explicitly says that similarities were recognised both horizontally and vertically.",
+      "source_text": "the sharing of similarities among living organisms both horizontally and vertically",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q011",
+      "type": "single_correct",
+      "topic": "Relationships among organisms",
+      "question": "According to the passage, all present-day living organisms are related to:",
+      "options": [
+        "Only organisms of the same species",
+        "Each other and organisms that ever lived on Earth",
+        "Only organisms living in the same habitat",
+        "Only plants or only animals"
+      ],
+      "correct_option": 1,
+      "explanation": "The passage states that present-day organisms are related to one another and to organisms that ever lived on Earth.",
+      "source_text": "all present day living organisms are related to each other and also to all organisms that ever lived on this earth",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q012",
+      "type": "single_correct",
+      "topic": "Conservation of biodiversity",
+      "question": "The recognition that living organisms are related to one another and to organisms of the past led to cultural movements for:",
+      "options": [
+        "Conservation of biodiversity",
+        "Elimination of nomenclature",
+        "Reducing the number of species",
+        "Replacing classification with local names"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage connects this recognition with cultural movements for conservation of biodiversity.",
+      "source_text": "led to cultural movements for conservation of biodiversity",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q013",
+      "type": "single_correct",
+      "topic": "Taxonomist's perspective",
+      "question": "The following chapters of the unit describe animals and plants from the perspective of a:",
+      "options": [
+        "Physicist",
+        "Taxonomist",
+        "Geologist",
+        "Medical practitioner"
+      ],
+      "correct_option": 1,
+      "explanation": "The final sentence says the descriptions and classification of animals and plants are presented from a taxonomist's perspective.",
+      "source_text": "from a taxonomist’s perspective",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q014",
+      "type": "single_correct",
+      "topic": "Unit contents",
+      "question": "Which chapter is listed as Chapter 1 in Unit 1?",
+      "options": [
+        "Biological Classification",
+        "Plant Kingdom",
+        "The Living World",
+        "Animal Kingdom"
+      ],
+      "correct_option": 2,
+      "explanation": "The unit contents list Chapter 1 as The Living World.",
+      "source_text": "Chapter 1 The Living World",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q015",
+      "type": "single_correct",
+      "topic": "Unit contents",
+      "question": "Which chapter is listed as Chapter 2 in Unit 1?",
+      "options": [
+        "The Living World",
+        "Biological Classification",
+        "Plant Kingdom",
+        "Animal Kingdom"
+      ],
+      "correct_option": 1,
+      "explanation": "The unit contents list Chapter 2 as Biological Classification.",
+      "source_text": "Chapter 2 Biological Classification",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q016",
+      "type": "single_correct",
+      "topic": "Unit contents",
+      "question": "Which chapter is listed as Chapter 3 in Unit 1?",
+      "options": [
+        "Plant Kingdom",
+        "Animal Kingdom",
+        "The Living World",
+        "Biological Classification"
+      ],
+      "correct_option": 0,
+      "explanation": "The unit contents list Chapter 3 as Plant Kingdom.",
+      "source_text": "Chapter 3 Plant Kingdom",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q017",
+      "type": "single_correct",
+      "topic": "Unit contents",
+      "question": "Which chapter is listed as Chapter 4 in Unit 1?",
+      "options": [
+        "Plant Kingdom",
+        "Animal Kingdom",
+        "Biological Classification",
+        "The Living World"
+      ],
+      "correct_option": 1,
+      "explanation": "The unit contents list Chapter 4 as Animal Kingdom.",
+      "source_text": "Chapter 4 Animal Kingdom",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q018",
+      "type": "multiple_statement",
+      "topic": "Early human understanding",
+      "question": "Consider the following statements:\n1. Early man could distinguish inanimate matter from living organisms.\n2. Early man deified some inanimate matter.\n3. The passage says early man deified no animals or plants.\nWhich statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 0,
+      "explanation": "Statements 1 and 2 agree with the passage. Statement 3 is false because the text says some animals and plants were also deified.",
+      "source_text": "Early man could easily perceive the difference ... Early man deified some of the inanimate matter ... and some among the animals and plants.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q019",
+      "type": "multiple_statement",
+      "topic": "Biological knowledge",
+      "question": "Consider the following statements:\n1. Description of living organisms began much later in human history.\n2. Anthropocentric societies registered limited progress in biological knowledge, according to the text.\n3. Systematic description made identification, nomenclature and classification unnecessary.\nWhich statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 0,
+      "explanation": "Statements 1 and 2 follow the passage. Statement 3 reverses the passage's point: systematic description led to these systems.",
+      "source_text": "The description of living organisms ... began much later ... [and] detailed systems of identification, nomenclature and classification.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q020",
+      "type": "multiple_statement",
+      "topic": "Organism relationships and biodiversity",
+      "question": "Consider the following statements:\n1. Present-day living organisms are related to one another.\n2. Present-day living organisms are related to organisms that lived on Earth in the past.\n3. Recognition of these relationships led to cultural movements for biodiversity conservation.\nWhich statements are correct according to the passage?",
+      "options": [
+        "1 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 3,
+      "explanation": "All three statements reflect the relationships and consequence described on the page.",
+      "source_text": "all present day living organisms are related to each other and also to all organisms that ever lived on this earth ... led to cultural movements for conservation of biodiversity",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q021",
+      "type": "match_the_following",
+      "topic": "Unit chapter list",
+      "question": "Match each chapter number with its title.",
+      "column_a": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "column_b": [
+        "A. Animal Kingdom",
+        "B. The Living World",
+        "C. Plant Kingdom",
+        "D. Biological Classification"
+      ],
+      "options": [
+        "1-B, 2-D, 3-C, 4-A",
+        "1-D, 2-B, 3-A, 4-C",
+        "1-B, 2-C, 3-D, 4-A",
+        "1-A, 2-D, 3-C, 4-B"
+      ],
+      "correct_option": 0,
+      "explanation": "The unit contents list The Living World, Biological Classification, Plant Kingdom and Animal Kingdom as Chapters 1 to 4 respectively.",
+      "source_text": "Chapter 1 The Living World; Chapter 2 Biological Classification; Chapter 3 Plant Kingdom; Chapter 4 Animal Kingdom.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q022",
+      "type": "assertion_reason",
+      "topic": "Identification, nomenclature and classification",
+      "question": "Assertion (A): Systematic description of life forms led to detailed systems of identification, nomenclature and classification.\nReason (R): The passage says these systems were brought in out of necessity.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "Both statements are supported by the text, and the necessity explains why the systems were developed.",
+      "source_text": "description of life forms brought in, out of necessity, detailed systems of identification, nomenclature and classification",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q023",
+      "type": "assertion_reason",
+      "topic": "Biodiversity conservation",
+      "question": "Assertion (A): Recognition of relationships among organisms led to cultural movements for conservation of biodiversity.\nReason (R): The passage states that all present-day living organisms are related to one another and to organisms that lived on Earth in the past.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage directly links recognition of these relationships to cultural movements for biodiversity conservation.",
+      "source_text": "all present day living organisms are related ... led to cultural movements for conservation of biodiversity",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P001-Q024",
+      "type": "single_correct",
+      "topic": "Scope of the unit",
+      "question": "According to the final sentence on the page, the following chapters provide descriptions, including classification, of:",
+      "options": [
+        "Only human beings",
+        "Only plants",
+        "Animals and plants",
+        "Only inanimate objects"
+      ],
+      "correct_option": 2,
+      "explanation": "The final sentence specifies animals and plants from a taxonomist's perspective.",
+      "source_text": "a description, including classification, of animals and plants from a taxonomist’s perspective",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

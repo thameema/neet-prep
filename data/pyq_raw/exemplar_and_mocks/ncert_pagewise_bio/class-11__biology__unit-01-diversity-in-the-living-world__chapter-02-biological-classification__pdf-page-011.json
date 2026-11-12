@@ -1,0 +1,365 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 11,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 11,
+    "source_scope": "Only the content printed on PDF page 11 (printed page 20): Figure 2.6 (TMV and bacteriophage), the discovery of viruses (Ivanowsky, Beijerinck, Stanley), virus structure and genetic material, capsid and capsomeres, viral diseases, and the start of plant virus symptoms.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 18,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q001",
+      "type": "single_correct",
+      "topic": "Viruses",
+      "question": "Once a virus infects a cell, it:",
+      "options": [
+        "Photosynthesises using the host's chloroplasts",
+        "Divides by fission inside the host",
+        "Takes over the machinery of the host cell to replicate itself, killing the host",
+        "Forms a cell wall around the host"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says viruses take over the host cell's machinery to replicate themselves, killing the host.",
+      "source_text": "Once they infect a cell, they take over the machinery of the host cell to replicate themselves, killing the host.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q002",
+      "type": "single_correct",
+      "topic": "Viruses",
+      "question": "The word 'virus' means:",
+      "options": [
+        "Infectious living fluid",
+        "Tiny crystal",
+        "Obligate parasite",
+        "Venom or poisonous fluid"
+      ],
+      "correct_option": 3,
+      "explanation": "The page states that virus means venom or poisonous fluid.",
+      "source_text": "Virus means venom or poisonous fluid.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q003",
+      "type": "single_correct",
+      "topic": "Discovery of viruses",
+      "question": "Dmitri Ivanowsky (1892) recognised certain microbes as the cause of:",
+      "options": [
+        "Mosaic disease of tobacco",
+        "Mad cow disease",
+        "Citrus canker",
+        "Potato spindle tuber disease"
+      ],
+      "correct_option": 0,
+      "explanation": "The page credits Ivanowsky (1892) with recognising microbes causing the mosaic disease of tobacco.",
+      "source_text": "Dmitri Ivanowsky (1892) recognised certain microbes as causal organism of the mosaic disease of tobacco",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q004",
+      "type": "single_correct",
+      "topic": "Discovery of viruses",
+      "question": "Ivanowsky found that the microbes were smaller than bacteria because they:",
+      "options": [
+        "Passed through bacteria-proof filters",
+        "Lacked genetic material",
+        "Could not be seen with the naked eye",
+        "Were crystalline"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says they were found to be smaller than bacteria because they passed through bacteria-proof filters.",
+      "source_text": "These were found to be smaller than bacteria because they passed through bacteria-proof filters.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q005",
+      "type": "single_correct",
+      "topic": "Discovery of viruses",
+      "question": "Who named the new pathogen 'virus' and called the fluid Contagium vivum fluidum?",
+      "options": [
+        "Dmitri Ivanowsky",
+        "T.O. Diener",
+        "M.W. Beijerinck",
+        "W.M. Stanley"
+      ],
+      "correct_option": 2,
+      "explanation": "The page credits M.W. Beijerinck (1898) with this naming.",
+      "source_text": "named the new pathogen “virus” and called the fluid as Contagium vivum fluidum",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q006",
+      "type": "single_correct",
+      "topic": "Discovery of viruses",
+      "question": "Contagium vivum fluidum means:",
+      "options": [
+        "Crystalline protein",
+        "Inert fluid",
+        "Infectious living fluid",
+        "Poisonous fluid"
+      ],
+      "correct_option": 2,
+      "explanation": "The page gives 'infectious living fluid' as the meaning.",
+      "source_text": "called the fluid as Contagium vivum fluidum (infectious living fluid).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q007",
+      "type": "single_correct",
+      "topic": "Discovery of viruses",
+      "question": "W.M. Stanley (1935) showed that viruses:",
+      "options": [
+        "Passed through bacteria-proof filters",
+        "Contain both RNA and DNA",
+        "Could be crystallised and the crystals consist largely of proteins",
+        "Could infect healthy tobacco plants"
+      ],
+      "correct_option": 2,
+      "explanation": "The page credits Stanley with showing that viruses could be crystallised, with crystals largely of proteins.",
+      "source_text": "W.M. Stanley (1935) showed that viruses could be crystallised and crystals consist largely of proteins.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q008",
+      "type": "match_the_following",
+      "topic": "Discovery of viruses",
+      "question": "Match each scientist with his contribution as given on the page.",
+      "column_a": [
+        "Ivanowsky",
+        "Beijerinck",
+        "Stanley"
+      ],
+      "column_b": [
+        "A. Showed that viruses could be crystallised",
+        "B. Recognised microbes causing mosaic disease of tobacco",
+        "C. Named the pathogen 'virus'"
+      ],
+      "options": [
+        "Ivanowsky-B, Beijerinck-C, Stanley-A",
+        "Ivanowsky-C, Beijerinck-B, Stanley-A",
+        "Ivanowsky-B, Beijerinck-A, Stanley-C",
+        "Ivanowsky-A, Beijerinck-C, Stanley-B"
+      ],
+      "correct_option": 0,
+      "explanation": "Ivanowsky recognised the microbes (1892), Beijerinck named the virus (1898) and Stanley crystallised it (1935).",
+      "source_text": "Dmitri Ivanowsky (1892) recognised ... M.W. Beijerinck (1898) ... named the new pathogen “virus” ... W.M. Stanley (1935) showed that viruses could be crystallised",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q009",
+      "type": "single_correct",
+      "topic": "Viruses",
+      "question": "Viruses are inert outside their specific host cell and are:",
+      "options": [
+        "Obligate parasites",
+        "Free-living saprophytes",
+        "Facultative parasites",
+        "Autotrophs"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says viruses are inert outside their specific host cell and are obligate parasites.",
+      "source_text": "They are inert outside their specific host cell. Viruses are obligate parasites.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q010",
+      "type": "single_correct",
+      "topic": "Viral genetic material",
+      "question": "The genetic material of a virus is:",
+      "options": [
+        "Either RNA or DNA, never both",
+        "Both RNA and DNA",
+        "Always DNA",
+        "Always RNA"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says genetic material could be either RNA or DNA and no virus contains both.",
+      "source_text": "that could be either RNA or DNA. No virus contains both RNA and DNA.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q011",
+      "type": "single_correct",
+      "topic": "Viral genetic material",
+      "question": "In general, viruses that infect plants have:",
+      "options": [
+        "Both RNA and DNA",
+        "Double stranded RNA only",
+        "Single stranded RNA",
+        "Double stranded DNA"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says viruses that infect plants generally have single stranded RNA.",
+      "source_text": "In general, viruses that infect plants have single stranded RNA",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q012",
+      "type": "single_correct",
+      "topic": "Viral genetic material",
+      "question": "Viruses that infect animals have:",
+      "options": [
+        "Only double stranded DNA",
+        "Only single stranded RNA",
+        "Both RNA and DNA",
+        "Either single or double stranded RNA or double stranded DNA"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says animal viruses have either single or double stranded RNA or double stranded DNA.",
+      "source_text": "viruses that infect animals have either single or double stranded RNA or double stranded DNA.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q013",
+      "type": "single_correct",
+      "topic": "Bacteriophages",
+      "question": "Bacteriophages, the viruses that infect bacteria, are usually:",
+      "options": [
+        "Double stranded RNA viruses",
+        "Double stranded DNA viruses",
+        "Viruses with both DNA and RNA",
+        "Single stranded RNA viruses"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says bacteriophages are usually double stranded DNA viruses.",
+      "source_text": "Bacterial viruses or bacteriophages (viruses that infect the bacteria) are usually double stranded DNA viruses",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q014",
+      "type": "single_correct",
+      "topic": "Virus structure",
+      "question": "The protein coat of a virus that protects the nucleic acid is called the:",
+      "options": [
+        "Pellicle, made of capsomeres",
+        "Sheath, made of nucleoprotein",
+        "Capsid, made of subunits called capsomeres",
+        "Capsomere, made of capsids"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says the capsid is made of small subunits called capsomeres and protects the nucleic acid.",
+      "source_text": "The protein coat called capsid made of small subunits called capsomeres, protects the nucleic acid.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q015",
+      "type": "single_correct",
+      "topic": "Virus structure",
+      "question": "The capsomeres of a virus are arranged in:",
+      "options": [
+        "Helical or polyhedral geometric forms",
+        "Cubical or spherical forms only",
+        "Random shapes",
+        "Filamentous forms only"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says capsomeres are arranged in helical or polyhedral geometric forms.",
+      "source_text": "These capsomeres are arranged in helical or polyhedral geometric forms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q016",
+      "type": "multiple_correct",
+      "topic": "Viral diseases",
+      "question": "Which diseases are named on the page as caused by viruses?",
+      "options": [
+        "Influenza",
+        "Herpes",
+        "Small pox",
+        "Mumps",
+        "Cholera",
+        "AIDS"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "explanation": "The page lists mumps, small pox, herpes, influenza and AIDS as viral diseases. Cholera is bacterial.",
+      "source_text": "Viruses cause diseases like mumps, small pox, herpes and influenza. AIDS in humans is also caused by a virus.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q017",
+      "type": "multiple_correct",
+      "topic": "Plant virus symptoms",
+      "question": "Which symptoms of viral infection in plants are listed on this page?",
+      "options": [
+        "Formation of fruiting bodies",
+        "Mosaic formation",
+        "Leaf rolling and curling",
+        "Formation of diatomaceous earth",
+        "Yellowing"
+      ],
+      "correct_options": [
+        1,
+        2,
+        4
+      ],
+      "explanation": "The page lists mosaic formation, leaf rolling and curling and yellowing, and continues the list on the next page.",
+      "source_text": "In plants, the symptoms can be mosaic formation, leaf rolling and curling, yellowing",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P011-Q018",
+      "type": "multiple_statement",
+      "topic": "Viruses",
+      "question": "Consider the following statements:\n1. No virus contains both RNA and DNA.\n2. A virus is a nucleoprotein.\n3. Bacteriophages are usually single stranded RNA viruses.\nWhich statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 0,
+      "explanation": "Statements 1 and 2 match the page. Statement 3 is false because bacteriophages are usually double stranded DNA viruses.",
+      "source_text": "No virus contains both RNA and DNA. A virus is a nucleoprotein ... bacteriophages ... are usually double stranded DNA viruses",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

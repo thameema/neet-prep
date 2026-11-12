@@ -1,0 +1,395 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 7,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 5,
+    "source_scope": "Only the content printed on PDF page 7: Homo sapiens; genus, family, order, class and phylum; examples using Solanum, Panthera, Felis, Solanaceae, Felidae, Canidae, Carnivora, Primata and Mammalia.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q001",
+      "type": "single_correct",
+      "topic": "Human scientific name",
+      "question": "According to the page, what is the scientific name of human beings?",
+      "options": [
+        "Homo sapiens",
+        "Panthera leo",
+        "Solanum tuberosum",
+        "Felis sapiens"
+      ],
+      "correct_option": 0,
+      "explanation": "The page states that humans belong to species sapiens in genus Homo, and the scientific name is Homo sapiens.",
+      "source_text": "The scientific name thus, for human being, is written as Homo sapiens.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q002",
+      "type": "single_correct",
+      "topic": "Genus",
+      "question": "A genus comprises which group, according to the page?",
+      "options": [
+        "Related species",
+        "Related families",
+        "Related orders",
+        "All organisms in a kingdom"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines genus as a group of related species sharing more characters with one another than species of other genera.",
+      "source_text": "Genus comprises a group of related species which has more characters in common in comparison to species of other genera.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q003",
+      "type": "single_correct",
+      "topic": "Genus and shared characters",
+      "question": "Compared with species from other genera, species within one genus have:",
+      "options": [
+        "More characters in common",
+        "No characters in common",
+        "Only different reproductive features",
+        "Fewer shared characters in every case"
+      ],
+      "correct_option": 0,
+      "explanation": "The page explains that related species in one genus share more characters with each other than species of other genera.",
+      "source_text": "Genus comprises a group of related species which has more characters in common in comparison to species of other genera.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q004",
+      "type": "single_correct",
+      "topic": "Solanum genus",
+      "question": "Which two organisms are given as different species belonging to the genus Solanum?",
+      "options": [
+        "Potato and brinjal",
+        "Lion and tiger",
+        "Cat and dog",
+        "Monkey and gorilla"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says potato and brinjal are different species but both belong to Solanum.",
+      "source_text": "potato and brinjal are two different species but both belong to the genus Solanum.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q005",
+      "type": "multiple_correct",
+      "topic": "Panthera genus",
+      "question": "Which animals are identified on the page as species of genus Panthera?",
+      "options": [
+        "Lion",
+        "Leopard",
+        "Tiger",
+        "Domestic cat"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Lion, leopard and tiger are listed as species of Panthera; cats are placed in Felis in this passage.",
+      "source_text": "Lion (Panthera leo), leopard (P. pardus) and tiger (P. tigris) ... are all species of the genus Panthera.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q006",
+      "type": "single_correct",
+      "topic": "Panthera and Felis",
+      "question": "Which genus is described as including cats and differing from Panthera?",
+      "options": [
+        "Felis",
+        "Solanum",
+        "Homo",
+        "Datura"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says Panthera differs from Felis, which includes cats.",
+      "source_text": "This genus differs from another genus Felis which includes cats.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q007",
+      "type": "single_correct",
+      "topic": "Family",
+      "question": "A family consists of a group of related:",
+      "options": [
+        "Genera",
+        "Species epithets only",
+        "Orders only",
+        "Kingdoms"
+      ],
+      "correct_option": 0,
+      "explanation": "The page describes family as the next category, containing related genera.",
+      "source_text": "Family, has a group of related genera",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q008",
+      "type": "single_correct",
+      "topic": "Family similarities",
+      "question": "Compared with genus and species, related genera in a family have:",
+      "options": [
+        "Still fewer similarities",
+        "Always more similarities",
+        "No differences at all",
+        "Identical scientific names"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says families have fewer similarities than genus and species.",
+      "source_text": "a group of related genera with still less number of similarities as compared to genus and species.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q009",
+      "type": "single_correct",
+      "topic": "Plant family characters",
+      "question": "Plant families are characterised on the basis of which features, according to the page?",
+      "options": [
+        "Both vegetative and reproductive features",
+        "Only flower colour",
+        "Only root length",
+        "Only habitat"
+      ],
+      "correct_option": 0,
+      "explanation": "The page specifies both vegetative and reproductive features of plant species.",
+      "source_text": "Families are characterised on the basis of both vegetative and reproductive features of plant species.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q010",
+      "type": "multiple_correct",
+      "topic": "Solanaceae examples",
+      "question": "Which genera are placed in the plant family Solanaceae in the example?",
+      "options": [
+        "Solanum",
+        "Petunia",
+        "Datura",
+        "Panthera"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The page names Solanum, Petunia and Datura as three genera in Solanaceae.",
+      "source_text": "three different genera Solanum, Petunia and Datura are placed in the family Solanaceae.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q011",
+      "type": "single_correct",
+      "topic": "Felidae family",
+      "question": "Which pair of genera is placed together in the family Felidae in the passage?",
+      "options": [
+        "Panthera and Felis",
+        "Solanum and Petunia",
+        "Homo and Panthera",
+        "Canidae and Solanaceae"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage places Panthera and Felis in the family Felidae.",
+      "source_text": "genus Panthera, comprising lion, tiger, leopard is put along with genus, Felis (cats) in the family Felidae.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q012",
+      "type": "single_correct",
+      "topic": "Cat and dog families",
+      "question": "According to the page, cats and dogs are separated into which families, respectively?",
+      "options": [
+        "Felidae and Canidae",
+        "Canidae and Felidae",
+        "Solanaceae and Felidae",
+        "Panthera and Felis"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage states that cats and dogs are separated into Felidae and Canidae, respectively.",
+      "source_text": "They are separated into two different families – Felidae and Canidae, respectively.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q013",
+      "type": "single_correct",
+      "topic": "Order",
+      "question": "An order is described as an assemblage of:",
+      "options": [
+        "Families exhibiting a few similar characters",
+        "Species with no shared features",
+        "Genera that are all identical",
+        "Only one species"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines order as a higher category made up of families with a few similar characters.",
+      "source_text": "Order being a higher category, is the assemblage of families which exhibit a few similar characters.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q014",
+      "type": "single_correct",
+      "topic": "Higher taxonomic categories",
+      "question": "According to the page, order and other higher taxonomic categories are generally identified based on:",
+      "options": [
+        "Aggregates of characters",
+        "A single local name",
+        "Only body size",
+        "The author's abbreviation"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage says order and higher categories are identified based on aggregates of characters.",
+      "source_text": "Generally, order and other higher taxonomic categories are identified based on the aggregates of characters.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q015",
+      "type": "single_correct",
+      "topic": "Plant order example",
+      "question": "Which order is given for the plant families Convolvulaceae and Solanaceae?",
+      "options": [
+        "Polymoniales",
+        "Carnivora",
+        "Primata",
+        "Mammalia"
+      ],
+      "correct_option": 0,
+      "explanation": "The page places Convolvulaceae and Solanaceae in the order printed as Polymoniales, mainly based on floral characters.",
+      "source_text": "Plant families like Convolvulaceae, Solanaceae are included in the order Polymoniales mainly based on the floral characters.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q016",
+      "type": "single_correct",
+      "topic": "Carnivora",
+      "question": "Which families are stated to be included in the animal order Carnivora?",
+      "options": [
+        "Felidae and Canidae",
+        "Solanaceae and Convolvulaceae",
+        "Homo and Solanum",
+        "Felis and Panthera as families"
+      ],
+      "correct_option": 0,
+      "explanation": "The page states that Carnivora includes Felidae and Canidae.",
+      "source_text": "The animal order, Carnivora, includes families like Felidae and Canidae.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q017",
+      "type": "single_correct",
+      "topic": "Class",
+      "question": "Which category includes related orders?",
+      "options": [
+        "Class",
+        "Family",
+        "Genus",
+        "Species"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines class as a category that includes related orders.",
+      "source_text": "This category includes related orders.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q018",
+      "type": "multiple_correct",
+      "topic": "Mammalia example",
+      "question": "Which organisms or groups are mentioned as examples in the discussion of class Mammalia?",
+      "options": [
+        "Monkey",
+        "Gorilla",
+        "Gibbon",
+        "Tiger",
+        "Cat",
+        "Dog"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The passage mentions monkey, gorilla and gibbon in order Primata, and tiger, cat and dog among animals in order Carnivora; these orders are placed in class Mammalia.",
+      "source_text": "order Primata comprising monkey, gorilla and gibbon is placed in class Mammalia along with order Carnivora that includes animals like tiger, cat and dog.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q019",
+      "type": "single_correct",
+      "topic": "Phylum",
+      "question": "The page says classes comprising fishes, amphibians, reptiles, birds and mammals constitute which next higher category?",
+      "options": [
+        "Phylum",
+        "Family",
+        "Genus",
+        "Species"
+      ],
+      "correct_option": 0,
+      "explanation": "The page introduces phylum as the next higher category above class for these animal groups.",
+      "source_text": "Classes comprising animals like fishes, amphibians, reptiles, birds along with mammals constitute the next higher category called Phylum.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P007-Q020",
+      "type": "single_correct",
+      "topic": "Taxonomic hierarchy",
+      "question": "Which sequence correctly moves from genus to family to order to class, as described across the examples on this page?",
+      "options": [
+        "Genus → Family → Order → Class",
+        "Class → Order → Genus → Family",
+        "Family → Species → Class → Genus",
+        "Order → Genus → Species → Family"
+      ],
+      "correct_option": 0,
+      "explanation": "The page presents family as the category above genus, order above family, and class as a category containing related orders.",
+      "source_text": "The next category, Family ... Order being a higher category ... This category includes related orders.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

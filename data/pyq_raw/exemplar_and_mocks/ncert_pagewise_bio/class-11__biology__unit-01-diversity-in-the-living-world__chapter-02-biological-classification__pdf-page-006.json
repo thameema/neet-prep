@@ -1,0 +1,379 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 6,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 6,
+    "source_scope": "Only the content printed on PDF page 6 (printed page 15): Sections 2.2.2 Dinoflagellates, 2.2.3 Euglenoids, 2.2.4 Slime Moulds, the start of 2.2.5 Protozoans (introduction and amoeboid protozoans), and Figure 2.4.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 19,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q001",
+      "type": "single_correct",
+      "topic": "Dinoflagellates",
+      "question": "Dinoflagellates are mostly:",
+      "options": [
+        "Terrestrial and saprophytic",
+        "Marine and photosynthetic",
+        "Parasitic and non-photosynthetic",
+        "Fresh water and heterotrophic"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says dinoflagellates are mostly marine and photosynthetic.",
+      "source_text": "These organisms are mostly marine and photosynthetic.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q002",
+      "type": "single_correct",
+      "topic": "Dinoflagellates",
+      "question": "Dinoflagellates appear yellow, green, brown, blue or red depending on:",
+      "options": [
+        "Their habitat depth",
+        "The number of flagella",
+        "The main pigments present in their cells",
+        "The thickness of their cell wall"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says the colour depends on the main pigments present in the cells.",
+      "source_text": "They appear yellow, green, brown, blue or red depending on the main pigments present in their cells.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q003",
+      "type": "single_correct",
+      "topic": "Dinoflagellates",
+      "question": "The cell wall of dinoflagellates has on its outer surface:",
+      "options": [
+        "Stiff cellulose plates",
+        "Chitin",
+        "A pellicle",
+        "Silica shells"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the cell wall has stiff cellulose plates on the outer surface.",
+      "source_text": "The cell wall has stiff cellulose plates on the outer surface.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q004",
+      "type": "single_correct",
+      "topic": "Dinoflagellates",
+      "question": "Most dinoflagellates have two flagella. How are they arranged?",
+      "options": [
+        "One short and one long, both at the anterior end",
+        "Many flagella cover the whole surface",
+        "One lies longitudinally and the other transversely in a furrow between the wall plates",
+        "Both lie longitudinally at the posterior end"
+      ],
+      "correct_option": 2,
+      "explanation": "The page describes one longitudinal and one transverse flagellum lying in a furrow between the wall plates.",
+      "source_text": "one lies longitudinally and the other transversely in a furrow between the wall plates.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q005",
+      "type": "single_correct",
+      "topic": "Red tides",
+      "question": "Red tides are caused by rapid multiplication of:",
+      "options": [
+        "Diatoms",
+        "Euglenoids",
+        "Cyanobacteria such as Nostoc",
+        "Red dinoflagellates such as Gonyaulax"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says red dinoflagellates (example Gonyaulax) multiply so rapidly that they make the sea appear red.",
+      "source_text": "red dinoflagellates (Example: Gonyaulax) undergo such rapid multiplication that they make the sea appear red (red tides).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q006",
+      "type": "single_correct",
+      "topic": "Red tides",
+      "question": "Toxins released by large numbers of red dinoflagellates may:",
+      "options": [
+        "Produce diatomaceous earth",
+        "Kill other marine animals such as fishes",
+        "Form fruiting bodies",
+        "Cause sleeping sickness"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the toxins released by such large numbers may even kill other marine animals such as fishes.",
+      "source_text": "Toxins released by such large numbers may even kill other marine animals such as fishes.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q007",
+      "type": "single_correct",
+      "topic": "Euglenoids",
+      "question": "Most euglenoids are found in:",
+      "options": [
+        "Deep oceans",
+        "Stagnant fresh water",
+        "Hot springs",
+        "Moist soil"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the majority are fresh water organisms found in stagnant water.",
+      "source_text": "Majority of them are fresh water organisms found in stagnant water.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q008",
+      "type": "single_correct",
+      "topic": "Euglenoids",
+      "question": "Instead of a cell wall, euglenoids have a protein-rich layer called:",
+      "options": [
+        "Mycelium",
+        "Pellicle",
+        "Plasmodium",
+        "Capsid"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the protein-rich pellicle makes the body of euglenoids flexible.",
+      "source_text": "they have a protein rich layer called pellicle which makes their body flexible.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q009",
+      "type": "single_correct",
+      "topic": "Euglenoids",
+      "question": "Euglenoids have two flagella, which are:",
+      "options": [
+        "One longitudinal and one transverse in a furrow",
+        "Both short",
+        "Both long",
+        "One short and one long"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says euglenoids have two flagella, a short and a long one.",
+      "source_text": "They have two flagella, a short and a long one.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q010",
+      "type": "single_correct",
+      "topic": "Euglenoids",
+      "question": "When deprived of sunlight, euglenoids behave like heterotrophs by:",
+      "options": [
+        "Predating on other smaller organisms",
+        "Forming a plasmodium",
+        "Fixing nitrogen",
+        "Absorbing dead matter as saprophytes"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says that without sunlight euglenoids behave like heterotrophs by predating on other smaller organisms.",
+      "source_text": "when deprived of sunlight they behave like heterotrophs by predating on other smaller organisms.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q011",
+      "type": "single_correct",
+      "topic": "Euglenoids",
+      "question": "The pigments of euglenoids are identical to those present in:",
+      "options": [
+        "Cyanobacteria only",
+        "Dinoflagellates only",
+        "Fungi",
+        "Higher plants"
+      ],
+      "correct_option": 3,
+      "explanation": "The page notes that the pigments of euglenoids are identical to those in higher plants.",
+      "source_text": "the pigments of euglenoids are identical to those present in higher plants.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q012",
+      "type": "single_correct",
+      "topic": "Slime moulds",
+      "question": "Slime moulds are:",
+      "options": [
+        "Autotrophic bacteria",
+        "Parasitic fungi",
+        "Saprophytic protists",
+        "Photosynthetic protists"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says slime moulds are saprophytic protists.",
+      "source_text": "Slime moulds are saprophytic protists.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q013",
+      "type": "single_correct",
+      "topic": "Slime moulds",
+      "question": "Under suitable conditions, slime moulds form an aggregation called:",
+      "options": [
+        "Plasmodium",
+        "Capsid",
+        "Pellicle",
+        "Mycelium"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the aggregation called plasmodium may grow and spread over several feet.",
+      "source_text": "they form an aggregation called plasmodium which may grow and spread over several feet.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q014",
+      "type": "multiple_correct",
+      "topic": "Slime moulds",
+      "question": "Which statements about slime mould spores are correct?",
+      "options": [
+        "They are extremely resistant and can survive for many years",
+        "They are dispersed by air currents",
+        "They are borne in fruiting bodies at the tips of the differentiated plasmodium",
+        "They are dispersed only by water",
+        "They lack walls",
+        "They possess true walls"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "explanation": "The page describes the spores as borne at the tips of fruiting bodies, with true walls, very resistant, surviving many years and dispersed by air currents.",
+      "source_text": "the plasmodium differentiates and forms fruiting bodies bearing spores at their tips. The spores possess true walls. They are extremely resistant and survive for many years",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q015",
+      "type": "single_correct",
+      "topic": "Protozoans",
+      "question": "All protozoans are:",
+      "options": [
+        "Chemosynthetic autotrophs",
+        "Photosynthetic autotrophs",
+        "Heterotrophs living as predators or parasites",
+        "Saprophytes only"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says all protozoans are heterotrophs and live as predators or parasites.",
+      "source_text": "All protozoans are heterotrophs and live as predators or parasites.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q016",
+      "type": "single_correct",
+      "topic": "Protozoans",
+      "question": "Protozoans are believed to be primitive relatives of:",
+      "options": [
+        "Bacteria",
+        "Plants",
+        "Fungi",
+        "Animals"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says protozoans are believed to be primitive relatives of animals.",
+      "source_text": "They are believed to be primitive relatives of animals.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q017",
+      "type": "single_correct",
+      "topic": "Protozoans",
+      "question": "Into how many major groups are protozoans divided on the page?",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "Five"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says there are four major groups of protozoans.",
+      "source_text": "There are four major groups of protozoans.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q018",
+      "type": "match_the_following",
+      "topic": "Protista",
+      "question": "Match each protist group with a characteristic from this page.",
+      "column_a": [
+        "Dinoflagellates",
+        "Euglenoids",
+        "Slime moulds",
+        "Protozoans"
+      ],
+      "column_b": [
+        "A. Pellicle",
+        "B. Plasmodium",
+        "C. Red tides",
+        "D. Predators or parasites"
+      ],
+      "options": [
+        "Dinoflagellates-C, Euglenoids-A, Slime moulds-B, Protozoans-D",
+        "Dinoflagellates-A, Euglenoids-C, Slime moulds-B, Protozoans-D",
+        "Dinoflagellates-C, Euglenoids-B, Slime moulds-A, Protozoans-D",
+        "Dinoflagellates-D, Euglenoids-A, Slime moulds-B, Protozoans-C"
+      ],
+      "correct_option": 0,
+      "explanation": "Red tides are linked to dinoflagellates, the pellicle to euglenoids, the plasmodium to slime moulds and predation or parasitism to protozoans.",
+      "source_text": "make the sea appear red (red tides). ... a protein rich layer called pellicle ... they form an aggregation called plasmodium ... live as predators or parasites.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P006-Q019",
+      "type": "assertion_reason",
+      "topic": "Euglenoids",
+      "question": "Assertion (A): Euglenoids are always photosynthetic, whatever the light conditions.\nReason (R): The pigments of euglenoids are identical to those present in higher plants.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 3,
+      "explanation": "A is false because euglenoids behave like heterotrophs when deprived of sunlight. R is true as stated on the page.",
+      "source_text": "Though they are photosynthetic in the presence of sunlight, when deprived of sunlight they behave like heterotrophs",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

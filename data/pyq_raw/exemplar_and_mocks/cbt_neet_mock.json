@@ -1,0 +1,1615 @@
+[
+  {
+    "id": 1,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "BF₃ is planar and electron-deficient. The hybridization and number of electrons around the central atom are respectively:",
+    "options": ["sp², 6", "sp³, 8", "sp², 8", "sp³, 6"],
+    "answer": 0
+  },
+  {
+    "id": 2,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "An ideal gas absorbs 200 J of heat and performs 120 J of work during expansion. The change in internal energy is:",
+    "options": ["+80 J", "+320 J", "–80 J", "–320 J"],
+    "answer": 0
+  },
+  {
+    "id": 3,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "For an ideal gas undergoing an isochoric process, which statement is correct?",
+    "options": ["Work done is positive.", "Work done is zero.", "Internal energy remains constant.", "Pressure remains constant."],
+    "answer": 1
+  },
+  {
+    "id": 4,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Hydrolysis of sucrose is given by the following reaction. Sucrose + H₂O ⇌ Glucose + Fructose. If the equilibrium constant (Kc) is 2 × 10^13 at 300 K, the value of ΔrG° at the same temperature will be:",
+    "options": [
+      "8.314 J mol⁻¹ K⁻¹ × 300K × ln(2 × 10^13)",
+      "8.314 J mol⁻¹ K⁻¹ × 300K × ln(3 × 10^13)",
+      "−8.314 J mol⁻¹ K⁻¹ × 300K × ln(4 × 10^13)",
+      "−8.314 J mol⁻¹ K⁻¹ × 300K × ln(2 × 10^13)"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 5,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Which species is paramagnetic?",
+    "options": ["N₂", "O₂", "F₂", "CO"],
+    "answer": 1
+  },
+  {
+    "id": 6,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "The shape of ClF₃ is:",
+    "options": ["Trigonal planar", "T-shaped", "Tetrahedral", "Square planar"],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "When 10 mL of 0.1 M acetic acid (pKa = 5.0) is titrated against 10 mL of 0.1 M ammonia solution (pKb = 5.0), the equivalence point occurs at pH: [AIIMS-2005]",
+    "options": ["5.0", "6.0", "7.0", "9.0"],
+    "answer": 2
+  },
+  {
+    "id": 8,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "A weak acid HA has a Ka of 1.00 × 10⁻⁵. If 0.100 moles of this acid is dissolved in one litre of water the percentage of acid dissociated at equilibrium is closest to: [AIPMT 2007]",
+    "options": ["99.0%", "1.00%", "99.9%", "0.100%"],
+    "answer": 1
+  },
+  {
+    "id": 9,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "Five moles of an ideal gas expand into a vacuum, doubling their volume. The work done is:",
+    "options": ["0 J", "nRT ln 2", "−nRT ln 2", "Depends on pressure"],
+    "answer": 0
+  },
+  {
+    "id": 10,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Which molecule has zero dipole moment?",
+    "options": ["NH₃", "H₂O", "BF₃", "SO₂"],
+    "answer": 2
+  },
+  {
+    "id": 11,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "The species having a bond angle of 120° is:",
+    "options": ["NH₃", "BF₃", "H₂O", "CH₄"],
+    "answer": 1
+  },
+  {
+    "id": 12,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "The heat evolved during the combustion of ethane is measured using a calorimeter. The required quantity is:",
+    "options": ["Enthalpy of combustion", "Internal energy of combustion", "Heat capacity", "Entropy change"],
+    "answer": 0
+  },
+  {
+    "id": 13,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "For one mole of an ideal gas, which statement is always correct?",
+    "options": ["CP − CV = R", "Compressibility factor is never 1.", "Internal energy depends on pressure.", "Enthalpy depends on volume."],
+    "answer": 0
+  },
+  {
+    "id": 14,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "MY and NY3, two nearly insoluble salts, have the same Ksp values of 6.2 × 10⁻¹³ at room temperature. Which statement would be true in regard to MY and NY3? [NEET-I 2016]",
+    "options": [
+      "The molar solubilities of MY and NY3 in water are identical.",
+      "The molar solubility of MY in water is less than that of NY3.",
+      "The salts MY and NY3 are more soluble in 0.5M KY than in pure water.",
+      "The addition of the salt of KY to solution of MY and NY3 will have no effect on their solubilities."
+    ],
+    "answer": 1
+  },
+  {
+    "id": 15,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "During compression, 10 kJ work is done on the system and 2 kJ heat is released. The change in internal energy is:",
+    "options": ["8 kJ", "10 kJ", "12 kJ", "–8 kJ"],
+    "answer": 0
+  },
+  {
+    "id": 16,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Which of the following has the minimum bond length?",
+    "options": ["C–C", "C=C", "C≡C", "C–H"],
+    "answer": 3
+  },
+  {
+    "id": 17,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Bond order of O₂⁻ is:",
+    "options": ["1.5", "2", "2.5", "3"],
+    "answer": 0
+  },
+  {
+    "id": 18,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "The percentage of pyridine (C5H5N) that forms pyridinium ion (C5H5N+H) in a 0.10M aqueous pyridine solution (Kb for C5H5N = 1.7 × 10⁻⁹) is [NEET-II 2016]",
+    "options": ["0.77%", "1.6%", "0.0060%", "0.013%"],
+    "answer": 3
+  },
+  {
+    "id": 19,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "The solubility product of a sparingly soluble salt AX2 is 3.2 × 10⁻¹¹. Its solubility (in moles/litre) is:- [AIPMT-2004]",
+    "options": ["3.1 × 10⁻⁴", "2 × 10⁻⁴", "4 × 10⁻⁴", "5.6 × 10⁻⁶"],
+    "answer": 1
+  },
+  {
+    "id": 20,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Which of the following has the highest bond angle?",
+    "options": ["H₂O", "NH₃", "CH₄", "BF₃"],
+    "answer": 3
+  },
+  {
+    "id": 21,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "The correct option for free expansion of an ideal gas under adiabatic condition is:",
+    "options": ["q = 0, ΔT = 0 and w = 0", "q = 0, ΔT < 0 and w > 0", "q < 0, ΔT = 0 and w = 0", "q > 0, ΔT > 0 and w > 0"],
+    "answer": 0
+  },
+  {
+    "id": 22,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "For the reaction, 2Cl(g) → Cl₂(g) the correct option is:",
+    "options": ["ΔrH > 0 and ΔrS > 0", "ΔrH > 0 and ΔrS < 0", "ΔrH < 0 and ΔrS > 0", "ΔrH < 0 and ΔrS < 0"],
+    "answer": 3
+  },
+  {
+    "id": 23,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Decreasing order of stability of O₂, O₂⁻, O₂⁺ and O₂²⁻ is",
+    "options": ["O₂²⁻ > O₂⁻ > O₂ > O₂⁺", "O₂ > O₂⁺ > O₂⁻ > O₂²⁻", "O₂⁻ > O₂²⁻ > O₂⁺ > O₂", "O₂⁺ > O₂ > O₂⁻ > O₂²⁻"],
+    "answer": 1
+  },
+  {
+    "id": 24,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "The Ksp of salt AgCl at 25°C is 2.56 × 10⁻¹⁰. Then how much volume of H2O is required to dissolve 0.01 mole of salt. [AIIMS-2016]",
+    "options": ["800 L", "400 L", "625 L", "50 L"],
+    "answer": 2
+  },
+  {
+    "id": 25,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Ksp of Sr(OH)2 is x, then calculate value of [OH⁻] in saturated solution? [AIIMS-2016]",
+    "options": ["(3x/4)^(1/3)", "2(x/4)^(1/3)", "(x/4)^(1/3)", "(x/3)^(1/4)"],
+    "answer": 1
+  },
+  {
+    "id": 26,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Maximum bond angle at nitrogen is present in",
+    "options": ["NO₂⁺", "NO₃⁻", "NO₂", "NO₂⁻"],
+    "answer": 0
+  },
+  {
+    "id": 27,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "The correct order of bond energy is:",
+    "options": ["F₂ < Cl₂ < Br₂ < I₂", "I₂ < Br₂ < Cl₂ < F₂", "F₂ < I₂ < Br₂ < Cl₂", "Cl₂ < Br₂ < I₂ < F₂"],
+    "answer": 2
+  },
+  {
+    "id": 28,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Which one of the following has the highest bond order?",
+    "options": ["O₂", "O₂⁺", "O₂⁻", "O₂²⁻"],
+    "answer": 1
+  },
+  {
+    "id": 29,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Find out the solubility of Ni(OH)2 in 0.1 M NaOH. Given that the ionic product of Ni(OH)2 is 2 × 10⁻¹⁵.",
+    "options": ["2 × 10⁻¹³ M", "2 × 10⁻⁸ M", "1 × 10⁻¹³ M", "1 × 10⁸ M"],
+    "answer": 0
+  },
+  {
+    "id": 30,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "If for a certain reaction ΔrH is 30 kJ mol⁻¹ at 450 K, the value of ΔrS (in J K⁻¹ mol⁻¹) for which the same reaction will be spontaneous at the same temperature is:",
+    "options": ["70", "-33", "33", "-70"],
+    "answer": 0
+  },
+  {
+    "id": 31,
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "question": "Match the compounds of Xe in column I with the molecular structure in column II. Column-I: (a) XeF2 (b) XeF4 (c) XeO3 (d) XeOF4. Column-II: (i) Square planar (ii) Linear (iii) Square pyramidal (iv) Pyramidal",
+    "options": [
+      "(a)-(ii), (b)-(i), (c)-(iii), (d)-(iv)",
+      "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)",
+      "(a)-(ii), (b)-(iii), (c)-(i), (d)-(iv)",
+      "(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 32,
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "question": "A cylinder contains hydrogen gas at pressure of 249 kPa and temperature 27°C. Its density is: (R = 8.3 J mol⁻¹ K⁻¹)",
+    "options": ["0.2 kg/m3", "0.1 kg/m3", "0.02 kg/m3", "0.5 kg/m3"],
+    "answer": 0
+  },
+  {
+    "id": 33,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "Two cylinders A and B of equal capacity are connected to each other via a stop cock. A contains an ideal gas at standard temperature and pressure. B is completely evacuated. The entire system is thermally insulated. The stop cock is suddenly opened. The process is:",
+    "options": ["adiabatic", "isochoric", "isobaric", "isothermal"],
+    "answer": 0
+  },
+  {
+    "id": 34,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "The correct option for free expansion of an ideal gas under adiabatic condition is:",
+    "options": ["q = 0, ΔT = 0 and w = 0", "q = 0, ΔT < 0 and w > 0", "q < 0, ΔT = 0 and w = 0", "q > 0, ΔT > 0 and w > 0"],
+    "answer": 0
+  },
+  {
+    "id": 35,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "For 2SO2(g) + O2(g) ⇌ 2SO3(g), ΔH < 0. Which change increases the yield of SO3?",
+    "options": ["Increase temperature", "Decrease pressure", "Increase pressure", "Remove catalyst"],
+    "answer": 2
+  },
+  {
+    "id": 36,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "The Ksp of AgCl is 1.8 × 10⁻¹⁰. Its molar solubility is:",
+    "options": ["1.34 × 10⁻⁵", "1.8 × 10⁻¹⁰", "4.2 × 10⁻⁶", "1.8 × 10⁻⁵"],
+    "answer": 0
+  },
+  {
+    "id": 37,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "In qualitative analysis, the metals of Group I can be separated from other ions by precipitating them as chloride salts. A solution initially contains Ag+ and Pb2+ at a concentration of 0.10 M. Aqueous HCl is added to this solution until the Cl⁻ concentration is 0.10 M. What will the concentrations of Ag+ and Pb2+ be at equilibrium? (Ksp for AgCl = 1.8 × 10⁻¹⁰, Ksp for PbCl2 = 1.7 × 10⁻⁵) [AIPMT Mains-2011]",
+    "options": [
+      "[Ag+] = 1.8 × 10⁻¹¹ M ; [Pb2+] = 1.7 × 10⁻⁴ M",
+      "[Ag+] = 1.8 × 10⁻⁷ M ; [Pb2+] = 1.7 × 10⁻⁶ M",
+      "[Ag+] = 1.8 × 10⁻¹¹ M ; [Pb2+] = 8.5 × 10⁻⁵ M",
+      "[Ag+] = 1.8 × 10⁻⁹ M ; [Pb2+] = 1.7 × 10⁻³ M"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 38,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Which will make basic buffer? [NEET(UG) 2019]",
+    "options": [
+      "50 mL of 0.1 M NaOH + 25 mL of 0.1 M CH3COOH",
+      "100 mL of 0.1 M CH3COOH + 100 mL of 0.1 M NaOH",
+      "100 mL of 0.1 M HCl + 200 mL of 0.1 M NH4OH",
+      "100 mL of 0.1 M HCl + 100 mL of 0.1 M NaOH"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 39,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Conjugate base for Brönsted acids H2O and HF are: [NEET(UG) 2019]",
+    "options": [
+      "OH⁻ and H2F+, respectively",
+      "H3O+ and F⁻, respectively",
+      "OH⁻ and F⁻, respectively",
+      "H3O+ and H2F+, respectively"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 40,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Conjugate base for Brönsted acids H2O and HF are: [NEET(UG) 2019]",
+    "options": [
+      "OH⁻ and H2F+, respectively",
+      "H3O+ and F⁻, respectively",
+      "OH⁻ and F⁻, respectively",
+      "H3O+ and H2F+, respectively"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 41,
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "question": "Which will make basic buffer? [NEET(UG) 2019]",
+    "options": [
+      "50 mL of 0.1 M NaOH + 25 mL of 0.1 M CH3COOH",
+      "100 mL of 0.1 M CH3COOH + 100 mL of 0.1 M NaOH",
+      "100 mL of 0.1 M HCl + 200 mL of 0.1 M NH4OH",
+      "100 mL of 0.1 M HCl + 100 mL of 0.1 M NaOH"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 42,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "When a gas is compressed adiabatically and reversibly, the final temperature is-",
+    "options": [
+      "Higher than the initial temperature",
+      "Lower than the initial temperature",
+      "The same as initial temperature",
+      "May either increase or decrease depending on the process used"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 43,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "The enthalpy change (ΔH) for the reaction, N2(g) + 3H2(g) ⟶ 2NH3(g) is −92.38 kJ at 298 K. The internal energy change ΔU at 298 K is - [AIIMS-2006]",
+    "options": ["−92.38 kJ", "−87.42 kJ", "−97.34 kJ", "−89.9 kJ"],
+    "answer": 1
+  },
+  {
+    "id": 44,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "question": "Consider the following reactions: [AIPMT-2007] (a) H+(aq) + OH⁻(aq) = H2O(l), ΔH = −X1 kJ mol⁻¹ (b) H2(g) + 1/2 O2(g) = H2O(l), ΔH = −X2 kJ mol⁻¹ (c) CO2(g) + H2(g) = CO(g) + H2O(l) − X3 kJ mol⁻¹ (d) C2H2(g) + 5/2 O2(g) = 2CO2(g) + H2O(l) + X4 kJ mol⁻¹. Enthalpy of formation of H2O(l) is:",
+    "options": ["+X1 kJ mol⁻¹", "−X2 kJ mol⁻¹", "+X3 kJ mol⁻¹", "−X4 kJ mol⁻¹"],
+    "answer": 1
+  },
+  {
+    "id": 45,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A body falling from a height of 10 m rebounds from hard floor. If it loses 20% energy in the impact, then coefficient of restitution is",
+    "options": ["0.89", "0.56", "0.23", "0.18"],
+    "answer": 0
+  },
+  {
+    "id": 46,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "Find the torque about the origin when a force of 3ĵ N acts on a particle whose position vector is 2k̂ m.",
+    "options": ["6î N m", "6ĵ N m", "−6î N m", "6k̂ N m"],
+    "answer": 2
+  },
+  {
+    "id": 47,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "Two particles A and B are moving in uniform circular motion in concentric circles of radii rA and rB with speed vA and vB respectively. Their time period of rotation is the same. The ratio of angular speed of A to that of B will be:",
+    "options": ["vA : vB", "1 : 1", "rB : rA", "rA : rB"],
+    "answer": 1
+  },
+  {
+    "id": 48,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "Two particles of mass 5 kg and 10 kg respectively are attached to the two ends of a rigid rod of length 1 m with negligible mass. The centre of mass of the system from the 5 kg particle is nearly at a distance of:",
+    "options": ["50 cm", "67 cm", "80 cm", "33 cm"],
+    "answer": 1
+  },
+  {
+    "id": 49,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "Two bodies of mass 4 kg and 6 kg are tied to the ends of a massless string. The string passes over a pulley which is frictionless (see figure). The acceleration of the system in terms of acceleration due to gravity (g) is:",
+    "options": ["g/2", "g/5", "g/10", "g"],
+    "answer": 1
+  },
+  {
+    "id": 50,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A rigid ball of mass m strikes a rigid wall at 60° and gets reflected without loss of speed as shown in the figure below. The value of impulse imparted by the wall on the ball will be:-",
+    "options": ["mV/2", "mV/3", "mV", "2mV"],
+    "answer": 2
+  },
+  {
+    "id": 51,
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "question": "A block of mass M is attached to the lower end of a vertical spring. The spring is hung from a ceiling and has force constant value k. The mass is released from rest with the spring initially unstretched. The maximum extension produced in the length of the spring will be:-",
+    "options": ["Mg/2k", "Mg/k", "2Mg/k", "4Mg/k"],
+    "answer": 2
+  },
+  {
+    "id": 52,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "Three masses are placed on the x-axis: 300 g at x = 0cm, 500 g at x = 40cm, 400 g at x = 70cm. Find the position of the centre of mass from the origin.",
+    "options": ["35 cm", "40 cm", "45 cm", "50 cm"],
+    "answer": 1
+  },
+  {
+    "id": 53,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A retarding force F = −2v is acting on a body of mass 10 gram. Find out time taken for its velocity to reduce to 37% of its initial value if initial velocity is 1 m/s.",
+    "options": ["2.5 ms", "5 ms", "7.5 ms", "8 ms"],
+    "answer": 1
+  },
+  {
+    "id": 54,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "If string is pulled with acceleration of 2 m/s² then acceleration of block is:",
+    "options": ["4 m/s²", "2 m/s²", "1 m/s²", "8 m/s²"],
+    "answer": 2
+  },
+  {
+    "id": 55,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "An engine pumps water continuously through a hose. Water leaves the hose with a velocity v and m is the mass per unit length of the water jet. What is the rate at which kinetic energy is imparted to water?",
+    "options": ["1/2 mv³", "mv³", "1/2 m²v²", "1/2 mv²"],
+    "answer": 0
+  },
+  {
+    "id": 56,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A block of mass m is placed on a smooth inclined wedge ABC of inclination θ as shown in the figure. The wedge is given an acceleration 'a' towards the right. The relation between a and θ for the block to remain stationary on the wedge is:",
+    "options": ["a = g cos θ", "a = g/sin θ", "a = g/csc θ", "a = g tan θ"],
+    "answer": 3
+  },
+  {
+    "id": 57,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A particle moving with velocity v⃗ is acted by three forces shown by the vector triangle PQR. The velocity of the particle will:",
+    "options": ["increase", "decrease", "remain constant", "change according to the smallest force (QR)"],
+    "answer": 2
+  },
+  {
+    "id": 58,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "A body initially at rest and sliding along a frictionless track from a height h (as shown in the figure) just completes a vertical circle of diameter AB = D. The height h is equal to—",
+    "options": ["7/5 D", "D", "3/2 D", "5/4 D"],
+    "answer": 3
+  },
+  {
+    "id": 59,
+    "subject": "Physics",
+    "chapter": "Collisions",
+    "question": "A body of mass 4m moving with speed u collides elastically with another body of mass 2m at rest. Find the fraction of kinetic energy lost by the heavier body.",
+    "options": ["1/9", "4/9", "8/9", "2/3"],
+    "answer": 2
+  },
+  {
+    "id": 60,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "The heart of a man pumps 5 litres of blood through the arteries per minute at a pressure of 150 mm of mercury. If the density of mercury be 13.6 × 10³ kg/m³ and g = 10 m/s² then the power of heart in watt is:",
+    "options": ["1.50", "1.70", "2.35", "3.0"],
+    "answer": 1
+  },
+      {
+    "id": 61,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "A stone is tied to a string of length 'ℓ' and is whirled in a vertical circle with the other end of the string as the centre. At a certain instant of time, the stone is at its lowest position and has a speed 'u'. The magnitude of the change in velocity as it reaches a position where the string is horizontal (g being acceleration due to gravity) is :-",
+    "options": ["√(u² − gℓ)", "u − √(u² − 2gℓ)", "√(2gℓ)", "√(2(u² − gℓ))"],
+    "answer": 3
+  },
+  {
+    "id": 62,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A force F = 20 + 10y acts on a particle in y-direction where F is in newton and y in meter. Work done by this force to move the particle from y = 0 to y = 1 m is—",
+    "options": ["30 J", "5 J", "25 J", "20 J"],
+    "answer": 2
+  },
+  {
+    "id": 63,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "A body initially at rest explodes into three fragments. Two fragments move in mutually perpendicular directions. Which law is used to determine the velocity of the third fragment?",
+    "options": ["Conservation of energy", "Conservation of momentum", "Newton's second law", "Work-energy theorem"],
+    "answer": 1
+  },
+  {
+    "id": 64,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "Two blocks A and B of masses 3m and m respectively are connected by a massless and inextensible string. The whole system is suspended by a massless spring as shown in figure. The magnitudes of acceleration of A and B immediately after the string is cut, are respectively:-",
+    "options": ["g/3, g", "g, g", "g/3, g/3", "g, g/3"],
+    "answer": 0
+  },
+  {
+    "id": 65,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "The moment of inertia of a thin uniform rod of mass M and length L about an axis passing through its midpoint and perpendicular to its length is I0. Its moment of inertia about an axis passing through one of its ends and perpendicular to its length is :-",
+    "options": ["I0 + ML²/2", "I0 + ML²/4", "I0 + 2ML²", "I0 + ML²"],
+    "answer": 1
+  },
+  {
+    "id": 66,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "A gramophone record is revolving with an angular velocity ω. A coin is placed at a distance r from the centre of the record. The static coefficient of friction is μ. The coin will revolve with the record if :-",
+    "options": ["r ≥ μg/ω²", "r = μgω²", "r < ω²/μg", "r ≤ μg/ω²"],
+    "answer": 3
+  },
+  {
+    "id": 67,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "A thin circular ring of mass M and radius R is rotating in a horizontal plane about an axis vertical to its plane with a constant angular velocity ω. If two objects each of mass m be attached gently to the opposite ends of a diameter of the ring, the ring will then rotate with an angular velocity :-",
+    "options": ["ωM/(M+m)", "ω(M−2m)/(M+2m)", "ωM/(M+2m)", "ω(M+2m)/M"],
+    "answer": 2
+  },
+  {
+    "id": 68,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "A car of mass m is moving on a level circular track of radius R. If μs represents the static friction between the road and tyres of the car, the maximum speed of the car in circular motion is given by :-",
+    "options": ["√(mRg/μs)", "√(μs Rg)", "√(μs mRg)", "√(Rg/μs)"],
+    "answer": 1
+  },
+  {
+    "id": 69,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A particle of mass is driven by a machine that delivers a constant power k watts. If the particle starts from rest the force on the particle at time t is :-",
+    "options": ["√(mk) t^(−1/2)", "√(2mk) t^(−1/2)", "(1/2)√(mk) t^(−1/2)", "√(mk/2) t^(−1/2)"],
+    "answer": 3
+  },
+  {
+    "id": 70,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "In the following diagram, find the value of T2.",
+    "options": ["12 N", "6 N", "4 N", "1 N"],
+    "answer": 0
+  },
+  {
+    "id": 71,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "The ratio of the radii of gyration of a circular disc about a tangential axis in the plane of the disc and of a circular ring of the same radius about a tangential axis in the plane of the ring is :-",
+    "options": ["2 : 1", "√5 : √6", "2 : 3", "1 : √2"],
+    "answer": 1
+  },
+  {
+    "id": 72,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "What is the minimum velocity with which a body of mass must enter a vertical loop of radius R so that it can complete the loop?",
+    "options": ["√gR", "√2gR", "√3gR", "√5gR"],
+    "answer": 3
+  },
+  {
+    "id": 73,
+    "subject": "Physics",
+    "chapter": "Collisions",
+    "question": "A bullet of mass m strikes a stationary block of mass M elastically. The transfer of kinetic energy is maximum when:",
+    "options": ["M ≫ m", "M = m", "M < m", "M = 2m"],
+    "answer": 1
+  },
+  {
+    "id": 74,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "If a street light of mass M is suspended from the end of uniform rod of length L in the different possible patterns as shown in figure, then :-",
+    "options": ["Pattern A is more sturdy", "Pattern B is more sturdy", "Pattern C is more sturdy", "All will have same sturdiness"],
+    "answer": 0
+  },
+  {
+    "id": 75,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "Two particles of masses 3 kg and 2 kg are separated by some distance. The 3 kg particle is moved 2 cm towards the centre of mass. By how much should the 2 kg particle be moved towards the centre of mass so that the centre of mass remains unchanged?",
+    "options": ["2 cm", "3 cm", "4 cm", "6 cm"],
+    "answer": 1
+  },
+  {
+    "id": 76,
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "question": "A person of mass 60 kg is inside a lift of mass 940 kg and presses the button on control panel. Then lift starts moving upwards with an acceleration 1.0 m/s². If g = 10 m/s⁻², the tension in the supporting cable is :",
+    "options": ["8600 N", "9680 N", "11000 N", "1200 N"],
+    "answer": 2
+  },
+  {
+    "id": 77,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "A ball rolls without slipping. The radius of gyration of the ball about an axis passing through its centre of mass is K. If radius of the ball be R, then the fraction of total energy associated with its rotational energy will be :-",
+    "options": ["(K²+R²)/R²", "K²/R²", "K²/(K²+R²)", "R²/(K²+R²)"],
+    "answer": 2
+  },
+  {
+    "id": 78,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "In the given figure, a = 15 m/s² represents the total acceleration of a particle moving in the clockwise direction in a circle of radius R = 2.5 m at a given instant of time. The speed of the particle is :-",
+    "options": ["5.7 m/s", "6.2 m/s", "4.5 m/s", "5.0 m/s"],
+    "answer": 3
+  },
+  {
+    "id": 79,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "A car of mass m starts from rest and accelerates so that the instantaneous power delivered to the car has a constant magnitude P0. The instantaneous velocity of this car is proportional to:",
+    "options": ["t^(−1/2)", "t/√m", "t²P0", "t^(1/2)"],
+    "answer": 3
+  },
+  {
+    "id": 80,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "A bomb of mass 5 kg moving with velocity 20 m/s explodes into two fragments of masses 2 kg and 3 kg. The smaller fragment moves with speed 40 m/s in the original direction. Find the speed of the larger fragment.",
+    "options": ["6.67 m/s", "13.3 m/s", "20 m/s", "26.7 m/s"],
+    "answer": 0
+  },
+  {
+    "id": 81,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "The moment of inertia of a uniform circular disc of radius R and mass M about an axis touching the disc at its diameter and normal to the disc is :-",
+    "options": ["D", "A", "B", "C"],
+    "answer": 2
+  },
+  {
+    "id": 82,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "One end of string of length l is connected to particle of mass 'm' and the other end is connected to a small peg on a smooth horizontal table. If the particle moves in circle with speed 'v' the net force on the particle (directed towards centre) will be (T represents the tension in the string):-",
+    "options": ["T + mv²/l", "T − mv²/l", "Zero", "T"],
+    "answer": 3
+  },
+  {
+    "id": 83,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "A particle of mass 5 kg is at rest and explodes into two fragments of masses 2 kg and 3 kg. The smaller fragment moves east with speed 15 m/s. Find the momentum of the larger fragment.",
+    "options": ["15 kg·m/s", "20 kg·m/s", "30 kg·m/s", "45 kg·m/s"],
+    "answer": 2
+  },
+  {
+    "id": 84,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "From a disc of radius R and mass M, a circular hole of diameter R, whose rim passes through the centre is cut. What is the moment of inertia of the remaining part of the disc about a perpendicular axis, passing through the centre?",
+    "options": ["15 MR²/32", "13 MR²/32", "11 MR²/32", "9 MR²/32"],
+    "answer": 2
+  },
+  {
+    "id": 85,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "A uniform circular disc of radius 50 cm at rest is free to turn about an axis which is perpendicular to its plane and passes through its centre. It is subjected to a torque which produces a constant angular acceleration of 2.0 rad/s². Its net acceleration in m/s² at the end of 2.0 s is approximately:",
+    "options": ["8.0", "7.0", "6.0", "3.0"],
+    "answer": 0
+  },
+  {
+    "id": 86,
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "question": "The potential energy of a particle in a force field is : U = A/r² − B/r where A and B are positive constants and r is the distance of particle from the centre of the field. For stable equilibrium, the distance of the particle is :",
+    "options": ["A/B", "B/A", "B/2A", "2A/B"],
+    "answer": 3
+  },
+  {
+    "id": 87,
+    "subject": "Physics",
+    "chapter": "Circular Motion",
+    "question": "A block of mass 10 kg is in contact against the inner wall of a hollow cylindrical drum of radius 1 m. The coefficient of friction between the block and the inner wall of the cylinder is 0.1. The minimum angular velocity needed for the cylinder to keep the block stationary when the cylinder is vertical and rotating about its axis, will be: (g = 10 m/s²)",
+    "options": ["√10 rad/s", "10/(2π) rad/s", "10 rad/s", "10π rad/s"],
+    "answer": 2
+  },
+  {
+    "id": 88,
+    "subject": "Physics",
+    "chapter": "Rotational Motion",
+    "question": "A solid sphere is in rolling motion. In rolling motion a body possesses translational kinetic energy (Kt) as well as rotational kinetic energy (Kr) simultaneously. The ratio Kt : (Kt + Kr) for the sphere is—",
+    "options": ["10 : 7", "5 : 7", "7 : 10", "2 : 5"],
+    "answer": 1
+  },
+  {
+    "id": 89,
+    "subject": "Physics",
+    "chapter": "Centre of Mass",
+    "question": "One fragment moves at 20 m/s east. The velocity of the other fragment is",
+    "options": ["20 m/s east", "20 m/s west", "40 m/s east", "Zero"],
+    "answer": 1
+  },
+  {
+    "id": 90,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Cardio autonomic regulatory system is present in:",
+    "options": ["left ventricle", "inner to myocardial muscles", "medulla oblongata", "in arteries"],
+    "answer": 2
+  },
+  {
+    "id": 91,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Cardio autonomic regulatory system is present in:",
+    "options": ["left ventricle", "inner to myocardial muscles", "medulla oblongata", "in arteries"],
+    "answer": 2
+  },
+  {
+    "id": 92,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which monosaccharide does not show optical isomerism:",
+    "options": ["Dihydroxy acetone", "Glyceraldehyde", "Erythrose", "Ribose"],
+    "answer": 0
+  },
+  {
+    "id": 93,
+    "subject": "Botany",
+    "chapter": "Mineral Nutrition",
+    "question": "A plant requires magnesium for :",
+    "options": ["Holding cells together", "Protein synthesis", "Chlorophyll synthesis", "Cell wall development"],
+    "answer": 2
+  },
+  {
+    "id": 94,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "What would be the heart rate of a person if the cardiac output is 5 L, blood volume in the ventricles at the end of diastole is 100 mL and at the end of ventricular systole is 50 mL?",
+    "options": ["50 beats per minute", "75 beats per minute", "100 beats per minute", "125 beats per minute"],
+    "answer": 2
+  },
+  {
+    "id": 95,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Examination of blood of a person suspected of having anemia, shows large, immature, nucleated erythrocytes without haemoglobin. Supplementing his diet with which of the following is likely to alleviate his symptoms?",
+    "options": ["Thiamine", "Folic acid and cobalamine", "Riboflavin", "Iron compounds"],
+    "answer": 1
+  },
+  {
+    "id": 96,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which one of the following mammalian cells is not capable of metabolising glucose to carbon-dioxide aerobically?",
+    "options": ["Red blood cells", "White blood cells", "Unstriated muscle cells", "Liver cells"],
+    "answer": 0
+  },
+  {
+    "id": 97,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "About 98 percent of the mass of every living organism is composed of just six elements including carbon, hydrogen, nitrogen, oxygen and :",
+    "options": ["Calcium and phosphorus", "Phosphorus and sulphur", "Sulphur and magnesium", "Magnesium and sodium"],
+    "answer": 1
+  },
+  {
+    "id": 98,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "A drop of each of the following, is placed separately on four slides. Which of them will not coagulate?",
+    "options": ["Whole blood from pulmonary vein", "Blood plasma", "Blood serum", "Sample from the thoracic duct of lymphatic system"],
+    "answer": 2
+  },
+  {
+    "id": 99,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "The most popularly known blood grouping is the ABO grouping. It is named ABO and not ABC, because \"O\" in it refers to having:",
+    "options": [
+      "No antigens A and B on RBCs",
+      "Other antigens besides A and B on RBCs",
+      "Overdominance of this type on the genes for A and B types",
+      "One antibody only - either anti-A or anti-B on the RBCs"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 100,
+    "subject": "Zoology",
+    "chapter": "Immune System",
+    "question": "The letter T in T-lymphocyte refers to:",
+    "options": ["Thymus", "Thyroid", "Thalamus", "Tonsil"],
+    "answer": 0
+  },
+  {
+    "id": 101,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which one of the following sets of monosaccharides forms sucrose?",
+    "options": [
+      "β-D-Glucopyranose and α-D-fructofuranose",
+      "α-D-Glucopyranose and β-D-fructopyranose",
+      "α-D-Galactopyranose and α-D-Glucopyranose",
+      "α-D-Glucopyranose and β-D-fructofuranose"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 102,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Order of occurrence of elements in human body is:-",
+    "options": ["O, C, N, H", "O, C, H, N", "Na, Ca, C, O", "K, Ca, C, D"],
+    "answer": 1
+  },
+  {
+    "id": 103,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Macro molecule chitin is :",
+    "options": [
+      "Simple polysaccharide",
+      "Nitrogen containing polysaccharide",
+      "Phosphorus containing polysaccharide",
+      "Sulphur containing polysaccharide"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 104,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which one of the following is a non-reducing carbohydrate?",
+    "options": ["Maltose", "Sucrose", "Lactose", "Ribose"],
+    "answer": 1
+  },
+  {
+    "id": 105,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "The opening between the right atrium and the right ventricle is guarded by which valve?",
+    "options": ["bicuspid valve", "tricuspid valve", "mitral valve", "semilunar valve"],
+    "answer": 1
+  },
+  {
+    "id": 106,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which one of the following mammalian cells is not capable of metabolising glucose to carbon-dioxide aerobically?",
+    "options": ["Red blood cells", "White blood cells", "Unstriated muscle cells", "Liver cells"],
+    "answer": 0
+  },
+  {
+    "id": 107,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which type of white blood cells are concerned with the release of histamine and the natural anticoagulant heparin?",
+    "options": ["Eosinophils", "Monocytes", "Neutrophils", "Basophils"],
+    "answer": 3
+  },
+  {
+    "id": 108,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Blood pressure in the pulmonary artery is :–",
+    "options": [
+      "same as that in the aorta.",
+      "more than that in the carotid.",
+      "more than that in the pulmonary vein.",
+      "less than that in the venae cavae."
+    ],
+    "answer": 2
+  },
+  {
+    "id": 109,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Macro molecule chitin is :",
+    "options": [
+      "Simple polysaccharide",
+      "Nitrogen containing polysaccharide",
+      "Phosphorus containing polysaccharide",
+      "Sulphur containing polysaccharide"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 110,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "The hepatic portal vein drains blood to liver from:",
+    "options": ["Stomach", "Kidneys", "Intestine", "Heart"],
+    "answer": 2
+  },
+  {
+    "id": 111,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Frog's heart when taken out of the body continues to beat for sometime. Select the best option from the following statements. (a) Frog is a poikilotherm. (b) Frog does not have any coronary circulation. (c) Heart is \"myogenic\" in nature. (d) Heart is autoexcitable.",
+    "options": ["Only(d)", "(a) and (b)", "(c) and (d)", "Only(c)"],
+    "answer": 2
+  },
+  {
+    "id": 112,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which of the following is the least likely to be involved in stabilizing the three-dimensional folding of most proteins?",
+    "options": ["Hydrophobic interaction", "Ester bonds", "Hydrogen bonds", "Electrostatic interaction"],
+    "answer": 1
+  },
+  {
+    "id": 113,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Glycoprotein contains :-",
+    "options": [
+      "More than 200 amino acids and carbohydrate as its side chain",
+      "More than 20 amino acids and carbohydrate as its side chain",
+      "More than 200 amino acids and steroids as its side chain",
+      "More than 20 amino acids contains steroids as its side chain"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 114,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which of the following are not polymeric?",
+    "options": ["Proteins", "Polysaccharides", "Lipids", "Nucleic acids"],
+    "answer": 2
+  },
+  {
+    "id": 115,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Find the correct ascending order of elements in human body according to percent weight",
+    "options": ["Co < Fe < K < Na", "Fe < Co < K < Na", "Na < Co < K < Na", "Na < Fe < K < Co"],
+    "answer": 0
+  },
+  {
+    "id": 116,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "What is the main cause of resistance in blood vessels?",
+    "options": ["Diameter of capillaries", "Viscosity of blood", "Irregular surface of vessels", "All of the above"],
+    "answer": 3
+  },
+  {
+    "id": 117,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which of the following is a commercial blood cholesterol lowering agent?",
+    "options": ["Cyclosporin A", "Statin", "Streptokinase", "Lipases"],
+    "answer": 1
+  },
+  {
+    "id": 118,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which of the following is correct statement about neutrophils?",
+    "options": [
+      "maximum in number among WBC's",
+      "act as phagocytosis and kill foreign material by producing antibodies",
+      "nucleus is bilobed",
+      "secrete serotonin and histamine"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 119,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Match the Column-I with Column-II. Column-I: (a) P-wave (b) QRS complex (c) T-wave (d) Reduction in the size of T-wave. Column-II: (i) Depolarisation of ventricles (ii) Repolarisation of ventricles (iii) Coronary ischemia (iv) Depolarisation of atria (v) Repolarisation of atria. Select the correct option.",
+    "options": [
+      "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)",
+      "(a)-(iv), (b)-(i), (c)-(ii), (d)-(v)",
+      "(a)-(ii), (b)-(i), (c)-(v), (d)-(iii)",
+      "(a)-(ii), (b)-(iii), (c)-(v), (d)-(iv)"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 120,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which of the following glucose transporters is insulin-dependent?",
+    "options": ["GLUT I", "GLUT II", "GLUT III", "GLUT IV"],
+    "answer": 3
+  },
+  {
+    "id": 121,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "The two functional groups characteristic of sugars are",
+    "options": ["Carbonyl and phosphate", "Carbonyl and methyl", "Hydroxyl and methyl", "Carbonyl and hydroxyl"],
+    "answer": 3
+  },
+  {
+    "id": 122,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Consider the following statement : (A) Coenzyme or metal ion that is tightly bound to enzyme protein is called prosthetic group. (B) A complete catalytic active enzyme with its bound prosthetic group is called apoenzyme. Select the correct option.",
+    "options": ["Both (A) and (B) are true.", "(A) is true but (B) is false.", "Both (A) and (B) are false.", "(A) is false but (B) is true."],
+    "answer": 1
+  },
+  {
+    "id": 123,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Which of the following gastric cells indirectly help in erythropoiesis?",
+    "options": ["Goblet cells", "Mucous cells", "Chief cells", "Parietal cells"],
+    "answer": 3
+  },
+  {
+    "id": 124,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Match the items given in Column I with those in Column II and select the correct option given below : Column I: a. Fibrinogen b. Globulin c. Albumin. Column II: (i) Osmotic balance (ii) Blood clotting (iii) Defence mechanism",
+    "options": [
+      "(a)-(i), (b)-(iii), (c)-(ii)",
+      "(a)-(i), (b)-(ii), (c)-(iii)",
+      "(a)-(iii), (b)-(ii), (c)-(i)",
+      "(a)-(ii), (b)-(iii), (c)-(i)"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 125,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "What would be the heart rate of a person if the cardiac output is 5 L, blood volume in the ventricles at the end of diastole is 100 mL and at the end of ventricular systole is 50 mL?",
+    "options": ["50 beats per minute", "75 beats per minute", "100 beats per minute", "125 beats per minute"],
+    "answer": 2
+  },
+  {
+    "id": 126,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "How do parasympathetic neural signals affect the working of the heart?",
+    "options": [
+      "Reduce both heart rate and cardiac output.",
+      "Heart rate is increased without affecting the cardiac output.",
+      "Both heart rate and cardiac output increase.",
+      "Heart rate decreases but cardiac output increases."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 127,
+    "subject": "Zoology",
+    "chapter": "Structural Organisation in Animals",
+    "question": "The chitinous exoskeleton of arthropods is formed by the polymerisation of :",
+    "options": ["lipoglycans", "keratin sulphate and chondroitin sulphate", "D-glucosamine", "N-acetyl glucosamine"],
+    "answer": 3
+  },
+  {
+    "id": 128,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which of the following pair of amino acid have positive charge at pH = 7 :-",
+    "options": ["Asp - glu", "Lys - Arg", "Gly - Ala", "Asp - gly"],
+    "answer": 1
+  },
+  {
+    "id": 129,
+    "subject": "Zoology",
+    "chapter": "Chemical Coordination",
+    "question": "Match the column-I with column-II and choose correct option :- Column-I: A Insulin B Antibody C Receptor D GLUT-4. Column-II: i Fights infectious agents ii Enables glucose transport into cells iii Hormone iv Sensory reception",
+    "options": [
+      "A-iii, B-ii, C-iv, D-i",
+      "A-iii, B-i, C-iv, D-ii",
+      "A-i, B-ii, C-iii, D-iv",
+      "A-ii, B-iii, C-iv, D-i"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 130,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Serum differs from blood in :–",
+    "options": ["Lacking clotting factors", "Lacking antibodies", "Lacking globulins", "Lacking albumins"],
+    "answer": 0
+  },
+  {
+    "id": 131,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Blood groups are controlled by antigens which are present :",
+    "options": ["In plasma", "On RBC membrane", "In red bone marrow", "On WBC membrane"],
+    "answer": 1
+  },
+  {
+    "id": 132,
+    "subject": "Zoology",
+    "chapter": "Body Fluids and Circulation",
+    "question": "Superior vena cava receive blood from :–",
+    "options": ["Head, neck, chest", "Digestive system", "Lower limbs", "Diaphragm and legs"],
+    "answer": 0
+  },
+  {
+    "id": 133,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "One of the major components of cell wall of most fungi is :-",
+    "options": ["Chitin", "Peptidoglycan", "Cellulose", "Hemicellulose"],
+    "answer": 0
+  },
+  {
+    "id": 134,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Match the following :- Column-I: A Alkaloid B Essential oils C Toxins D Drugs. Column-II: i Vinblastin, curcumin ii Morphine, Codeine iii Lemon grass oil iv Abrin, Ricin",
+    "options": [
+      "a-II, b-III, c-IV, d-I",
+      "a-III, b-II, c-IV, d-I",
+      "a-II, b-III, c-I, d-IV",
+      "a-III, b-II, c-I, d-IV"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 135,
+    "subject": "Botany",
+    "chapter": "Biomolecules",
+    "question": "Which level of protein structure is stabilized mainly by hydrogen bonds between peptide groups?",
+    "options": ["Primary", "Secondary", "Tertiary", "Quaternary"],
+    "answer": 1
+  },
+  {
+    "id": 136,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "Symbiotic association between fungi and algae are called ________.",
+    "options": ["Lichens", "Sponges", "Mycorrhiza", "Chrysophytes"],
+    "answer": 0
+  },
+  {
+    "id": 137,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Mad cow disease is caused by _______.",
+    "options": ["Prions", "Viroids", "Aspergillus sp.", "Mycoplasma sp."],
+    "answer": 0
+  },
+  {
+    "id": 138,
+    "subject": "Botany",
+    "chapter": "Living World",
+    "question": "Which of the following is not a prokaryote?",
+    "options": ["Bacteria", "Blue green algae", "Mycoplasma", "Fungi"],
+    "answer": 3
+  },
+  {
+    "id": 139,
+    "subject": "Botany",
+    "chapter": "Living World",
+    "question": "The main criteria used for Five Kingdom Classification proposed by R.H. Whittaker (1969) included: A. Cell structure B. Body organization C. Presence of flagellum D. Reproduction E. Phylogenetic relationships",
+    "options": ["A, B, D and E only", "A, B, C, D and E", "A, B and E only", "B, C and D only"],
+    "answer": 0
+  },
+  {
+    "id": 140,
+    "subject": "Botany",
+    "chapter": "Living World",
+    "question": "Each of the following characteristics represent a Kingdom proposed by Whittaker. Arrange the following in increasing order of complexity of body organization. A. Multicellular heterotrophs with cell wall made of chitin. B. Heterotrophs with tissue/organ/organ system level of body organization. C. Prokaryotes with cell wall made of polysaccharides and amino acids. D. Eukaryotic autotrophs with tissue/organ level of body organization. E. Eukaryotes with cellular body organization.",
+    "options": ["A, C, E, D, B", "C, E, A, B, D", "A, C, E, B, D", "C, E, A, D, B"],
+    "answer": 3
+  },
+  {
+    "id": 141,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "Which one of the following is not a criterion for classification of fungi?",
+    "options": ["Morphology of mycelium", "Mode of nutrition", "Mode of spore formation", "Fruiting body"],
+    "answer": 1
+  },
+  {
+    "id": 142,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "The asexual spores of deuteromycetes are:",
+    "options": ["Aplanospores", "Conidia", "Zoospores", "Basidiospores"],
+    "answer": 1
+  },
+  {
+    "id": 143,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Given below are two statements: Statement I: Mycoplasma can pass through less than 1 micron filter size. Statement II: Mycoplasma are bacteria with cell wall.",
+    "options": [
+      "Statement I is correct but Statement II is incorrect",
+      "Statement I is incorrect but Statement II is correct",
+      "Both Statement I and Statement II are correct",
+      "Both Statement I and Statement II are incorrect"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 144,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which of the following is a correct statement? (A) Cyanobacteria are a group of autotrophic organisms classified under Kingdom Monera. (B) Mycoplasma have DNA, Ribosome and cell wall. (C) Slime moulds are saprophytic organisms classified under Kingdom Monera. (D) Bacteria are exclusively heterotrophic organisms.",
+    "options": [
+      "Cyanobacteria are a group of autotrophic organisms classified under Kingdom Monera.",
+      "Mycoplasma have DNA, Ribosome and cell wall.",
+      "Slime moulds are saprophytic organisms classified under Kingdom Monera.",
+      "Bacteria are exclusively heterotrophic organisms."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 145,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Mad cow disease in cattle and Cr Jacob disease in humans are due to infection by ______.",
+    "options": ["Prion", "Bacterium", "Virus", "Viroid"],
+    "answer": 0
+  },
+  {
+    "id": 146,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "Which of the following statements is correct?",
+    "options": [
+      "Organisms that depend on living plants are called saprophytes.",
+      "Some of the organisms can fix atmospheric nitrogen in specialised cells called sheath cells.",
+      "The fusion of two cells is called Karyogamy.",
+      "Fusion of protoplasms between two motile on non-motile gametes is called plasmogamy."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 147,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which of the following is correct about viroids?",
+    "options": [
+      "They have DNA with protein coat.",
+      "They have free DNA without protein coat.",
+      "They have RNA with protein coat.",
+      "They have free RNA without protein coat."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 148,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which of the following statements is incorrect?",
+    "options": [
+      "Prions consist of abnormally folded proteins.",
+      "Viroids lack a protein coat.",
+      "Viruses are obligate parasites.",
+      "Infective constituent in viruses is the protein coat."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 149,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "Which of the following statements is incorrect?",
+    "options": [
+      "Yeasts have filamentous bodies with Iong thread-like hyphae.",
+      "Morels and truffles are edible delicacies.",
+      "Claviceps is a source of many alkaloid and LSD.",
+      "Conidia are produced exogenously and ascospores endogenously."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 150,
+    "subject": "Botany",
+    "chapter": "Living World",
+    "question": "Select the correctly written scientific name of Mango which was first described by Carolus Linnaeus:",
+    "options": ["Mangifera indica Linn", "Mangifera Indica", "Mangifera indica Car. Linn.", "Mangifera indica"],
+    "answer": 0
+  },
+  {
+    "id": 151,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which among the following is not a prokaryote?",
+    "options": ["Saccharomyces", "Mycobacterium", "Nostoc", "Oscillatoria"],
+    "answer": 0
+  },
+  {
+    "id": 152,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Select the wrong statement.",
+    "options": [
+      "Cell wall is present in members of fungi and plantae.",
+      "Mushrooms belong to basidiomycetes.",
+      "Pseudopodia are locomotory and feeding structures in sporozoans.",
+      "Mitochondria are the powerhouse of the cell in all kingdoms except monera."
+    ],
+    "answer": 2
+  },
+  {
+    "id": 153,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "After karyogamy followed by meiosis, spores are produced exogenously in ______.",
+    "options": ["Neurospora", "Alternaria", "Agaricus", "Saccharomyces"],
+    "answer": 2
+  },
+  {
+    "id": 154,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Which of the following organisms are known as chief producers in the oceans?",
+    "options": ["Dinoflagellates", "Diatoms", "Cyanobacteria", "Euglenoids"],
+    "answer": 1
+  },
+  {
+    "id": 155,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Ciliates differ from all other protozoans in:",
+    "options": [
+      "Using flagella for locomotion.",
+      "Having a contractile vacuole for removing excess water.",
+      "Using pseudopodia for capturing prey.",
+      "Having two types of nuclei."
+    ],
+    "answer": 3
+  },
+  {
+    "id": 156,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Viroids differ from viruses in having:",
+    "options": [
+      "DNA molecules without protein coat",
+      "RNA molecules with protein coat",
+      "RNA molecules without protein coat",
+      "DNA molecules with protein coat"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 157,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which of the following are found in extreme saline conditions?",
+    "options": ["Eubacteria", "Cyanobacteria", "Mycobacteria", "Archaebacteria"],
+    "answer": 3
+  },
+  {
+    "id": 158,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which among the following are the smallest living cells, known without a definite cell wall, pathogenic to plants as well as animals and can survive without oxygen?",
+    "options": ["Pseudomonas", "Mycoplasma", "Nostoc", "Bacillus"],
+    "answer": 1
+  },
+  {
+    "id": 159,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "Which one of the following is wrong for fungi?",
+    "options": [
+      "They are eukaryotic.",
+      "They are heterotrophic.",
+      "All fungi possess a purely cellulosic cell wall.",
+      "They are both unicellular and multicellular."
+    ],
+    "answer": 2
+  },
+  {
+    "id": 160,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Methanogens belong to ______.",
+    "options": ["Eubacteria", "Archaebacteria", "Dinoflagellates", "Slime moulds"],
+    "answer": 1
+  },
+  {
+    "id": 161,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Select the wrong statement.",
+    "options": [
+      "The walls of diatoms are easily destructible.",
+      "'Diatomaceous earth' is formed by the cell walls of diatoms.",
+      "Diatoms are chief producers in the oceans.",
+      "Diatoms are microscopic and float passively in water."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 162,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "One of the major components of the cell wall of most fungi is:",
+    "options": ["Cellulose", "Hemicellulose", "Chitin", "Peptidoglycan"],
+    "answer": 2
+  },
+  {
+    "id": 163,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which of the following statements is wrong for viroids?",
+    "options": [
+      "They cause infections.",
+      "Their RNA is of high molecular weight.",
+      "They lack a protein coat.",
+      "They are smaller than viruses."
+    ],
+    "answer": 1
+  },
+  {
+    "id": 164,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which one of the following statements is wrong?",
+    "options": [
+      "Eubacteria are also called false bacteria.",
+      "Phycomycetes are also called algal fungi.",
+      "Cyanobacteria are also called blue-green algae.",
+      "Golden algae are also called desmids."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 165,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "The primitive prokaryotes responsible for the production of biogas from the dung of ruminant animals include the ______.",
+    "options": ["Methanogens", "Eubacteria", "Halophiles", "Thermoacidophiles"],
+    "answer": 0
+  },
+  {
+    "id": 166,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Chrysophytes, Euglenoids, Dinoflagellates and Slime moulds are included in the Kingdom ______.",
+    "options": ["Fungi", "Animalia", "Monera", "Protista"],
+    "answer": 3
+  },
+  {
+    "id": 167,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Siliceous cell walls are found in:",
+    "options": ["Dinoflagellates", "Amoeba", "Diatoms", "Euglena"],
+    "answer": 2
+  },
+  {
+    "id": 168,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Diatoms belong to which group?",
+    "options": ["Euglenoids", "Chrysophytes", "Dinoflagellates", "Slime moulds"],
+    "answer": 1
+  },
+  {
+    "id": 169,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Kingdom Monera includes:",
+    "options": ["Fungi and Cyanobacteria", "Archaebacteria, Eubacteria and Cyanobacteria", "Protista and Cyanobacteria", "Fungi and Archaebacteria"],
+    "answer": 1
+  },
+  {
+    "id": 170,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Chrysophytes, Euglenoids, Dinoflagellates and Slime moulds belong to:",
+    "options": ["Monera", "Protista", "Fungi", "Animalia"],
+    "answer": 1
+  },
+  {
+    "id": 171,
+    "subject": "Botany",
+    "chapter": "Kingdom Fungi",
+    "question": "Lichens are considered good indicators of:",
+    "options": ["Air pollution", "Water pollution", "Soil pollution", "Noise pollution"],
+    "answer": 0
+  },
+  {
+    "id": 172,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Blue-green algae, nitrogen-fixing bacteria and methanogens are included in:",
+    "options": ["Plantae", "Protista", "Fungi", "Monera"],
+    "answer": 3
+  },
+  {
+    "id": 173,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Which one is NOT a characteristic of Kingdom Protista?",
+    "options": ["Unicellular eukaryotes", "Well-defined nucleus", "Cell wall present in all members", "Both autotrophic and heterotrophic nutrition"],
+    "answer": 2
+  },
+  {
+    "id": 174,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Which one of the following is a mixotrophic organism?",
+    "options": ["Amoeba", "Euglena", "Paramecium", "Chlamydomonas"],
+    "answer": 1
+  },
+  {
+    "id": 175,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "The walls of diatoms form deposits known as:",
+    "options": ["Coral reefs", "Diatomaceous earth", "Limestone", "Peat"],
+    "answer": 1
+  },
+  {
+    "id": 176,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Red tides are caused by massive growth of:",
+    "options": ["Diatoms", "Dinoflagellates", "Cyanobacteria", "Slime moulds"],
+    "answer": 1
+  },
+  {
+    "id": 177,
+    "subject": "Botany",
+    "chapter": "Kingdom Protista",
+    "question": "Which of the following produces toxins during bloom?",
+    "options": ["Gonyaulax", "Volvox", "Physarum", "Amoeba"],
+    "answer": 0
+  },
+  {
+    "id": 178,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Methanogens are commonly found in:",
+    "options": ["Human stomach", "Rumen of cattle", "Roots of legumes", "Pond water"],
+    "answer": 1
+  },
+  {
+    "id": 179,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Which archaeobacteria can survive in highly salty areas?",
+    "options": ["Thermoacidophiles", "Methanogens", "Halophiles", "Cyanobacteria"],
+    "answer": 2
+  },
+  {
+    "id": 180,
+    "subject": "Botany",
+    "chapter": "Kingdom Monera",
+    "question": "Thermoacidophiles are found in:",
+    "options": ["Oceans", "Hot sulphur springs", "Paddy fields", "Lakes"],
+    "answer": 1
+  }
+]
+
+
+

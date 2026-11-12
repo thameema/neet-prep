@@ -1,9 +1,192 @@
 {
-  "updated_at": "2026-11-12 11:21:07",
-  "total_attempts_recorded": 14,
+  "updated_at": "2026-11-12 14:07:20",
+  "total_attempts_recorded": 17,
   "best_projected_720": 720,
-  "average_projected_720": 537.9,
+  "average_projected_720": 565.3,
   "attempts": [
+    {
+      "id": 17,
+      "student_id": "tn_aspirant_demo",
+      "student_name": "Disputed Key Verification Run",
+      "module_id": "pyq_controversial_2024_2026",
+      "module_title": "NTA Disputed, Bonus (+4) & Supreme Court Landmark Questions (2024–2026, 8 Qs)",
+      "mode": "practice",
+      "total_questions": 8,
+      "attempted": 8,
+      "correct_count": 8,
+      "wrong_count": 0,
+      "unanswered_count": 0,
+      "raw_score": 32,
+      "max_score": 32,
+      "negative_marks_lost": 0,
+      "accuracy_pct": 100.0,
+      "projected_720": 720,
+      "tn_college_tier": "On Track: Tier-1 TN Govt Medical College (MMC Chennai / Stanley / JIPMER)",
+      "time_spent_sec": 540,
+      "created_at": "2026-11-12 14:07:20",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 2,
+          "attempted": 2,
+          "correct": 2,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 8,
+          "max_score": 8
+        },
+        "Chemistry": {
+          "total": 1,
+          "attempted": 1,
+          "correct": 1,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 4,
+          "max_score": 4
+        },
+        "Botany": {
+          "total": 2,
+          "attempted": 2,
+          "correct": 2,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 8,
+          "max_score": 8
+        },
+        "Zoology": {
+          "total": 3,
+          "attempted": 3,
+          "correct": 3,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 12,
+          "max_score": 12
+        }
+      },
+      "wrong_question_ids": []
+    },
+    {
+      "id": 16,
+      "student_id": "tn_aspirant_demo",
+      "student_name": "Sample Baseline Run (TN)",
+      "module_id": "mini_mock_pyq",
+      "module_title": "NEET High-Yield PYQ Mock Exam — Paper 2 (40 Qs / 40 Mins)",
+      "mode": "mock",
+      "total_questions": 40,
+      "attempted": 38,
+      "correct_count": 36,
+      "wrong_count": 2,
+      "unanswered_count": 2,
+      "raw_score": 142,
+      "max_score": 160,
+      "negative_marks_lost": 2,
+      "accuracy_pct": 94.7,
+      "projected_720": 639,
+      "tn_college_tier": "On Track: Tier-2 Premier TN Govt Medical College (Kilpauk / Madurai / Coimbatore GMC)",
+      "time_spent_sec": 2180,
+      "created_at": "2026-11-12 14:07:20",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 10,
+          "attempted": 9,
+          "correct": 8,
+          "wrong": 1,
+          "unanswered": 1,
+          "score": 31,
+          "max_score": 40
+        },
+        "Chemistry": {
+          "total": 10,
+          "attempted": 9,
+          "correct": 9,
+          "wrong": 0,
+          "unanswered": 1,
+          "score": 36,
+          "max_score": 40
+        },
+        "Botany": {
+          "total": 10,
+          "attempted": 10,
+          "correct": 10,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 40,
+          "max_score": 40
+        },
+        "Zoology": {
+          "total": 10,
+          "attempted": 10,
+          "correct": 9,
+          "wrong": 1,
+          "unanswered": 0,
+          "score": 35,
+          "max_score": 40
+        }
+      },
+      "wrong_question_ids": [
+        106,
+        401
+      ]
+    },
+    {
+      "id": 15,
+      "student_id": "neet_coach_benchmark",
+      "student_name": "NEET Coach Self-Verification",
+      "module_id": "full_mock_1",
+      "module_title": "NEET Full Syllabus Mock Exam — Paper 1 (NTA 4-Subject OMR Pattern)",
+      "mode": "mock",
+      "total_questions": 80,
+      "attempted": 80,
+      "correct_count": 80,
+      "wrong_count": 0,
+      "unanswered_count": 0,
+      "raw_score": 320,
+      "max_score": 320,
+      "negative_marks_lost": 0,
+      "accuracy_pct": 100.0,
+      "projected_720": 720,
+      "tn_college_tier": "On Track: Tier-1 TN Govt Medical College (MMC Chennai / Stanley / JIPMER)",
+      "time_spent_sec": 2940,
+      "created_at": "2026-11-12 14:07:20",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Chemistry": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Botany": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Zoology": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        }
+      },
+      "wrong_question_ids": []
+    },
     {
       "id": 14,
       "student_id": "tn_aspirant_demo",

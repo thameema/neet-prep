@@ -1,0 +1,250 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Unit introduction — Ernst Mayr profile",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 2,
+    "chapter": null,
+    "chapter_page": null,
+    "source_scope": "Only the Ernst Mayr biographical profile printed on PDF page 2; unit front matter, not Chapter 1.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 12,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q001",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — birth",
+      "question": "According to the profile, when was Ernst Mayr born?",
+      "options": [
+        "5 July 1904",
+        "5 July 2004",
+        "15 July 1904",
+        "5 June 1904"
+      ],
+      "correct_option": 0,
+      "explanation": "The profile gives his birth date as 5 July 1904.",
+      "source_text": "Born on 5 July 1904, in Kempten, Germany",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q002",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — birthplace",
+      "question": "Ernst Mayr was born in:",
+      "options": [
+        "Berlin, Germany",
+        "Kempten, Germany",
+        "Harvard, USA",
+        "London, England"
+      ],
+      "correct_option": 1,
+      "explanation": "The profile identifies Kempten, Germany as his birthplace.",
+      "source_text": "in Kempten, Germany",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q003",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — field",
+      "question": "Ernst Mayr is described in the profile as a Harvard University:",
+      "options": [
+        "Evolutionary biologist",
+        "Physicist",
+        "Chemist",
+        "Geologist"
+      ],
+      "correct_option": 0,
+      "explanation": "The profile calls Mayr a Harvard University evolutionary biologist.",
+      "source_text": "the Harvard University evolutionary biologist",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q004",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — epithet",
+      "question": "Which title was used for Ernst Mayr in the profile?",
+      "options": [
+        "The Father of Genetics",
+        "The Darwin of the 20th century",
+        "The Founder of Ecology",
+        "The Newton of Biology"
+      ],
+      "correct_option": 1,
+      "explanation": "The profile says Mayr has been called ‘The Darwin of the 20th century’.",
+      "source_text": "who has been called ‘The Darwin of the 20th century’",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q005",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — Harvard appointment",
+      "question": "In which year did Ernst Mayr join Harvard’s Faculty of Arts and Sciences?",
+      "options": [
+        "1904",
+        "1953",
+        "1975",
+        "2004"
+      ],
+      "correct_option": 1,
+      "explanation": "The profile states that Mayr joined the faculty in 1953.",
+      "source_text": "Mayr joined Harvard’s Faculty of Arts and Sciences in 1953",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q006",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — retirement",
+      "question": "In which year did Ernst Mayr retire from Harvard’s Faculty of Arts and Sciences?",
+      "options": [
+        "1953",
+        "1975",
+        "1983",
+        "1994"
+      ],
+      "correct_option": 1,
+      "explanation": "The profile gives 1975 as the year he retired.",
+      "source_text": "and retired in 1975",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q007",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — emeritus title",
+      "question": "After retirement, Mayr assumed the title:",
+      "options": [
+        "Alexander Agassiz Professor of Zoology Emeritus",
+        "Professor of Botany Emeritus",
+        "Darwin Professor of Genetics",
+        "Agassiz Professor of Medicine"
+      ],
+      "correct_option": 0,
+      "explanation": "The profile names his post-retirement title as Alexander Agassiz Professor of Zoology Emeritus.",
+      "source_text": "assuming the title Alexander Agassiz Professor of Zoology Emeritus",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q008",
+      "type": "multiple_correct",
+      "topic": "Ernst Mayr — research areas",
+      "question": "Which fields are explicitly listed as areas of Mayr’s research?",
+      "options": [
+        "Ornithology",
+        "Taxonomy",
+        "Zoogeography",
+        "Evolution",
+        "Astrophysics"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The profile lists ornithology, taxonomy, zoogeography, evolution, systematics, and the history and philosophy of biology. Astrophysics is not listed.",
+      "source_text": "his research spanned ornithology, taxonomy, zoogeography, evolution, systematics, and the history and philosophy of biology",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q009",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — species diversity",
+      "question": "According to the profile, Mayr helped make which question central to evolutionary biology?",
+      "options": [
+        "The origin of species diversity",
+        "The origin of the solar system",
+        "The discovery of antibiotics",
+        "The structure of DNA"
+      ],
+      "correct_option": 0,
+      "explanation": "The profile says he made the origin of species diversity a central question of evolutionary biology.",
+      "source_text": "made the origin of species diversity the central question of evolutionary biology",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q010",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — biological species",
+      "question": "The profile credits Ernst Mayr with pioneering the currently accepted definition of a:",
+      "options": [
+        "Biological species",
+        "Cell",
+        "Taxonomic kingdom",
+        "Fossil"
+      ],
+      "correct_option": 0,
+      "explanation": "The profile explicitly says he pioneered the currently accepted definition of a biological species.",
+      "source_text": "He also pioneered the currently accepted definition of a biological species.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q011",
+      "type": "match_the_following",
+      "topic": "Ernst Mayr — awards",
+      "question": "Match the award with the year in which Ernst Mayr received it, as listed in the profile.",
+      "column_a": [
+        "1. Balzan Prize",
+        "2. International Prize for Biology",
+        "3. Crafoord Prize"
+      ],
+      "column_b": [
+        "A. 1999",
+        "B. 1983",
+        "C. 1994"
+      ],
+      "options": [
+        "1-B, 2-C, 3-A",
+        "1-A, 2-B, 3-C",
+        "1-C, 2-A, 3-B",
+        "1-B, 2-A, 3-C"
+      ],
+      "correct_option": 0,
+      "explanation": "The profile lists the Balzan Prize in 1983, the International Prize for Biology in 1994, and the Crafoord Prize in 1999.",
+      "source_text": "the Balzan Prize in 1983, the International Prize for Biology in 1994, and the Crafoord Prize in 1999",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-INTRO-P002-Q012",
+      "type": "single_correct",
+      "topic": "Ernst Mayr — death",
+      "question": "According to the profile, Ernst Mayr died in:",
+      "options": [
+        "1975",
+        "1983",
+        "1999",
+        "2004"
+      ],
+      "correct_option": 3,
+      "explanation": "The profile says Mayr died at the age of 100 in 2004.",
+      "source_text": "Mayr died at the age of 100 in the year 2004.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

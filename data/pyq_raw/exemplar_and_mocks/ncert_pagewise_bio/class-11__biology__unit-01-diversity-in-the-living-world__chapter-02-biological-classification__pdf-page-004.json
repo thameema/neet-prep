@@ -1,0 +1,344 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 4,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 4,
+    "source_scope": "Only the content printed on PDF page 4 (printed page 13): metabolic diversity of bacteria, Section 2.1.1 Archaebacteria, Section 2.1.2 Eubacteria (cyanobacteria, chemosynthetic and the start of heterotrophic bacteria), and Figure 2.2.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 17,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q001",
+      "type": "single_correct",
+      "topic": "Bacterial diversity",
+      "question": "Compared to many other organisms, bacteria as a group show the most extensive:",
+      "options": [
+        "Body size",
+        "Structural complexity",
+        "Tissue organisation",
+        "Metabolic diversity"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says bacterial structure is simple but they show the most extensive metabolic diversity.",
+      "source_text": "bacteria as a group show the most extensive metabolic diversity.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q002",
+      "type": "single_correct",
+      "topic": "Bacterial nutrition",
+      "question": "The vast majority of bacteria are:",
+      "options": [
+        "Heterotrophs",
+        "Photosynthetic autotrophs",
+        "Parasites only",
+        "Chemosynthetic autotrophs"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the vast majority of bacteria are heterotrophs that depend on other organisms or dead organic matter.",
+      "source_text": "The vast majority of bacteria are heterotrophs",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q003",
+      "type": "single_correct",
+      "topic": "Bacterial nutrition",
+      "question": "Autotrophic bacteria synthesise their own food from:",
+      "options": [
+        "Inorganic substrates",
+        "Other living organisms",
+        "Organic wastes only",
+        "Dead organic matter"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says autotrophic bacteria synthesise their own food from inorganic substrates.",
+      "source_text": "they synthesise their own food from inorganic substrates.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q004",
+      "type": "match_the_following",
+      "topic": "Archaebacteria",
+      "question": "Match each type of archaebacterium with its habitat.",
+      "column_a": [
+        "Halophiles",
+        "Thermoacidophiles",
+        "Methanogens"
+      ],
+      "column_b": [
+        "A. Marshy areas",
+        "B. Hot springs",
+        "C. Extreme salty areas"
+      ],
+      "options": [
+        "Halophiles-C, Thermoacidophiles-B, Methanogens-A",
+        "Halophiles-B, Thermoacidophiles-C, Methanogens-A",
+        "Halophiles-C, Thermoacidophiles-A, Methanogens-B",
+        "Halophiles-A, Thermoacidophiles-B, Methanogens-C"
+      ],
+      "correct_option": 0,
+      "explanation": "The page lists halophiles in extreme salty areas, thermoacidophiles in hot springs and methanogens in marshy areas.",
+      "source_text": "extreme salty areas (halophiles), hot springs (thermoacidophiles) and marshy areas (methanogens)",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q005",
+      "type": "single_correct",
+      "topic": "Archaebacteria",
+      "question": "Archaebacteria survive in extreme conditions because they have:",
+      "options": [
+        "A different cell wall structure",
+        "Heterocysts",
+        "Chlorophyll a",
+        "A nuclear membrane"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the different cell wall structure of archaebacteria is responsible for their survival in extreme conditions.",
+      "source_text": "this feature is responsible for their survival in extreme conditions.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q006",
+      "type": "single_correct",
+      "topic": "Methanogens",
+      "question": "Methanogens in the gut of ruminants such as cows and buffaloes are responsible for producing:",
+      "options": [
+        "Methane (biogas) from dung",
+        "Antibiotics",
+        "Atmospheric nitrogen fixation",
+        "Curd from milk"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says methanogens produce methane (biogas) from the dung of these animals.",
+      "source_text": "they are responsible for the production of methane (biogas) from the dung of these animals.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q007",
+      "type": "single_correct",
+      "topic": "Eubacteria",
+      "question": "Eubacteria, or 'true bacteria', are characterised by:",
+      "options": [
+        "A well-defined nucleus",
+        "A rigid cell wall and, if motile, a flagellum",
+        "A different cell wall structure that allows survival in extreme habitats",
+        "The complete absence of a cell wall"
+      ],
+      "correct_option": 1,
+      "explanation": "The page describes eubacteria as having a rigid cell wall and, if motile, a flagellum.",
+      "source_text": "They are characterised by the presence of a rigid cell wall, and if motile, a flagellum.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q008",
+      "type": "single_correct",
+      "topic": "Cyanobacteria",
+      "question": "Cyanobacteria, also called blue-green algae, have which chlorophyll similar to green plants?",
+      "options": [
+        "Chlorophyll c",
+        "Chlorophyll a",
+        "Chlorophyll b",
+        "Bacteriochlorophyll"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says cyanobacteria have chlorophyll a similar to green plants and are photosynthetic autotrophs.",
+      "source_text": "have chlorophyll a similar to green plants and are",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q009",
+      "type": "single_correct",
+      "topic": "Cyanobacteria",
+      "question": "Which statement about cyanobacteria is correct according to the page?",
+      "options": [
+        "They are all unicellular and terrestrial",
+        "They lack chlorophyll",
+        "They are chemosynthetic autotrophs",
+        "They can be unicellular, colonial or filamentous"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says cyanobacteria are unicellular, colonial or filamentous, and freshwater, marine or terrestrial.",
+      "source_text": "The cyanobacteria are unicellular, colonial or filamentous, freshwater/marine or terrestrial algae.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q010",
+      "type": "single_correct",
+      "topic": "Cyanobacteria",
+      "question": "Cyanobacteria often form which structures in polluted water bodies?",
+      "options": [
+        "Plasmodium",
+        "Blooms",
+        "Biogas pockets",
+        "Diatomaceous earth"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says cyanobacteria often form blooms in polluted water bodies.",
+      "source_text": "They often form blooms in polluted water bodies.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q011",
+      "type": "single_correct",
+      "topic": "Nitrogen fixation",
+      "question": "In cyanobacteria, atmospheric nitrogen is fixed in specialised cells called:",
+      "options": [
+        "Capsids",
+        "Pellicles",
+        "Hyphae",
+        "Heterocysts"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says some cyanobacteria fix atmospheric nitrogen in specialised cells called heterocysts.",
+      "source_text": "Some of these organisms can fix atmospheric nitrogen in specialised cells called heterocysts",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q012",
+      "type": "multiple_correct",
+      "topic": "Nitrogen fixation",
+      "question": "Which of the following are given as examples of cyanobacteria that fix nitrogen in heterocysts?",
+      "options": [
+        "Chlorella",
+        "Anabaena",
+        "Paramoecium",
+        "Nostoc"
+      ],
+      "correct_options": [
+        1,
+        3
+      ],
+      "explanation": "The page gives Nostoc and Anabaena as examples. Paramoecium and Chlorella are Protista.",
+      "source_text": "e.g., Nostoc and Anabaena.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q013",
+      "type": "single_correct",
+      "topic": "Chemosynthetic bacteria",
+      "question": "Chemosynthetic autotrophic bacteria obtain energy for ATP production by:",
+      "options": [
+        "Oxidising inorganic substances such as nitrates, nitrites and ammonia",
+        "Performing photosynthesis with chlorophyll a",
+        "Absorbing dead organic matter",
+        "Fixing atmospheric nitrogen in heterocysts"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says they oxidise inorganic substances like nitrates, nitrites and ammonia and use the released energy for ATP production.",
+      "source_text": "oxidise various inorganic substances such as nitrates, nitrites and ammonia and use the released energy for their ATP production.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q014",
+      "type": "multiple_correct",
+      "topic": "Chemosynthetic bacteria",
+      "question": "Chemosynthetic autotrophic bacteria play a great role in recycling which nutrients?",
+      "options": [
+        "Phosphorus",
+        "Helium",
+        "Argon",
+        "Sulphur",
+        "Nitrogen",
+        "Iron"
+      ],
+      "correct_options": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The page lists nitrogen, phosphorus, iron and sulphur.",
+      "source_text": "They play a great role in recycling nutrients like nitrogen, phosphorous, iron and sulphur.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q015",
+      "type": "single_correct",
+      "topic": "Heterotrophic bacteria",
+      "question": "Which group of bacteria is most abundant in nature, with the majority being important decomposers?",
+      "options": [
+        "Chemosynthetic autotrophic bacteria",
+        "Cyanobacteria",
+        "Methanogens",
+        "Heterotrophic bacteria"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says heterotrophic bacteria are most abundant in nature and the majority are important decomposers.",
+      "source_text": "Heterotrophic bacteria are most abundant in nature. The majority are important decomposers.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q016",
+      "type": "assertion_reason",
+      "topic": "Archaebacteria",
+      "question": "Assertion (A): Archaebacteria can survive in some of the most harsh habitats.\nReason (R): Archaebacteria have a cell wall structure different from other bacteria.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The page links their survival in extreme conditions to their different cell wall structure.",
+      "source_text": "Archaebacteria differ from other bacteria in having a different cell wall structure and this feature is responsible for their survival in extreme conditions.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P004-Q017",
+      "type": "single_correct",
+      "topic": "Figure 2.2",
+      "question": "Figure 2.2 shows a filamentous blue-green alga. Which one is it?",
+      "options": [
+        "Nostoc",
+        "Chlorella",
+        "Euglena",
+        "Anabaena"
+      ],
+      "correct_option": 0,
+      "explanation": "The caption of Figure 2.2 reads 'A filamentous blue-green algae - Nostoc', with the heterocyst and mucilagenous sheath labelled.",
+      "source_text": "Figure 2.2 A filamentous blue-green algae – Nostoc",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

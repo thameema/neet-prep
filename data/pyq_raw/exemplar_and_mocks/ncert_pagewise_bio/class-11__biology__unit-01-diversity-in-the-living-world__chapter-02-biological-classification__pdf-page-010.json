@@ -1,0 +1,356 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 10,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 10,
+    "source_scope": "Only the content printed on PDF page 10 (printed page 19): Section 2.4 Kingdom Plantae, Section 2.5 Kingdom Animalia, and the start of Section 2.6 Viruses, Viroids, Prions and Lichens (introduction and the opening of the discussion on viruses).",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 18,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q001",
+      "type": "single_correct",
+      "topic": "Kingdom Plantae",
+      "question": "Kingdom Plantae includes:",
+      "options": [
+        "All multicellular organisms",
+        "All eukaryotic chlorophyll-containing organisms",
+        "All organisms with a cell wall",
+        "All photosynthetic organisms including bacteria"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says Kingdom Plantae includes all eukaryotic chlorophyll-containing organisms commonly called plants.",
+      "source_text": "includes all eukaryotic chlorophyll-containing organisms commonly called plants.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q002",
+      "type": "multiple_correct",
+      "topic": "Kingdom Plantae",
+      "question": "Which of the following are named on the page as partially heterotrophic plants?",
+      "options": [
+        "Paramoecium",
+        "Cuscuta",
+        "Bladderwort",
+        "Venus fly trap",
+        "Agaricus"
+      ],
+      "correct_options": [
+        1,
+        2,
+        3
+      ],
+      "explanation": "The page names the insectivorous plants bladderwort and Venus fly trap and the parasite Cuscuta. Agaricus is a fungus and Paramoecium a protozoan.",
+      "source_text": "Bladderwort and Venus fly trap are examples of insectivorous plants and Cuscuta is a parasite.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q003",
+      "type": "single_correct",
+      "topic": "Kingdom Plantae",
+      "question": "Cuscuta is an example of a:",
+      "options": [
+        "Photosynthetic protist",
+        "Saprophytic fungus",
+        "Parasitic, partially heterotrophic plant",
+        "Insectivorous plant"
+      ],
+      "correct_option": 2,
+      "explanation": "The page lists Cuscuta as a parasite among the partially heterotrophic plant members.",
+      "source_text": "A few members are partially heterotrophic such as the insectivorous plants or parasites.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q004",
+      "type": "single_correct",
+      "topic": "Kingdom Plantae",
+      "question": "Plant cells have an eukaryotic structure with prominent chloroplasts and a cell wall mainly made of:",
+      "options": [
+        "Chitin",
+        "Cellulose",
+        "Peptidoglycan",
+        "Silica"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the cell wall of plant cells is mainly made of cellulose.",
+      "source_text": "cell wall mainly made of cellulose.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q005",
+      "type": "multiple_correct",
+      "topic": "Kingdom Plantae",
+      "question": "Which groups are included in Kingdom Plantae according to the page?",
+      "options": [
+        "Gymnosperms",
+        "Fungi",
+        "Bryophytes",
+        "Angiosperms",
+        "Protozoans",
+        "Pteridophytes",
+        "Algae"
+      ],
+      "correct_options": [
+        0,
+        2,
+        3,
+        5,
+        6
+      ],
+      "explanation": "The page lists algae, bryophytes, pteridophytes, gymnosperms and angiosperms.",
+      "source_text": "Plantae includes algae, bryophytes, pteridophytes, gymnosperms and angiosperms.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q006",
+      "type": "single_correct",
+      "topic": "Alternation of generations",
+      "question": "The life cycle of plants has two distinct phases that alternate with each other. They are:",
+      "options": [
+        "Diploid sporophytic and diploid gametophytic",
+        "Haploid sporophytic and diploid gametophytic",
+        "Diploid sporophytic and haploid gametophytic",
+        "Haploid sporophytic and haploid gametophytic"
+      ],
+      "correct_option": 2,
+      "explanation": "The page names the diploid sporophytic and the haploid gametophytic phases.",
+      "source_text": "the diploid sporophytic and the haploid gametophytic – that alternate with each other.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q007",
+      "type": "single_correct",
+      "topic": "Alternation of generations",
+      "question": "The alternation of the diploid sporophytic and haploid gametophytic phases in plants is called:",
+      "options": [
+        "Plasmogamy",
+        "Alternation of generations",
+        "Metagenesis of spores",
+        "Dikaryophase"
+      ],
+      "correct_option": 1,
+      "explanation": "The page names this phenomenon alternation of generations.",
+      "source_text": "This phenomenon is called alternation of generations.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q008",
+      "type": "single_correct",
+      "topic": "Alternation of generations",
+      "question": "Which of the following varies among different plant groups, according to the page?",
+      "options": [
+        "The presence of sex organs",
+        "The presence of chlorophyll",
+        "The presence of a diploid phase",
+        "The lengths of the haploid and diploid phases and whether they are free-living or dependent on others"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says the lengths of the phases, and whether they are free-living or dependent, vary among groups.",
+      "source_text": "The lengths of the haploid and diploid phases, and whether these phases are free– living or dependent on others, vary among different groups in plants.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q009",
+      "type": "single_correct",
+      "topic": "Kingdom Animalia",
+      "question": "Kingdom Animalia is characterised by organisms that are:",
+      "options": [
+        "Heterotrophic, prokaryotic and unicellular",
+        "Autotrophic, eukaryotic and multicellular",
+        "Heterotrophic, eukaryotic with cellulose walls",
+        "Heterotrophic, eukaryotic and multicellular, with cells lacking cell walls"
+      ],
+      "correct_option": 3,
+      "explanation": "The page describes animals as heterotrophic eukaryotic multicellular organisms whose cells lack cell walls.",
+      "source_text": "heterotrophic eukaryotic organisms that are multicellular and their cells lack cell walls.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q010",
+      "type": "single_correct",
+      "topic": "Kingdom Animalia",
+      "question": "In animals, food reserves are stored as:",
+      "options": [
+        "Starch",
+        "Glycogen or fat",
+        "Chitin",
+        "Cellulose"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says animals store food reserves as glycogen or fat.",
+      "source_text": "store food reserves as glycogen or fat.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q011",
+      "type": "single_correct",
+      "topic": "Kingdom Animalia",
+      "question": "The mode of nutrition of animals is holozoic, which means:",
+      "options": [
+        "Ingestion of food",
+        "Photosynthesis",
+        "Oxidation of inorganic substances",
+        "Absorption from dead substrates"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the mode of nutrition is holozoic – by ingestion of food.",
+      "source_text": "Their mode of nutrition is holozoic – by ingestion of food.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q012",
+      "type": "single_correct",
+      "topic": "Kingdom Animalia",
+      "question": "Animals digest their food in:",
+      "options": [
+        "Heterocysts",
+        "An internal cavity",
+        "The mycelium",
+        "The cell wall"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says animals digest their food in an internal cavity.",
+      "source_text": "They digest their food in an internal cavity",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q013",
+      "type": "single_correct",
+      "topic": "Kingdom Animalia",
+      "question": "Sexual reproduction in animals is described as:",
+      "options": [
+        "DNA transfer between cells",
+        "Copulation of male and female followed by embryological development",
+        "Fusion of spores",
+        "Fusion of two vegetative cells"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says sexual reproduction is by copulation of male and female followed by embryological development.",
+      "source_text": "The sexual reproduction is by copulation of male and female followed by embryological development.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q014",
+      "type": "single_correct",
+      "topic": "Viruses, viroids, prions and lichens",
+      "question": "Which of the following were not mentioned in Whittaker's five kingdom classification?",
+      "options": [
+        "Lichens and acellular organisms like viruses, viroids and prions",
+        "Fungi and Protista",
+        "Algae and bryophytes",
+        "Bacteria and cyanobacteria"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the five kingdom classification does not mention lichens and some acellular organisms like viruses, viroids and prions.",
+      "source_text": "In the five kingdom classification of Whittaker there is no mention of lichens and some acellular organisms like viruses, viroids and prions.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q015",
+      "type": "single_correct",
+      "topic": "Viruses",
+      "question": "Viruses did not find a place in classification because:",
+      "options": [
+        "They contain chlorophyll",
+        "They have a nuclear membrane",
+        "They are not considered truly 'living' if living is taken to mean having a cell structure",
+        "They are larger than bacteria"
+      ],
+      "correct_option": 2,
+      "explanation": "The page gives this as the reason and says viruses are non-cellular.",
+      "source_text": "Viruses did not find a place in classification since they are not considered truly ‘living’, if we understand living as those organisms that have a cell structure.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q016",
+      "type": "single_correct",
+      "topic": "Viruses",
+      "question": "Outside the living cell, viruses have:",
+      "options": [
+        "A flagellum",
+        "A rigid cell wall",
+        "A well-defined nucleus",
+        "An inert crystalline structure"
+      ],
+      "correct_option": 3,
+      "explanation": "The page describes viruses as non-cellular with an inert crystalline structure outside the living cell.",
+      "source_text": "characterised by having an inert crystalline structure outside the living cell.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q017",
+      "type": "multiple_statement",
+      "topic": "Plantae",
+      "question": "Consider the following statements:\n1. All members of Kingdom Plantae are strictly autotrophic.\n2. Insectivorous plants are partially heterotrophic.\n3. Cuscuta is a parasitic plant.\nWhich statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 1,
+      "explanation": "Statement 1 is false because a few plants are partially heterotrophic. Statements 2 and 3 match the page.",
+      "source_text": "A few members are partially heterotrophic such as the insectivorous plants or parasites. ... Cuscuta is a parasite.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P010-Q018",
+      "type": "assertion_reason",
+      "topic": "Viruses",
+      "question": "Assertion (A): Viruses were not included in Whittaker's five kingdom classification.\nReason (R): Viruses are non-cellular organisms.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says viruses did not find a place since they are not considered truly living, and describes them as non-cellular.",
+      "source_text": "Viruses did not find a place in classification since they are not considered truly ‘living’ ... The viruses are non-cellular organisms",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

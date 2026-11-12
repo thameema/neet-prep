@@ -1,0 +1,332 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 3,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 3,
+    "source_scope": "Only the content printed on PDF page 3 (printed page 12): how the five kingdom system reclassified fungi, prokaryotes and unicellular eukaryotes, the phylogenetic approach, the start of Section 2.1 Kingdom Monera, bacterial shapes, and Figure 2.1.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 16,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q001",
+      "type": "single_correct",
+      "topic": "Kingdom Fungi",
+      "question": "Fungi were placed in a separate kingdom partly because their cell walls contain, unlike the cellulosic walls of green plants:",
+      "options": [
+        "Cellulose",
+        "Chitin",
+        "Silica",
+        "Lignin"
+      ],
+      "correct_option": 1,
+      "explanation": "The page contrasts the chitin in fungal walls with the cellulosic cell wall of green plants.",
+      "source_text": "in their walls while the green plants had a cellulosic cell wall.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q002",
+      "type": "single_correct",
+      "topic": "Kingdom Monera",
+      "question": "In the five kingdom system, all prokaryotic organisms are grouped under:",
+      "options": [
+        "Kingdom Plantae",
+        "Kingdom Monera",
+        "Kingdom Protista",
+        "Kingdom Fungi"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says all prokaryotic organisms were grouped together under Kingdom Monera.",
+      "source_text": "All prokaryotic organisms were grouped together under Kingdom Monera",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q003",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Which kingdom contains the unicellular eukaryotic organisms?",
+      "options": [
+        "Kingdom Fungi",
+        "Kingdom Monera",
+        "Kingdom Animalia",
+        "Kingdom Protista"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says the unicellular eukaryotic organisms were placed in Kingdom Protista.",
+      "source_text": "the unicellular eukaryotic organisms were placed in Kingdom Protista.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q004",
+      "type": "multiple_correct",
+      "topic": "Kingdom Protista",
+      "question": "Which of these organisms are named on the page as brought together in Kingdom Protista?",
+      "options": [
+        "Chlamydomonas",
+        "Bacillus",
+        "Paramoecium",
+        "Spirogyra",
+        "Amoeba",
+        "Chlorella"
+      ],
+      "correct_options": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "explanation": "Kingdom Protista brought together Chlamydomonas and Chlorella with Paramoecium and Amoeba.",
+      "source_text": "Kingdom Protista has brought together Chlamydomonas, Chlorella",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q005",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Chlamydomonas and Chlorella were earlier placed under:",
+      "options": [
+        "Bacteria",
+        "Algae within Plants",
+        "The animal kingdom",
+        "Fungi"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says they were earlier placed in algae within Plants and both had cell walls.",
+      "source_text": "(earlier placed in Algae within Plants and both having cell walls)",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q006",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Paramoecium and Amoeba were earlier placed in:",
+      "options": [
+        "The animal kingdom, which lacks cell walls",
+        "Fungi",
+        "Algae within Plants",
+        "Bacteria"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says they were earlier placed in the animal kingdom which lacks cell wall.",
+      "source_text": "(which were earlier placed in the animal kingdom which lack cell wall)",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q007",
+      "type": "single_correct",
+      "topic": "Changing criteria",
+      "question": "Kingdom Protista put together organisms that earlier belonged to different kingdoms. This happened because:",
+      "options": [
+        "Cell walls were found in all of them",
+        "The criteria for classification changed",
+        "Protozoa were discovered to be plants",
+        "Bacteria were reclassified as eukaryotes"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says this happened because the criteria for classification changed.",
+      "source_text": "This happened because the criteria for classification changed.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q008",
+      "type": "single_correct",
+      "topic": "Phylogenetic classification",
+      "question": "A classification that is 'phylogenetic' is based on:",
+      "options": [
+        "Cell size alone",
+        "Habitat alone",
+        "Economic importance",
+        "Evolutionary relationships"
+      ],
+      "correct_option": 3,
+      "explanation": "The page defines phylogenetic as based on evolutionary relationships.",
+      "source_text": "but is also phylogenetic, i.e., is based on evolutionary relationships.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q009",
+      "type": "single_correct",
+      "topic": "Chapter plan",
+      "question": "In which chapters are Kingdoms Plantae and Animalia dealt with separately?",
+      "options": [
+        "Chapters 5 and 6",
+        "Chapters 3 and 4",
+        "Chapters 1 and 2",
+        "Chapter 2 only"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the plant and animal kingdoms will be dealt with separately in chapters 3 and 4.",
+      "source_text": "will be dealt separately in chapters 3 and 4.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q010",
+      "type": "single_correct",
+      "topic": "Kingdom Monera",
+      "question": "Which organisms are the sole members of Kingdom Monera?",
+      "options": [
+        "Fungi",
+        "Viruses",
+        "Bacteria",
+        "Protozoans"
+      ],
+      "correct_option": 2,
+      "explanation": "The page states that bacteria are the sole members of Kingdom Monera.",
+      "source_text": "Bacteria are the sole members of the Kingdom Monera.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q011",
+      "type": "multiple_correct",
+      "topic": "Kingdom Monera",
+      "question": "Which habitats are mentioned where bacteria live, including those where very few other life forms survive?",
+      "options": [
+        "Deep oceans",
+        "Hot springs",
+        "Snow",
+        "Only inside the human body",
+        "Only in fresh water",
+        "Deserts"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "explanation": "The page says bacteria occur almost everywhere, including hot springs, deserts, snow and deep oceans.",
+      "source_text": "such as hot springs, deserts, snow and deep oceans where very few other life forms can survive.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q012",
+      "type": "single_correct",
+      "topic": "Kingdom Monera",
+      "question": "According to the page, bacteria are:",
+      "options": [
+        "The largest micro-organisms",
+        "The most abundant micro-organisms",
+        "Found only in soil",
+        "Always free-living"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says bacteria are the most abundant micro-organisms and that many live in or on other organisms as parasites.",
+      "source_text": "They are the most abundant micro-organisms.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q013",
+      "type": "single_correct",
+      "topic": "Bacterial shapes",
+      "question": "Into how many categories are bacteria grouped based on their shape on this page?",
+      "options": [
+        "Five",
+        "Two",
+        "Four",
+        "Three"
+      ],
+      "correct_option": 2,
+      "explanation": "Coccus, Bacillus, Vibrium and Spirillum make four shape categories.",
+      "source_text": "Bacteria are grouped under four categories based on their shape",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q014",
+      "type": "match_the_following",
+      "topic": "Bacterial shapes",
+      "question": "Match each bacterial form with its shape.",
+      "column_a": [
+        "Coccus",
+        "Bacillus",
+        "Vibrium",
+        "Spirillum"
+      ],
+      "column_b": [
+        "A. Spiral",
+        "B. Rod-shaped",
+        "C. Spherical",
+        "D. Comma-shaped"
+      ],
+      "options": [
+        "Coccus-C, Bacillus-B, Vibrium-D, Spirillum-A",
+        "Coccus-B, Bacillus-C, Vibrium-D, Spirillum-A",
+        "Coccus-C, Bacillus-B, Vibrium-A, Spirillum-D",
+        "Coccus-D, Bacillus-B, Vibrium-C, Spirillum-A"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives: spherical Coccus, rod-shaped Bacillus, comma-shaped Vibrium and spiral Spirillum.",
+      "source_text": "the spherical Coccus (pl.: cocci), the rod-shaped Bacillus (pl.: bacilli), the comma-shaped Vibrium (pl.: vibrio) and the spiral Spirillum (pl.: spirilla)",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q015",
+      "type": "single_correct",
+      "topic": "Bacterial shapes",
+      "question": "The plural of Spirillum, as given on the page, is:",
+      "options": [
+        "Spirillums",
+        "Spirillae",
+        "Spirilli",
+        "Spirilla"
+      ],
+      "correct_option": 3,
+      "explanation": "The page gives spirilla as the plural of Spirillum.",
+      "source_text": "the spiral Spirillum (pl.: spirilla)",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P003-Q016",
+      "type": "assertion_reason",
+      "topic": "Kingdom Protista",
+      "question": "Assertion (A): Kingdom Protista put together organisms that earlier classifications had placed in different kingdoms.\nReason (R): The criteria used for classification had changed.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives the changed classification criteria as the reason for this regrouping.",
+      "source_text": "It has put together organisms which, in earlier classifications, were placed in different kingdoms. This happened because the criteria for classification changed.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

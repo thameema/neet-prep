@@ -1,0 +1,389 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 7,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 7,
+    "source_scope": "Only the content printed on PDF page 7 (printed page 16): the four groups of protozoans (amoeboid, flagellated, ciliated, sporozoans), the start of Section 2.3 Kingdom Fungi, hyphae and mycelium, and the nutrition and start of reproduction in fungi.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 19,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q001",
+      "type": "single_correct",
+      "topic": "Amoeboid protozoans",
+      "question": "Amoeboid protozoans move and capture their prey by putting out:",
+      "options": [
+        "Pseudopodia (false feet)",
+        "Cilia",
+        "Hyphae",
+        "Flagella"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says they put out pseudopodia, as in Amoeba.",
+      "source_text": "their prey by putting out pseudopodia (false feet) as in Amoeba.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q002",
+      "type": "single_correct",
+      "topic": "Amoeboid protozoans",
+      "question": "Marine forms of amoeboid protozoans have on their surface:",
+      "options": [
+        "Silica shells",
+        "Cellulose plates",
+        "A protein-rich pellicle",
+        "Chitin walls"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says marine forms have silica shells on their surface.",
+      "source_text": "Marine forms have silica shells on their surface.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q003",
+      "type": "single_correct",
+      "topic": "Amoeboid protozoans",
+      "question": "Which of the following is a parasitic amoeboid protozoan named on the page?",
+      "options": [
+        "Entamoeba",
+        "Plasmodium",
+        "Paramoecium",
+        "Trypanosoma"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says some amoeboid protozoans such as Entamoeba are parasites.",
+      "source_text": "Some of them such as Entamoeba are parasites.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q004",
+      "type": "single_correct",
+      "topic": "Flagellated protozoans",
+      "question": "Parasitic flagellated protozoans cause diseases such as:",
+      "options": [
+        "Typhoid",
+        "Sleeping sickness",
+        "Malaria",
+        "Cholera"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says parasitic flagellates cause diseases such as sleeping sickness, with Trypanosoma as the example.",
+      "source_text": "The parasitic forms cause diaseases such as sleeping sickness. Example: Trypanosoma.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q005",
+      "type": "single_correct",
+      "topic": "Ciliated protozoans",
+      "question": "Ciliated protozoans are actively moving aquatic organisms because of:",
+      "options": [
+        "A single long flagellum",
+        "The presence of thousands of cilia",
+        "Pseudopodia",
+        "A pellicle"
+      ],
+      "correct_option": 1,
+      "explanation": "The page attributes their active movement to thousands of cilia.",
+      "source_text": "These are aquatic, actively moving organisms because of the presence of thousands of cilia.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q006",
+      "type": "single_correct",
+      "topic": "Ciliated protozoans",
+      "question": "In ciliated protozoans, the coordinated movement of rows of cilia:",
+      "options": [
+        "Releases toxins into the sea",
+        "Steers water laden with food into the gullet",
+        "Forms the plasmodium",
+        "Produces silica shells"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the coordinated movement of cilia steers the food-laden water into the gullet, a cavity opening to the outside of the cell surface.",
+      "source_text": "causes the water laden with food to be steered into the gullet.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q007",
+      "type": "single_correct",
+      "topic": "Sporozoans",
+      "question": "Sporozoans are diverse organisms that have:",
+      "options": [
+        "An infectious spore-like stage in their life cycle",
+        "Thousands of cilia",
+        "A gullet",
+        "Pseudopodia for capture of prey"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says sporozoans have an infectious spore-like stage in their life cycle.",
+      "source_text": "This includes diverse organisms that have an infectious spore-like stage in their life cycle.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q008",
+      "type": "single_correct",
+      "topic": "Sporozoans",
+      "question": "The most notorious sporozoan, which causes malaria, is:",
+      "options": [
+        "Plasmodium",
+        "Entamoeba",
+        "Trypanosoma",
+        "Paramoecium"
+      ],
+      "correct_option": 0,
+      "explanation": "The page names Plasmodium, the malarial parasite, as the most notorious sporozoan.",
+      "source_text": "The most notorious is Plasmodium (malarial parasite) which causes malaria",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q009",
+      "type": "match_the_following",
+      "topic": "Protozoans",
+      "question": "Match each group of protozoans with its example from this page.",
+      "column_a": [
+        "Amoeboid protozoans",
+        "Flagellated protozoans",
+        "Ciliated protozoans",
+        "Sporozoans"
+      ],
+      "column_b": [
+        "A. Paramoecium",
+        "B. Plasmodium",
+        "C. Amoeba",
+        "D. Trypanosoma"
+      ],
+      "options": [
+        "Amoeboid-C, Flagellated-D, Ciliated-A, Sporozoans-B",
+        "Amoeboid-D, Flagellated-C, Ciliated-A, Sporozoans-B",
+        "Amoeboid-C, Flagellated-D, Ciliated-B, Sporozoans-A",
+        "Amoeboid-A, Flagellated-D, Ciliated-C, Sporozoans-B"
+      ],
+      "correct_option": 0,
+      "explanation": "Amoeba is amoeboid, Trypanosoma flagellated, Paramoecium ciliated and Plasmodium a sporozoan.",
+      "source_text": "as in Amoeba. ... Example: Trypanosoma. ... Example: Paramoecium (Figure 2.4d). ... The most notorious is Plasmodium",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q010",
+      "type": "single_correct",
+      "topic": "Kingdom Fungi",
+      "question": "Which unicellular fungus is used to make bread and beer?",
+      "options": [
+        "Penicillium",
+        "Mushroom",
+        "Puccinia",
+        "Yeast"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says some unicellular fungi, for example yeast, are used to make bread and beer.",
+      "source_text": "Some unicellular fungi, e.g., yeast are used to make bread and beer.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q011",
+      "type": "single_correct",
+      "topic": "Kingdom Fungi",
+      "question": "Wheat rust is caused by which fungus, as given on the page?",
+      "options": [
+        "Mucor",
+        "Puccinia",
+        "Yeast",
+        "Penicillium"
+      ],
+      "correct_option": 1,
+      "explanation": "The page cites wheat rust-causing Puccinia as an important example of a fungus causing plant disease.",
+      "source_text": "wheat rust-causing Puccinia is an important example.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q012",
+      "type": "single_correct",
+      "topic": "Kingdom Fungi",
+      "question": "Which fungus is mentioned on the page as a source of antibiotics?",
+      "options": [
+        "Yeast",
+        "Puccinia",
+        "Toadstool",
+        "Penicillium"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says some fungi are sources of antibiotics, for example Penicillium.",
+      "source_text": "Some are the source of antibiotics, e.g., Penicillium.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q013",
+      "type": "single_correct",
+      "topic": "Kingdom Fungi",
+      "question": "Fungi prefer to grow in:",
+      "options": [
+        "Warm and humid places",
+        "Only strongly acidic water",
+        "Only very salty areas",
+        "Cold and dry places"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says fungi prefer warm and humid places, which is why food is kept in a refrigerator.",
+      "source_text": "They prefer to grow in warm and humid places.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q014",
+      "type": "single_correct",
+      "topic": "Fungal body",
+      "question": "With the exception of yeasts, fungi are:",
+      "options": [
+        "Unicellular",
+        "Filamentous",
+        "Tissue-organised",
+        "Colonial with gelatinous sheaths"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says that apart from unicellular yeasts, fungi are filamentous with bodies of thread-like hyphae.",
+      "source_text": "With the exception of yeasts which are unicellular, fungi are filamentous.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q015",
+      "type": "single_correct",
+      "topic": "Fungal body",
+      "question": "The network of hyphae in a fungus is known as:",
+      "options": [
+        "Pellicle",
+        "Capsid",
+        "Plasmodium",
+        "Mycelium"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says hyphae are long slender thread-like structures and their network is the mycelium.",
+      "source_text": "The network of hyphae is known as mycelium.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q016",
+      "type": "single_correct",
+      "topic": "Fungal body",
+      "question": "Hyphae that are continuous tubes filled with multinucleated cytoplasm are called:",
+      "options": [
+        "Coenocytic hyphae",
+        "Dikaryotic hyphae",
+        "Septate hyphae",
+        "Aseptate spores"
+      ],
+      "correct_option": 0,
+      "explanation": "The page defines coenocytic hyphae this way and says other hyphae have septae or cross walls.",
+      "source_text": "Some hyphae are continuous tubes filled with multinucleated cytoplasm – these are called coenocytic hyphae.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q017",
+      "type": "single_correct",
+      "topic": "Fungal body",
+      "question": "The cell walls of fungi are composed of:",
+      "options": [
+        "Peptidoglycan and lipids",
+        "Protein only",
+        "Cellulose and silica",
+        "Chitin and polysaccharides"
+      ],
+      "correct_option": 3,
+      "explanation": "The page states fungal cell walls are composed of chitin and polysaccharides.",
+      "source_text": "The cell walls of fungi are composed of chitin and polysaccharides.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q018",
+      "type": "match_the_following",
+      "topic": "Fungal nutrition",
+      "question": "Match each term with its meaning as given on the page.",
+      "column_a": [
+        "Saprophytes",
+        "Parasites",
+        "Lichens",
+        "Mycorrhiza"
+      ],
+      "column_b": [
+        "A. Fungi associated with roots of higher plants",
+        "B. Fungi absorbing soluble organic matter from dead substrates",
+        "C. Fungi depending on living plants and animals",
+        "D. Fungi associated with algae"
+      ],
+      "options": [
+        "Saprophytes-B, Parasites-C, Lichens-D, Mycorrhiza-A",
+        "Saprophytes-C, Parasites-B, Lichens-D, Mycorrhiza-A",
+        "Saprophytes-B, Parasites-C, Lichens-A, Mycorrhiza-D",
+        "Saprophytes-D, Parasites-C, Lichens-B, Mycorrhiza-A"
+      ],
+      "correct_option": 0,
+      "explanation": "Saprophytes use dead substrates, parasites depend on living hosts, and symbionts form lichens with algae or mycorrhiza with roots of higher plants.",
+      "source_text": "absorb soluble organic matter from dead substrates and hence are called saprophytes. ... in association with algae as lichens and with roots of higher plants as mycorrhiza.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P007-Q019",
+      "type": "multiple_correct",
+      "topic": "Fungal reproduction",
+      "question": "Which are the means of vegetative reproduction in fungi mentioned on the page?",
+      "options": [
+        "Metamorphosis",
+        "Pollination",
+        "Fission",
+        "Fragmentation",
+        "Budding"
+      ],
+      "correct_options": [
+        2,
+        3,
+        4
+      ],
+      "explanation": "The page lists fragmentation, fission and budding.",
+      "source_text": "Reproduction in fungi can take place by vegetative means – fragmentation, fission and budding.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 9,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 9,
+    "source_scope": "Only the content printed on PDF page 9 (printed page 18): the rest of Section 2.3.2 Ascomycetes, Section 2.3.3 Basidiomycetes and Section 2.3.4 Deuteromycetes.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 22,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q001",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "In ascomycetes the mycelium is:",
+      "options": [
+        "Absent",
+        "Dikaryotic and unbranched",
+        "Aseptate and coenocytic",
+        "Branched and septate"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says the mycelium of ascomycetes is branched and septate.",
+      "source_text": "is branched and septate. The asexual spores are conidia",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q002",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "In ascomycetes, conidia are produced exogenously on special mycelium called:",
+      "options": [
+        "Asci",
+        "Sporangia",
+        "Basidia",
+        "Conidiophores"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says the asexual spores, conidia, are produced exogenously on special mycelium called conidiophores.",
+      "source_text": "The asexual spores are conidia produced exogenously on the special mycelium called conidiophores.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q003",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "Ascospores of ascomycetes are produced endogenously in sac-like structures called:",
+      "options": [
+        "Basidia",
+        "Conidiophores",
+        "Sporangia",
+        "Asci"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says ascospores are produced endogenously in sac like asci (singular ascus).",
+      "source_text": "Sexual spores are called ascospores which are produced endogenously in sac like asci (singular ascus).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q004",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "Asci are arranged in different types of fruiting bodies called:",
+      "options": [
+        "Conidiocarps",
+        "Ascocarps",
+        "Basidiocarps",
+        "Sporocarps"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says the asci are arranged in fruiting bodies called ascocarps.",
+      "source_text": "These asci are arranged in different types of fruiting bodies called ascocarps.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q005",
+      "type": "multiple_correct",
+      "topic": "Ascomycetes",
+      "question": "Which of the following are examples of ascomycetes given on this page?",
+      "options": [
+        "Agaricus",
+        "Neurospora",
+        "Claviceps",
+        "Ustilago",
+        "Aspergillus"
+      ],
+      "correct_options": [
+        1,
+        2,
+        4
+      ],
+      "explanation": "The page gives Aspergillus, Claviceps and Neurospora. Agaricus and Ustilago are basidiomycetes.",
+      "source_text": "Some examples are Aspergillus (Figure 2.5b), Claviceps and Neurospora.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q006",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "Which ascomycete is used extensively in biochemical and genetic work?",
+      "options": [
+        "Alternaria",
+        "Agaricus",
+        "Claviceps",
+        "Neurospora"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says Neurospora is used extensively in biochemical and genetic work.",
+      "source_text": "Neurospora is used extensively in biochemical and genetic work.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q007",
+      "type": "single_correct",
+      "topic": "Ascomycetes",
+      "question": "Morels and truffles are:",
+      "options": [
+        "Edible ascomycetes considered delicacies",
+        "Poisonous basidiomycetes",
+        "Imperfect fungi",
+        "Fungi forming zoospores"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says many members like morels and truffles are edible and are considered delicacies, in the discussion of ascomycetes.",
+      "source_text": "Many members like morels and truffles are edible and are considered delicacies.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q008",
+      "type": "single_correct",
+      "topic": "Basidiomycetes",
+      "question": "Commonly known forms of basidiomycetes are:",
+      "options": [
+        "Sac-fungi and club-fungi",
+        "Yeasts and moulds",
+        "Mushrooms, bracket fungi and puffballs",
+        "Rhizopus and Mucor"
+      ],
+      "correct_option": 2,
+      "explanation": "The page lists mushrooms, bracket fungi and puffballs.",
+      "source_text": "Commonly known forms of basidiomycetes are mushrooms, bracket fungi or puffballs.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q009",
+      "type": "single_correct",
+      "topic": "Basidiomycetes",
+      "question": "Rusts and smuts, which grow in living plant bodies as parasites, belong to:",
+      "options": [
+        "Ascomycetes",
+        "Basidiomycetes",
+        "Phycomycetes",
+        "Deuteromycetes"
+      ],
+      "correct_option": 1,
+      "explanation": "The page cites rusts and smuts as parasitic basidiomycetes.",
+      "source_text": "in living plant bodies as parasites, e.g., rusts and smuts.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q010",
+      "type": "single_correct",
+      "topic": "Basidiomycetes",
+      "question": "In basidiomycetes, asexual spores are generally not found, but vegetative reproduction occurs commonly by:",
+      "options": [
+        "Budding only",
+        "Conidia",
+        "Zoospores",
+        "Fragmentation"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says asexual spores are generally not found, but vegetative reproduction by fragmentation is common.",
+      "source_text": "The asexual spores are generally not found, but vegetative reproduction by fragmentation is common.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q011",
+      "type": "single_correct",
+      "topic": "Basidiomycetes",
+      "question": "In basidiomycetes, plasmogamy is brought about by:",
+      "options": [
+        "Fusion of two nuclei in the basidium",
+        "Fusion of sex organs",
+        "Fusion of zoospores",
+        "Fusion of two vegetative or somatic cells of different strains or genotypes"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says sex organs are absent, and plasmogamy happens by fusion of two vegetative or somatic cells of different strains or genotypes.",
+      "source_text": "The sex organs are absent, but plasmogamy is brought about by fusion of two vegetative or somatic cells of different strains or genotypes.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q012",
+      "type": "single_correct",
+      "topic": "Basidiomycetes",
+      "question": "In basidiomycetes, karyogamy and meiosis take place in the basidium, producing:",
+      "options": [
+        "Eight ascospores",
+        "Four basidiospores",
+        "Two ascospores",
+        "Many conidia"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says they produce four basidiospores.",
+      "source_text": "Karyogamy and meiosis take place in the basidium producing four basidiospores.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q013",
+      "type": "single_correct",
+      "topic": "Basidiomycetes",
+      "question": "Basidiospores are produced on the basidium in which way, and where are basidia arranged?",
+      "options": [
+        "Exogenously; in fruiting bodies called basidiocarps",
+        "Endogenously; in conidiophores",
+        "Exogenously; in ascocarps",
+        "Endogenously; in ascocarps"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says basidiospores are exogenously produced on the basidium and basidia are arranged in basidiocarps.",
+      "source_text": "The basidiospores are exogenously produced on the basidium (pl.: basidia). The basidia are arranged in fruiting bodies called basidiocarps.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q014",
+      "type": "multiple_correct",
+      "topic": "Basidiomycetes",
+      "question": "Which of the following are common basidiomycetes named on the page?",
+      "options": [
+        "Agaricus (mushroom)",
+        "Trichoderma",
+        "Puccinia (rust fungus)",
+        "Ustilago (smut)",
+        "Neurospora"
+      ],
+      "correct_options": [
+        0,
+        2,
+        3
+      ],
+      "explanation": "The page names Agaricus, Ustilago and Puccinia. Neurospora is an ascomycete and Trichoderma a deuteromycete.",
+      "source_text": "Some common members are Agaricus (mushroom) (Figure 2.5c), Ustilago (smut) and Puccinia (rust fungus).",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q015",
+      "type": "single_correct",
+      "topic": "Deuteromycetes",
+      "question": "Deuteromycetes are commonly known as imperfect fungi because:",
+      "options": [
+        "Only their asexual or vegetative phases are known",
+        "They lack a cell wall",
+        "They reproduce only sexually",
+        "They have no mycelium"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives this as the reason for the name imperfect fungi.",
+      "source_text": "Commonly known as imperfect fungi because only the asexual or vegetative phases of these fungi are known.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q016",
+      "type": "single_correct",
+      "topic": "Deuteromycetes",
+      "question": "When the sexual forms of imperfect fungi were discovered, the fungi were:",
+      "options": [
+        "Moved into the classes they rightly belong to",
+        "Kept in deuteromycetes",
+        "Removed from the Kingdom Fungi",
+        "Moved to Kingdom Protista"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says that when the sexual forms were discovered they were moved into the classes they rightly belong to, often ascomycetes and basidiomycetes.",
+      "source_text": "When the sexual forms of these fungi were discovered they were moved into classes they rightly belong to.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q017",
+      "type": "single_correct",
+      "topic": "Deuteromycetes",
+      "question": "Deuteromycetes reproduce only by:",
+      "options": [
+        "Basidiospores",
+        "Asexual spores known as conidia",
+        "Ascospores",
+        "Zoospores"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says deuteromycetes reproduce only by asexual spores known as conidia, and their mycelium is septate and branched.",
+      "source_text": "The deuteromycetes reproduce only by asexual spores known as conidia.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q018",
+      "type": "single_correct",
+      "topic": "Deuteromycetes",
+      "question": "A large number of deuteromycetes are:",
+      "options": [
+        "Obligate parasites on animals",
+        "Lichen-forming algae",
+        "Decomposers of litter that help in mineral cycling",
+        "Edible sac-fungi"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says a large number of them are decomposers of litter and help in mineral cycling.",
+      "source_text": "a large number of them are decomposers of litter and help in mineral cycling.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q019",
+      "type": "multiple_correct",
+      "topic": "Deuteromycetes",
+      "question": "Which of these are examples of deuteromycetes?",
+      "options": [
+        "Colletotrichum",
+        "Puccinia",
+        "Claviceps",
+        "Trichoderma",
+        "Alternaria"
+      ],
+      "correct_options": [
+        0,
+        3,
+        4
+      ],
+      "explanation": "The page gives Alternaria, Colletotrichum and Trichoderma. Claviceps is an ascomycete and Puccinia a basidiomycete.",
+      "source_text": "Some examples are Alternaria, Colletotrichum and Trichoderma.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q020",
+      "type": "match_the_following",
+      "topic": "Classes of fungi",
+      "question": "Match each class of fungi with its spore-bearing structure or feature from this page.",
+      "column_a": [
+        "Ascomycetes",
+        "Basidiomycetes",
+        "Deuteromycetes"
+      ],
+      "column_b": [
+        "A. Basidia",
+        "B. Asci",
+        "C. Only asexual spores (conidia)"
+      ],
+      "options": [
+        "Ascomycetes-B, Basidiomycetes-A, Deuteromycetes-C",
+        "Ascomycetes-A, Basidiomycetes-B, Deuteromycetes-C",
+        "Ascomycetes-B, Basidiomycetes-C, Deuteromycetes-A",
+        "Ascomycetes-C, Basidiomycetes-A, Deuteromycetes-B"
+      ],
+      "correct_option": 0,
+      "explanation": "Ascomycetes bear spores in asci, basidiomycetes on basidia, and deuteromycetes reproduce only by conidia.",
+      "source_text": "sac like asci (singular ascus) ... Karyogamy and meiosis take place in the basidium ... reproduce only by asexual spores known as conidia.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q021",
+      "type": "multiple_statement",
+      "topic": "Spore formation",
+      "question": "Consider the following statements:\n1. Ascospores are produced endogenously in asci.\n2. Basidiospores are produced endogenously inside the basidium.\n3. Basidiospores are produced exogenously on the basidium.\nWhich statements are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_option": 2,
+      "explanation": "Statements 1 and 3 match the page. Statement 2 is false because basidiospores are produced exogenously on the basidium.",
+      "source_text": "which are produced endogenously in sac like asci ... The basidiospores are exogenously produced on the basidium",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P009-Q022",
+      "type": "assertion_reason",
+      "topic": "Deuteromycetes",
+      "question": "Assertion (A): Deuteromycetes are called imperfect fungi.\nReason (R): Only the asexual or vegetative phases of these fungi are known.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives the lack of a known sexual phase as the reason for the name.",
+      "source_text": "Commonly known as imperfect fungi because only the asexual or vegetative phases of these fungi are known.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

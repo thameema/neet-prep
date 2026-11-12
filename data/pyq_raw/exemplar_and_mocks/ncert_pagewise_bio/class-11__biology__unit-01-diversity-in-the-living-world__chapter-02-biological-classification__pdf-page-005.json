@@ -1,0 +1,395 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 2 — Biological Classification",
+    "pdf_file": "kebo102.pdf",
+    "pdf_page": 5,
+    "chapter": "Chapter 2 — Biological Classification",
+    "chapter_page": 5,
+    "source_scope": "Only the content printed on PDF page 5 (printed page 14): end of the heterotrophic bacteria discussion, bacterial reproduction, Mycoplasma, Section 2.2 Kingdom Protista (introduction), Section 2.2.1 Chrysophytes, and Figure 2.3.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 19,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q001",
+      "type": "multiple_correct",
+      "topic": "Bacterial pathogens",
+      "question": "Pathogenic bacteria are described on the page as causing damage to which of the following?",
+      "options": [
+        "Only aquatic animals",
+        "Farm animals",
+        "Crops",
+        "Pets",
+        "Only wild plants",
+        "Human beings"
+      ],
+      "correct_options": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "explanation": "The page says some bacteria are pathogens causing damage to human beings, crops, farm animals and pets.",
+      "source_text": "Some are pathogens causing damage to human beings, crops, farm animals and pets.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q002",
+      "type": "multiple_correct",
+      "topic": "Bacterial diseases",
+      "question": "Which diseases are named on the page as caused by bacteria?",
+      "options": [
+        "Cholera",
+        "Citrus canker",
+        "Typhoid",
+        "Malaria",
+        "Mumps",
+        "Tetanus"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "explanation": "The page names cholera, typhoid, tetanus and citrus canker as well-known bacterial diseases.",
+      "source_text": "Cholera, typhoid, tetanus, citrus canker are well known diseases caused by different bacteria.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q003",
+      "type": "single_correct",
+      "topic": "Bacterial reproduction",
+      "question": "Bacteria reproduce mainly by:",
+      "options": [
+        "Conidia formation",
+        "Fission",
+        "Zygospore formation",
+        "Budding"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says bacteria reproduce mainly by fission.",
+      "source_text": "Bacteria reproduce mainly by fission",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q004",
+      "type": "single_correct",
+      "topic": "Bacterial reproduction",
+      "question": "Under unfavourable conditions, bacteria sometimes produce:",
+      "options": [
+        "Fruiting bodies",
+        "Spores",
+        "Plasmodium",
+        "Heterocysts"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says that under unfavourable conditions bacteria sometimes produce spores.",
+      "source_text": "Sometimes, under unfavourable conditions, they produce spores.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q005",
+      "type": "single_correct",
+      "topic": "Bacterial reproduction",
+      "question": "The sort of sexual reproduction seen in bacteria involves:",
+      "options": [
+        "Copulation of male and female",
+        "A primitive type of DNA transfer from one bacterium to another",
+        "Fusion of two gametes to form a zygote",
+        "Fusion of two vegetative cells followed by karyogamy"
+      ],
+      "correct_option": 1,
+      "explanation": "The page describes bacterial sexual reproduction as adopting a primitive type of DNA transfer from one bacterium to the other.",
+      "source_text": "adopting a primitive type of DNA transfer from one bacterium to the other.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q006",
+      "type": "single_correct",
+      "topic": "Mycoplasma",
+      "question": "Which organisms completely lack a cell wall and are the smallest living cells known?",
+      "options": [
+        "Cyanobacteria",
+        "Diatoms",
+        "Archaebacteria",
+        "Mycoplasma"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says Mycoplasma completely lack a cell wall and are the smallest living cells known.",
+      "source_text": "The Mycoplasma are organisms that completely lack a cell wall. They are the smallest living cells known",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q007",
+      "type": "multiple_correct",
+      "topic": "Mycoplasma",
+      "question": "Which statements about Mycoplasma are correct?",
+      "options": [
+        "Many are pathogenic in animals and plants",
+        "They can survive without oxygen",
+        "They are the smallest living cells known",
+        "They completely lack a cell wall",
+        "They have a rigid cell wall",
+        "They are photosynthetic autotrophs"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The page states the four correct features. A rigid cell wall is a feature of eubacteria, and Mycoplasma lack a cell wall.",
+      "source_text": "and can survive without oxygen. Many mycoplasma are pathogenic in animals and plants.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q008",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Kingdom Protista includes:",
+      "options": [
+        "All multicellular heterotrophs",
+        "All organisms with chitin in their walls",
+        "All single-celled eukaryotes",
+        "All single-celled prokaryotes"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says all single-celled eukaryotes are placed under Protista.",
+      "source_text": "All single-celled eukaryotes are placed under Protista",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q009",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "The page says what may be 'a photosynthetic protistan' to one biologist may be to another:",
+      "options": [
+        "A fungus",
+        "A plant",
+        "A bacterium",
+        "An animal"
+      ],
+      "correct_option": 1,
+      "explanation": "This shows the boundaries of Protista are not well defined.",
+      "source_text": "What may be ‘a photosynthetic protistan’ to one biologist may be ‘a plant’ to another.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q010",
+      "type": "multiple_correct",
+      "topic": "Kingdom Protista",
+      "question": "Which groups are included under Protista in this book?",
+      "options": [
+        "Mycoplasma",
+        "Chrysophytes",
+        "Slime moulds",
+        "Cyanobacteria",
+        "Protozoans",
+        "Euglenoids",
+        "Dinoflagellates"
+      ],
+      "correct_options": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The page lists Chrysophytes, Dinoflagellates, Euglenoids, Slime moulds and Protozoans.",
+      "source_text": "we include Chrysophytes, Dinoflagellates, Euglenoids, Slime moulds and Protozoans under Protista.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q011",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Members of Kingdom Protista are primarily:",
+      "options": [
+        "Aquatic",
+        "Terrestrial",
+        "Parasitic on plants",
+        "Aerial"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says members of Protista are primarily aquatic.",
+      "source_text": "Members of Protista are primarily aquatic.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q012",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Being eukaryotes, the protistan cell body contains:",
+      "options": [
+        "No nucleus but ribosomes",
+        "A nucleoid and plasmids",
+        "A well defined nucleus and other membrane-bound organelles",
+        "Only a cell wall of chitin"
+      ],
+      "correct_option": 2,
+      "explanation": "The page says the protistan cell body has a well defined nucleus and other membrane-bound organelles.",
+      "source_text": "the protistan cell body contains a well defined nucleus and other membrane-bound organelles.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q013",
+      "type": "single_correct",
+      "topic": "Kingdom Protista",
+      "question": "Protists reproduce asexually and sexually by a process involving:",
+      "options": [
+        "Cell fusion and zygote formation",
+        "Spore formation only",
+        "DNA transfer between cells",
+        "Fission only"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the sexual process in protists involves cell fusion and zygote formation.",
+      "source_text": "Protists reproduce asexually and sexually by a process involving cell fusion and zygote formation.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q014",
+      "type": "single_correct",
+      "topic": "Chrysophytes",
+      "question": "Chrysophytes include:",
+      "options": [
+        "Mushrooms and yeasts",
+        "Diatoms and golden algae (desmids)",
+        "Amoeba and Paramoecium",
+        "Euglenoids and slime moulds"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says this group includes diatoms and golden algae (desmids).",
+      "source_text": "This group includes diatoms and golden algae (desmids).",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q015",
+      "type": "single_correct",
+      "topic": "Diatoms",
+      "question": "The cell walls of diatoms are:",
+      "options": [
+        "Two thin overlapping shells embedded with silica",
+        "A flexible protein-rich pellicle",
+        "A single cellulose layer",
+        "Made of chitin"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says diatom walls form two thin overlapping shells that fit together like a soap box and are embedded with silica.",
+      "source_text": "the cell walls form two thin overlapping shells, which fit together as in a soap box. The walls are embedded with silica",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q016",
+      "type": "single_correct",
+      "topic": "Diatomaceous earth",
+      "question": "'Diatomaceous earth' is formed by:",
+      "options": [
+        "Wastes of red tides",
+        "Accumulation of diatom cell wall deposits over billions of years",
+        "Accumulation of dead bacteria",
+        "Decay of slime mould plasmodium"
+      ],
+      "correct_option": 1,
+      "explanation": "The page says diatoms left behind large amounts of cell wall deposits and their accumulation over billions of years is called diatomaceous earth.",
+      "source_text": "this accumulation over billions of years is referred to as ‘diatomaceous earth’.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q017",
+      "type": "multiple_correct",
+      "topic": "Diatomaceous earth",
+      "question": "Diatomaceous earth is used for:",
+      "options": [
+        "Filtration of oils",
+        "Polishing",
+        "Making curd",
+        "Filtration of syrups",
+        "Producing methane"
+      ],
+      "correct_options": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "The page says being gritty, this soil is used in polishing and filtration of oils and syrups.",
+      "source_text": "this soil is used in polishing, filtration of oils and syrups.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q018",
+      "type": "single_correct",
+      "topic": "Diatoms",
+      "question": "Which organisms are the chief 'producers' in the oceans?",
+      "options": [
+        "Slime moulds",
+        "Dinoflagellates",
+        "Mycoplasma",
+        "Diatoms"
+      ],
+      "correct_option": 3,
+      "explanation": "The page says diatoms are the chief producers in the oceans.",
+      "source_text": "Diatoms are the chief ‘producers’ in the oceans.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH02-P005-Q019",
+      "type": "assertion_reason",
+      "topic": "Diatoms",
+      "question": "Assertion (A): Diatom cell walls are indestructible.\nReason (R): The cell walls of diatoms are embedded with silica.",
+      "options": [
+        "Both A and R are true, and R correctly explains A",
+        "Both A and R are true, but R does not explain A",
+        "A is true, but R is false",
+        "A is false, but R is true"
+      ],
+      "correct_option": 0,
+      "explanation": "The page says the walls are embedded with silica and thus are indestructible.",
+      "source_text": "The walls are embedded with silica and thus the walls are indestructible.",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}

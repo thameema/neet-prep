@@ -1,0 +1,306 @@
+{
+  "source": {
+    "subject": "Biology",
+    "unit": "Unit 1 — Diversity in the Living World",
+    "section": "Chapter 1 — The Living World",
+    "pdf_file": "kebo101.pdf",
+    "pdf_page": 3,
+    "chapter": "Chapter 1 — The Living World",
+    "chapter_page": 1,
+    "source_scope": "Only the content printed on PDF page 3: Chapter 1 opening passage and the beginning of section 1.1, Diversity in the Living World.",
+    "class": 11,
+    "class_label": "Class 11",
+    "curriculum": "NCERT"
+  },
+  "question_count": 15,
+  "questions": [
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q001",
+      "type": "single_correct",
+      "topic": "Chapter 1 — title",
+      "question": "What is the title of Chapter 1?",
+      "options": [
+        "The Living World",
+        "Biological Classification",
+        "Diversity in the Living World",
+        "Taxonomic Categories"
+      ],
+      "correct_option": 0,
+      "explanation": "The page heading identifies Chapter 1 as The Living World.",
+      "source_text": "CHAPTER 1 THE LIVING WORLD",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q002",
+      "type": "single_correct",
+      "topic": "Chapter 1 — section headings",
+      "question": "Which two sections are listed in the chapter contents on this page?",
+      "options": [
+        "Diversity in the Living World and Taxonomic Categories",
+        "Biological Classification and Plant Kingdom",
+        "Taxonomy and Evolution",
+        "Living Organisms and Biodiversity Conservation"
+      ],
+      "correct_option": 0,
+      "explanation": "The page lists sections 1.1 Diversity in the Living World and 1.2 Taxonomic Categories.",
+      "source_text": "1.1 Diversity in the Living World; 1.2 Taxonomic Categories",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q003",
+      "type": "single_correct",
+      "topic": "Habitats",
+      "question": "Which of the following habitats is explicitly mentioned in the opening passage?",
+      "options": [
+        "Cold mountains",
+        "Polar ice caves",
+        "Coral reefs",
+        "Underground mines"
+      ],
+      "correct_option": 0,
+      "explanation": "Cold mountains are one of the habitats listed in the passage.",
+      "source_text": "cold mountains, deciduous forests, oceans, fresh water lakes, deserts or hot springs",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q004",
+      "type": "multiple_correct",
+      "topic": "Habitats",
+      "question": "Which habitats are mentioned as places where living organisms are found?",
+      "options": [
+        "Deciduous forests",
+        "Fresh water lakes",
+        "Deserts",
+        "Hot springs",
+        "Volcanic magma chambers"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The passage lists deciduous forests, fresh water lakes, deserts and hot springs, among other habitats.",
+      "source_text": "deciduous forests, oceans, fresh water lakes, deserts or hot springs",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q005",
+      "type": "multiple_correct",
+      "topic": "Examples that evoke wonder",
+      "question": "Which examples are used in the passage to evoke awe and a deep sense of wonder?",
+      "options": [
+        "A galloping horse",
+        "Migrating birds",
+        "The valley of flowers",
+        "An attacking shark",
+        "A moving glacier"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The passage names a galloping horse, migrating birds, the valley of flowers and an attacking shark.",
+      "source_text": "The beauty of a galloping horse, of the migrating birds, the valley of flowers or the attacking shark evokes awe and a deep sense of wonder.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q006",
+      "type": "single_correct",
+      "topic": "Ecological interactions",
+      "question": "The passage refers to ecological conflict and cooperation among members of a population and among:",
+      "options": [
+        "Populations of a community",
+        "Different planets",
+        "Only cells of a tissue",
+        "Only unrelated ecosystems"
+      ],
+      "correct_option": 0,
+      "explanation": "The text mentions ecological conflict and cooperation among populations of a community.",
+      "source_text": "among members of a population and among populations of a community",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q007",
+      "type": "single_correct",
+      "topic": "Cellular processes",
+      "question": "Besides ecological interactions, what process inside a cell is mentioned in the opening passage?",
+      "options": [
+        "Molecular traffic",
+        "Photosynthesis in every cell",
+        "Cell division only",
+        "Movement of whole organisms"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage refers to molecular traffic inside a cell.",
+      "source_text": "the molecular traffic inside a cell",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q008",
+      "type": "single_correct",
+      "topic": "Meaning of life — technical question",
+      "question": "The first implicit question within the question ‘what is life?’ is described as:",
+      "options": [
+        "A technical question about what is living as opposed to non-living",
+        "A philosophical question about the purpose of life",
+        "A question about the origin of the universe",
+        "A question about naming organisms"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage distinguishes the technical question of living versus non-living from the philosophical question about life's purpose.",
+      "source_text": "The first is a technical one and seeks answer to what living is as opposed to the non-living",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q009",
+      "type": "single_correct",
+      "topic": "Meaning of life — philosophical question",
+      "question": "According to the passage, the second implicit question concerns:",
+      "options": [
+        "The purpose of life",
+        "The number of known species",
+        "The naming of organisms",
+        "The classification of habitats"
+      ],
+      "correct_option": 0,
+      "explanation": "The second question is described as philosophical and concerned with the purpose of life.",
+      "source_text": "the second is a philosophical one, and seeks answer to what the purpose of life is",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q010",
+      "type": "single_correct",
+      "topic": "Scientific scope",
+      "question": "Which question does the passage say scientists will try to reflect on?",
+      "options": [
+        "What is living?",
+        "What is the purpose of life?",
+        "Why does the universe exist?",
+        "What is the best habitat?"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage says scientists will not attempt to answer the philosophical question about life's purpose, but will reflect on what is living.",
+      "source_text": "As scientists, we shall not attempt answering the second question. We will try to reflect on – what is living?",
+      "difficulty": "medium",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q011",
+      "type": "multiple_correct",
+      "topic": "Visible and microscopic organisms",
+      "question": "Which examples of living organisms are mentioned in section 1.1?",
+      "options": [
+        "Potted plants",
+        "Insects",
+        "Birds",
+        "Pets",
+        "Only organisms visible to the naked eye"
+      ],
+      "correct_options": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The passage names potted plants, insects, birds, pets and other animals and plants; it also notes that some organisms cannot be seen with the naked eye.",
+      "source_text": "potted plants, insects, birds, your pets or other animals and plants",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q012",
+      "type": "single_correct",
+      "topic": "Observation area and diversity",
+      "question": "According to section 1.1, what happens to the range and variety of organisms observed when the area of observation increases?",
+      "options": [
+        "They would increase",
+        "They would always decrease",
+        "They remain exactly the same",
+        "All organisms become visible to the naked eye"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage states that increasing the area of observation increases the range and variety of organisms seen.",
+      "source_text": "If you were to increase the area that you make observations in, the range and variety of organisms that you see would increase.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q013",
+      "type": "single_correct",
+      "topic": "Dense forest",
+      "question": "What does the passage suggest one would probably observe on visiting a dense forest?",
+      "options": [
+        "A greater number and kinds of living organisms",
+        "Only one species of organism",
+        "No organisms that cannot be seen with the naked eye",
+        "Fewer kinds of organisms than in a smaller area"
+      ],
+      "correct_option": 0,
+      "explanation": "The text says a dense forest would probably show a much greater number and kinds of living organisms.",
+      "source_text": "if you were to visit a dense forest, you would probably see a much greater number and kinds of living organisms in it",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q014",
+      "type": "single_correct",
+      "topic": "Species",
+      "question": "According to section 1.1, each different kind of plant, animal or organism that one sees represents a:",
+      "options": [
+        "Species",
+        "Community",
+        "Kingdom",
+        "Habitat"
+      ],
+      "correct_option": 0,
+      "explanation": "The passage states that each different kind of plant, animal or organism represents a species.",
+      "source_text": "Each different kind of plant, animal or organism that you see, represents a species.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    },
+    {
+      "id": "BIO-C11-U01-CH01-P003-Q015",
+      "type": "single_correct",
+      "topic": "Known and described species",
+      "question": "The number of species known and described is stated on this page to range between:",
+      "options": [
+        "1.7–1.8 million",
+        "17–18 thousand",
+        "7–8 million",
+        "1.7–1.8 billion"
+      ],
+      "correct_option": 0,
+      "explanation": "The page gives the range as 1.7–1.8 million and relates it to biodiversity.",
+      "source_text": "The number of species that are known and described range between 1.7-1.8 million.",
+      "difficulty": "easy",
+      "question_origin": "NCERT-based",
+      "verification": "reviewed_against_source"
+    }
+  ]
+}
