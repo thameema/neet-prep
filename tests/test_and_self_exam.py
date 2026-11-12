@@ -172,9 +172,11 @@ def main():
     assert st_html == 200 and "TAMIL NADU NEET-UG MASTERY HUB" in html_body
     st_js, js_body = http_get("/questions_database.js")
     assert st_js == 200 and "window.NEET_QUESTION_BANK" in js_body
+    st_pyq_js, pyq_js_body = http_get("/past_papers_database.js")
+    assert st_pyq_js == 200 and "window.NEET_PAST_PAPERS_ARCHIVE" in pyq_js_body
     st_h, health_raw = http_get("/api/health")
     health = json.loads(health_raw)
-    assert st_h == 200 and health["verified_questions"] == 80
+    assert st_h == 200 and health["verified_questions"] == 3644
     print(f"Health OK: {health}")
 
     # Load questions WITHOUT looking at 'correct' field to simulate real exam taking
@@ -273,6 +275,48 @@ def main():
         f"40-Q Simulation Score: {res_m2['raw_score']}/{res_m2['max_score']} | "
         f"Projected: {res_m2['projected_720']}/720 | -1 Lost: -{res_m2['negative_marks_lost']} | "
         f"Tier: {res_m2['tn_college_tier']}"
+    )
+
+    print("\n=== 4B. Verifying 14-Year PYQ Archive & NTA Disputed / Dropped / Multi-Key Grading ===")
+    with open(os.path.join(ROOT_DIR, "past_papers_archive.json"), "r", encoding="utf-8") as f:
+        pyq_archive = json.load(f)
+    assert pyq_archive["metadata"]["totalQuestions"] == 3564
+    assert pyq_archive["metadata"]["totalPapers"] == 24
+    controv_mod = pyq_archive["modules"]["pyq_controversial_2024_2026"]
+    controv_qids = controv_mod["questionIds"]
+    assert len(controv_qids) == 9
+    pyq_q_by_id = {q["id"]: q for q in pyq_archive["questions"]}
+    controv_answers = {}
+    for qid in controv_qids:
+        qobj = pyq_q_by_id[qid]
+        if qobj.get("answerStatus") == "dropped":
+            # Even if left blank, NTA dropped questions award +4 to all candidates
+            continue
+        elif qobj.get("answerStatus") == "multiple" and len(qobj.get("acceptedOptions", [])) > 1:
+            # Pick the SECOND accepted option to verify multi-key support
+            controv_answers[str(qid)] = qobj["acceptedOptions"][1]
+        else:
+            controv_answers[str(qid)] = qobj["correct"]
+
+    st_m3, res_m3 = http_post_json(
+        "/api/submit_attempt",
+        {
+            "student_id": "tn_aspirant_demo",
+            "student_name": "Disputed Key Verification Run",
+            "quota_category": "BC (85% TN State Quota)",
+            "module_id": "pyq_controversial_2024_2026",
+            "module_title": controv_mod["title"],
+            "mode": "practice",
+            "time_spent_sec": 540,
+            "question_ids": controv_qids,
+            "answers": controv_answers,
+        },
+    )
+    assert st_m3 == 200
+    assert res_m3["correct_count"] == 9 and res_m3["wrong_count"] == 0 and res_m3["raw_score"] == 36
+    print(
+        f"Disputed/Dropped/SC Module Score: {res_m3['raw_score']}/{res_m3['max_score']} "
+        f"(All 9/9 awarded +4 including blank dropped Qs & secondary multi-key options!)"
     )
 
     print("\n=== 5. Testing Live Bilingual Gemini AI Coach (Tamil, Tanglish, English) ===")

@@ -1150,6 +1150,7 @@
 
       <div class="desktop-nav-tabs">
         <button class="nav-tab active" data-view="workspace" onclick="switchView('workspace')">Exam & Coach Workspace</button>
+        <button class="nav-tab" data-view="pyq" onclick="switchView('pyq')">Past Papers (2013–2026)</button>
         <button class="nav-tab" data-view="tracker" onclick="switchView('tracker')">Score & Mentor Tracker</button>
         <button class="nav-tab" data-view="guide" onclick="switchView('guide')">TN NEET Guide & YouTube Hub</button>
       </div>
@@ -1273,6 +1274,88 @@
     </div>
   </section>
 
+  <!-- VIEW 1.5: 14-YEAR OFFICIAL PAST PAPERS ARCHIVE & ANALYTICS (2013–2026) -->
+  <section id="view-pyq" class="view-section">
+    <div class="page-scroll">
+      <div class="page-container">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+          <div>
+            <h1 style="font-size:19px;color:var(--navy);">Official NTA NEET / AIPMT Past Papers Archive (2013–2026)</h1>
+            <p style="font-size:12.5px;color:var(--text-sec);margin-top:3px;">
+              <strong>3,564 Verified Official Past Questions</strong> across <strong>24 Official Exam Papers</strong> (including <strong>Re-NEET 2026 June 21</strong>, <strong>NEET 2025</strong>, <strong>NEET 2024</strong>, and <strong>Official NTA தமிழ் Booklets 2018–2021</strong>) plus the <strong>NTA Disputed &amp; Supreme Court Landmark Module</strong>.
+            </p>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn-outline" onclick="loadSelectedModule('pyq_controversial_2024_2026'); switchMobilePane('question');">Disputed &amp; SC Landmark Qs (9 Qs)</button>
+            <button class="btn-primary" onclick="loadSelectedModule('pyq_reneet_2026'); switchMobilePane('question');">Launch Re-NEET 2026 Paper</button>
+          </div>
+        </div>
+
+        <div class="kpi-grid" id="pyq-overview-kpis"></div>
+
+        <div class="section-card">
+          <h2>1. Subject-Wise 14-Year PYQ Sprints &amp; Disputed NTA Answer Keys</h2>
+          <p style="font-size:12.5px;color:var(--text-sec);margin-bottom:12px;">
+            Launch a fresh 45-question subject sprint sampled across 2013–2026 official NEET papers, or practice the exact 2024–2026 questions that triggered NTA bonus drops (+4 to all), dual answer keys, and Supreme Court / IIT-Delhi rulings.
+          </p>
+          <div class="resource-grid" id="pyq-sprint-cards"></div>
+        </div>
+
+        <div class="section-card">
+          <h2>2. Launch Full Official Past NEET / Re-NEET / தமிழ் Exam Papers (2013–2026)</h2>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+            <button class="subj-pill active" id="pyq-filter-all" onclick="filterPyqPaperCards('all')">All 24 Official Papers</button>
+            <button class="subj-pill" id="pyq-filter-recent" onclick="filterPyqPaperCards('recent')">2020–2026 NTA Era</button>
+            <button class="subj-pill" id="pyq-filter-ta" onclick="filterPyqPaperCards('ta')">Official NTA தமிழ் Booklets (2018–2021)</button>
+            <button class="subj-pill" id="pyq-filter-classic" onclick="filterPyqPaperCards('classic')">2013–2019 Classic NEET / AIPMT</button>
+          </div>
+          <div class="resource-grid" id="pyq-paper-cards"></div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;">
+          <div class="section-card">
+            <h2>3. 14-Year NTA Question-Format Shift (2013–2026)</h2>
+            <p style="font-size:12px;color:var(--text-sec);margin-bottom:10px;">
+              Notice how <strong>Match List-I &amp; II</strong>, <strong>Statement I &amp; II</strong>, and <strong>Assertion–Reason</strong> questions surged from 2022–2026 to act as time-sinks.
+            </p>
+            <div style="overflow-x:auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Exam Year</th>
+                    <th>Clean PYQs</th>
+                    <th>Direct</th>
+                    <th>Numerical</th>
+                    <th>Match List</th>
+                    <th>Stmt I/II</th>
+                    <th>A–R</th>
+                  </tr>
+                </thead>
+                <tbody id="pyq-year-format-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <h2>4. Highest-Yield NCERT Chapters (2013–2026 Frequency)</h2>
+            <p style="font-size:12px;color:var(--text-sec);margin-bottom:10px;">
+              Top recurring NCERT Class 11 &amp; 12 chapters across 3,564 official NEET questions.
+            </p>
+            <div id="pyq-top-chapters-wrap"></div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>5. Verified Dossier: Disputed NTA Answer Keys, Bonus Drops &amp; Supreme Court Rulings (2018–2026)</h2>
+          <p style="font-size:12.5px;color:var(--text-sec);margin-bottom:12px;">
+            Every NEET aspirant must know how NTA resolves printing errors, old-vs-new NCERT conflicts, and Tamil translation disputes. Click any landmark case below or launch the interactive <strong>9-Question Disputed &amp; Landmark Module</strong>.
+          </p>
+          <div class="resource-grid" id="pyq-disputed-dossier-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VIEW 2: STUDENT & MENTOR SCORE TRACKER -->
   <section id="view-tracker" class="view-section">
     <div class="page-scroll">
@@ -1363,63 +1446,112 @@
         </div>
 
         <div class="section-card">
-          <h2>2. Tamil Nadu Medical Counseling (85% DMER State Quota & 7.5% Govt School Quota)</h2>
+          <h2>2. Tamil Nadu Medical Counseling (85% DMER State Quota & 7.5% Govt School Quota — Verified 2026 Data)</h2>
           <p style="font-size:13px;color:var(--text-sec);line-height:1.65;margin-bottom:14px;">
-            Tamil Nadu has <strong>36+ Government Medical Colleges</strong> counselled via <strong>DMER Chennai (tnmedicalselection.net)</strong> under 85% State Quota plus the <strong>7.5% Horizontal Reservation for students from TN Govt Schools (Class 6–12)</strong>. Even if studying TN State Board (<em>Samacheer Kalvi</em>), master <strong>NCERT Class 11 & 12 line-by-line</strong>.
+            Tamil Nadu has <strong>36+ Government Medical Colleges</strong> counselled via <strong>DMER Chennai (tnmedicalselection.net)</strong> under 85% State Quota plus the <strong>7.5% Horizontal Reservation for students from TN Govt Schools (Class 6–12)</strong> (<strong>641 seats: 537 MBBS + 104 BDS</strong> with full tuition, hostel, and mess fee coverage via the TNMSC revolving fund). Note how actual closing marks shift with paper difficulty (e.g., 2024 hyper-inflation vs. 2025/2026 tougher papers):
           </p>
           <div style="overflow-x:auto;">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>TN Govt Medical College Tier</th>
-                  <th>OC Safe</th>
-                  <th>BC / BCM / MBC</th>
+                  <th>TN Govt Medical College Tier / Category</th>
+                  <th>OC (General)</th>
+                  <th>BC / BCM</th>
+                  <th>MBC / DNC</th>
                   <th>SC / SCA / ST</th>
-                  <th>7.5% Govt Quota</th>
+                  <th>7.5% TN Govt School Quota</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td><strong>Tier 1: MMC & Stanley Chennai</strong></td><td>685–705+</td><td>655–680+</td><td>590–625+</td><td>555–595+</td></tr>
-                <tr><td><strong>Tier 2: Kilpauk, Madurai, Coimbatore</strong></td><td>655–680+</td><td>630–655+</td><td>545–585+</td><td>515–555+</td></tr>
-                <tr><td><strong>Tier 3: Chengalpattu, Salem, Trichy</strong></td><td>635–655+</td><td>610–630+</td><td>515–545+</td><td>490–520+</td></tr>
-                <tr><td><strong>Tier 4: Newer District GMCs</strong></td><td>615–635+</td><td>590–612+</td><td>485–515+</td><td>460–495+</td></tr>
+                <tr><td><strong>Tier 1: MMC &amp; Stanley Chennai (Safe Target)</strong></td><td>665–695+</td><td>645–675+</td><td>630–660+</td><td>575–615+</td><td>545–599+</td></tr>
+                <tr><td><strong>Tier 2: Kilpauk, Madurai, Coimbatore</strong></td><td>635–665+</td><td>610–645+</td><td>595–625+</td><td>530–575+</td><td>505–545+</td></tr>
+                <tr><td><strong>Tier 3: Chengalpattu, Salem, Trichy, Tirunelveli</strong></td><td>605–635+</td><td>575–610+</td><td>560–595+</td><td>495–530+</td><td>475–505+</td></tr>
+                <tr style="background:#f0fdfa;"><td><strong>Verified 2026 Round 1 Govt MBBS Closing Marks</strong></td><td><strong>577</strong> (Rank 1,369)</td><td><strong>BC: 536</strong> / <strong>BCM: 523</strong></td><td><strong>526</strong> (Rank 4,053)</td><td><strong>SC: 472 / SCA: 436 / ST: 433</strong></td><td><strong>446</strong> (Called to 433; Top: 599)</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
         <div class="section-card">
-          <h2>3. Curated Tamil & English YouTube Channels for NEET</h2>
+          <h2>2B. Year-by-Year NEET Exam Pattern Shocks (2020–2026) &amp; Topper Tactics</h2>
+          <div style="overflow-x:auto;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Exam Cycle</th>
+                  <th>Duration &amp; Format</th>
+                  <th>Top Score &amp; UR Cutoff</th>
+                  <th>Key Pattern Shock &amp; Strategic Lesson for Tamil Nadu Students</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Re-NEET 2026 (21 Jun)</strong></td>
+                  <td>180 Qs • <strong>195 Mins</strong> (+15m buffer)</td>
+                  <td><strong>715/720</strong> (2 AIR-1) • UR: <strong>213</strong></td>
+                  <td>Original 3 May 2026 paper cancelled over Sikar/Latur leak. Re-NEET had 2 dropped Qs (+4 to all: Q26 Vernier Calliper &amp; Q157 Henle's Loop) and 1 multi-key Q (Q159 Evolution A/C).</td>
+                </tr>
+                <tr>
+                  <td><strong>NEET 2025 (4 May)</strong></td>
+                  <td>180 Compulsory Qs • <strong>180 Mins</strong></td>
+                  <td><strong>686/720</strong> (Zero 720s) • UR: <strong>144</strong></td>
+                  <td>NTA removed Section B (15 optional Qs) and removed the 20 extra minutes. Tough, lengthy Physics + multi-line Biology caused a 50–65 mark drop across all cutoffs.</td>
+                </tr>
+                <tr>
+                  <td><strong>NEET 2024 (5 May)</strong></td>
+                  <td>200 Qs (attempt 180) • 200 Mins</td>
+                  <td><strong>720/720</strong> (17 after SC ruling) • UR: <strong>162</strong></td>
+                  <td>31 Match-the-Column Qs in Biology + Physics Atoms old-vs-new NCERT conflict. Supreme Court &amp; IIT-Delhi ruled only Option D valid, revoking 44 grace-mark 720 toppers.</td>
+                </tr>
+                <tr>
+                  <td><strong>NEET 2022–2023</strong></td>
+                  <td>200 Qs (attempt 180) • 200 Mins</td>
+                  <td><strong>715–720</strong> • UR: <strong>117–137</strong></td>
+                  <td>2022 was the longest Biology paper in history (Assertion-Reason &amp; 5-statement questions), prompting NTA to add 20 extra minutes (200 mins total).</td>
+                </tr>
+                <tr>
+                  <td><strong>NEET 2018 Tamil Case</strong></td>
+                  <td>180 Compulsory Qs • 180 Mins</td>
+                  <td><strong>691/720</strong> • UR: <strong>119</strong></td>
+                  <td>49 Tamil translation errors ("Cheetah" printed as "Seetha"). Supreme Court held that <strong>English version legally governs</strong> — always cross-check English terms in your bilingual booklet!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>3. Verified Tamil &amp; English YouTube Channels for NEET</h2>
           <div class="resource-grid">
             <div class="resource-item">
-              <h4>Biology Simplified Tamil (Senthil Nathan Sir)</h4>
-              <p>Gold-standard Tamil channel decoding Class 11 & 12 NCERT Biology line-by-line while preserving English NCERT terms.</p>
-              <a class="resource-link" href="https://www.youtube.com/@BiologySimplifiedTamil" target="_blank" rel="noopener">Open @BiologySimplifiedTamil &rarr;</a>
+              <h4>Biology Simplified Tamil — Senthilnathan Sir (803K+ Subs)</h4>
+              <p>Gold-standard Tamil channel decoding Class 11 &amp; 12 NCERT Biology line-by-line while preserving exact English NCERT terms (<em>NCERT Line to Line</em>, <em>90/90 Master Series</em>).</p>
+              <a class="resource-link" href="https://www.youtube.com/@biologysimplifiedtamil" target="_blank" rel="noopener">Open @biologysimplifiedtamil &rarr;</a>
             </div>
             <div class="resource-item">
-              <h4>Vedantu NEET Tamil (Vettri)</h4>
-              <p>Structured Tamil + English playlists covering Physics derivations, NCERT Chemistry line-by-line, and One-Shot revisions.</p>
-              <a class="resource-link" href="https://www.youtube.com/@Vedantu_NEET_Tamil" target="_blank" rel="noopener">Open @Vedantu_NEET_Tamil &rarr;</a>
+              <h4>Vedantu Master Tamil — Shimon Joseph Sir (469K+ Subs)</h4>
+              <p>IIT Madras alumnus teaching bilingual Tamil + English Physics &amp; Chemistry derivations, PYQ marathons, and <em>Vidiyal XI / Mastering NEET</em> playlists.</p>
+              <a class="resource-link" href="https://www.youtube.com/@Vedantu_NEET_Tamil" target="_blank" rel="noopener">Open Vedantu Tamil NEET &rarr;</a>
             </div>
             <div class="resource-item">
-              <h4>Xylem NEET Tamil</h4>
-              <p>High-intensity chapter marathons, PYQ solving sessions, and Physics/Chemistry numerical practice in Tamil.</p>
-              <a class="resource-link" href="https://www.youtube.com/@XylemNEETTamil" target="_blank" rel="noopener">Open @XylemNEETTamil &rarr;</a>
+              <h4>Hundred Learning NEET Tamil (456K+ Subs)</h4>
+              <p>Dedicated support for Tamil Nadu Samacheer Kalvi &amp; CBSE students bridging Class 11/12 board exams with NCERT NEET Physics, Chemistry, and Biology.</p>
+              <a class="resource-link" href="https://www.youtube.com/@hundredlearnings" target="_blank" rel="noopener">Open @hundredlearnings &rarr;</a>
             </div>
             <div class="resource-item">
-              <h4>NEET Strategies Tamil (Dr. Sudharshan)</h4>
-              <p>Physics numerical speed tricks, OMR time-management strategies, and Tamil Nadu DMER counseling guidance.</p>
+              <h4>Career Guidance Ashwin (321K+ Subs)</h4>
+              <p>Authoritative Tamil Nadu DMER medical counselling analyst covering 85% State Quota, 7.5% Govt School Quota rank lists, and round-by-round college cutoffs.</p>
+              <a class="resource-link" href="https://www.youtube.com/@careerguidanceashwin" target="_blank" rel="noopener">Open @careerguidanceashwin &rarr;</a>
+            </div>
+            <div class="resource-item">
+              <h4>NEET Strategies in Tamil — Dr. Sudharshan (136K+ Subs)</h4>
+              <p>Govt Erode Medical College MBBS graduate sharing Physics numerical speed tricks, 3-round OMR wave strategy, and 180-minute clock discipline.</p>
               <a class="resource-link" href="https://www.youtube.com/@NEETStrategiesTamil" target="_blank" rel="noopener">Open @NEETStrategiesTamil &rarr;</a>
             </div>
             <div class="resource-item">
-              <h4>PW English (Physics Wallah — English Medium)</h4>
-              <p>National-level NEET Physics, Chemistry, and Biology batches taught completely in English (zero Hindi barrier).</p>
-              <a class="resource-link" href="https://www.youtube.com/@PW-English" target="_blank" rel="noopener">Open @PW-English &rarr;</a>
-            </div>
-            <div class="resource-item">
-              <h4>NCERT Official Channel</h4>
-              <p>Official NCERT curriculum walkthroughs and lab demonstrations for Experimental Physics & Practical Chemistry.</p>
-              <a class="resource-link" href="https://www.youtube.com/@NCERTOfficial" target="_blank" rel="noopener">Open @NCERTOfficial &rarr;</a>
+              <h4>PW Tamil Nadu NEET &amp; Xylem NEET Tamil</h4>
+              <p>High-intensity NCERT chapter one-shots, PYQ solving marathons, and Physics/Chemistry numerical practice in Tamil + English.</p>
+              <a class="resource-link" href="https://www.youtube.com/@NEET_Tamil_PW" target="_blank" rel="noopener">Open @NEET_Tamil_PW &rarr;</a>
             </div>
           </div>
         </div>
@@ -1463,6 +1595,10 @@
     <button class="m-nav-btn" data-mnav="coach" onclick="switchMobilePane('coach')">
       <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       <span>AI Coach</span>
+    </button>
+    <button class="m-nav-btn" data-mnav="pyq" onclick="switchMobilePane('pyq')">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>PYQs</span>
     </button>
     <button class="m-nav-btn" data-mnav="tracker" onclick="switchMobilePane('tracker')">
       <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
@@ -1523,10 +1659,33 @@
   </div>
 
   <script src="questions_database.js"></script>
+  <script src="past_papers_database.js"></script>
   <script>
     const BANK = window.NEET_QUESTION_BANK || { modules: {}, questions: [] };
+    const PYQ_ARCHIVE = window.NEET_PAST_PAPERS_ARCHIVE || { modules: {}, questions: [], analytics: {}, metadata: {} };
+    if (PYQ_ARCHIVE.modules) {
+      Object.assign(BANK.modules, PYQ_ARCHIVE.modules);
+    }
+    if (Array.isArray(PYQ_ARCHIVE.questions) && PYQ_ARCHIVE.questions.length > 0) {
+      const existingIds = new Set(BANK.questions.map(q => q.id));
+      PYQ_ARCHIVE.questions.forEach(q => {
+        if (!existingIds.has(q.id)) {
+          BANK.questions.push(q);
+          existingIds.add(q.id);
+        }
+      });
+    }
     const Q_MAP = {};
     BANK.questions.forEach(q => { Q_MAP[q.id] = q; });
+
+    function isAnswerCorrectForQ(q, chosenLetter) {
+      if (!q) return false;
+      if (q.answerStatus === "dropped") return true;
+      const accepted = Array.isArray(q.acceptedOptions) && q.acceptedOptions.length > 0
+        ? q.acceptedOptions
+        : [q.correct];
+      return Boolean(chosenLetter && accepted.includes(chosenLetter));
+    }
 
     // Hybrid Backend Discovery: Localhost -> Relative API; GitHub Pages (neet.memnos.net) -> Live Bridge or Direct Gemini / Offline NCERT Coach
     const DEFAULT_TUNNEL_URL = "https://noticed-queue-charitable-front.trycloudflare.com";
@@ -1592,11 +1751,26 @@
 
       const sel = document.getElementById("module-select");
       sel.innerHTML = "";
-      Object.values(BANK.modules).forEach(mod => {
-        const opt = document.createElement("option");
-        opt.value = mod.id;
-        opt.textContent = mod.title;
-        sel.appendChild(opt);
+      const groups = [
+        { label: "Core Bilingual Mastery Mocks & Chapter Drills", filter: m => !m.id.startsWith("pyq_") },
+        { label: "NTA Disputed Keys & 14-Year Subject PYQ Sprints", filter: m => m.id === "pyq_controversial_2024_2026" || m.isDynamicSubjectPyq },
+        { label: "Official Past NEET & Re-NEET Papers (2020–2026)", filter: m => m.isPastPaper && !m.id.endsWith("_ta") && (m.examYear || 0) >= 2020 },
+        { label: "Official NTA தமிழ் Booklet Past Papers (2018–2021)", filter: m => m.isPastPaper && m.id.endsWith("_ta") },
+        { label: "Official Past NEET & AIPMT Papers (2013–2019)", filter: m => m.isPastPaper && !m.id.endsWith("_ta") && (m.examYear || 0) < 2020 }
+      ];
+      const allMods = Object.values(BANK.modules);
+      groups.forEach(g => {
+        const items = allMods.filter(g.filter);
+        if (!items.length) return;
+        const og = document.createElement("optgroup");
+        og.label = g.label;
+        items.forEach(mod => {
+          const opt = document.createElement("option");
+          opt.value = mod.id;
+          opt.textContent = mod.title;
+          og.appendChild(opt);
+        });
+        sel.appendChild(og);
       });
 
       let restored = false;
@@ -1627,6 +1801,7 @@
         });
       }
       renderChat();
+      renderPyqArchiveHub();
       checkServerHealth();
     }
 
@@ -1688,6 +1863,17 @@
       return picked;
     }
 
+    function buildSubjectPyqSprintIds(subjectName, count = 45) {
+      const pool = BANK.questions
+        .filter(q => q.subject === subjectName && q.id >= 10000 && q.language !== "ta")
+        .map(q => q.id);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      return pool.slice(0, count);
+    }
+
     function loadSelectedModule(modId) {
       const mod = BANK.modules[modId];
       if (!mod) return;
@@ -1695,6 +1881,8 @@
       let qIds = [];
       if (mod.isDynamicRandom) {
         qIds = buildRandomSprintIds(mod.perSubjectCount || 5);
+      } else if (mod.isDynamicSubjectPyq) {
+        qIds = buildSubjectPyqSprintIds(mod.targetSubject || "Botany", mod.sampleCount || 45);
       } else if (mod.isMistakeBank) {
         qIds = getMistakeIds();
         if (qIds.length === 0) {
@@ -1793,9 +1981,10 @@
         if (qid === activeQid) cls += " current";
 
         if (state.submittedResult) {
-          const truth = Q_MAP[qid].correct;
-          if (ans && ans === truth) cls += " answered";
-          else if (ans && ans !== truth) cls += " wrong-review";
+          const qObj = Q_MAP[qid];
+          if (qObj && qObj.answerStatus === "dropped") cls += " answered";
+          else if (ans && isAnswerCorrectForQ(qObj, ans)) cls += " answered";
+          else if (ans && !isAnswerCorrectForQ(qObj, ans)) cls += " wrong-review";
         } else {
           if (rev) cls += " review";
           else if (ans) cls += " answered";
@@ -1848,11 +2037,20 @@
       const globalNum = state.questionIds.indexOf(q.id) + 1;
       const lang = profile.language_pref || "bilingual";
 
+      const statusBadgeHtml = q.answerStatus === "dropped"
+        ? `<span class="badge" style="background:#fef3c7;color:#92400e;border-color:#fde68a;">NTA DROPPED (+4 TO ALL)</span>`
+        : (q.answerStatus === "multiple" && Array.isArray(q.acceptedOptions)
+          ? `<span class="badge" style="background:#e0e7ff;color:#1e40af;border-color:#c7d2fe;">NTA MULTI-KEY (${escapeHtml(q.acceptedOptions.join(" / "))})</span>`
+          : (q.answerStatus === "sc_landmark"
+            ? `<span class="badge" style="background:#fce7f3;color:#9d174d;border-color:#fbcfe8;">SUPREME COURT LANDMARK</span>`
+            : ""));
+
       document.getElementById("q-badges").innerHTML = `
         <span class="badge" style="background:var(--navy);color:#fff;border-color:var(--navy);">Q.${globalNum}/${state.questionIds.length}</span>
         <span class="badge badge-subj">${escapeHtml(q.subject)}</span>
         <span class="badge">${escapeHtml(q.classLevel)} — ${escapeHtml(q.chapter)}</span>
         <span class="badge badge-pyq">${escapeHtml(q.pyqTag)}</span>
+        ${statusBadgeHtml}
       `;
 
       const stemEnEl = document.getElementById("q-stem-en");
@@ -1889,11 +2087,15 @@
       document.getElementById("mark-review-btn").textContent =
         state.markedReview[q.id] ? "Unmark" : "Review";
 
+      const acceptedList = (Array.isArray(q.acceptedOptions) && q.acceptedOptions.length > 0)
+        ? q.acceptedOptions
+        : [q.correct];
+
       document.getElementById("choices-container").innerHTML = q.choices.map(c => {
         let rowCls = "choice-row";
         if (showSolution) {
-          if (c.letter === q.correct) rowCls += " correct-reveal";
-          else if (selected === c.letter && selected !== q.correct) rowCls += " wrong-reveal";
+          if (q.answerStatus === "dropped" || acceptedList.includes(c.letter)) rowCls += " correct-reveal";
+          else if (selected === c.letter && !acceptedList.includes(selected)) rowCls += " wrong-reveal";
         } else if (selected === c.letter) {
           rowCls += " selected";
         }
@@ -1915,8 +2117,15 @@
       const solPanel = document.getElementById("solution-panel");
       if (showSolution) {
         let statusTag = "Unattempted (0 Marks)";
-        if (selected === q.correct) statusTag = `Correct Bubble ${selected} (+4 Marks)`;
-        else if (selected) statusTag = `Incorrect Bubble ${selected} (-1 Mark) — Correct: ${q.correct}`;
+        if (q.answerStatus === "dropped") {
+          statusTag = "NTA Dropped Question (+4 Bonus Marks Awarded to All Candidates)";
+        } else if (selected && acceptedList.includes(selected)) {
+          statusTag = acceptedList.length > 1
+            ? `Correct Bubble ${selected} (+4 Marks — NTA Accepted: ${acceptedList.join(" or ")})`
+            : `Correct Bubble ${selected} (+4 Marks)`;
+        } else if (selected) {
+          statusTag = `Incorrect Bubble ${selected} (-1 Mark) — Official Key: ${acceptedList.join(" / ")}`;
+        }
 
         const trapRows = Object.entries(q.trap_breakdown || {}).map(
           ([opt, txt]) => `<div><strong>Option ${escapeHtml(opt)}:</strong> ${renderInlineRich(txt)}</div>`
@@ -1978,7 +2187,7 @@
       const q = getCurrentQ();
       if (!q) return;
       state.revealedPractice[q.id] = true;
-      if (state.answers[q.id] && state.answers[q.id] !== q.correct) addMistakeIds([q.id]);
+      if (state.answers[q.id] && !isAnswerCorrectForQ(q, state.answers[q.id])) addMistakeIds([q.id]);
       saveSession();
       renderCurrentQuestion();
     }
@@ -2062,9 +2271,15 @@
         sb[q.subject].total += 1;
         sb[q.subject].max_score += 4;
         const ch = payload.answers[qid];
-        if (!ch) { unans += 1; sb[q.subject].unanswered += 1; }
-        else if (ch === q.correct) { correct += 1; sb[q.subject].correct += 1; sb[q.subject].score += 4; }
-        else { wrong += 1; wrongIds.push(qid); sb[q.subject].wrong += 1; sb[q.subject].score -= 1; }
+        if (q.answerStatus === "dropped") {
+          correct += 1; sb[q.subject].correct += 1; sb[q.subject].score += 4;
+        } else if (!ch) {
+          unans += 1; sb[q.subject].unanswered += 1;
+        } else if (isAnswerCorrectForQ(q, ch)) {
+          correct += 1; sb[q.subject].correct += 1; sb[q.subject].score += 4;
+        } else {
+          wrong += 1; wrongIds.push(qid); sb[q.subject].wrong += 1; sb[q.subject].score -= 1;
+        }
       });
       const total = payload.question_ids.length;
       const raw = correct * 4 - wrong;
@@ -2605,19 +2820,172 @@ Student Question: ${studentMsg}`;
       }
     }
 
+    /* PAST PAPERS ARCHIVE HUB (2013-2026) */
+    let currentPyqPaperFilter = "all";
+
+    function renderPyqArchiveHub() {
+      const meta = PYQ_ARCHIVE.metadata || {};
+      const analytics = PYQ_ARCHIVE.analytics || {};
+      const kpiWrap = document.getElementById("pyq-overview-kpis");
+      if (!kpiWrap) return;
+
+      const totalPyq = meta.totalQuestions || (PYQ_ARCHIVE.questions || []).length;
+      const totalPapers = meta.totalPapers || 24;
+      const subjCounts = meta.subjectCounts || analytics.subjectTotals || {};
+
+      kpiWrap.innerHTML = `
+        <div class="kpi-card">
+          <div class="kpi-label">Official Past Questions</div>
+          <div class="kpi-value" style="color:var(--primary);">${totalPyq.toLocaleString()}</div>
+          <div class="kpi-note">${totalPapers} Official Exam Booklets (2013–2026)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Biology PYQs (Bot + Zoo)</div>
+          <div class="kpi-value">${((subjCounts.Botany || 0) + (subjCounts.Zoology || 0)).toLocaleString()}</div>
+          <div class="kpi-note">Botany: ${subjCounts.Botany || 0} • Zoology: ${subjCounts.Zoology || 0}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Physics &amp; Chemistry PYQs</div>
+          <div class="kpi-value">${((subjCounts.Physics || 0) + (subjCounts.Chemistry || 0)).toLocaleString()}</div>
+          <div class="kpi-note">Physics: ${subjCounts.Physics || 0} • Chemistry: ${subjCounts.Chemistry || 0}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Official NTA தமிழ் PYQs</div>
+          <div class="kpi-value" style="color:var(--amber);">${meta.tamilBookletQuestions || 651}</div>
+          <div class="kpi-note">2018–2021 Bilingual NTA Booklets</div>
+        </div>
+      `;
+
+      const sprintWrap = document.getElementById("pyq-sprint-cards");
+      if (sprintWrap) {
+        const sprintIds = [
+          "pyq_controversial_2024_2026",
+          "pyq_sprint_botany",
+          "pyq_sprint_zoology",
+          "pyq_sprint_chemistry",
+          "pyq_sprint_physics"
+        ];
+        sprintWrap.innerHTML = sprintIds.map(id => {
+          const m = BANK.modules[id];
+          if (!m) return "";
+          const badge = id === "pyq_controversial_2024_2026"
+            ? "NTA BONUS / MULTI-KEY / SUPREME COURT"
+            : `14-YEAR ${escapeHtml((m.targetSubject || "").toUpperCase())} PYQ POOL`;
+          return `
+            <div class="resource-item" style="display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="font-size:10.5px;font-weight:800;color:var(--primary);margin-bottom:4px;">${badge}</div>
+                <h4>${escapeHtml(m.title)}</h4>
+                <p style="margin-bottom:10px;">${escapeHtml(m.description || "")}</p>
+              </div>
+              <button class="btn-primary" style="width:100%;font-size:12px;" onclick="loadSelectedModule('${escapeHtml(m.id)}'); switchMobilePane('question');">Start Practice Sprint &rarr;</button>
+            </div>
+          `;
+        }).join("");
+      }
+
+      filterPyqPaperCards(currentPyqPaperFilter);
+
+      const yearTbody = document.getElementById("pyq-year-format-tbody");
+      if (yearTbody && analytics.questionTypeByYear) {
+        const years = Object.keys(analytics.questionTypeByYear).sort((a, b) => Number(b) - Number(a));
+        yearTbody.innerHTML = years.map(yr => {
+          const r = analytics.questionTypeByYear[yr] || {};
+          const qt = r.counts || {};
+          const paperId = yr === "2026" ? "pyq_reneet_2026" : (yr === "2022" ? "pyq_2022_p1" : (yr === "2016" ? "pyq_2016_p1" : (yr === "2015" ? "pyq_2015_retest" : `pyq_${yr}`)));
+          return `
+            <tr>
+              <td><a href="javascript:void(0)" style="color:var(--primary);font-weight:700;text-decoration:none;" onclick="loadSelectedModule('${escapeHtml(paperId)}'); switchMobilePane('question');">NEET ${escapeHtml(yr)}</a></td>
+              <td><strong>${r.total || 0}</strong></td>
+              <td>${qt["Direct NCERT Concept"] || qt["Direct Concept"] || 0}</td>
+              <td>${qt["Numerical / Formula"] || 0}</td>
+              <td><strong>${qt["Match List-I & II"] || 0}</strong></td>
+              <td><strong>${qt["Statement I & II"] || 0}</strong></td>
+              <td><strong>${qt["Assertion-Reason"] || 0}</strong></td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      const chapWrap = document.getElementById("pyq-top-chapters-wrap");
+      if (chapWrap && analytics.topChaptersBySubject) {
+        chapWrap.innerHTML = ["Botany", "Zoology", "Chemistry", "Physics"].map(subj => {
+          const list = (analytics.topChaptersBySubject[subj] || []).slice(0, 4);
+          const pills = list.map(item => `<span class="badge" style="margin:2px 4px 2px 0;">${escapeHtml(item.chapter)} (${item.count})</span>`).join("");
+          return `
+            <div style="margin-bottom:10px;">
+              <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:4px;">${subj} Top NCERT Chapters:</div>
+              <div>${pills}</div>
+            </div>
+          `;
+        }).join("");
+      }
+
+      const dossierGrid = document.getElementById("pyq-disputed-dossier-grid");
+      if (dossierGrid && Array.isArray(analytics.disputedQuestionsDossier)) {
+        dossierGrid.innerHTML = analytics.disputedQuestionsDossier.map(d => `
+          <div class="resource-item">
+            <div style="font-size:10.5px;font-weight:800;color:var(--rose);margin-bottom:4px;">${escapeHtml(d.exam)}</div>
+            <h4>${escapeHtml(d.questionRef)}</h4>
+            <p style="margin-bottom:6px;"><strong>Dispute / Issue:</strong> ${escapeHtml(d.issue)}</p>
+            <p style="margin-bottom:6px;"><strong>Official Resolution:</strong> ${escapeHtml(d.resolution)}</p>
+            <div style="font-size:11.5px;color:var(--primary);font-weight:700;">Rule: ${escapeHtml(d.takeaway)}</div>
+          </div>
+        `).join("");
+      }
+    }
+
+    function filterPyqPaperCards(filterKey) {
+      currentPyqPaperFilter = filterKey;
+      ["all", "recent", "ta", "classic"].forEach(k => {
+        const btn = document.getElementById(`pyq-filter-${k}`);
+        if (btn) btn.classList.toggle("active", k === filterKey);
+      });
+      const wrap = document.getElementById("pyq-paper-cards");
+      if (!wrap) return;
+      const papers = Object.values(BANK.modules).filter(m => m.isPastPaper);
+      const filtered = papers.filter(m => {
+        if (filterKey === "recent") return !m.id.endsWith("_ta") && (m.examYear || 0) >= 2020;
+        if (filterKey === "ta") return m.id.endsWith("_ta");
+        if (filterKey === "classic") return !m.id.endsWith("_ta") && (m.examYear || 0) < 2020;
+        return true;
+      });
+      wrap.innerHTML = filtered.map(m => {
+        const qCount = (m.questionIds || []).length;
+        const isTa = m.id.endsWith("_ta");
+        return `
+          <div class="resource-item" style="display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div style="font-size:10.5px;font-weight:800;color:${isTa ? "var(--amber)" : "var(--primary)"};margin-bottom:4px;">
+                ${isTa ? "OFFICIAL NTA தமிழ் + EN BOOKLET" : `OFFICIAL ${m.examYear || ""} EXAM PAPER`} • ${qCount} Qs
+              </div>
+              <h4>${escapeHtml(m.title)}</h4>
+              <p style="margin-bottom:10px;">${escapeHtml(m.description || "")}</p>
+            </div>
+            <button class="btn-outline" style="width:100%;font-size:12px;border-color:var(--primary);color:var(--primary);" onclick="loadSelectedModule('${escapeHtml(m.id)}'); switchMobilePane('question');">Solve Official Paper (${qCount} Qs) &rarr;</button>
+          </div>
+        `;
+      }).join("");
+    }
+
     /* VIEW & MOBILE NAVIGATION */
     function switchView(viewName) {
       document.querySelectorAll(".nav-tab").forEach(b => b.classList.toggle("active", b.dataset.view === viewName));
       document.getElementById("view-workspace").classList.toggle("active", viewName === "workspace");
+      const pyqEl = document.getElementById("view-pyq");
+      if (pyqEl) pyqEl.classList.toggle("active", viewName === "pyq");
       document.getElementById("view-tracker").classList.toggle("active", viewName === "tracker");
       document.getElementById("view-guide").classList.toggle("active", viewName === "guide");
       if (viewName === "tracker") refreshScoreDashboard();
+      if (viewName === "pyq") renderPyqArchiveHub();
     }
 
     function switchMobilePane(target) {
       document.querySelectorAll(".m-nav-btn").forEach(b => b.classList.toggle("active", b.dataset.mnav === target));
       if (target === "tracker") {
         switchView("tracker");
+      } else if (target === "pyq") {
+        switchView("pyq");
       } else if (target === "guide") {
         switchView("guide");
       } else {

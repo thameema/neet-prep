@@ -28,13 +28,21 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "neet_data.db")
 LEDGER_PATH = os.path.join(BASE_DIR, "student_score_ledger.json")
 QUESTIONS_PATH = os.path.join(BASE_DIR, "questions_bank.json")
+PAST_PAPERS_PATH = os.path.join(BASE_DIR, "past_papers_archive.json")
 AGY_BIN = os.environ.get("AGY_BIN", os.path.expanduser("~/.local/bin/agy"))
 
 DB_LOCK = threading.Lock()
 
-# Load verified question bank at startup
+# Load verified question bank + 2013-2026 official past papers archive at startup
 with open(QUESTIONS_PATH, "r", encoding="utf-8") as f:
     QUESTION_BANK = json.load(f)
+
+PAST_PAPERS_ARCHIVE = {}
+if os.path.exists(PAST_PAPERS_PATH):
+    with open(PAST_PAPERS_PATH, "r", encoding="utf-8") as f:
+        PAST_PAPERS_ARCHIVE = json.load(f)
+    QUESTION_BANK.setdefault("modules", {}).update(PAST_PAPERS_ARCHIVE.get("modules", {}))
+    QUESTION_BANK.setdefault("questions", []).extend(PAST_PAPERS_ARCHIVE.get("questions", []))
 
 QUESTIONS_BY_ID = {int(q["id"]): q for q in QUESTION_BANK.get("questions", [])}
 
@@ -215,13 +223,23 @@ def grade_exam_submission(payload: dict) -> dict:
 
         chosen = str(answers.get(str(qid)) or answers.get(qid) or "").strip().upper()
         truth = q["correct"]
+        acc_opts = set(q.get("acceptedOptions") or [truth])
+        ans_status = q.get("answerStatus") or "normal"
 
-        if not chosen:
+        if ans_status == "dropped":
+            # Official NTA Rule: Dropped question awards +4 bonus to all candidates
+            status = "correct"
+            marks = 4
+            correct_count += 1
+            subjects[subj]["attempted"] += 1
+            subjects[subj]["correct"] += 1
+            subjects[subj]["score"] += 4
+        elif not chosen:
             status = "unanswered"
             marks = 0
             unanswered_count += 1
             subjects[subj]["unanswered"] += 1
-        elif chosen == truth:
+        elif chosen in acc_opts:
             status = "correct"
             marks = 4
             correct_count += 1

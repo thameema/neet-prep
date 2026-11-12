@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
-Builds the Official Past NEET-UG Exam Archive & Trend Analytics (2016 - 2026):
-- Ingests verified public NEET-UG PYQ datasets across 11 exam years (2016-2026),
-  including 14 Official English NEET Papers (2016 Phase 1/2 through NEET 2025 & NEET 2026)
-  and 4 Official NTA Tamil Booklet Papers (NEET 2018-2021 தமிழ்).
-- Filters out diagram-dependent or malformed items so 100% of questions are self-contained.
-- Normalizes HTML tables (Match List-I & List-II), subscripts/superscripts, and LaTeX math
-  delimiters ($...$ / $$...$$) for zero-error KaTeX rendering on mobile and desktop.
-- Classifies every question by Subject (Physics, Chemistry, Botany, Zoology), NCERT Class &
-  Chapter, and NTA Question Format (Assertion-Reason, Statement I & II, Match List-I & II,
-  Multi-Statement, Numerical / Formula, Direct NCERT Concept).
-- Outputs:
-  1. data/neet_pyq_sources.json.gz (reproducible compressed raw corpus inside repo)
-  2. past_papers_archive.json (full structured archive + 11-year analytics)
-  3. past_papers_database.js (browser bundle window.NEET_PAST_PAPERS_ARCHIVE)
+Builds the Official Past NEET-UG / Re-NEET / AIPMT Exam Archive & Trend Analytics (2013 - 2026):
+- Ingests verified public NEET-UG & AIPMT PYQ datasets across 14 exam years (2013-2026):
+  1. NEET 2026 Official Paper (Code 11)
+  2. Re-NEET 2026 Official Paper (Code 50)
+  3. NEET 2025 Official Paper (Code 45 — post Section-B removal, 180 compulsory Qs)
+  4. NEET 2024 Official Paper (with NCERT skill/chapter tags + tabular Match-List recovery)
+  5. 16 Official NEET & AIPMT Papers (2013–2023: NEET 2023, 2023 Manipur, 2022 Phase 1 & 2,
+     2021, 2020, 2019, 2018, 2017, 2016 Phase 1 & 2, AIPMT 2015 Re-Exam, AIPMT 2015,
+     AIPMT 2014, NEET 2013, NEET 2013 Karnataka) with step-by-step solutions & NMC flags.
+  6. 4 Official NTA Tamil Medium Booklets (NEET 2018, 2019, 2020, 2021 தமிழ்).
+- Filters out diagram-dependent items so 100% of questions are self-contained.
+- Normalizes double-escaped LaTeX (\\\\( ... \\\\)), LaTeX tabular blocks, HTML tables,
+  and Plain TeX macros (\\buildrel, \\matrix, \\oint_\\limits) for zero-error KaTeX rendering.
+- Outputs compact (<2.5 MB) browser & server bundles:
+  1. data/neet_pyq_sources.json.gz
+  2. past_papers_archive.json
+  3. past_papers_database.js (window.NEET_PAST_PAPERS_ARCHIVE)
 """
 
 import csv
@@ -45,12 +48,11 @@ FIG_EN_RE = re.compile(
 )
 
 FIG_TA_RE = re.compile(
-    r"(படத்தில் காட்டப்பட்டுள்ள|கொடுக்கப்பட்டுள்ள படத்தில்|கீழ்க்காணும் படத்தில்|"
+    r"(படத்தில் காட்டப்பட்டுள்ள|படத்தில் காட்டியவாறு|கொடுக்கப்பட்டுள்ள படத்தில்|கீழ்க்காணும் படத்தில்|"
     r"சுற்றுப் படத்தில்|வரைபடத்தில் காட்டப்பட்டுள்ள|படத்தைக் கவனி|<img\b|<image_)",
     re.IGNORECASE,
 )
 
-# NCERT Botany vs Zoology + Chapter Keyword Taxonomy (Class 11 & Class 12)
 BOTANY_CHAPTER_RULES = [
     ("The Living World", "Class 11", ["binomial nomenclature", "icbn", "taxonomic", "herbarium", "taxon", "systematics", "mangifera"]),
     ("Biological Classification", "Class 11", ["monera", "protista", "fungi", "mycoplasma", "viroid", "prion", "lichen", "dinoflagellate", "diatom", "slime mould", "ascomycetes", "basidiomycetes", "phycomycetes", "deuteromycetes", "archaebacteria", "cyanobacteria"]),
@@ -160,6 +162,43 @@ def slug_to_title(slug: str) -> str:
     return " ".join(out)
 
 
+def unescape_double_latex(raw: str) -> str:
+    """Fixes double-escaped LaTeX from dipika_en / dipika_ta where \\\\( and \\\\frac appear."""
+    if not raw:
+        return ""
+    s = str(raw)
+    if "\\\\(" in s or "\\\\[" in s or "\\\\begin{" in s or "\\\\frac" in s or "\\\\sqrt" in s or "\\\\mathrm" in s:
+        # First convert row breaks \\\\ inside tabular to a placeholder so we don't collapse them prematurely
+        s = s.replace("\\\\\\\\", "@@TABROW@@")
+        # Collapse double backslashes before LaTeX tokens / parens / brackets / symbols
+        s = re.sub(r"\\\\([()\[\]A-Za-z{}%~_^])", r"\\\1", s)
+        s = s.replace("@@TABROW@@", "\\\\")
+    return s
+
+
+def convert_latex_tabular(text: str) -> str:
+    """Converts \\begin{tabular}{...} ... \\end{tabular} (outside math) into clean readable lines."""
+    def repl_tab(match):
+        body = match.group(1)
+        body = re.sub(r"\\hline", "", body)
+        rows = re.split(r"\\\\", body)
+        lines = []
+        for r in rows:
+            cells = [c.strip() for c in r.split("&")]
+            cells = [c for c in cells if c]
+            if not cells:
+                continue
+            if len(cells) == 2 and "list" in cells[0].lower() and "list" in cells[1].lower():
+                lines.append(f"{cells[0]}  |  {cells[1]}")
+            elif len(cells) == 4:
+                lines.append(f"{cells[0]} {cells[1]}  —  {cells[2]} {cells[3]}")
+            else:
+                lines.append("  |  ".join(cells))
+        return "\n" + "\n".join(lines) + "\n"
+
+    return re.sub(r"\\begin\{tabular\}\s*\{[^{}]*\}([\s\S]*?)\\end\{tabular\}", repl_tab, text)
+
+
 def convert_html_tables(text: str) -> str:
     """Converts HTML <table> blocks (Match List-I with List-II) into clean readable multi-line text."""
     def repl_table(match):
@@ -191,27 +230,21 @@ def convert_html_tables(text: str) -> str:
 def html_to_clean_text(raw: str) -> str:
     if not raw:
         return ""
-    s = str(raw)
-    # Remove <style>...</style>
+    s = unescape_double_latex(raw)
+    if "\\begin{tabular}" in s:
+        s = convert_latex_tabular(s)
     s = re.sub(r"<style[^>]*>[\s\S]*?</style>", "", s, flags=re.IGNORECASE)
-    # Remove optional <img ...> tags (e.g. inside explanations)
     s = re.sub(r"<img[^>]*>", "", s, flags=re.IGNORECASE)
-    # Convert tables
     if "<table" in s.lower():
         s = convert_html_tables(s)
-    # Convert sub/sup outside math to clean notation
     s = re.sub(r"<sub[^>]*>\s*([^{}<>]+?)\s*</sub>", lambda m: f"_{m.group(1).strip()}" if len(m.group(1).strip()) == 1 else m.group(1).strip(), s, flags=re.IGNORECASE)
     s = re.sub(r"<sup[^>]*>\s*([^{}<>]+?)\s*</sup>", lambda m: f"^{m.group(1).strip()}", s, flags=re.IGNORECASE)
-    # Block/line tags
     s = re.sub(r"<br\s*/?>", "\n", s, flags=re.IGNORECASE)
     s = re.sub(r"</(p|div|li|tr|h\d)>", "\n", s, flags=re.IGNORECASE)
     s = re.sub(r"<li[^>]*>", "• ", s, flags=re.IGNORECASE)
-    # Bold / italic
     s = re.sub(r"<(b|strong)[^>]*>([\s\S]*?)</\1>", r"**\2**", s, flags=re.IGNORECASE)
-    # Strip remaining tags
     s = re.sub(r"<[^>]+>", "", s)
     s = html.unescape(s)
-    # Normalize non-breaking spaces and excessive blank lines
     s = s.replace("\u00a0", " ").replace("\r\n", "\n").replace("\r", "\n")
     s = re.sub(r"[ \t]+", " ", s)
     s = re.sub(r"\n[ \t]+", "\n", s)
@@ -219,61 +252,123 @@ def html_to_clean_text(raw: str) -> str:
     return s.strip()
 
 
-RAW_LATEX_START_RE = re.compile(r"^\\(frac|sqrt|vec|mathrm|text|left|Delta|alpha|beta|gamma|theta|lambda|mu|pi|rho|sigma|omega|Omega|varepsilon|epsilon)\b")
+RAW_LATEX_START_RE = re.compile(
+    r"^\\(frac|sqrt|vec|mathrm|text|left|Delta|alpha|beta|gamma|theta|lambda|mu|pi|rho|sigma|omega|Omega|varepsilon|epsilon|underline|overline)\b"
+)
+
+
+def convert_plain_tex_macros(tex: str) -> str:
+    """Converts legacy Plain TeX macros found in jeeneetards (\\buildrel, \\matrix, \\oint_\\limits) to standard KaTeX."""
+    t = tex
+    # 1. \oint_\limits{...} -> \oint\limits_{...} (and \int_\limits)
+    t = re.sub(r"\\(oint|int)_\\limits", r"\\\1\\limits_", t)
+
+    # 2. \buildrel {...} \over \longrightarrow (or \rightarrow / \to / \rightleftharpoons)
+    t = re.sub(
+        r"\\buildrel\s*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}\s*\\over\s*\\(longrightarrow|rightarrow|to)\b",
+        r"\\xrightarrow{\1}",
+        t,
+    )
+    t = re.sub(
+        r"\\buildrel\s*([^\s{}]+)\s*\\over\s*\\(longrightarrow|rightarrow|to)\b",
+        r"\\xrightarrow{\1}",
+        t,
+    )
+    t = re.sub(
+        r"\\buildrel\s*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}\s*\\over\s*\\(rightleftharpoons|leftharpoons)\b",
+        r"\\overset{\1}{\\\2}",
+        t,
+    )
+    t = re.sub(
+        r"\\buildrel\s*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}\s*\\over\s*([^\s{}]+)",
+        r"\\overset{\1}{\2}",
+        t,
+    )
+    # Remaining bare \buildrel
+    t = t.replace("\\buildrel", "")
+
+    # 3. Plain TeX \matrix{ a & b \cr c & d } -> \begin{matrix} a & b \\ c & d \end{matrix}
+    while "\\matrix{" in t:
+        idx = t.find("\\matrix{")
+        start_brace = idx + len("\\matrix")
+        depth = 0
+        end_brace = -1
+        for pos in range(start_brace, len(t)):
+            if t[pos] == "{" and (pos == 0 or t[pos - 1] != "\\"):
+                depth += 1
+            elif t[pos] == "}" and (pos == 0 or t[pos - 1] != "\\"):
+                depth -= 1
+                if depth == 0:
+                    end_brace = pos
+                    break
+        if end_brace == -1:
+            t = t.replace("\\matrix{", "\\begin{matrix}", 1) + "\\end{matrix}"
+            break
+        inner = t[start_brace + 1 : end_brace]
+        inner = re.sub(r"\\cr\b", r"\\\\", inner)
+        t = t[:idx] + "\\begin{matrix}" + inner + "\\end{matrix}" + t[end_brace + 1 :]
+
+    t = re.sub(r"\\cr\b", r"\\\\", t)
+    return t
 
 
 def sanitize_tex_inner(tex: str) -> str:
     t = tex.strip()
-    # Escape unescaped % inside math
+    t = convert_plain_tex_macros(t)
     t = re.sub(r"(?<!\\)%", r"\\%", t)
-    # Replace unsupported/OCR LaTeX quirks
-    t = t.replace("\\cfrac", "\\frac")
-    t = t.replace("\\dfrac", "\\frac")
-    t = t.replace("\\tfrac", "\\frac")
+    t = t.replace("\\cfrac", "\\frac").replace("\\dfrac", "\\frac").replace("\\tfrac", "\\frac")
     t = re.sub(r"\\mbox\s*\{", r"\\text{", t)
     t = re.sub(r"\\rm\b\s*", "", t)
     t = re.sub(r"\\bf\b\s*", "", t)
     t = re.sub(r"\\cal\b\s*", "", t)
-    # Balance braces if minor OCR mismatch
+    # Fix empty denominator OCR glitch like \frac{\sqrt{hG}}{} -> \sqrt{hG}
+    t = re.sub(r"\\frac\s*\{\s*([^{}]+?)\s*\}\s*\{\s*\}", r"\1", t)
+    # Fix unmatched \left or \right counts by converting bare \left( / \right) when unbalanced
+    left_cnt = len(re.findall(r"\\left\b", t))
+    right_cnt = len(re.findall(r"\\right\b", t))
+    if left_cnt != right_cnt:
+        t = re.sub(r"\\left\s*([(\[\{|.])", lambda m: "" if m.group(1) == "." else m.group(1), t)
+        t = re.sub(r"\\right\s*([)\]\}|.])", lambda m: "" if m.group(1) == "." else m.group(1), t)
+    # Fix trailing dangling _ or ^ before end of math
+    t = re.sub(r"[_^]\s*$", "", t)
+    # Balance braces
     clean_b = re.sub(r"\\[{}]", "", t)
     opens = clean_b.count("{")
     closes = clean_b.count("}")
     if opens > closes:
         t = t + ("}" * (opens - closes))
     elif closes > opens:
-        # Strip trailing extra } if present
         while closes > opens and t.endswith("}") and not t.endswith("\\}"):
             t = t[:-1]
             closes -= 1
-    return t
+    return t.strip()
 
 
 def normalize_math_text(raw_str: str, strip_opt_prefix: bool = False) -> str:
     s = html_to_clean_text(raw_str)
     if strip_opt_prefix:
-        # Strip leading "(1) ", "(2) ", "(A) ", "1. " only when it's an option label prefix
         s = re.sub(r"^\([1-4A-D]\)\s+", "", s)
 
     # Convert \( ... \) -> $...$ and \[ ... \] -> $$...$$
     s = re.sub(r"\\\(\s*([\s\S]+?)\s*\\\)", lambda m: f"${sanitize_tex_inner(m.group(1)).replace(chr(10), ' ')}$", s)
     s = re.sub(r"\\\[\s*([\s\S]+?)\s*\\\]", lambda m: f"$${sanitize_tex_inner(m.group(1))}$$", s)
 
-    # Convert inline $$...$$ (single line, <= 90 chars, or mid-sentence) into $...$ so inline math doesn't break lines
     def fix_dd(m):
         inner = sanitize_tex_inner(m.group(1))
-        if "\n" not in inner and len(inner) <= 95:
-            return f"${inner.strip()}$"
+        if not inner:
+            return ""
+        if "\n" not in inner and len(inner) <= 95 and "\\begin{" not in inner:
+            return f"${inner}$"
         return f"$${inner}$$"
 
     s = re.sub(r"\$\$([\s\S]+?)\$\$", fix_dd, s)
 
-    # Sanitize existing $...$ blocks
     def fix_sd(m):
         inner = sanitize_tex_inner(m.group(1))
         return f"${inner}$" if inner else ""
 
-    # Temporarily mask $$...$$ before fixing single $...$
     dd_blocks = []
+
     def mask_dd(m):
         dd_blocks.append(m.group(0))
         return f"@@DDBLK_{len(dd_blocks)-1}@@"
@@ -281,13 +376,10 @@ def normalize_math_text(raw_str: str, strip_opt_prefix: bool = False) -> str:
     s_masked = re.sub(r"\$\$[\s\S]+?\$\$", mask_dd, s)
     s_masked = re.sub(r"(?<!\\)\$([^$\n]+?)(?<!\\)\$", fix_sd, s_masked)
 
-    # Check if there is a stray unmatched single $ left over; if so, escape it
     if len(re.findall(r"(?<!\\)\$", s_masked)) % 2 == 1:
-        # Escape all unmated single $ in lines with odd count
         fixed_lines = []
         for ln in s_masked.split("\n"):
             if len(re.findall(r"(?<!\\)\$", ln)) % 2 == 1:
-                # Find last unescaped $ and escape or remove if currency
                 ln = re.sub(r"(?<!\\)\$(?![^$]*\$)", "", ln, count=1)
             fixed_lines.append(ln)
         s_masked = "\n".join(fixed_lines)
@@ -296,7 +388,6 @@ def normalize_math_text(raw_str: str, strip_opt_prefix: bool = False) -> str:
         s_masked = s_masked.replace(f"@@DDBLK_{idx}@@", blk)
 
     s = s_masked.strip()
-    # If an entire option string is raw unwrapped LaTeX (e.g. "\frac{3}{2}"), wrap it in $...$!
     if "$" not in s and "\n" not in s and RAW_LATEX_START_RE.search(s):
         s = f"${sanitize_tex_inner(s)}$"
 
@@ -305,16 +396,13 @@ def normalize_math_text(raw_str: str, strip_opt_prefix: bool = False) -> str:
 
 def classify_biology_sub_and_chapter(text_blob: str, existing_chapter: str = "", existing_group: str = ""):
     blob = (text_blob + " " + existing_chapter).lower()
+    subj = None
     if existing_group:
         eg = existing_group.lower()
         if "botany" in eg:
             subj = "Botany"
         elif "zoology" in eg:
             subj = "Zoology"
-        else:
-            subj = None
-    else:
-        subj = None
 
     best_bot = ("Biology — NCERT Core", "Class 12", 0)
     for ch, cls, kws in BOTANY_CHAPTER_RULES:
@@ -343,13 +431,12 @@ def classify_biology_sub_and_chapter(text_blob: str, existing_chapter: str = "",
 
     if best_bot[2] > best_zoo[2]:
         return "Botany", (existing_chapter or best_bot[0]), best_bot[1]
-    elif best_zoo[2] > best_bot[2]:
+    if best_zoo[2] > best_bot[2]:
         return "Zoology", (existing_chapter or best_zoo[0]), best_zoo[1]
-    else:
-        # Tie-breaker using plant vs animal words
-        if any(w in blob for w in ["plant", "flower", "leaf", "root", "stem", "seed", "pollen", "photosynthe", "gene", "dna", "ecosystem", "תאவர", "மகரந்த", "வேர்", "இலை", "மரபு"]):
-            return "Botany", (existing_chapter or "Plant Biology & Genetics"), "Class 12"
-        return "Zoology", (existing_chapter or "Animal & Human Biology"), "Class 12"
+
+    if any(w in blob for w in ["plant", "flower", "leaf", "root", "stem", "seed", "pollen", "photosynthe", "gene", "dna", "ecosystem", "தாவர", "மகரந்த", "வேர்", "இலை", "மரபு"]):
+        return "Botany", (existing_chapter or "Plant Biology & Genetics"), "Class 12"
+    return "Zoology", (existing_chapter or "Animal & Human Biology"), "Class 12"
 
 
 def classify_pc_chapter(subject: str, text_blob: str, existing_chapter: str = ""):
@@ -368,7 +455,7 @@ def classify_pc_chapter(subject: str, text_blob: str, existing_chapter: str = ""
 
 def classify_question_pattern(stem: str, choices_text: str, subject: str) -> str:
     combined = (stem + " " + choices_text).lower()
-    if "assertion" in combined and "reason" in combined or ("கூற்று" in combined and "காரணம்" in combined):
+    if ("assertion" in combined and "reason" in combined) or ("கூற்று" in combined and "காரணம்" in combined):
         return "Assertion-Reason"
     if ("statement i" in combined and "statement ii" in combined) or ("statement - i" in combined) or ("statement-i" in combined) or ("கூற்று i" in combined and "கூற்று ii" in combined):
         return "Statement I & II"
@@ -385,7 +472,7 @@ def ensure_raw_gz():
     """Creates data/neet_pyq_sources.json.gz from scratch raw datasets if scratch exists."""
     os.makedirs(DATA_DIR, exist_ok=True)
     if os.path.exists(SCRATCH_RAW) and os.path.exists(os.path.join(SCRATCH_RAW, "dipika_en.json")):
-        print("Packing raw PYQ datasets into data/neet_pyq_sources.json.gz ...")
+        print("Packing raw PYQ datasets (2013-2026 + Re-NEET 2026 + Tamil) into data/neet_pyq_sources.json.gz ...")
         je_files = {}
         for fp in sorted(glob.glob(os.path.join(SCRATCH_RAW, "jeeneetards", "*.json"))):
             je_files[os.path.basename(fp)] = json.load(open(fp, encoding="utf-8"))
@@ -396,6 +483,7 @@ def ensure_raw_gz():
             "csv_2016_2024": list(csv.DictReader(open(os.path.join(SCRATCH_RAW, "neet_2016_2024.csv"), encoding="utf-8"))),
             "neet2025_code45": json.load(open(os.path.join(SCRATCH_RAW, "neet2025-code45.json"), encoding="utf-8")),
             "neet2026_code11": json.load(open(os.path.join(SCRATCH_RAW, "neet2026-code11.json"), encoding="utf-8")),
+            "reneet2026_code50": json.load(open(os.path.join(SCRATCH_RAW, "reneet2026-code50.json"), encoding="utf-8")),
         }
         with gzip.open(RAW_GZ_PATH, "wt", encoding="utf-8") as gz:
             json.dump(bundle, gz, ensure_ascii=False)
@@ -409,7 +497,7 @@ def ensure_raw_gz():
     raise FileNotFoundError(f"Neither {SCRATCH_RAW} nor {RAW_GZ_PATH} found!")
 
 
-def build_question_record(
+def build_compact_question_record(
     qid: int,
     year: int,
     paper_id: str,
@@ -418,51 +506,46 @@ def build_question_record(
     subject: str,
     chapter: str,
     class_level: str,
-    stem_en: str,
-    stem_ta: str,
-    opts_en: list,
-    opts_ta: list,
+    primary_stem: str,
+    opts_list: list,
     correct_letter: str,
     explanation_en: str,
     explanation_ta: str,
     ncert_ref: str,
     is_out_of_syllabus: bool = False,
 ) -> dict:
-    q_type = classify_question_pattern(
-        stem_en + " " + stem_ta,
-        " ".join(opts_en) + " " + " ".join(opts_ta),
-        subject,
-    )
-    pyq_tag = f"NEET {year} Official" + (" (தமிழ் Booklet)" if language == "ta" else "")
-    if "Manipur" in paper_title:
+    q_type = classify_question_pattern(primary_stem, " ".join(opts_list), subject)
+    if "Re-NEET" in paper_title:
+        pyq_tag = f"Re-NEET {year} Official"
+    elif "AIPMT" in paper_title:
+        pyq_tag = f"AIPMT {year} Official"
+    elif "Manipur" in paper_title:
         pyq_tag = f"NEET {year} (Manipur)"
+    elif "Karnataka" in paper_title:
+        pyq_tag = f"NEET {year} (Karnataka)"
     elif "Phase 2" in paper_title:
         pyq_tag = f"NEET {year} (Phase 2)"
     elif "Phase 1" in paper_title and year in (2016, 2022):
         pyq_tag = f"NEET {year} (Phase 1)"
+    elif language == "ta":
+        pyq_tag = f"NEET {year} (தமிழ் Booklet)"
+    else:
+        pyq_tag = f"NEET {year} Official"
 
-    choices = []
-    for i, ltr in enumerate(LETTERS):
-        choices.append({
-            "letter": ltr,
-            "text_en": opts_en[i],
-            "text_ta": opts_ta[i],
-        })
+    choices = [
+        {"letter": ltr, "text_en": opts_list[i], "text_ta": opts_list[i]}
+        for i, ltr in enumerate(LETTERS)
+    ]
 
     corr_idx = LETTERS.index(correct_letter)
-    corr_text = opts_ta[corr_idx] if language == "ta" else opts_en[corr_idx]
+    corr_text = opts_list[corr_idx]
 
     if not explanation_en:
-        explanation_en = f"Official NTA NEET {year} Answer Key: **Option {correct_letter}** ({corr_text}). Revise {chapter} in NCERT {class_level}."
+        explanation_en = f"Official NTA Answer Key: **Option {correct_letter}** ({corr_text}). NCERT {class_level} — {chapter}."
     if not explanation_ta:
-        explanation_ta = f"அதிகாரப்பூர்வ NTA NEET {year} விடைக்குறிப்பு: **விருப்பம் {correct_letter}** ({opts_ta[corr_idx]}). பாடம்: {chapter} ({ncert_ref})."
+        explanation_ta = f"அதிகாரப்பூர்வ NTA விடைக்குறிப்பு: **விருப்பம் {correct_letter}** ({corr_text}). பாடம்: {chapter}."
 
-    trap_breakdown = {}
-    for i, ltr in enumerate(LETTERS):
-        if ltr != correct_letter:
-            trap_breakdown[ltr] = f"Eliminate Option {ltr} — does not match the official NTA NEET {year} key (Option {correct_letter}) for {chapter}."
-
-    return {
+    rec = {
         "id": qid,
         "examYear": year,
         "paperId": paper_id,
@@ -475,15 +558,91 @@ def build_question_record(
         "isOutOfSyllabus": bool(is_out_of_syllabus),
         "ncertRef": ncert_ref,
         "pyqTag": pyq_tag,
-        "stem_en": stem_en,
-        "stem_ta": stem_ta,
+        "stem_en": f"[{pyq_tag} — {subject}] {primary_stem}" if language == "ta" else primary_stem,
+        "stem_ta": primary_stem if language == "ta" else f"[{pyq_tag} — {subject}: {chapter}] (ஆங்கில மூல வினா மேலே / கீழே உள்ளது)",
         "choices": choices,
         "correct": correct_letter,
         "explanation_en": explanation_en,
         "explanation_ta": explanation_ta,
-        "ncert_key_point": f"[{pyq_tag} • {q_type}] Official Answer: Option {correct_letter} — {chapter} ({class_level}).",
-        "trap_breakdown": trap_breakdown,
+        "ncert_key_point": f"[{pyq_tag} • {q_type}] Official Key: Option {correct_letter} — {chapter} ({class_level}).",
+        "trap_breakdown": {},
     }
+    return rec
+
+
+UNOFFICIAL_COMMUNITY_INSIGHTS = {
+    "patternShifts": [
+        {
+            "era": "2013–2019 (CBSE / Early NTA Era)",
+            "format": "180 Compulsory Qs • 180 Mins",
+            "summary": "84%–89% single-line direct NCERT fact & formula MCQs; near-zero Statement I/II or Assertion-Reason traps.",
+        },
+        {
+            "era": "2020–2024 (COVID Section-B Era & Score Inflation)",
+            "format": "200 Qs (180 Attempted, Optional Sec-B) • 200 Mins",
+            "summary": "Optional Section B cushioned tough numericals, driving massive top-score bunching in 2024 (67+ candidates at 720/720) while NTA surged Match-List, Statement I/II, and Assertion-Reason questions to ~25% of the paper.",
+        },
+        {
+            "era": "2025–2026 (Section-B Removed • Strict 180-in-180 Era)",
+            "format": "180 Compulsory Qs (45P + 45C + 90B) • 180 Mins",
+            "summary": "NTA removed Section B and the extra 20 minutes. NEET 2025 shocked aspirants (r/MEDICOreTARDS consensus) with lengthy multi-concept Physics numericals and dense multi-statement Biology under a strict 1-minute-per-question clock.",
+        },
+    ],
+    "controversiesAndLessons": [
+        {
+            "title": "NEET 2024 Physics 'Atoms' Controversy (Supreme Court & IIT Delhi Verdict)",
+            "detail": "Statement I ('Atoms are electrically neutral...') vs Statement II ('Atoms of each element are stable and emit their characteristic spectrum'). Over 4.2 lakh students marked 'Both True' based on older pre-rationalized NCERT printings. The Supreme Court appointed a 3-professor IIT Delhi panel, which ruled ONLY 'Statement I correct, Statement II incorrect' is valid (radioactive elements are unstable) — proving NEW rationalized NCERT editions strictly govern NTA keys.",
+        },
+        {
+            "title": "NEET 2025 Section-B Removal & Physics Time-Crunch Trap",
+            "detail": "With optional Section B gone, getting stuck for 4–5 minutes on 3 lengthy Physics integration/mechanics problems starved students of OMR bubbling time in Biology. Toppers enforce a hard 40–45 min Biology, 45–50 min Chemistry, 65–70 min Physics ceiling + 15 min OMR buffer.",
+        },
+        {
+            "title": "Old vs. New NMC Rationalized Syllabus Boundary",
+            "detail": "Topics like p-Block compounds, States of Matter, s-Block, Transport in Plants, Mineral Nutrition, and Digestion were pruned in NMC rationalization, yet experimental skills (Vernier calliper, Screw gauge, Salt analysis, Lassaigne/Kjeldahl organic tests) and Plant Families (Malvaceae, Cruciferae, Compositae, Gramineae) saw sharp weightage spikes.",
+        },
+    ],
+    "coachingAndRedditMeta": [
+        {
+            "source": "Aakash CST (Complete Syllabus Tests) & Intensive Batch",
+            "verdict": "Ranked #1 on r/MEDICOreTARDS & r/JEENEETards for Biology NCERT line-twisting and exact NTA statement/Assertion-Reason phrasing.",
+        },
+        {
+            "source": "Allen Major / Achiever Test Series",
+            "verdict": "Deliberately 15–20% tougher in Physics & Physical Chemistry than typical NEET — gold standard for surviving a 2025-style tough Physics paper without panicking.",
+        },
+        {
+            "source": "NCERT Exemplar + Back Exercises (Physics & Chemistry)",
+            "verdict": "NTA directly lifts Physical/Inorganic Chemistry graphs, assertion statements, and Physics conceptual traps verbatim from NCERT Exemplar and Intext Solved Examples.",
+        },
+        {
+            "source": "New Light Institute Biology & PW Rankers / MIP",
+            "verdict": "Popular among droppers via community Telegram PDFs for high-volume Biology statement-based drilling (100% NCERT line-by-line).",
+        },
+    ],
+    "tamilNaduEcosystem": [
+        {
+            "name": "Biology Simplified Tamil (V. Senthilnathan)",
+            "focus": "NCERT Biology line-by-line in Tamil + English, Thannambikkai rapid revision, and TN DMER 85% State Quota / 7.5% Govt School reservation counselling alerts.",
+            "url": "https://www.youtube.com/@BiologySimplifiedTamil",
+        },
+        {
+            "name": "Open Your Mind With Muruga MP",
+            "focus": "Tamil Nadu's go-to Physics & Numericals channel — derivation shortcuts, PYQ solving in Tamil, and unit/dimension speed tricks.",
+            "url": "https://www.youtube.com/@OpenYourMindWithMurugaMP",
+        },
+        {
+            "name": "PW Tamil Nadu NEET & Xylem NEET Tamil",
+            "focus": "Full-syllabus Tamil One-Shot marathons (Physics, Chemistry, Botany, Zoology), DPP discussions, and pre-exam formula marathons.",
+            "url": "https://www.youtube.com/@PWTamilNaduNEET",
+        },
+        {
+            "name": "Namakkal (Green Park) & Chennai (Velammal) High-Frequency Drill Culture",
+            "focus": "TN's top residential/integrated hubs drill daily 2:00 PM–5:20 PM OMR tests and maintain a strict 'Mistake Notebook' of every -1 negative mark.",
+            "url": "https://tnmedicalselection.net/",
+        },
+    ],
+}
 
 
 def main():
@@ -492,14 +651,13 @@ def main():
     papers_meta = []
     next_id = 10001
 
-    # -------------------------------------------------------------------------
-    # 1. NEET 2026 Official Paper (Code 11) & NEET 2025 Official Paper (Code 45)
-    # -------------------------------------------------------------------------
-    for year, key, p_id, p_title, p_title_ta in [
-        (2026, "neet2026_code11", "pyq_2026", "NEET 2026 Official Exam Paper (Code 11)", "NEET 2026 அதிகாரப்பூர்வ வினாத்தாள் (Code 11)"),
-        (2025, "neet2025_code45", "pyq_2025", "NEET 2025 Official Exam Paper (Code 45)", "NEET 2025 அதிகாரப்பூர்வ வினாத்தாள் (Code 45)"),
+    # 1. NEET 2026 (Code 11), Re-NEET 2026 (Code 50), & NEET 2025 (Code 45)
+    for year, key, p_id, p_title, p_title_ta, code_lbl in [
+        (2026, "neet2026_code11", "pyq_2026", "NEET 2026 Official Exam Paper (Code 11)", "NEET 2026 அதிகாரப்பூர்வ வினாத்தாள் (Code 11)", "Code 11"),
+        (2026, "reneet2026_code50", "pyq_reneet_2026", "Re-NEET 2026 Official Exam Paper (Code 50)", "Re-NEET 2026 அதிகாரப்பூர்வ வினாத்தாள் (Code 50)", "Code 50"),
+        (2025, "neet2025_code45", "pyq_2025", "NEET 2025 Official Exam Paper (Code 45)", "NEET 2025 அதிகாரப்பூர்வ வினாத்தாள் (Code 45)", "Code 45"),
     ]:
-        rows = bundle[key]
+        rows = bundle.get(key) or []
         p_qids = []
         for r in rows:
             if r.get("figure_names"):
@@ -517,9 +675,7 @@ def main():
             if not stem_en or any(not o for o in opts_en):
                 continue
 
-            sol_raw = r.get("solution") or ""
-            if "<image" in sol_raw.lower():
-                sol_raw = re.sub(r"<image_\d+>", "", sol_raw)
+            sol_raw = re.sub(r"<image_\d+>", "", r.get("solution") or "")
             exp_en = normalize_math_text(sol_raw)
 
             raw_subj = (r.get("subject") or "").strip()
@@ -534,8 +690,7 @@ def main():
                 ch_name, cls_lvl = classify_pc_chapter("Chemistry", blob)
 
             corr_ltr = LETTERS[corr_list[0]]
-            stem_ta = f"[NEET {year} அதிகாரப்பூர்வ வினா — {subj}: {ch_name}] {stem_en}"
-            q_rec = build_question_record(
+            q_rec = build_compact_question_record(
                 qid=next_id,
                 year=year,
                 paper_id=p_id,
@@ -544,14 +699,12 @@ def main():
                 subject=subj,
                 chapter=ch_name,
                 class_level=cls_lvl,
-                stem_en=stem_en,
-                stem_ta=stem_ta,
-                opts_en=opts_en,
-                opts_ta=opts_en,
+                primary_stem=stem_en,
+                opts_list=opts_en,
                 correct_letter=corr_ltr,
                 explanation_en=exp_en,
                 explanation_ta="",
-                ncert_ref=f"NCERT {cls_lvl} {subj} — {ch_name} (NEET {year} Code {'11' if year == 2026 else '45'}, Q.{r.get('question_number')})",
+                ncert_ref=f"NCERT {cls_lvl} {subj} — {ch_name} ({code_lbl}, Q.{r.get('question_number')})",
             )
             all_pyqs.append(q_rec)
             p_qids.append(next_id)
@@ -566,14 +719,12 @@ def main():
             "questionIds": p_qids,
         })
 
-    # -------------------------------------------------------------------------
-    # 2. NEET 2024 Official Paper (from dipika_en + neet_2016_2024.csv)
-    # -------------------------------------------------------------------------
+    # 2. NEET 2024 Official Paper (from dipika_en + neet_2016_2024.csv, recovering tabular Match-List Qs!)
     p24_qids = []
     for e, r in zip(bundle["dipika_en"], bundle["csv_2016_2024"]):
         if str(r.get("year")) != "2024":
             continue
-        if e.get("image_information"):
+        if e.get("image_information") and e.get("image_type") != "table":
             continue
         opts_raw = e.get("options") or []
         ans_idx = e.get("answer")
@@ -611,9 +762,8 @@ def main():
             f"**Chapter & Topic:** {ch_name}" + (f" — {csv_topic}" if csv_topic else "") + ".\n"
             + (f"**Analytical Basis ({csv_skill}):** {csv_ev}" if csv_ev else "")
         ).strip()
-        stem_ta = f"[NEET 2024 அதிகாரப்பூர்வ வினா — {subj}: {ch_name}] {stem_en}"
 
-        q_rec = build_question_record(
+        q_rec = build_compact_question_record(
             qid=next_id,
             year=2024,
             paper_id="pyq_2024",
@@ -622,10 +772,8 @@ def main():
             subject=subj,
             chapter=ch_name,
             class_level=cls_lvl,
-            stem_en=stem_en,
-            stem_ta=stem_ta,
-            opts_en=opts_en,
-            opts_ta=opts_en,
+            primary_stem=stem_en,
+            opts_list=opts_en,
             correct_letter=corr_ltr,
             explanation_en=exp_en,
             explanation_ta="",
@@ -644,9 +792,7 @@ def main():
         "questionIds": p24_qids,
     })
 
-    # -------------------------------------------------------------------------
-    # 3. NEET 2023 down to NEET 2016 Official Papers (from jeeneetards with full solutions!)
-    # -------------------------------------------------------------------------
+    # 3. 16 Official NEET & AIPMT Papers from 2023 down to 2013 (with full step-by-step solutions!)
     je_order = [
         ("2023_NEET_2023.json", 2023, "pyq_2023", "NEET 2023 Official Exam Paper", "NEET 2023 அதிகாரப்பூர்வ வினாத்தாள்"),
         ("2023_NEET_2023_Manipur.json", 2023, "pyq_2023_manipur", "NEET 2023 (Manipur) Official Paper", "NEET 2023 (மணிப்பூர்) அதிகாரப்பூர்வ தாள்"),
@@ -659,10 +805,17 @@ def main():
         ("2017_NEET_2017.json", 2017, "pyq_2017", "NEET 2017 Official Exam Paper", "NEET 2017 அதிகாரப்பூர்வ வினாத்தாள்"),
         ("2016_NEET_2016_Phase_1.json", 2016, "pyq_2016_p1", "NEET 2016 Official Exam Paper (Phase 1)", "NEET 2016 அதிகாரப்பூர்வ வினாத்தாள் (Phase 1)"),
         ("2016_NEET_2016_Phase_2.json", 2016, "pyq_2016_p2", "NEET 2016 Official Exam Paper (Phase 2)", "NEET 2016 அதிகாரப்பூர்வ வினாத்தாள் (Phase 2)"),
+        ("2015_AIPMT_2015.json", 2015, "pyq_2015_re", "AIPMT 2015 Official Re-Exam Paper", "AIPMT 2015 அதிகாரப்பூர்வ மறுதேர்வு வினாத்தாள்"),
+        ("2015_AIPMT_2015_Cancelled_Paper.json", 2015, "pyq_2015_may", "AIPMT 2015 Official May Paper", "AIPMT 2015 அதிகாரப்பூர்வ மே மாத வினாத்தாள்"),
+        ("2014_AIPMT_2014.json", 2014, "pyq_2014", "AIPMT 2014 Official Exam Paper", "AIPMT 2014 அதிகாரப்பூர்வ வினாத்தாள்"),
+        ("2013_NEET_2013.json", 2013, "pyq_2013", "NEET 2013 Official Exam Paper", "NEET 2013 அதிகாரப்பூர்வ வினாத்தாள்"),
+        ("2013_NEET_2013_Karnataka.json", 2013, "pyq_2013_ka", "NEET 2013 (Karnataka) Official Paper", "NEET 2013 (கர்நாடகா) அதிகாரப்பூர்வ வினாத்தாள்"),
     ]
 
     for fname, year, p_id, p_title, p_title_ta in je_order:
         sections = bundle["jeeneetards"].get(fname, [])
+        if not sections:
+            continue
         p_qids = []
         for sec in sections:
             for q in sec.get("questions", []):
@@ -679,7 +832,6 @@ def main():
                     continue
 
                 stem_en = normalize_math_text(full_raw)
-                # Ensure options are ordered A, B, C, D
                 opt_by_id = {o.get("identifier"): normalize_math_text(o.get("content") or "", strip_opt_prefix=True) for o in opts_objs}
                 if any(ltr not in opt_by_id or not opt_by_id[ltr] for ltr in LETTERS) or not stem_en:
                     continue
@@ -702,11 +854,10 @@ def main():
                     ch_name, cls_lvl = classify_pc_chapter("Chemistry", blob, existing_chapter=slug_to_title(ch_slug))
 
                 is_oos = bool(q.get("isOutOfSyllabus"))
-                oos_note = " [Note: Legacy pre-rationalization topic]" if is_oos else ""
-                stem_ta = f"[NEET {year} அதிகாரப்பூர்வ வினா — {subj}: {ch_name}]{oos_note} {stem_en}"
+                oos_note = " [Pre-rationalized topic]" if is_oos else ""
                 ncert_ref = f"NCERT {cls_lvl} {subj} — {ch_name}" + (f" ({topic_slug})" if topic_slug else "") + oos_note
 
-                q_rec = build_question_record(
+                q_rec = build_compact_question_record(
                     qid=next_id,
                     year=year,
                     paper_id=p_id,
@@ -715,10 +866,8 @@ def main():
                     subject=subj,
                     chapter=ch_name,
                     class_level=cls_lvl,
-                    stem_en=stem_en,
-                    stem_ta=stem_ta,
-                    opts_en=opts_en,
-                    opts_ta=opts_en,
+                    primary_stem=stem_en,
+                    opts_list=opts_en,
                     correct_letter=corr_opts[0],
                     explanation_en=exp_en,
                     explanation_ta="",
@@ -738,9 +887,7 @@ def main():
             "questionIds": p_qids,
         })
 
-    # -------------------------------------------------------------------------
     # 4. Official NTA Tamil Booklet Past Papers (2021, 2020, 2019, 2018) from dipika_ta
-    # -------------------------------------------------------------------------
     ta_by_year = defaultdict(list)
     for x in bundle["dipika_ta"]:
         fn = x.get("file_name") or ""
@@ -754,7 +901,7 @@ def main():
         p_title_ta = f"NEET {year} அதிகாரப்பூர்வ தமிழ் வழி வினாத்தாள்"
         p_qids = []
         for x in ta_by_year[year]:
-            if x.get("image_information"):
+            if x.get("image_information") and x.get("image_type") != "table":
                 continue
             opts_raw = x.get("options") or []
             ans_idx = x.get("answer")
@@ -784,17 +931,16 @@ def main():
                 ch_name = f"{'தாவரவியல்' if subj == 'Botany' else 'விலங்கியல்'} ({ch_name})"
 
             corr_ltr = LETTERS[ans_idx]
-            stem_en = f"[Official NTA Tamil Booklet — NEET {year} {subj}, Q.{x.get('original_question_num')}]\n{stem_ta}"
             exp_ta = (
                 f"அதிகாரப்பூர்வ NTA NEET {year} தமிழ் வினாத்தாள் விடைக்குறிப்பு: **விருப்பம் {corr_ltr}** ({opts_ta[ans_idx]}). "
-                f"விரிவான படிப்படியான NCERT விளக்கத்திற்கு வலதுபுறம் உள்ள **Gemini AI Coach**-ஐக் கேட்கவும்."
+                f"விரிவான படிப்படியான NCERT விளக்கத்திற்கு **Gemini AI Coach**-ஐக் கேட்கவும்."
             )
             exp_en = (
                 f"Official NTA NEET {year} Tamil Booklet Answer Key: **Option {corr_ltr}** ({opts_ta[ans_idx]}). "
-                f"Tap **Ask Coach** or any quick chip in Gemini AI Coach for a full bilingual step-by-step derivation."
+                f"Tap **Ask Coach** in Gemini AI Coach for a full bilingual step-by-step derivation."
             )
 
-            q_rec = build_question_record(
+            q_rec = build_compact_question_record(
                 qid=next_id,
                 year=year,
                 paper_id=p_id,
@@ -803,10 +949,8 @@ def main():
                 subject=subj,
                 chapter=ch_name,
                 class_level=cls_lvl,
-                stem_en=stem_en,
-                stem_ta=stem_ta,
-                opts_en=opts_ta,
-                opts_ta=opts_ta,
+                primary_stem=stem_ta,
+                opts_list=opts_ta,
                 correct_letter=corr_ltr,
                 explanation_en=exp_en,
                 explanation_ta=exp_ta,
@@ -825,9 +969,7 @@ def main():
             "questionIds": p_qids,
         })
 
-    # -------------------------------------------------------------------------
-    # 5. Compute Multi-Year Analytics ("What Kind of Questions Were Asked")
-    # -------------------------------------------------------------------------
+    # 5. Compute Multi-Year Analytics (2013 - 2026)
     en_pyqs = [q for q in all_pyqs if q["language"] == "en"]
     years_sorted = sorted({q["examYear"] for q in en_pyqs})
 
@@ -851,15 +993,10 @@ def main():
         ch_cnt = Counter(q["chapter"] for q in s_qs)
         tot_s = len(s_qs) or 1
         top_chapters_by_subject[subj] = [
-            {
-                "chapter": ch,
-                "count": c,
-                "sharePct": round((c / tot_s) * 100, 1),
-            }
+            {"chapter": ch, "count": c, "sharePct": round((c / tot_s) * 100, 1)}
             for ch, c in ch_cnt.most_common(12)
         ]
 
-    # Build OMR Exam Modules for every Past Paper + Subject-Wise 11-Year PYQ Sprints
     past_modules = {}
     for pm in papers_meta:
         qids = pm["questionIds"]
@@ -867,38 +1004,37 @@ def main():
             "id": pm["id"],
             "title": pm["title"],
             "title_ta": pm["title_ta"],
-            "group": "Official NTA தமிழ் Booklet Past Papers (2018–2021)" if pm["language"] == "ta" else "Official Past NEET Exam Papers (2016–2026)",
+            "group": "Official NTA தமிழ் Booklet Past Papers (2018–2021)" if pm["language"] == "ta" else "Official Past NEET / Re-NEET / AIPMT Papers (2013–2026)",
             "mode": "mock",
             "isPastPaper": True,
             "examYear": pm["year"],
             "paperLanguage": pm["language"],
             "durationMinutes": len(qids),
             "marking": {"correct": 4, "wrong": -1, "unanswered": 0},
-            "description": f"Authentic NTA NEET {pm['year']} questions & official answer keys (+4 / -1 / 0 OMR grading).",
+            "description": f"Authentic NTA/CBSE {pm['year']} questions & official answer keys (+4 / -1 / 0 OMR grading).",
             "questionIds": qids,
         }
 
-    # Add 4 Dynamic 45-Question Subject-Wise Real PYQ Sprint Modules (matching 45 Qs per subject in real NEET!)
     for subj, ta_name in [("Physics", "இயற்பியல்"), ("Chemistry", "வேதியியல்"), ("Botany", "தாவரவியல்"), ("Zoology", "விலங்கியல்")]:
         mod_id = f"pyq_sprint_{subj.lower()}"
         past_modules[mod_id] = {
             "id": mod_id,
-            "title": f"{subj} 11-Year Past NEET PYQ Bank (Fresh 45-Q Sprint, 2016–2026)",
-            "title_ta": f"{ta_name} முந்தைய ஆண்டு நீட் வினா வங்கி (45 வினாக்கள், 2016–2026)",
-            "group": "Subject-Wise 11-Year Past PYQ Sprints (45 Qs)",
+            "title": f"{subj} 14-Year Past NEET PYQ Bank (Fresh 45-Q Sprint, 2013–2026)",
+            "title_ta": f"{ta_name} முந்தைய ஆண்டு நீட் வினா வங்கி (45 வினாக்கள், 2013–2026)",
+            "group": "Subject-Wise 14-Year Past PYQ Sprints (45 Qs)",
             "mode": "practice",
             "isDynamicSubjectPyq": True,
             "targetSubject": subj,
             "sampleCount": 45,
             "durationMinutes": 45,
             "marking": {"correct": 4, "wrong": -1, "unanswered": 0},
-            "description": f"Draws 45 authentic past NEET {subj} questions (2016–2026) with instant answer verification and Gemini coaching.",
+            "description": f"Draws 45 authentic past NEET {subj} questions (2013–2026) with instant answer verification and Gemini coaching.",
             "questionIds": [],
         }
 
     archive_payload = {
         "metadata": {
-            "title": "Official Past NEET-UG Question & Answer Archive (2016–2026)",
+            "title": "Official Past NEET-UG, Re-NEET & AIPMT Question Archive (2013–2026)",
             "totalQuestions": len(all_pyqs),
             "englishQuestions": len(en_pyqs),
             "tamilBookletQuestions": len(all_pyqs) - len(en_pyqs),
@@ -906,9 +1042,9 @@ def main():
             "yearsCovered": years_sorted,
             "subjectCounts": dict(overall_subjects),
             "sources": [
-                "National Testing Agency (NTA) Official NEET-UG Exam Booklets & Final Answer Keys (neet.nta.nic.in / nta.ac.in)",
-                "NEET 2025 (Code 45) & NEET 2026 (Code 11) Verified Benchmark Corpus",
-                "NEET 2016–2024 NCERT Skill-Tagged & Multilingual Tamil/English PYQ Archives",
+                "National Testing Agency (NTA) & CBSE Official NEET-UG / AIPMT Booklets & Final Answer Keys (2013–2026)",
+                "NEET 2026 (Code 11), Re-NEET 2026 (Code 50) & NEET 2025 (Code 45) Verified Benchmark Corpus",
+                "Official NTA Tamil Medium NEET Booklets (2018–2021) & NCERT Skill-Tagged Archive",
             ],
         },
         "analytics": {
@@ -926,6 +1062,7 @@ def main():
                 for pm in papers_meta
             ],
         },
+        "unofficialInsights": UNOFFICIAL_COMMUNITY_INSIGHTS,
         "modules": past_modules,
         "questions": all_pyqs,
     }
@@ -936,16 +1073,16 @@ def main():
 
     js_out = os.path.join(ROOT_DIR, "past_papers_database.js")
     with open(js_out, "w", encoding="utf-8") as f:
-        f.write("// Auto-generated Official Past NEET-UG Exam Archive & Analytics (2016-2026)\n")
+        f.write("// Auto-generated Official Past NEET-UG Exam Archive & Analytics (2013-2026)\n")
         f.write("window.NEET_PAST_PAPERS_ARCHIVE = ")
         json.dump(archive_payload, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
 
-    print(f"SUCCESS: Built Official Past NEET Archive!")
-    print(f"  Total Clean Diagram-Free Official PYQs: {len(all_pyqs)} (English 2016-2026: {len(en_pyqs)}, Official Tamil 2018-2021: {len(all_pyqs)-len(en_pyqs)})")
+    print("SUCCESS: Built Official Past NEET Archive (2013-2026)!")
+    print(f"  Total Clean Diagram-Free Official PYQs: {len(all_pyqs)} (English 2013-2026: {len(en_pyqs)}, Official Tamil 2018-2021: {len(all_pyqs)-len(en_pyqs)})")
     print(f"  Papers built: {len(papers_meta)}")
     print(f"  Subject breakdown: {dict(overall_subjects)}")
-    print(f"  Question types (2016-2026 EN): {dict(overall_types)}")
+    print(f"  Question types (2013-2026 EN): {dict(overall_types)}")
     print(f"  Sizes: JSON={os.path.getsize(json_out)/1024:.1f} KB, JS={os.path.getsize(js_out)/1024:.1f} KB")
 
 
