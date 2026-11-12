@@ -1,0 +1,316 @@
+{
+  "updated_at": "2026-11-12 00:09:44",
+  "total_attempts_recorded": 5,
+  "best_projected_720": 720,
+  "average_projected_720": 545.0,
+  "attempts": [
+    {
+      "id": 5,
+      "student_id": "tn_aspirant_demo",
+      "student_name": "Sample Baseline Run (TN)",
+      "module_id": "mini_mock_pyq",
+      "module_title": "NEET High-Yield PYQ Mock Exam — Paper 2 (40 Qs / 40 Mins)",
+      "mode": "mock",
+      "total_questions": 40,
+      "attempted": 38,
+      "correct_count": 36,
+      "wrong_count": 2,
+      "unanswered_count": 2,
+      "raw_score": 142,
+      "max_score": 160,
+      "negative_marks_lost": 2,
+      "accuracy_pct": 94.7,
+      "projected_720": 639,
+      "tn_college_tier": "On Track: Tier-2 Premier TN Govt Medical College (Kilpauk / Madurai / Coimbatore GMC)",
+      "time_spent_sec": 2180,
+      "created_at": "2026-11-12 00:09:44",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 10,
+          "attempted": 9,
+          "correct": 8,
+          "wrong": 1,
+          "unanswered": 1,
+          "score": 31,
+          "max_score": 40
+        },
+        "Chemistry": {
+          "total": 10,
+          "attempted": 9,
+          "correct": 9,
+          "wrong": 0,
+          "unanswered": 1,
+          "score": 36,
+          "max_score": 40
+        },
+        "Botany": {
+          "total": 10,
+          "attempted": 10,
+          "correct": 10,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 40,
+          "max_score": 40
+        },
+        "Zoology": {
+          "total": 10,
+          "attempted": 10,
+          "correct": 9,
+          "wrong": 1,
+          "unanswered": 0,
+          "score": 35,
+          "max_score": 40
+        }
+      },
+      "wrong_question_ids": [
+        106,
+        401
+      ]
+    },
+    {
+      "id": 4,
+      "student_id": "neet_coach_benchmark",
+      "student_name": "NEET Coach Self-Verification",
+      "module_id": "full_mock_1",
+      "module_title": "NEET Full Syllabus Mock Exam — Paper 1 (NTA 4-Subject OMR Pattern)",
+      "mode": "mock",
+      "total_questions": 80,
+      "attempted": 80,
+      "correct_count": 80,
+      "wrong_count": 0,
+      "unanswered_count": 0,
+      "raw_score": 320,
+      "max_score": 320,
+      "negative_marks_lost": 0,
+      "accuracy_pct": 100.0,
+      "projected_720": 720,
+      "tn_college_tier": "On Track: Tier-1 TN Govt Medical College (MMC Chennai / Stanley / JIPMER)",
+      "time_spent_sec": 2940,
+      "created_at": "2026-11-12 00:09:44",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Chemistry": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Botany": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Zoology": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        }
+      },
+      "wrong_question_ids": []
+    },
+    {
+      "id": 3,
+      "student_id": "tn_student_1",
+      "student_name": "NEET Aspirant",
+      "module_id": "full_mock_1",
+      "module_title": "NEET Full Syllabus Mock Exam — Paper 1 (NTA 4-Subject OMR Pattern)",
+      "mode": "mock",
+      "total_questions": 80,
+      "attempted": 2,
+      "correct_count": 1,
+      "wrong_count": 1,
+      "unanswered_count": 78,
+      "raw_score": 3,
+      "max_score": 320,
+      "negative_marks_lost": 1,
+      "accuracy_pct": 50.0,
+      "projected_720": 7,
+      "tn_college_tier": "Foundation Phase — Master NCERT Biology (340+/360 target) & Eliminate Blind Guessing",
+      "time_spent_sec": 95,
+      "created_at": "2026-11-12 00:01:08",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 20,
+          "attempted": 2,
+          "correct": 1,
+          "wrong": 1,
+          "unanswered": 18,
+          "score": 3,
+          "max_score": 80
+        },
+        "Chemistry": {
+          "total": 20,
+          "attempted": 0,
+          "correct": 0,
+          "wrong": 0,
+          "unanswered": 20,
+          "score": 0,
+          "max_score": 80
+        },
+        "Botany": {
+          "total": 20,
+          "attempted": 0,
+          "correct": 0,
+          "wrong": 0,
+          "unanswered": 20,
+          "score": 0,
+          "max_score": 80
+        },
+        "Zoology": {
+          "total": 20,
+          "attempted": 0,
+          "correct": 0,
+          "wrong": 0,
+          "unanswered": 20,
+          "score": 0,
+          "max_score": 80
+        }
+      },
+      "wrong_question_ids": [
+        101
+      ]
+    },
+    {
+      "id": 2,
+      "student_id": "tn_aspirant_demo",
+      "student_name": "Sample Baseline Run (TN)",
+      "module_id": "mini_mock_pyq",
+      "module_title": "NEET High-Yield PYQ Mock Exam — Paper 2 (40 Qs / 40 Mins)",
+      "mode": "mock",
+      "total_questions": 40,
+      "attempted": 38,
+      "correct_count": 36,
+      "wrong_count": 2,
+      "unanswered_count": 2,
+      "raw_score": 142,
+      "max_score": 160,
+      "negative_marks_lost": 2,
+      "accuracy_pct": 94.7,
+      "projected_720": 639,
+      "tn_college_tier": "On Track: Tier-2 Premier TN Govt Medical College (Kilpauk / Madurai / Coimbatore GMC)",
+      "time_spent_sec": 2180,
+      "created_at": "2026-11-11 23:50:29",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 10,
+          "attempted": 9,
+          "correct": 8,
+          "wrong": 1,
+          "unanswered": 1,
+          "score": 31,
+          "max_score": 40
+        },
+        "Chemistry": {
+          "total": 10,
+          "attempted": 9,
+          "correct": 9,
+          "wrong": 0,
+          "unanswered": 1,
+          "score": 36,
+          "max_score": 40
+        },
+        "Botany": {
+          "total": 10,
+          "attempted": 10,
+          "correct": 10,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 40,
+          "max_score": 40
+        },
+        "Zoology": {
+          "total": 10,
+          "attempted": 10,
+          "correct": 9,
+          "wrong": 1,
+          "unanswered": 0,
+          "score": 35,
+          "max_score": 40
+        }
+      },
+      "wrong_question_ids": [
+        106,
+        401
+      ]
+    },
+    {
+      "id": 1,
+      "student_id": "neet_coach_benchmark",
+      "student_name": "NEET Coach Self-Verification",
+      "module_id": "full_mock_1",
+      "module_title": "NEET Full Syllabus Mock Exam — Paper 1 (NTA 4-Subject OMR Pattern)",
+      "mode": "mock",
+      "total_questions": 80,
+      "attempted": 80,
+      "correct_count": 80,
+      "wrong_count": 0,
+      "unanswered_count": 0,
+      "raw_score": 320,
+      "max_score": 320,
+      "negative_marks_lost": 0,
+      "accuracy_pct": 100.0,
+      "projected_720": 720,
+      "tn_college_tier": "On Track: Tier-1 TN Govt Medical College (MMC Chennai / Stanley / JIPMER)",
+      "time_spent_sec": 2940,
+      "created_at": "2026-11-11 23:50:29",
+      "subject_breakdown": {
+        "Physics": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Chemistry": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Botany": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        },
+        "Zoology": {
+          "total": 20,
+          "attempted": 20,
+          "correct": 20,
+          "wrong": 0,
+          "unanswered": 0,
+          "score": 80,
+          "max_score": 80
+        }
+      },
+      "wrong_question_ids": []
+    }
+  ]
+}

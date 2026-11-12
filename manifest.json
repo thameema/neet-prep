@@ -1,0 +1,9 @@
+{
+  "name": "Tamil Nadu NEET-UG 720 Mastery Hub",
+  "short_name": "TN NEET 720",
+  "description": "Bilingual (English + Tamil) NEET-UG OMR Mock Exams, Score Tracker & Gemini AI Coach",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a"
+}

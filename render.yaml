@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tn-neet-mastery-hub
+    runtime: python
+    buildCommand: python3 scripts/compile_and_verify.py
+    startCommand: python3 neet_server.py
+    envVars:
+      - key: PORT
+        value: 8090
+      - key: GEMINI_API_KEY
+        sync: false

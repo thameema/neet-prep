@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+neet_data.db
+neet_data.db-journal
+.DS_Store
