@@ -1155,7 +1155,10 @@
         <button class="nav-tab" data-view="guide" onclick="switchView('guide')">TN NEET Guide & YouTube Hub</button>
       </div>
 
-      <button class="header-btn" onclick="openProfileModal()" id="profile-pill-btn">Profile</button>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button class="header-btn" onclick="openIntroVideoModal()" id="intro-video-btn" style="background:rgba(20,184,166,0.22);border-color:#14b8a6;color:#5eead4;">Intro Video (தமிழ் + EN)</button>
+        <button class="header-btn" onclick="openProfileModal()" id="profile-pill-btn">Profile</button>
+      </div>
     </div>
 
     <div class="header-right">
@@ -1656,6 +1659,38 @@
       <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px;">
         <button class="btn-outline" onclick="closeProfileModal()">Cancel</button>
         <button class="btn-primary" onclick="saveProfile()">Save Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRODUCTORY EXPLAINER VIDEO MODAL (TAMIL VOICEOVER + ENGLISH SUBTITLES) -->
+  <div class="modal-backdrop" id="intro-video-modal" onclick="if(event.target===this) closeIntroVideoModal()">
+    <div class="modal-box" style="max-width:920px;width:95%;padding:20px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;">
+        <div>
+          <h3 style="margin:0;color:var(--navy);font-size:17px;">Platform Walkthrough &amp; Study System Guide (தமிழ் Voiceover + English Subtitles)</h3>
+          <p style="font-size:12px;color:var(--text-sec);margin-top:3px;">
+            Complete tour of all 4 tabs: NTA 180-Q OMR Workspace, -1 Negative Mark Trap Box, 24/7 Bilingual Gemini AI Coach, 27-Year Past Papers &amp; NCERT Exemplar Archive (7,484 Qs), and TN Medical College Score Tracker.
+          </p>
+        </div>
+        <button class="btn-outline" style="padding:5px 10px;font-size:12px;" onclick="closeIntroVideoModal()">Close</button>
+      </div>
+      <div id="intro-video-container" style="position:relative;width:100%;border-radius:10px;overflow:hidden;background:#070d19;border:1px solid var(--border);">
+        <video id="intro-explainer-player" controls preload="metadata" style="width:100%;max-height:70vh;display:block;" poster="video/assets/bg_intro_medical_dream.jpg">
+          <source src="video/tamil_nadu_neet_explainer.mp4" type="video/mp4" />
+          <track label="English Subtitles" kind="subtitles" srclang="en" src="video/tamil_nadu_neet_explainer_en.vtt" default />
+          Your browser does not support HTML5 video.
+        </video>
+        <iframe id="intro-youtube-iframe" style="display:none;width:100%;aspect-ratio:16/9;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:12px;font-size:12px;color:var(--text-sec);">
+        <div>
+          <strong>Audio:</strong> தமிழ் (Tamil Neural Voice) &nbsp;|&nbsp; <strong>Subtitles:</strong> Burned-in English + CC Track
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <a href="video/tamil_nadu_neet_explainer.mp4" download="Tamil_Nadu_NEET_720_Mastery_Explainer.mp4" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download MP4 Video</a>
+          <a href="video/tamil_nadu_neet_explainer_en.srt" download="Tamil_Nadu_NEET_720_Explainer_EN.srt" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download English .SRT</a>
+        </div>
       </div>
     </div>
   </div>
@@ -3026,6 +3061,34 @@ Student Question: ${studentMsg}`;
     }
 
     function closeProfileModal() { document.getElementById("profile-modal").classList.remove("open"); }
+
+    // Optional YouTube Embed URL — set once uploaded to YouTube (falls back to built-in 1080p MP4 player)
+    const INTRO_YOUTUBE_EMBED_URL = "";
+
+    function openIntroVideoModal() {
+      const modal = document.getElementById("intro-video-modal");
+      const vid = document.getElementById("intro-explainer-player");
+      const yt = document.getElementById("intro-youtube-iframe");
+      modal.classList.add("open");
+      if (INTRO_YOUTUBE_EMBED_URL) {
+        vid.style.display = "none";
+        yt.style.display = "block";
+        yt.src = INTRO_YOUTUBE_EMBED_URL;
+      } else {
+        yt.style.display = "none";
+        vid.style.display = "block";
+        try { vid.play(); } catch (_) {}
+      }
+    }
+
+    function closeIntroVideoModal() {
+      const modal = document.getElementById("intro-video-modal");
+      const vid = document.getElementById("intro-explainer-player");
+      const yt = document.getElementById("intro-youtube-iframe");
+      modal.classList.remove("open");
+      try { vid.pause(); } catch (_) {}
+      if (yt) yt.src = "";
+    }
 
     async function saveProfile() {
       profile.name = document.getElementById("prof-name").value.trim() || "NEET Aspirant";

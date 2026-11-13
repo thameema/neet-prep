@@ -1,0 +1,95 @@
+1
+00:00:00,150 --> 00:00:12,258
+Welcome to the Tamil Nadu NEET 720 Mastery Hub — built to turn every Tamil Nadu student's medical dream into reality.
+
+2
+00:00:12,508 --> 00:00:27,490
+Securing a seat in top Government Medical Colleges like MMC requires more than memorization — it demands deep NCERT mastery and precision OMR practice.
+
+3
+00:00:27,740 --> 00:00:39,782
+That is why this platform combines 7,484 verified NEET questions with a live bilingual Tamil and English Gemini AI Coach.
+
+4
+00:00:40,032 --> 00:00:52,524
+In Tab 1 — the Exam Workspace — you can take full-length Mock Exams following NTA's strict 180-question, 180-minute compulsory pattern.
+
+5
+00:00:52,774 --> 00:01:03,796
+Switch any question instantly between English, Tamil, or Bilingual view, while tracking every bubble on the live NTA OMR sheet on the left.
+
+6
+00:01:04,046 --> 00:01:13,760
+Filter seamlessly across Physics, Chemistry, Botany, and Zoology, mark questions for review, and master real exam time management.
+
+7
+00:01:14,010 --> 00:01:23,838
+In NEET, every correct answer awards +4 marks, while every wrong bubble costs a -1 negative mark penalty.
+
+8
+00:01:24,088 --> 00:01:35,374
+In Guided Practice Mode, clicking 'Check Answer' immediately reveals the exact NCERT textbook reference with step-by-step English and Tamil explanations.
+
+9
+00:01:35,624 --> 00:01:45,626
+Even better, the '-1 Negative Mark Trap Box' explains why each distractor option fails so you never fall for the same exam trap twice.
+
+10
+00:01:45,876 --> 00:01:56,688
+Whenever you have a doubt on any question, ask the built-in Gemini AI NEET Coach directly in Tamil, English, or Tanglish.
+
+11
+00:01:56,938 --> 00:02:08,320
+Use one-tap quick chips for Step-by-Step derivations, Tamil explanations, NCERT memory shortcuts, or a brand-new similar MCQ to test yourself.
+
+12
+00:02:08,570 --> 00:02:16,508
+It acts like a personal 24/7 NEET subject expert sitting right beside you through every single practice session.
+
+13
+00:02:16,758 --> 00:02:29,946
+Tab 2 — the Past Papers Archive — houses 40 official NEET, Re-NEET, and classic AIPMT exam papers spanning 27 years from 2000 to 2026.
+
+14
+00:02:30,196 --> 00:02:41,650
+It also includes official NTA Tamil Medium question booklets from 2018 to 2021 alongside 27-year subject-wise 45-question sprints.
+
+15
+00:02:41,900 --> 00:02:52,742
+A dedicated module even lets you practice landmark Supreme Court adjudicated questions, +4 bonus dropped items, and multi-key NTA questions.
+
+16
+00:02:52,992 --> 00:03:04,116
+Beyond past papers, the archive features over 1,430 NCERT Exemplar, Textbook Back-Exercise, and Coaching Mock Test questions.
+
+17
+00:03:04,366 --> 00:03:14,572
+Practice Class 11 and 12 NCERT Line-by-Line Biology questions complete with exact textbook sentence citations and statement-twist checks.
+
+18
+00:03:14,822 --> 00:03:25,880
+Full 180-question NTA Abhyas CBT mocks and physics-heavy coaching test packs build the speed needed for tough exam papers.
+
+19
+00:03:26,130 --> 00:03:36,798
+Tab 3 — the Score and Mentor Tracker — automatically logs every attempt and projects your standing on the 720-point NEET scale.
+
+20
+00:03:37,048 --> 00:03:50,230
+It benchmarks your score against Tamil Nadu's 85% State Quota and 7.5% Government School Quota cutoffs for MMC, Stanley, Madurai, and District GMCs.
+
+21
+00:03:50,480 --> 00:04:00,218
+Every wrong answer is saved into your personal Adaptive Mistake Bank so you can re-test weak spots and share a 1-click WhatsApp progress report.
+
+22
+00:04:00,468 --> 00:04:12,672
+Finally, Tab 4 — the TN NEET Guide & YouTube Hub — shares the exact 3-Round OMR timing playbook used by 720/720 Tamil Nadu toppers.
+
+23
+00:04:12,922 --> 00:04:26,752
+It also curates the best Tamil and English YouTube tutorials — including Biology Simplified Tamil, Muruga MP, and PW Tamil — linked by subject.
+
+24
+00:04:27,002 --> 00:04:38,156
+Start practicing today — with 7,484 verified questions, smart OMR analytics, and your bilingual Gemini AI Coach, your medical college dream is within reach!
