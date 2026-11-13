@@ -1055,6 +1055,33 @@
       .brand-full-text { display: none; }
       .desktop-nav-tabs { display: none; }
 
+      .header-left {
+        width: 100% !important;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      #intro-video-btn {
+        background: linear-gradient(135deg, #0d9488, #0f766e) !important;
+        border: 1px solid #5eead4 !important;
+        color: #ffffff !important;
+        font-weight: 800 !important;
+        padding: 6px 10px !important;
+        font-size: 11.5px !important;
+        white-space: nowrap;
+        box-shadow: 0 2px 8px rgba(20, 184, 166, 0.35);
+      }
+
+      #profile-pill-btn {
+        max-width: 112px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 6px 8px;
+        font-size: 11px;
+      }
+
       .header-right {
         width: 100%;
         justify-content: space-between;
@@ -1156,7 +1183,7 @@
       </div>
 
       <div style="display:flex;align-items:center;gap:6px;">
-        <button class="header-btn" onclick="openIntroVideoModal()" id="intro-video-btn" style="background:rgba(20,184,166,0.22);border-color:#14b8a6;color:#5eead4;">Intro Video (தமிழ் + EN)</button>
+        <button class="header-btn" onclick="openIntroVideoModal()" id="intro-video-btn" style="background:linear-gradient(135deg,#0d9488,#0f766e);border-color:#5eead4;color:#ffffff;font-weight:700;">&#9654; Intro Video (தமிழ் + EN)</button>
         <button class="header-btn" onclick="openProfileModal()" id="profile-pill-btn">Profile</button>
       </div>
     </div>
@@ -1203,6 +1230,7 @@
           <div class="subject-pills" id="subject-pills"></div>
           <div class="timer-cluster">
             <div class="timer-box" id="exam-timer">80:00</div>
+            <button class="btn-outline" style="padding:6px 10px;font-size:11.5px;border-color:#0d9488;color:#0f766e;background:#f0fdfa;" onclick="openIntroVideoModal()">&#9654; Video Guide</button>
             <button class="btn-outline" style="padding:6px 10px;font-size:11.5px;" onclick="startFreshAttempt()">New / Retake</button>
             <button class="btn-danger" style="padding:6px 11px;font-size:11.5px;" id="submit-exam-btn" onclick="submitCurrentExam()">Submit OMR</button>
           </div>
@@ -1613,6 +1641,10 @@
       <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
       <span>TN Guide</span>
     </button>
+    <button class="m-nav-btn" data-mnav="video" onclick="openIntroVideoModal()" style="color:#5eead4;">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+      <span>Video</span>
+    </button>
   </nav>
 
   <!-- STUDENT PROFILE & SETTINGS MODAL -->
@@ -1665,7 +1697,7 @@
 
   <!-- INTRODUCTORY EXPLAINER VIDEO MODAL (TAMIL VOICEOVER + ENGLISH SUBTITLES) -->
   <div class="modal-backdrop" id="intro-video-modal" onclick="if(event.target===this) closeIntroVideoModal()">
-    <div class="modal-box" style="max-width:920px;width:95%;padding:20px;">
+    <div class="modal-card" style="max-width:920px;width:96%;padding:18px;">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;">
         <div>
           <h3 style="margin:0;color:var(--navy);font-size:17px;">Platform Walkthrough &amp; Study System Guide (தமிழ் Voiceover + English Subtitles)</h3>
