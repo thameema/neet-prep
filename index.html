@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0f172a">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.json">
   <title>Tamil Nadu NEET-UG Mastery Hub — OMR Mock Exams, Score Tracker & Bilingual Gemini Coach</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
@@ -48,12 +48,19 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans Tamil", "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text-main);
-      height: 100vh;
-      height: 100dvh;
+      position: fixed;
+      inset: 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -957,10 +964,8 @@
     /* MOBILE BOTTOM APP NAVIGATION BAR */
     .mobile-bottom-nav {
       display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      flex-shrink: 0;
+      width: 100%;
       height: calc(var(--mobile-nav-h) + env(safe-area-inset-bottom, 0px));
       padding-bottom: env(safe-area-inset-bottom, 0px);
       background: var(--navy);
@@ -1043,23 +1048,21 @@
 
     /* TABLET & MOBILE RESPONSIVE BREAKPOINTS */
     @media (max-width: 960px) {
-      body {
-        padding-bottom: calc(var(--mobile-nav-h) + env(safe-area-inset-bottom, 0px));
-      }
-
       header {
-        padding: 8px 12px;
-        gap: 7px;
+        padding: calc(10px + env(safe-area-inset-top, 0px)) 10px 8px 10px;
+        gap: 6px;
       }
 
       .brand-full-text { display: none; }
       .desktop-nav-tabs { display: none; }
+      .intro-btn-sub { display: none; }
 
       .header-left {
         width: 100% !important;
         justify-content: space-between;
         flex-wrap: nowrap;
         gap: 6px;
+        min-width: 0;
       }
 
       #intro-video-btn {
@@ -1067,18 +1070,21 @@
         border: 1px solid #5eead4 !important;
         color: #ffffff !important;
         font-weight: 800 !important;
-        padding: 6px 10px !important;
+        padding: 5px 9px !important;
         font-size: 11.5px !important;
         white-space: nowrap;
+        flex-shrink: 0;
         box-shadow: 0 2px 8px rgba(20, 184, 166, 0.35);
       }
 
       #profile-pill-btn {
-        max-width: 112px;
+        max-width: 120px;
+        min-width: 0;
+        flex-shrink: 1;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding: 6px 8px;
+        padding: 5px 8px;
         font-size: 11px;
       }
 
@@ -1182,8 +1188,8 @@
         <button class="nav-tab" data-view="guide" onclick="switchView('guide')">TN NEET Guide & YouTube Hub</button>
       </div>
 
-      <div style="display:flex;align-items:center;gap:6px;">
-        <button class="header-btn" onclick="openIntroVideoModal()" id="intro-video-btn" style="background:linear-gradient(135deg,#0d9488,#0f766e);border-color:#5eead4;color:#ffffff;font-weight:700;">&#9654; Intro Video (தமிழ் + EN)</button>
+      <div style="display:flex;align-items:center;gap:6px;min-width:0;flex-shrink:1;">
+        <button class="header-btn" onclick="openIntroVideoModal()" id="intro-video-btn" style="background:linear-gradient(135deg,#0d9488,#0f766e);border-color:#5eead4;color:#ffffff;font-weight:700;">&#9654; Intro Video<span class="intro-btn-sub"> (தமிழ் + EN)</span></button>
         <button class="header-btn" onclick="openProfileModal()" id="profile-pill-btn">Profile</button>
       </div>
     </div>
@@ -1230,7 +1236,6 @@
           <div class="subject-pills" id="subject-pills"></div>
           <div class="timer-cluster">
             <div class="timer-box" id="exam-timer">80:00</div>
-            <button class="btn-outline" style="padding:6px 10px;font-size:11.5px;border-color:#0d9488;color:#0f766e;background:#f0fdfa;" onclick="openIntroVideoModal()">&#9654; Video Guide</button>
             <button class="btn-outline" style="padding:6px 10px;font-size:11.5px;" onclick="startFreshAttempt()">New / Retake</button>
             <button class="btn-danger" style="padding:6px 11px;font-size:11.5px;" id="submit-exam-btn" onclick="submitCurrentExam()">Submit OMR</button>
           </div>
@@ -3175,6 +3180,12 @@ Student Question: ${studentMsg}`;
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
     }
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY !== 0 || window.scrollX !== 0) {
+        window.scrollTo(0, 0);
+      }
+    }, { passive: true });
 
     window.addEventListener("DOMContentLoaded", initApp);
   </script>
