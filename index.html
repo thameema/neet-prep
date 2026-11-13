@@ -1676,20 +1676,21 @@
         <button class="btn-outline" style="padding:5px 10px;font-size:12px;" onclick="closeIntroVideoModal()">Close</button>
       </div>
       <div id="intro-video-container" style="position:relative;width:100%;border-radius:10px;overflow:hidden;background:#070d19;border:1px solid var(--border);">
-        <video id="intro-explainer-player" controls preload="metadata" style="width:100%;max-height:70vh;display:block;" poster="video/assets/bg_intro_medical_dream.jpg">
+        <iframe id="intro-youtube-iframe" style="display:block;width:100%;aspect-ratio:16/9;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <video id="intro-explainer-player" controls preload="metadata" style="width:100%;max-height:70vh;display:none;">
           <source src="video/tamil_nadu_neet_explainer.mp4" type="video/mp4" />
           <track label="English Subtitles" kind="subtitles" srclang="en" src="video/tamil_nadu_neet_explainer_en.vtt" default />
           Your browser does not support HTML5 video.
         </video>
-        <iframe id="intro-youtube-iframe" style="display:none;width:100%;aspect-ratio:16/9;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:12px;font-size:12px;color:var(--text-sec);">
         <div>
-          <strong>Audio:</strong> தமிழ் (Tamil Neural Voice) &nbsp;|&nbsp; <strong>Subtitles:</strong> Burned-in English + CC Track
+          <strong>Audio:</strong> தமிழ் (Spoken Tamil Walkthrough) &nbsp;|&nbsp; <strong>Subtitles:</strong> Burned-in English + CC Track
         </div>
-        <div style="display:flex;gap:8px;align-items:center;">
-          <a href="video/tamil_nadu_neet_explainer.mp4" download="Tamil_Nadu_NEET_720_Mastery_Explainer.mp4" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download MP4 Video</a>
-          <a href="video/tamil_nadu_neet_explainer_en.srt" download="Tamil_Nadu_NEET_720_Explainer_EN.srt" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download English .SRT</a>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <a href="https://youtu.be/ChJSZgvqAuY" target="_blank" rel="noopener" class="btn-primary" style="text-decoration:none;padding:6px 12px;font-size:12px;background:#dc2626;border-color:#dc2626;color:#fff;">Open on YouTube &rarr;</a>
+          <button type="button" id="toggle-video-source-btn" class="btn-outline" style="padding:6px 12px;font-size:12px;" onclick="toggleIntroVideoPlayerSource()">Use Built-in MP4 Player</button>
+          <a href="video/tamil_nadu_neet_explainer.mp4" download="Tamil_Nadu_NEET_720_Mastery_Explainer.mp4" class="btn-outline" style="text-decoration:none;padding:6px 12px;font-size:12px;">Download MP4</a>
         </div>
       </div>
     </div>
@@ -3062,23 +3063,33 @@ Student Question: ${studentMsg}`;
 
     function closeProfileModal() { document.getElementById("profile-modal").classList.remove("open"); }
 
-    // Optional YouTube Embed URL — set once uploaded to YouTube (falls back to built-in 1080p MP4 player)
-    const INTRO_YOUTUBE_EMBED_URL = "";
+    // YouTube Embed URL for Introductory Explainer Video (falls back or toggles to built-in 1080p MP4 player)
+    const INTRO_YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/ChJSZgvqAuY?autoplay=1&rel=0";
+    let introUseLocalMp4 = false;
 
     function openIntroVideoModal() {
       const modal = document.getElementById("intro-video-modal");
       const vid = document.getElementById("intro-explainer-player");
       const yt = document.getElementById("intro-youtube-iframe");
+      const toggleBtn = document.getElementById("toggle-video-source-btn");
       modal.classList.add("open");
-      if (INTRO_YOUTUBE_EMBED_URL) {
+      if (INTRO_YOUTUBE_EMBED_URL && !introUseLocalMp4) {
         vid.style.display = "none";
+        try { vid.pause(); } catch (_) {}
         yt.style.display = "block";
         yt.src = INTRO_YOUTUBE_EMBED_URL;
+        if (toggleBtn) toggleBtn.textContent = "Use Built-in MP4 Player";
       } else {
-        yt.style.display = "none";
+        if (yt) { yt.style.display = "none"; yt.src = ""; }
         vid.style.display = "block";
         try { vid.play(); } catch (_) {}
+        if (toggleBtn) toggleBtn.textContent = "Switch to YouTube Player";
       }
+    }
+
+    function toggleIntroVideoPlayerSource() {
+      introUseLocalMp4 = !introUseLocalMp4;
+      openIntroVideoModal();
     }
 
     function closeIntroVideoModal() {
