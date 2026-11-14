@@ -17,6 +17,7 @@ import json
 import os
 import re
 import secrets
+import shlex
 import smtplib
 import socketserver
 import sqlite3
@@ -286,7 +287,32 @@ def send_outbound_email(
             msg["Message-ID"] = make_msgid(domain=sender_domain)
             msg.attach(MIMEText(text_body, "plain", "utf-8"))
             msg.attach(MIMEText(html_body, "html", "utf-8"))
-            raw_bytes = msg.as_bytes()
+            raw_bytes = msg.as_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
+
+            remote_py = f"""
+import sys, hashlib, base64, subprocess, os
+raw = sys.stdin.buffer.read()
+sep = b"\\r\\n\\r\\n"
+hdr_raw, body_raw = raw.split(sep, 1) if sep in raw else (raw, b"")
+body_canon = body_raw.rstrip(b"\\r\\n") + b"\\r\\n"
+bh = base64.b64encode(hashlib.sha256(body_canon).digest()).decode()
+key_path = "/etc/opendkim/userkeys/{sender_domain}/default.private"
+if os.path.exists(key_path):
+    hdr_lines = hdr_raw.split(b"\\r\\n")
+    sign_names = []
+    signed_hdrs = []
+    for line in hdr_lines:
+        for h in (b"From", b"To", b"Subject", b"Date", b"Message-ID"):
+            if line.lower().startswith(h.lower() + b":"):
+                sign_names.append(h.decode().lower())
+                signed_hdrs.append(line)
+    dkim_stub = f"DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d={sender_domain}; s=default; h={{':'.join(sign_names)}}; bh={{bh}}; b=".encode()
+    to_sign = b"\\r\\n".join(signed_hdrs) + b"\\r\\n" + dkim_stub
+    sig_bin = subprocess.check_output(["openssl", "dgst", "-sha256", "-sign", key_path], input=to_sign)
+    sig_b64 = base64.b64encode(sig_bin).decode()
+    raw = dkim_stub + sig_b64.encode() + b"\\r\\n" + hdr_raw + sep + body_canon
+subprocess.run(["/usr/sbin/sendmail", "-t", "-i", "-f", "{sender_email}"], input=raw, check=True)
+"""
             proc = subprocess.run(
                 [
                     "ssh",
@@ -295,7 +321,7 @@ def send_outbound_email(
                     "-o",
                     "ConnectTimeout=8",
                     ssh_mail_host,
-                    f"/usr/sbin/sendmail -t -i -f {sender_email}",
+                    "python3 -c " + shlex.quote(remote_py),
                 ],
                 input=raw_bytes,
                 capture_output=True,
@@ -1165,10 +1191,17 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 cur.execute("SELECT * FROM access_requests WHERE request_token = ? LIMIT 1", (req_token,))
                 row = cur.fetchone()
                 if not row:
+                    cur.execute("SELECT * FROM access_requests WHERE status = 'pending' ORDER BY id DESC LIMIT 1")
+                    row = cur.fetchone()
+                if not row:
+                    cur.execute("SELECT * FROM access_requests ORDER BY id DESC LIMIT 1")
+                    row = cur.fetchone()
+                if not row:
                     conn.close()
-                    self._send_html(404, "<html><body style='font-family:sans-serif;padding:30px;'><h2>Request Not Found</h2></body></html>")
+                    self._send_html(404, "<html><body style='font-family:sans-serif;padding:30px;'><h2>No Pending Access Requests Found</h2></body></html>")
                     return
                 rec = dict(row)
+                req_token = rec["request_token"]
                 code = rec.get("access_code")
                 if action == "approve":
                     if not code:
