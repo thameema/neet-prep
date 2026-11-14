@@ -1870,10 +1870,15 @@
     }
 
     // Hybrid Backend Discovery: Localhost -> Relative API; GitHub Pages (neet.memnos.net) -> Live Bridge or Direct Gemini / Offline NCERT Coach
-    const DEFAULT_TUNNEL_URL = "https://noticed-queue-charitable-front.trycloudflare.com";
+    const DEFAULT_TUNNEL_URL = "https://wallpapers-regular-gallery-dash.trycloudflare.com";
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get("backend")) {
       localStorage.setItem("tn_neet_backend_override", urlParams.get("backend").replace(/\/+$/, ""));
+    } else {
+      const savedOverride = localStorage.getItem("tn_neet_backend_override") || "";
+      if (savedOverride.includes("trycloudflare.com") && savedOverride !== DEFAULT_TUNNEL_URL) {
+        localStorage.removeItem("tn_neet_backend_override");
+      }
     }
 
     function getApiBase() {
@@ -1882,6 +1887,18 @@
         return "";
       }
       return localStorage.getItem("tn_neet_backend_override") || DEFAULT_TUNNEL_URL;
+    }
+
+    async function apiFetch(path, options) {
+      const base = getApiBase();
+      try {
+        return await fetch(`${base}${path}`, options);
+      } catch (err) {
+        if (base && base !== "http://localhost:8090") {
+          return await fetch(`http://localhost:8090${path}`, options);
+        }
+        throw err;
+      }
     }
 
     const STORAGE_KEYS = {
@@ -3352,7 +3369,7 @@ Student Question: ${studentMsg}`;
       const cleanCode = String(code || "").trim().toUpperCase();
       if (!cleanCode) return { valid: false, reason: "Please enter your access code." };
       try {
-        const res = await fetch(`${getApiBase()}/api/auth/verify_code`, {
+        const res = await apiFetch(`/api/auth/verify_code`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ code: cleanCode, device_id: getDeviceId() })
@@ -3400,7 +3417,7 @@ Student Question: ${studentMsg}`;
         return;
       }
       try {
-        const res = await fetch(`${getApiBase()}/api/auth/check_request?email=${encodeURIComponent(email)}`);
+        const res = await apiFetch(`/api/auth/check_request?email=${encodeURIComponent(email)}`);
         if (!res.ok) {
           showGateFeedback("gate-code-feedback", "No access request found for that email yet. Click <strong>First Timer? Request Code</strong> above to request one!", false);
           return;
@@ -3443,7 +3460,7 @@ Student Question: ${studentMsg}`;
       btn.textContent = "Submitting Request...";
 
       try {
-        const res = await fetch(`${getApiBase()}/api/auth/request_access`, {
+        const res = await apiFetch(`/api/auth/request_access`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, district, purpose })
@@ -3490,7 +3507,7 @@ Student Question: ${studentMsg}`;
           ? `request_token=${encodeURIComponent(reqToken)}`
           : `email=${encodeURIComponent(pendingEmail || "")}`;
         if (!q || q === "email=") return;
-        const res = await fetch(`${getApiBase()}/api/auth/check_request?${q}`);
+        const res = await apiFetch(`/api/auth/check_request?${q}`);
         if (!res.ok) return;
         const data = await res.json();
         if (data.status === "approved" && data.access_code) {
@@ -3523,7 +3540,7 @@ Student Question: ${studentMsg}`;
       const strip = document.getElementById("admin-analytics-strip");
       wrap.innerHTML = `<div style="padding:16px;font-size:13px;color:var(--text-sec);">Loading access requests &amp; analytics...</div>`;
       try {
-        const res = await fetch(`${getApiBase()}/api/auth/admin_list?admin_key=${encodeURIComponent(adminKey)}`);
+        const res = await apiFetch(`/api/auth/admin_list?admin_key=${encodeURIComponent(adminKey)}`);
         if (!res.ok) {
           wrap.innerHTML = `<div style="padding:16px;color:var(--rose);font-weight:700;">Invalid Admin Key (403).</div>`;
           return;
@@ -3594,7 +3611,7 @@ Student Question: ${studentMsg}`;
       let enforceGate = true;
       // Sync GA4 Measurement ID and auth_required flag from server config
       try {
-        const r = await fetch(`${getApiBase()}/api/public_config`);
+        const r = await apiFetch(`/api/public_config`);
         const cfg = r.ok ? await r.json() : null;
         if (cfg) {
           if (cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_neet_ga_id")) {
