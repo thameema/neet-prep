@@ -1492,11 +1492,11 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 name = str(body.get("name") or "").strip()[:120]
                 email = str(body.get("email") or "").strip().lower()[:160]
                 district = str(body.get("district") or "").strip()[:120]
-                purpose = str(body.get("purpose") or "").strip()[:500]
+                purpose = str(body.get("purpose") or "NEET Aspirant").strip()[:500]
                 ua = (self.headers.get("User-Agent") or "")[:240]
 
-                if not name or not email or "@" not in email or not purpose:
-                    self._send_json(400, {"error": "Please enter your Name, a valid Email Address, and your Purpose for requesting access."})
+                if not name or not email or "@" not in email:
+                    self._send_json(400, {"error": "Please enter your Name and a valid Email Address."})
                     return
 
                 cfg = load_admin_secrets()
@@ -1504,6 +1504,7 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 max_dev = int(cfg.get("max_devices_per_code") or 2)
                 daily_lim = int(cfg.get("daily_ai_limit_per_code") or 40)
 
+                is_new_signup = True
                 with DB_LOCK:
                     conn = sqlite3.connect(DB_PATH)
                     conn.row_factory = sqlite3.Row
@@ -1513,21 +1514,29 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                         (email,),
                     )
                     existing = cur.fetchone()
+                    if existing and existing["status"] in ("revoked", "rejected"):
+                        conn.close()
+                        self._send_json(403, {"error": "Access for this email has been revoked by the administrator."})
+                        return
+
                     if existing:
+                        is_new_signup = False
                         req_token = existing["request_token"]
+                        code = existing["access_code"] or generate_unique_access_code()
                         cur.execute(
-                            "UPDATE access_requests SET name = ?, district = ?, purpose = ?, status = 'pending', ip_address = ?, user_agent = ?, created_at = ? WHERE request_token = ?",
-                            (name, district, purpose, client_ip, ua, now_str, req_token),
+                            "UPDATE access_requests SET name = ?, district = ?, purpose = ?, status = 'approved', access_code = ?, approved_at = COALESCE(approved_at, ?), ip_address = ?, user_agent = ? WHERE request_token = ?",
+                            (name, district, purpose, code, now_str, client_ip, ua, req_token),
                         )
                     else:
                         req_token = secrets.token_hex(16)
+                        code = generate_unique_access_code()
                         cur.execute(
                             """
                             INSERT INTO access_requests (
                                 request_token, name, email, district, purpose,
-                                status, max_devices, daily_ai_limit,
-                                ip_address, user_agent, created_at
-                            ) VALUES (?, ?, ?, ?, ?, 'pending', ?, ?, ?, ?, ?)
+                                status, access_code, max_devices, daily_ai_limit,
+                                ip_address, user_agent, created_at, approved_at
+                            ) VALUES (?, ?, ?, ?, ?, 'approved', ?, ?, ?, ?, ?, ?, ?)
                             """,
                             (
                                 req_token,
@@ -1535,10 +1544,12 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                                 email,
                                 district,
                                 purpose,
+                                code,
                                 max_dev,
                                 daily_lim,
                                 client_ip,
                                 ua,
+                                now_str,
                                 now_str,
                             ),
                         )
@@ -1547,10 +1558,11 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                         """
                         INSERT INTO analytics_events (
                             event_name, student_id, access_code, page_url, meta_json, ip_address, created_at
-                        ) VALUES ('access_requested', ?, '', '', ?, ?, ?)
+                        ) VALUES ('access_requested', ?, ?, '', ?, ?, ?)
                         """,
                         (
                             email,
+                            code,
                             json.dumps({"name": name, "district": district, "purpose": purpose[:120]}),
                             client_ip,
                             now_str,
@@ -1562,6 +1574,7 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 api_base = (cfg.get("public_api_url") or f"http://localhost:{PORT}").rstrip("/")
                 frontend_url = (cfg.get("public_frontend_url") or "https://neet.memnos.net").rstrip("/")
                 admin_console_url = f"{frontend_url}/?admin={urllib.parse.quote(str(cfg.get('admin_key') or ''))}"
+                magic_link = f"{frontend_url}/?code={urllib.parse.quote(code)}"
                 approve_sig = sign_admin_token(req_token, "approve")
                 reject_sig = sign_admin_token(req_token, "reject")
                 revoke_sig = sign_admin_token(req_token, "revoke")
@@ -1569,72 +1582,88 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 reject_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=reject&sig={reject_sig}"
                 revoke_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=revoke&sig={revoke_sig}"
 
-                owner_email = str(cfg.get("owner_notify_email") or "").strip()
-                notify_res = {"sent": False, "transport": "none"}
-                if owner_email:
-                    subj = f"[NEET 720 Access Request] {name} ({district or 'TN'}) — {email}"
-                    owner_html = f"""
-                    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:560px;margin:0 auto;padding:22px;border:1px solid #cbd5e1;border-radius:12px;background:#ffffff;color:#0f172a;">
-                      <div style="background:#0f172a;color:#ffffff;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-                        <strong style="color:#5eead4;font-size:11px;letter-spacing:0.6px;">NEET 720 ACCESS GATEKEEPER</strong>
-                        <h2 style="margin:4px 0 0 0;font-size:17px;">New Student Access Code Request</h2>
-                      </div>
-                      <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:18px;">
-                        <tr><td style="padding:6px 0;color:#64748b;width:130px;"><strong>Name:</strong></td><td style="padding:6px 0;font-weight:700;">{html.escape(name)}</td></tr>
-                        <tr><td style="padding:6px 0;color:#64748b;"><strong>Email:</strong></td><td style="padding:6px 0;">{html.escape(email)}</td></tr>
-                        <tr><td style="padding:6px 0;color:#64748b;"><strong>District / School:</strong></td><td style="padding:6px 0;">{html.escape(district or 'Not specified')}</td></tr>
-                        <tr><td style="padding:6px 0;color:#64748b;"><strong>Purpose:</strong></td><td style="padding:6px 0;">{html.escape(purpose)}</td></tr>
-                        <tr><td style="padding:6px 0;color:#64748b;"><strong>Submitted At:</strong></td><td style="padding:6px 0;">{now_str} (IP: {html.escape(client_ip)})</td></tr>
-                      </table>
-                      <div style="background:#f8fafc;padding:16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
-                        <p style="margin:0 0 12px 0;font-size:12.5px;color:#334155;">
-                          Click below to approve, reject, or later revoke this student's access (once approved, their browser unlocks automatically or when they check status with their email):
-                        </p>
-                        <a href="{approve_url}" style="background:#047857;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:800;font-size:14px;display:inline-block;margin:4px;">
-                          &#9989; 1-Click Approve
-                        </a>
-                        <a href="{revoke_url}" style="background:#be123c;color:#ffffff;text-decoration:none;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13px;display:inline-block;margin:4px;">
-                          &#128683; Revoke / Logout User
-                        </a>
-                      </div>
-                      <p style="margin:14px 0 0 0;font-size:12px;text-align:center;">
-                        <a href="{admin_console_url}" style="color:#0f766e;font-weight:700;text-decoration:none;">Open Full Gatekeeper Admin Console (View / Revoke Any User) &rarr;</a>
-                      </p>
-                    </div>
-                    """
-                    owner_text = (
-                        f"New NEET 720 Access Request\n"
-                        f"Name: {name}\n"
-                        f"Email: {email}\n"
-                        f"District/School: {district}\n"
-                        f"Purpose: {purpose}\n\n"
-                        f"1-CLICK APPROVE & AUTO-SEND CODE:\n{approve_url}\n\n"
-                        f"REJECT:\n{reject_url}\n"
-                    )
-                    notify_res = send_outbound_email(
-                        owner_email,
-                        subj,
-                        owner_html,
-                        owner_text,
-                        is_owner_alert=True,
-                        structured_fields={
-                            "Student_Name": name,
-                            "Student_Email": email,
-                            "District_or_School": district or "Not specified",
-                            "Purpose_for_Access": purpose,
-                            "Submitted_At": f"{now_str} (IP: {client_ip})",
-                            "1_CLICK_APPROVE_AND_SEND_CODE": approve_url,
-                            "1_CLICK_REJECT": reject_url,
-                        },
-                    )
+                def _dispatch_signup_emails():
+                    try:
+                        stu_subj = f"Your Free Student Pass for Tamil Nadu NEET 720 Mastery Hub: {code}"
+                        stu_html = f"""
+                        <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:560px;margin:0 auto;padding:24px;border:1px solid #e2e8f0;border-radius:12px;background:#ffffff;color:#0f172a;">
+                          <div style="background:#0f172a;color:#ffffff;padding:14px 18px;border-radius:8px;margin-bottom:18px;">
+                            <strong style="color:#5eead4;font-size:12px;letter-spacing:0.6px;">TAMIL NADU NEET 720 MASTERY HUB</strong>
+                            <h2 style="margin:4px 0 0 0;font-size:18px;">Your Student Access Pass is Active!</h2>
+                          </div>
+                          <p style="font-size:14px;line-height:1.6;">Hello <strong>{html.escape(name)}</strong>,</p>
+                          <p style="font-size:14px;line-height:1.6;">Welcome to the <strong>Tamil Nadu NEET-UG 720 Mastery Hub &amp; Bilingual Gemini AI Coach</strong>. Keep this email to sign in on your phone, tablet, or laptop anytime.</p>
+                          <div style="background:#f0fdfa;border:2px dashed #0d9488;border-radius:10px;padding:16px;text-align:center;margin:18px 0;">
+                            <div style="font-size:11px;font-weight:700;color:#0f766e;text-transform:uppercase;letter-spacing:0.8px;">Your Personal Access Code</div>
+                            <div style="font-size:26px;font-weight:900;color:#0f172a;letter-spacing:2px;margin-top:6px;font-family:monospace;">{html.escape(code)}</div>
+                            <div style="font-size:11.5px;color:#475569;margin-top:6px;">Valid for up to {max_dev} personal devices • {daily_lim} AI Coach queries/day</div>
+                          </div>
+                          <p style="text-align:center;margin:22px 0;">
+                            <a href="{magic_link}" style="background:#0f766e;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block;">Open NEET 720 Hub &amp; Auto-Sign In &rarr;</a>
+                          </p>
+                        </div>
+                        """
+                        stu_text = (
+                            f"Hello {name},\n\n"
+                            f"Your Personal Access Code for Tamil Nadu NEET 720 Mastery Hub: {code}\n"
+                            f"Direct Sign-In Link: {magic_link}\n"
+                        )
+                        if is_new_signup:
+                            send_outbound_email(email, stu_subj, stu_html, stu_text, is_owner_alert=False)
+
+                        owner_email = str(cfg.get("owner_notify_email") or "").strip()
+                        if owner_email and is_new_signup:
+                            subj = f"[NEET 720 New Student Pass] {name} ({district or 'TN'}) — {email} [{code}]"
+                            owner_html = f"""
+                            <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:560px;margin:0 auto;padding:22px;border:1px solid #cbd5e1;border-radius:12px;background:#ffffff;color:#0f172a;">
+                              <div style="background:#0f172a;color:#ffffff;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+                                <strong style="color:#5eead4;font-size:11px;letter-spacing:0.6px;">NEET 720 ACCESS GATEKEEPER</strong>
+                                <h2 style="margin:4px 0 0 0;font-size:17px;">New Student Registered (Auto-Unlocked: {html.escape(code)})</h2>
+                              </div>
+                              <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:18px;">
+                                <tr><td style="padding:6px 0;color:#64748b;width:130px;"><strong>Name:</strong></td><td style="padding:6px 0;font-weight:700;">{html.escape(name)}</td></tr>
+                                <tr><td style="padding:6px 0;color:#64748b;"><strong>Email:</strong></td><td style="padding:6px 0;">{html.escape(email)}</td></tr>
+                                <tr><td style="padding:6px 0;color:#64748b;"><strong>District / School:</strong></td><td style="padding:6px 0;">{html.escape(district or 'Not specified')}</td></tr>
+                                <tr><td style="padding:6px 0;color:#64748b;"><strong>Role / Purpose:</strong></td><td style="padding:6px 0;">{html.escape(purpose)}</td></tr>
+                                <tr><td style="padding:6px 0;color:#64748b;"><strong>Access Code:</strong></td><td style="padding:6px 0;font-family:monospace;font-weight:800;color:#0f766e;">{html.escape(code)}</td></tr>
+                                <tr><td style="padding:6px 0;color:#64748b;"><strong>Signed Up At:</strong></td><td style="padding:6px 0;">{now_str} (IP: {html.escape(client_ip)})</td></tr>
+                              </table>
+                              <div style="background:#f8fafc;padding:16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
+                                <p style="margin:0 0 12px 0;font-size:12.5px;color:#334155;">
+                                  This student was granted instant access ({daily_lim} AI queries/day limit). Click below anytime to revoke and log out their devices:
+                                </p>
+                                <a href="{revoke_url}" style="background:#be123c;color:#ffffff;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:800;font-size:13.5px;display:inline-block;margin:4px;">
+                                  &#128683; 1-Click Revoke / Block User
+                                </a>
+                              </div>
+                              <p style="margin:14px 0 0 0;font-size:12px;text-align:center;">
+                                <a href="{admin_console_url}" style="color:#0f766e;font-weight:700;text-decoration:none;">Open Full Gatekeeper Admin Console &rarr;</a>
+                              </p>
+                            </div>
+                            """
+                            owner_text = (
+                                f"New NEET 720 Student Registered (Code: {code})\n"
+                                f"Name: {name}\n"
+                                f"Email: {email}\n"
+                                f"District/School: {district}\n"
+                                f"Role/Purpose: {purpose}\n\n"
+                                f"1-CLICK REVOKE / BLOCK USER:\n{revoke_url}\n"
+                            )
+                            send_outbound_email(owner_email, subj, owner_html, owner_text, is_owner_alert=True)
+                    except Exception:
+                        pass
+
+                threading.Thread(target=_dispatch_signup_emails, daemon=True).start()
 
                 self._send_json(
                     200,
                     {
-                        "status": "pending",
+                        "status": "approved",
+                        "access_code": code,
                         "request_token": req_token,
-                        "notified": notify_res.get("sent", False),
-                        "message": "Your access request has been submitted! As soon as it is approved, your unique code will be emailed to you and this screen will unlock automatically.",
+                        "name": name,
+                        "district": district,
+                        "message": f"Welcome {name}! Your personal access code {code} is active.",
                     },
                 )
             except Exception as exc:

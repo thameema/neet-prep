@@ -1250,6 +1250,16 @@
         </div>
 
         <div class="question-scroll" id="question-scroll">
+          <!-- Free 3-Question Preview Banner for Unregistered Visitors -->
+          <div id="free-preview-banner" style="display:none;max-width:840px;width:100%;margin:0 auto 12px auto;background:linear-gradient(135deg,#0f172a 0%,#134e4a 100%);color:#ffffff;padding:11px 16px;border-radius:10px;border:1px solid #14b8a6;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;box-shadow:var(--shadow-sm);">
+            <div style="font-size:12.5px;line-height:1.4;">
+              <strong style="color:#5eead4;">&#10024; Free Trial Preview (Questions 1–3 of 7,484):</strong> Try the first 3 questions below! Unlock all 7,484 Official PYQs &amp; 24/7 Bilingual Gemini AI Coach for free.
+            </div>
+            <button type="button" onclick="openAccessGateModal('Unlock all 7,484 NEET Questions, 27-Year Past Papers &amp; 24/7 Gemini AI Coach instantly — 100% free.')" style="background:#14b8a6;color:#0f172a;border:none;padding:7px 13px;border-radius:7px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;">
+              Get Free Student Pass (Instant) &rarr;
+            </button>
+          </div>
+
           <!-- Post-submission scorecard banner -->
           <div id="mock-result-banner" class="mock-result-banner"></div>
 
@@ -1745,38 +1755,72 @@
   </div>
 
   <!-- FIRST-TIME STUDENT ACCESS CODE GATE & REQUEST MODAL -->
-  <div class="modal-backdrop" id="access-gate-modal" style="z-index:120;background:rgba(15,23,42,0.86);backdrop-filter:blur(6px);">
+  <div class="modal-backdrop" id="access-gate-modal" style="z-index:120;background:rgba(15,23,42,0.86);backdrop-filter:blur(6px);" onclick="if(event.target===this) closeAccessGateToPreview()">
     <div class="modal-card" style="max-width:520px;width:95%;padding:22px;border:1px solid #cbd5e1;">
       <div style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#ffffff;padding:14px 16px;border-radius:10px;margin-bottom:14px;">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
-          <span style="background:var(--primary);color:#fff;font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:0.6px;">INVITE-ONLY STUDENT ACCESS</span>
-          <button type="button" onclick="openIntroVideoModal()" style="background:rgba(13,148,136,0.28);border:1px solid #14b8a6;color:#5eead4;font-size:11px;font-weight:800;padding:4px 9px;border-radius:6px;cursor:pointer;">
-            &#9654; Watch Intro Video (தமிழ் + EN)
-          </button>
+          <span style="background:var(--primary);color:#fff;font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:0.6px;">100% FREE STUDENT PASS • INSTANT UNLOCK</span>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <button type="button" onclick="openIntroVideoModal()" style="background:rgba(13,148,136,0.28);border:1px solid #14b8a6;color:#5eead4;font-size:11px;font-weight:800;padding:4px 9px;border-radius:6px;cursor:pointer;">
+              &#9654; Intro Video
+            </button>
+            <button type="button" onclick="closeAccessGateToPreview()" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#e2e8f0;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;cursor:pointer;" title="Return to 3-Question Free Preview">
+              &#10005; Preview Q.1–3
+            </button>
+          </div>
         </div>
-        <h3 style="margin:8px 0 3px 0;font-size:17px;color:#ffffff;">Tamil Nadu NEET-UG 720 Mastery Hub</h3>
-        <p style="margin:0;font-size:12px;color:#cbd5e1;line-height:1.45;">
-          Protected workspace &amp; 24/7 Bilingual Gemini AI Coach. Enter your personal Access Code or request a free student code below.
+        <h3 style="margin:8px 0 3px 0;font-size:17px;color:#ffffff;">Unlock All 7,484 NEET Questions &amp; AI Coach</h3>
+        <p id="gate-context-msg" style="margin:0;font-size:12px;color:#cbd5e1;line-height:1.45;">
+          Enter your Name &amp; Email below to unlock the full 27-Year NEET Archive &amp; 24/7 Bilingual (தமிழ் + English) Gemini AI Coach immediately.
         </p>
       </div>
 
-      <!-- Mode Switcher Tabs -->
+      <!-- Mode Switcher Tabs (Default: New Here? Get Free Pass) -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f1f5f9;padding:4px;border-radius:8px;margin-bottom:14px;">
-        <button type="button" id="gate-tab-code-btn" onclick="switchAccessGateTab('code')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:800;cursor:pointer;background:#0f766e;color:#ffffff;">
-          Sign In (Email or Code)
+        <button type="button" id="gate-tab-req-btn" onclick="switchAccessGateTab('request')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:800;cursor:pointer;background:#0f766e;color:#ffffff;">
+          New Here? Get Free Pass
         </button>
-        <button type="button" id="gate-tab-req-btn" onclick="switchAccessGateTab('request')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:700;cursor:pointer;background:transparent;color:#334155;">
-          First Timer? Request Access
+        <button type="button" id="gate-tab-code-btn" onclick="switchAccessGateTab('code')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:700;cursor:pointer;background:transparent;color:#334155;">
+          Already Registered? Sign In
         </button>
       </div>
 
-      <!-- TAB 1: SIGN IN WITH APPROVED EMAIL OR ACCESS CODE -->
-      <div id="gate-pane-code">
+      <!-- TAB 1 (DEFAULT): INSTANT FREE STUDENT PASS REGISTRATION -->
+      <div id="gate-pane-request">
         <div class="form-group">
-          <label>Already Requested Access? Enter Your Email to Check Status &amp; Unlock</label>
+          <label>Your Full Name *</label>
+          <input type="text" id="req-name" class="form-control" placeholder="e.g., Kavin Kumar" onkeydown="if(event.key==='Enter') submitFirstTimeAccessRequest()" />
+        </div>
+        <div class="form-group">
+          <label>Your Email Address * (Unlocks immediately &amp; emails your backup pass)</label>
+          <input type="email" id="req-email" class="form-control" placeholder="e.g., student@gmail.com" onkeydown="if(event.key==='Enter') submitFirstTimeAccessRequest()" />
+        </div>
+        <div class="form-group">
+          <label>I am a *</label>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;" id="req-role-pills">
+            <button type="button" class="role-pill-btn" data-role="NEET Student (Class 11/12/Dropper)" onclick="selectGateRolePill(this)" style="padding:7px 8px;font-size:12px;font-weight:800;border-radius:7px;border:1.5px solid #0f766e;background:#f0fdfa;color:#0f766e;cursor:pointer;">&#127891; Student</button>
+            <button type="button" class="role-pill-btn" data-role="Parent of NEET Aspirant" onclick="selectGateRolePill(this)" style="padding:7px 8px;font-size:12px;font-weight:700;border-radius:7px;border:1px solid var(--border);background:#ffffff;color:var(--text-sec);cursor:pointer;">&#128106; Parent</button>
+            <button type="button" class="role-pill-btn" data-role="Teacher / NEET Mentor" onclick="selectGateRolePill(this)" style="padding:7px 8px;font-size:12px;font-weight:700;border-radius:7px;border:1px solid var(--border);background:#ffffff;color:var(--text-sec);cursor:pointer;">&#128218; Teacher</button>
+          </div>
+          <input type="hidden" id="req-purpose" value="NEET Student (Class 11/12/Dropper)" />
+        </div>
+        <div class="form-group">
+          <label>City / District (Optional)</label>
+          <input type="text" id="req-district" class="form-control" placeholder="e.g., Chennai, Madurai, Coimbatore" onkeydown="if(event.key==='Enter') submitFirstTimeAccessRequest()" />
+        </div>
+        <div id="gate-req-feedback" style="display:none;font-size:12px;padding:10px 12px;border-radius:7px;margin-bottom:10px;line-height:1.45;"></div>
+        <button type="button" id="gate-req-submit-btn" class="btn-primary" style="width:100%;padding:11px 14px;font-size:14px;font-weight:800;" onclick="submitFirstTimeAccessRequest()">
+          Unlock All 7,484 Questions &amp; AI Coach Now &rarr;
+        </button>
+      </div>
+
+      <!-- TAB 2: RETURNING STUDENT SIGN IN WITH EMAIL OR CODE -->
+      <div id="gate-pane-code" style="display:none;">
+        <div class="form-group">
+          <label>Enter Your Registered Email to Unlock</label>
           <div style="display:flex;gap:6px;">
             <input type="email" id="gate-lookup-email" class="form-control" placeholder="Enter your email address (e.g., student@gmail.com)" style="font-size:13.5px;" onkeydown="if(event.key==='Enter') lookupAccessByEmail()" />
-            <button type="button" class="btn-primary" style="white-space:nowrap;font-size:13px;padding:9px 14px;" onclick="lookupAccessByEmail()">Check &amp; Sign In &rarr;</button>
+            <button type="button" class="btn-primary" style="white-space:nowrap;font-size:13px;padding:9px 14px;" onclick="lookupAccessByEmail()">Sign In &rarr;</button>
           </div>
         </div>
         <div id="gate-code-feedback" style="display:none;font-size:12px;padding:9px 11px;border-radius:7px;margin-bottom:10px;"></div>
@@ -1792,32 +1836,8 @@
         </div>
       </div>
 
-      <!-- TAB 2: FIRST-TIME STUDENT REQUEST FORM -->
-      <div id="gate-pane-request" style="display:none;">
-        <div class="form-group">
-          <label>Your Full Name *</label>
-          <input type="text" id="req-name" class="form-control" placeholder="e.g., Kavin Kumar" />
-        </div>
-        <div class="form-group">
-          <label>Your Email Address * (Your unique code will be sent here)</label>
-          <input type="email" id="req-email" class="form-control" placeholder="e.g., student@gmail.com" />
-        </div>
-        <div class="form-group">
-          <label>Tamil Nadu District / School</label>
-          <input type="text" id="req-district" class="form-control" placeholder="e.g., Madurai — Govt Model Higher Sec School" />
-        </div>
-        <div class="form-group">
-          <label>Purpose for Requesting Access *</label>
-          <input type="text" id="req-purpose" class="form-control" placeholder="e.g., Preparing for NEET-UG 2026 (Class 12 / Dropper)" />
-        </div>
-        <div id="gate-req-feedback" style="display:none;font-size:12px;padding:10px 12px;border-radius:7px;margin-bottom:10px;line-height:1.45;"></div>
-        <button type="button" id="gate-req-submit-btn" class="btn-primary" style="width:100%;padding:10px 14px;font-size:13.5px;" onclick="submitFirstTimeAccessRequest()">
-          Request My Personal Access Code &rarr;
-        </button>
-      </div>
-
       <div style="margin-top:12px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;">
-        Each access code is bound to your personal devices and includes a daily AI Coach quota to prevent spam and keep tutoring fast for genuine NEET aspirants.
+        100% Free for NEET Aspirants • Includes 40 Bilingual Gemini AI Coach explanations/day.
       </div>
     </div>
   </div>
@@ -2243,6 +2263,10 @@
     }
 
     function jumpToFilteredFromOMR(idx) {
+      if (isFreePreviewVisitor() && idx >= FREE_PREVIEW_QUESTION_LIMIT) {
+        openAccessGateModal(`You've tried the first 3 sample questions! Enter your Name &amp; Email below to unlock Question #${idx + 1} and all 7,484 NEET Questions immediately — 100% free.`);
+        return;
+      }
       state.currentIndex = idx;
       saveSession();
       renderOMRPalette();
@@ -2256,6 +2280,10 @@
     function navQuestion(delta) {
       const next = state.currentIndex + delta;
       if (next >= 0 && next < state.filteredIds.length) {
+        if (isFreePreviewVisitor() && next >= FREE_PREVIEW_QUESTION_LIMIT) {
+          openAccessGateModal(`You've completed the 3-question free preview! Enter your Name &amp; Email below to unlock Question #${next + 1} and all 7,484 NEET Questions immediately — 100% free.`);
+          return;
+        }
         state.currentIndex = next;
         saveSession();
         renderOMRPalette();
@@ -2318,10 +2346,11 @@
       }
 
       const selected = state.answers[q.id] || "";
-      const showSolution = Boolean(state.submittedResult) || (state.mode === "practice" && state.revealedPractice[q.id]);
+      const allowPreviewReveal = state.mode === "practice" || (isFreePreviewVisitor() && state.currentIndex < FREE_PREVIEW_QUESTION_LIMIT);
+      const showSolution = Boolean(state.submittedResult) || (allowPreviewReveal && state.revealedPractice[q.id]);
 
       document.getElementById("check-instant-btn").style.display =
-        (state.mode === "practice" && !state.submittedResult) ? "inline-block" : "none";
+        (allowPreviewReveal && !state.submittedResult) ? "inline-block" : "none";
 
       document.getElementById("mark-review-btn").textContent =
         state.markedReview[q.id] ? "Unmark" : "Review";
@@ -2432,6 +2461,10 @@
     }
 
     function openMobileCoachForCurrentQ() {
+      if (isFreePreviewVisitor()) {
+        openAccessGateModal("Enter your Name &amp; Email below to unlock your 24/7 Bilingual (தமிழ் + English) Gemini AI Coach immediately — 100% free.");
+        return;
+      }
       if (window.innerWidth <= 960) {
         switchMobilePane("coach");
       }
@@ -2471,6 +2504,10 @@
 
     async function submitCurrentExam(autoTimeout = false) {
       if (state.submittedResult) return;
+      if (isFreePreviewVisitor() && !autoTimeout) {
+        openAccessGateModal("Enter your Name &amp; Email below to grade your OMR sheet and unlock your 720-scale Tamil Nadu Medical College cutoff report.");
+        return;
+      }
       const mod = BANK.modules[state.moduleId] || { title: "NEET Paper" };
       const payload = {
         student_id: profile.student_id,
@@ -2866,6 +2903,10 @@ Student Question: ${studentMsg}`;
     }
 
     async function sendCoachMessage(studentMsg) {
+      if (isFreePreviewVisitor()) {
+        openAccessGateModal("Enter your Name &amp; Email below to unlock your 24/7 Bilingual (தமிழ் + English) Gemini AI Coach immediately — 100% free.");
+        return;
+      }
       const q = getCurrentQ();
       const globalNum = q ? (state.questionIds.indexOf(q.id) + 1) : 1;
       const userChoice = q ? (state.answers[q.id] || "") : "";
@@ -3251,6 +3292,10 @@ Student Question: ${studentMsg}`;
 
     /* VIEW & MOBILE NAVIGATION */
     function switchView(viewName) {
+      if (isFreePreviewVisitor() && viewName === "pyq") {
+        openAccessGateModal("Enter your Name &amp; Email below to unlock the complete 27-Year NEET Past Paper &amp; NCERT Exemplar Archive (7,484 Questions) immediately.");
+        return;
+      }
       document.querySelectorAll(".nav-tab").forEach(b => b.classList.toggle("active", b.dataset.view === viewName));
       document.getElementById("view-workspace").classList.toggle("active", viewName === "workspace");
       const pyqEl = document.getElementById("view-pyq");
@@ -3306,12 +3351,63 @@ Student Question: ${studentMsg}`;
       closeProfileModal();
       document.getElementById("gate-code-input").value = "";
       document.getElementById("gate-lookup-email").value = "";
+      switchAccessGateTab("code");
+      syncFreePreviewBanner();
       document.getElementById("access-gate-modal").classList.add("open");
-      showGateFeedback("gate-code-feedback", "You have signed out on this device. Enter your approved email or access code to sign back in.", true);
+      showGateFeedback("gate-code-feedback", "You have signed out on this device. Enter your registered email or access code to sign back in.", true);
     }
 
-    /* STUDENT ACCESS CODE GATE, 1-CLICK EMAIL APPROVAL POLLING & ADMIN CONSOLE */
+    /* STUDENT ACCESS CODE GATE, 3-QUESTION FREE PREVIEW & ADMIN CONSOLE */
     let pendingPollTimer = null;
+    let enforceGateActive = true;
+    const FREE_PREVIEW_QUESTION_LIMIT = 3;
+
+    function isFreePreviewVisitor() {
+      return Boolean(enforceGateActive && !getAccessCode());
+    }
+
+    function syncFreePreviewBanner() {
+      const banner = document.getElementById("free-preview-banner");
+      if (!banner) return;
+      banner.style.display = isFreePreviewVisitor() ? "flex" : "none";
+    }
+
+    function openAccessGateModal(reasonHtml) {
+      const msgEl = document.getElementById("gate-context-msg");
+      if (msgEl && reasonHtml) {
+        msgEl.innerHTML = reasonHtml;
+      }
+      const hasPending = Boolean(localStorage.getItem(STORAGE_KEYS.pendingToken) || localStorage.getItem("tn_neet_pending_email_v1"));
+      switchAccessGateTab(hasPending ? "code" : "request");
+      document.getElementById("access-gate-modal").classList.add("open");
+      setTimeout(() => {
+        const focusEl = document.getElementById(hasPending ? "gate-lookup-email" : "req-name");
+        if (focusEl) focusEl.focus();
+      }, 80);
+    }
+
+    function closeAccessGateToPreview() {
+      document.getElementById("access-gate-modal").classList.remove("open");
+      if (isFreePreviewVisitor() && state.currentIndex >= FREE_PREVIEW_QUESTION_LIMIT) {
+        state.currentIndex = 0;
+        renderOMRPalette();
+        renderCurrentQuestion();
+      }
+      syncFreePreviewBanner();
+    }
+
+    function selectGateRolePill(btn) {
+      const role = btn.getAttribute("data-role") || "NEET Student (Class 11/12/Dropper)";
+      const inp = document.getElementById("req-purpose");
+      if (inp) inp.value = role;
+      document.querySelectorAll("#req-role-pills .role-pill-btn").forEach(b => {
+        const active = b === btn;
+        b.style.border = active ? "1.5px solid #0f766e" : "1px solid var(--border)";
+        b.style.background = active ? "#f0fdfa" : "#ffffff";
+        b.style.color = active ? "#0f766e" : "var(--text-sec)";
+        b.style.fontWeight = active ? "800" : "700";
+      });
+    }
 
     function switchAccessGateTab(tab) {
       const codePane = document.getElementById("gate-pane-code");
@@ -3363,6 +3459,8 @@ Student Question: ${studentMsg}`;
         updateProfilePill();
       }
       document.getElementById("access-gate-modal").classList.remove("open");
+      syncFreePreviewBanner();
+      renderCurrentQuestion();
     }
 
     async function verifyCodeWithServer(code, silentIfValid) {
@@ -3448,16 +3546,16 @@ Student Question: ${studentMsg}`;
       const name = (document.getElementById("req-name").value || "").trim();
       const email = (document.getElementById("req-email").value || "").trim().toLowerCase();
       const district = (document.getElementById("req-district").value || "").trim();
-      const purpose = (document.getElementById("req-purpose").value || "").trim();
+      const purpose = (document.getElementById("req-purpose").value || "NEET Student (Class 11/12/Dropper)").trim();
 
-      if (!name || !email || !email.includes("@") || !purpose) {
-        showGateFeedback("gate-req-feedback", "Please enter your <strong>Full Name</strong>, a valid <strong>Email Address</strong>, and your <strong>Purpose</strong>.", false);
+      if (!name || !email || !email.includes("@")) {
+        showGateFeedback("gate-req-feedback", "Please enter your <strong>Full Name</strong> and a valid <strong>Email Address</strong> to unlock your free pass.", false);
         return;
       }
 
       const btn = document.getElementById("gate-req-submit-btn");
       btn.disabled = true;
-      btn.textContent = "Submitting Request...";
+      btn.textContent = "Unlocking Your Free Pass...";
 
       try {
         const res = await apiFetch(`/api/auth/request_access`, {
@@ -3467,7 +3565,7 @@ Student Question: ${studentMsg}`;
         });
         const data = await res.json().catch(() => ({}));
         btn.disabled = false;
-        btn.textContent = "Request My Personal Access Code →";
+        btn.textContent = "Unlock All 7,484 Questions & AI Coach Now →";
 
         if (!res.ok) {
           showGateFeedback("gate-req-feedback", escapeHtml(data.error || "Could not submit request."), false);
@@ -3475,8 +3573,9 @@ Student Question: ${studentMsg}`;
         }
 
         if (data.status === "approved" && data.access_code) {
-          showGateFeedback("gate-req-feedback", `Your email is already approved! Your code is <strong>${escapeHtml(data.access_code)}</strong>. Unlocking now...`, true);
-          await verifyCodeWithServer(data.access_code, false);
+          showGateFeedback("gate-req-feedback", `<strong>Unlocked!</strong> Your personal pass is <code>${escapeHtml(data.access_code)}</code> (also emailed to ${escapeHtml(email)}). Opening full workspace...`, true);
+          unlockAppWithAccessCode(data.access_code, name, district);
+          await verifyCodeWithServer(data.access_code, true);
           return;
         }
 
@@ -3489,15 +3588,13 @@ Student Question: ${studentMsg}`;
         }
         showGateFeedback(
           "gate-req-feedback",
-          `<strong>Request Sent!</strong> Once the mentor clicks <strong>Approve</strong>:<br>
-           1️⃣ <strong>Instant Unlock:</strong> Keep this tab open (checks every 4 seconds) OR come back anytime and enter <strong>${escapeHtml(email)}</strong> in the <em>Sign In (Email or Code)</em> tab to unlock directly.<br>
-           2️⃣ <strong>Email Backup:</strong> Your unique code is also emailed to <strong>${escapeHtml(email)}</strong> (please check your <strong>Spam / Promotions</strong> folder if using Yahoo/Gmail).`,
+          `<strong>Request Sent!</strong> Keep this tab open or enter <strong>${escapeHtml(email)}</strong> in the Sign In tab anytime to unlock.`,
           true
         );
       } catch (_) {
         btn.disabled = false;
-        btn.textContent = "Request My Personal Access Code →";
-        showGateFeedback("gate-req-feedback", "Network error while submitting request. Please try again.", false);
+        btn.textContent = "Unlock All 7,484 Questions & AI Coach Now →";
+        showGateFeedback("gate-req-feedback", "Network error while creating your pass. Please try again.", false);
       }
     }
 
@@ -3647,20 +3744,36 @@ Student Question: ${studentMsg}`;
         }
       }
 
+      enforceGateActive = enforceGate;
+
       // Check existing saved code in localStorage
       const savedCode = getAccessCode();
       if (savedCode) {
         const check = await verifyCodeWithServer(savedCode, true);
-        if (check.valid) return;
+        if (check.valid) {
+          syncFreePreviewBanner();
+          return;
+        }
       }
 
-      // Only show the First-Time Access Gate Modal when enforceGate is true (or ?gate=1 for testing)
       if (!enforceGate) {
         document.getElementById("access-gate-modal").classList.remove("open");
+        syncFreePreviewBanner();
         return;
       }
 
-      document.getElementById("access-gate-modal").classList.add("open");
+      // 3-Question Free Trial: Start new visitors on Q.1–3 with the Free Preview Banner visible,
+      // and only open the modal immediately if ?gate=1 was explicitly requested in the URL.
+      if (state.currentIndex >= FREE_PREVIEW_QUESTION_LIMIT) {
+        state.currentIndex = 0;
+      }
+      syncFreePreviewBanner();
+      renderOMRPalette();
+      renderCurrentQuestion();
+
+      if (urlParams.get("gate") === "1") {
+        openAccessGateModal();
+      }
       const pendingTok = localStorage.getItem(STORAGE_KEYS.pendingToken);
       const pendingEm = localStorage.getItem("tn_neet_pending_email_v1");
       if (pendingTok || pendingEm) {
