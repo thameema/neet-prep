@@ -2418,7 +2418,24 @@
       if (window.innerWidth <= 960) {
         switchMobilePane("coach");
       }
-      document.getElementById("coach-input").focus();
+      const q = getCurrentQ();
+      if (!q) {
+        document.getElementById("coach-input").focus();
+        return;
+      }
+      const globalNum = state.questionIds.indexOf(q.id) + 1;
+      const userChoice = state.answers[q.id] || "";
+      let autoPrompt;
+      if (profile.language_pref === "ta") {
+        autoPrompt = userChoice
+          ? `வினா ${globalNum} (${q.subject} — ${q.chapter}): நான் தேர்ந்தெடுத்த விருப்பம் ${userChoice} சரியானதா? படிப்படியாக விளக்கவும்.`
+          : `வினா ${globalNum} (${q.subject} — ${q.chapter}): இந்த வினாவை தமிழில் படிப்படியாக விளக்கவும்.`;
+      } else {
+        autoPrompt = userChoice
+          ? `Explain Q.${globalNum} (${q.subject} — ${q.chapter}) step-by-step and check my selected option ${userChoice}.`
+          : `Explain Q.${globalNum} (${q.subject} — ${q.chapter}) step-by-step using NCERT and highlight the -1 trap.`;
+      }
+      sendCoachMessage(autoPrompt);
     }
 
     function evaluateTnTierLocal(proj720, quota) {
