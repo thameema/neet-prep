@@ -1173,7 +1173,7 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
             self._send_json(
                 200,
                 {
-                    "ga_measurement_id": cfg.get("ga_measurement_id") or "G-TNNEET720M",
+                    "ga_measurement_id": cfg.get("ga_measurement_id") or "G-KGL9DJNFNR",
                     "auth_required": enforce_gate,
                     "daily_ai_limit_per_code": int(cfg.get("daily_ai_limit_per_code") or 40),
                     "max_devices_per_code": int(cfg.get("max_devices_per_code") or 2),
