@@ -63,7 +63,11 @@ def load_admin_secrets() -> dict:
         "daily_ai_limit_per_code": 40,
         "max_devices_per_code": 2,
         "sender_display_name": "Tamil Nadu NEET 720 Mastery Hub",
-        "sender_noreply_email": "noreply@memnos.net",
+        "sender_noreply_email": "noreply@sirath.com",
+        "enforce_access_gate": False,
+        "doppler_scope": "/Users/thameema/Documents/ai/zudioz",
+        "doppler_project": "sirath-spaces",
+        "doppler_config": "prd",
         "resend_api_key": "",
         "gas_webhook_url": "",
         "smtp_host": "",
@@ -252,14 +256,15 @@ def send_outbound_email(
     """
     Sends a rich HTML + plain-text email without ever exposing the owner's personal email address to the requester.
     Supports:
+      0. Amazon SES (`sesv2`) via Doppler (`doppler run` in Zudioz scope) or environment AWS credentials
       1. Direct DKIM/SPF-verified Postfix Relay via ssh_mail_host (configured in ~/.config/neet-prep/admin_secrets.json)
       2. Resend API (resend_api_key in ~/.config/neet-prep/admin_secrets.json)
       3. Custom SMTP (smtp_host / smtp_user / smtp_pass in ~/.config/neet-prep/admin_secrets.json)
     """
     cfg = load_admin_secrets()
     sender_name = cfg.get("sender_display_name") or "Tamil Nadu NEET 720 Mastery Hub"
-    sender_email = cfg.get("sender_noreply_email") or "noreply@zrown.com"
-    sender_domain = sender_email.split("@")[-1] if "@" in sender_email else "zrown.com"
+    sender_email = cfg.get("sender_noreply_email") or "noreply@sirath.com"
+    sender_domain = sender_email.split("@")[-1] if "@" in sender_email else "sirath.com"
 
     if is_owner_alert:
         try:
@@ -274,6 +279,47 @@ def send_outbound_email(
             )
         except Exception:
             pass
+
+    # 0. Amazon SES via Doppler (Zudioz workspace) or environment AWS credentials
+    doppler_scope = str(cfg.get("doppler_scope") or "/Users/thameema/Documents/ai/zudioz").strip()
+    doppler_project = str(cfg.get("doppler_project") or "sirath-spaces").strip()
+    doppler_config = str(cfg.get("doppler_config") or "prd").strip()
+    if doppler_project and doppler_config:
+        try:
+            ses_payload = json.dumps({
+                "from": f"{sender_name} <{sender_email}>",
+                "to": to_email,
+                "subject": subject,
+                "text": text_body,
+                "html": html_body,
+            }).encode("utf-8")
+            ses_py = (
+                "import sys, os, json, boto3; "
+                "d = json.load(sys.stdin); "
+                "reg = os.environ.get('AWS_SES_REGION') or os.environ.get('AWS_REGION') or 'us-east-1'; "
+                "ses = boto3.client('sesv2', region_name=reg); "
+                "r = ses.send_email("
+                "FromEmailAddress=d['from'], "
+                "Destination={'ToAddresses': [d['to']]}, "
+                "Content={'Simple': {"
+                "'Subject': {'Data': d['subject'], 'Charset': 'UTF-8'}, "
+                "'Body': {"
+                "'Text': {'Data': d['text'], 'Charset': 'UTF-8'}, "
+                "'Html': {'Data': d['html'], 'Charset': 'UTF-8'}"
+                "}}}); "
+                "print(r.get('MessageId', ''))"
+            )
+            cmd = ["doppler", "run"]
+            if doppler_scope and os.path.exists(doppler_scope):
+                cmd.extend(["--scope", doppler_scope])
+            cmd.extend(["-p", doppler_project, "-c", doppler_config, "--", sys.executable, "-c", ses_py])
+            proc = subprocess.run(cmd, input=ses_payload, capture_output=True, timeout=14)
+            if proc.returncode == 0 and proc.stdout.decode("utf-8", "ignore").strip():
+                msg_id = proc.stdout.decode("utf-8", "ignore").strip().splitlines()[-1]
+                return {"sent": True, "transport": "aws_ses_doppler", "message_id": msg_id}
+            print(f"[NEET-Email] Doppler SES warning: {proc.stderr.decode('utf-8', 'ignore')}", file=sys.stderr)
+        except Exception as exc:
+            print(f"[NEET-Email] Doppler SES error: {exc}", file=sys.stderr)
 
     # 1. Direct DKIM/SPF-verified Postfix Relay via SSH mail host (e.g., host31)
     ssh_mail_host = str(cfg.get("ssh_mail_host") or "").strip()
@@ -1121,11 +1167,12 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
 
         if path == "/api/public_config":
             cfg = load_admin_secrets()
+            enforce_gate = bool(cfg.get("enforce_access_gate", False))
             self._send_json(
                 200,
                 {
                     "ga_measurement_id": cfg.get("ga_measurement_id") or "G-TNNEET720M",
-                    "auth_required": True,
+                    "auth_required": enforce_gate,
                     "daily_ai_limit_per_code": int(cfg.get("daily_ai_limit_per_code") or 40),
                     "max_devices_per_code": int(cfg.get("max_devices_per_code") or 2),
                 },
@@ -1464,25 +1511,11 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                         (email,),
                     )
                     existing = cur.fetchone()
-                    if existing and existing["status"] == "approved" and existing["access_code"]:
-                        rec = dict(existing)
-                        conn.close()
-                        self._send_json(
-                            200,
-                            {
-                                "status": "approved",
-                                "request_token": rec["request_token"],
-                                "access_code": rec["access_code"],
-                                "message": "Your email is already approved! Signing you in automatically...",
-                            },
-                        )
-                        return
-
-                    if existing and existing["status"] == "pending":
+                    if existing:
                         req_token = existing["request_token"]
                         cur.execute(
-                            "UPDATE access_requests SET name = ?, district = ?, purpose = ?, ip_address = ?, user_agent = ? WHERE request_token = ?",
-                            (name, district, purpose, client_ip, ua, req_token),
+                            "UPDATE access_requests SET name = ?, district = ?, purpose = ?, status = 'pending', ip_address = ?, user_agent = ?, created_at = ? WHERE request_token = ?",
+                            (name, district, purpose, client_ip, ua, now_str, req_token),
                         )
                     else:
                         req_token = secrets.token_hex(16)
@@ -1768,7 +1801,10 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 )
                 ua = (self.headers.get("User-Agent") or "")[:240]
 
-                if not custom_key:
+                cfg = load_admin_secrets()
+                enforce_gate = bool(cfg.get("enforce_access_gate", False))
+
+                if not custom_key and (enforce_gate or access_code):
                     auth_check = validate_student_access_code(
                         access_code,
                         device_id=device_id,
@@ -1776,7 +1812,7 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                         user_agent=ua,
                         consume_ai_quota=True,
                     )
-                    if not auth_check.get("valid"):
+                    if not auth_check.get("valid") and enforce_gate:
                         self._send_json(
                             403,
                             {

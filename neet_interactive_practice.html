@@ -3543,16 +3543,22 @@ Student Question: ${studentMsg}`;
     }
 
     async function initAccessGateAndAnalytics() {
-      // Sync GA4 Measurement ID from server config if customized
+      let enforceGate = urlParams.get("gate") === "1";
+      // Sync GA4 Measurement ID and auth_required flag from server config
       try {
-        fetch(`${getApiBase()}/api/public_config`).then(r => r.ok ? r.json() : null).then(cfg => {
-          if (cfg && cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_neet_ga_id")) {
+        const r = await fetch(`${getApiBase()}/api/public_config`);
+        const cfg = r.ok ? await r.json() : null;
+        if (cfg) {
+          if (cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_neet_ga_id")) {
             localStorage.setItem("tn_neet_ga_id", cfg.ga_measurement_id);
             if (typeof window.gtag === "function") {
               window.gtag("config", cfg.ga_measurement_id, { send_page_view: true });
             }
           }
-        }).catch(() => {});
+          if (typeof cfg.auth_required === "boolean" && urlParams.get("gate") !== "1") {
+            enforceGate = cfg.auth_required;
+          }
+        }
       } catch (_) {}
 
       trackNeetEvent("page_view", { module: state.moduleId });
@@ -3583,7 +3589,12 @@ Student Question: ${studentMsg}`;
         if (check.valid) return;
       }
 
-      // Otherwise show the First-Time Access Gate Modal
+      // Only show the First-Time Access Gate Modal when enforceGate is true (or ?gate=1 for testing)
+      if (!enforceGate) {
+        document.getElementById("access-gate-modal").classList.remove("open");
+        return;
+      }
+
       document.getElementById("access-gate-modal").classList.add("open");
       const pendingTok = localStorage.getItem(STORAGE_KEYS.pendingToken);
       const pendingEm = localStorage.getItem("tn_neet_pending_email_v1");
