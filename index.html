@@ -1704,9 +1704,12 @@
         <label>Optional Google Gemini API Key (For direct serverless Gemini on phone)</label>
         <input type="password" id="prof-gemini-key" class="form-control" placeholder="Optional AIza... key (saved only on this device)" />
       </div>
-      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px;">
-        <button class="btn-outline" onclick="closeProfileModal()">Cancel</button>
-        <button class="btn-primary" onclick="saveProfile()">Save Profile</button>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:16px;flex-wrap:wrap;">
+        <button type="button" class="btn-outline" style="color:var(--rose);border-color:#fecdd3;font-size:12px;" onclick="logoutStudentAccess()">Sign Out / Switch Access Code</button>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-outline" onclick="closeProfileModal()">Cancel</button>
+          <button class="btn-primary" onclick="saveProfile()">Save Profile</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1763,31 +1766,31 @@
       <!-- Mode Switcher Tabs -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f1f5f9;padding:4px;border-radius:8px;margin-bottom:14px;">
         <button type="button" id="gate-tab-code-btn" onclick="switchAccessGateTab('code')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:800;cursor:pointer;background:#0f766e;color:#ffffff;">
-          Have an Access Code?
+          Sign In (Email or Code)
         </button>
         <button type="button" id="gate-tab-req-btn" onclick="switchAccessGateTab('request')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:700;cursor:pointer;background:transparent;color:#334155;">
-          First Timer? Request Code
+          First Timer? Request Access
         </button>
       </div>
 
-      <!-- TAB 1: ENTER CODE OR CHECK APPROVED EMAIL -->
+      <!-- TAB 1: SIGN IN WITH APPROVED EMAIL OR ACCESS CODE -->
       <div id="gate-pane-code">
         <div class="form-group">
-          <label>Enter Your Unique Student Access Code</label>
-          <input type="text" id="gate-code-input" class="form-control" placeholder="e.g., NEET-7X9K2M" style="font-family:monospace;font-size:15px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;" onkeydown="if(event.key==='Enter') submitAccessCodeVerify()" />
+          <label>Already Requested Access? Enter Your Email to Check Status &amp; Unlock</label>
+          <div style="display:flex;gap:6px;">
+            <input type="email" id="gate-lookup-email" class="form-control" placeholder="Enter your email address (e.g., student@gmail.com)" style="font-size:13.5px;" onkeydown="if(event.key==='Enter') lookupAccessByEmail()" />
+            <button type="button" class="btn-primary" style="white-space:nowrap;font-size:13px;padding:9px 14px;" onclick="lookupAccessByEmail()">Check &amp; Sign In &rarr;</button>
+          </div>
         </div>
         <div id="gate-code-feedback" style="display:none;font-size:12px;padding:9px 11px;border-radius:7px;margin-bottom:10px;"></div>
-        <button type="button" class="btn-primary" style="width:100%;padding:10px 14px;font-size:13.5px;" onclick="submitAccessCodeVerify()">
-          Verify Code &amp; Unlock NEET 720 Hub &rarr;
-        </button>
 
         <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
           <div style="font-size:11.5px;font-weight:700;color:var(--text-sec);margin-bottom:6px;">
-            Already requested a code? Check your approval status by email:
+            Or enter your <code>NEET-XXXXXX</code> Access Code directly:
           </div>
           <div style="display:flex;gap:6px;">
-            <input type="email" id="gate-lookup-email" class="form-control" placeholder="Enter your email address..." style="font-size:12.5px;" onkeydown="if(event.key==='Enter') lookupAccessByEmail()" />
-            <button type="button" class="btn-outline" style="white-space:nowrap;font-size:12px;padding:7px 12px;" onclick="lookupAccessByEmail()">Check Status</button>
+            <input type="text" id="gate-code-input" class="form-control" placeholder="e.g., NEET-7X9K2M" style="font-family:monospace;font-size:14px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;" onkeydown="if(event.key==='Enter') submitAccessCodeVerify()" />
+            <button type="button" class="btn-outline" style="white-space:nowrap;font-size:12.5px;padding:8px 12px;" onclick="submitAccessCodeVerify()">Verify Code</button>
           </div>
         </div>
       </div>
@@ -3259,6 +3262,23 @@ Student Question: ${studentMsg}`;
 
     function closeProfileModal() { document.getElementById("profile-modal").classList.remove("open"); }
 
+    function logoutStudentAccess() {
+      try {
+        localStorage.removeItem(STORAGE_KEYS.accessCode);
+        localStorage.removeItem(STORAGE_KEYS.pendingToken);
+        localStorage.removeItem("tn_neet_pending_email_v1");
+      } catch (_) {}
+      if (pendingPollTimer) {
+        clearInterval(pendingPollTimer);
+        pendingPollTimer = null;
+      }
+      closeProfileModal();
+      document.getElementById("gate-code-input").value = "";
+      document.getElementById("gate-lookup-email").value = "";
+      document.getElementById("access-gate-modal").classList.add("open");
+      showGateFeedback("gate-code-feedback", "You have signed out on this device. Enter your approved email or access code to sign back in.", true);
+    }
+
     /* STUDENT ACCESS CODE GATE, 1-CLICK EMAIL APPROVAL POLLING & ADMIN CONSOLE */
     let pendingPollTimer = null;
 
@@ -3328,6 +3348,9 @@ Student Question: ${studentMsg}`;
           unlockAppWithAccessCode(cleanCode, data.name, data.district);
           return { valid: true, data };
         }
+        if (res.status === 403 && getAccessCode() === cleanCode) {
+          try { localStorage.removeItem(STORAGE_KEYS.accessCode); } catch (_) {}
+        }
         return { valid: false, reason: data.reason || "Invalid or expired access code." };
       } catch (_) {
         // If backend is temporarily unreachable and code matches NEET-XXXXXX format, allow cached session
@@ -3379,6 +3402,9 @@ Student Question: ${studentMsg}`;
             startPendingApprovalPoll(data.request_token);
           }
           showGateFeedback("gate-code-feedback", "Your request is currently <strong>pending approval</strong>. Keep this tab open or check back shortly — as soon as the mentor clicks Approve, your code will appear automatically!", true);
+        } else if (data.status === "revoked" || data.status === "rejected") {
+          try { localStorage.removeItem(STORAGE_KEYS.accessCode); } catch (_) {}
+          showGateFeedback("gate-code-feedback", `Your access is currently <strong>${escapeHtml(data.status)}</strong> by the administrator.`, false);
         } else {
           showGateFeedback("gate-code-feedback", `Request status: ${escapeHtml(data.status)}.`, false);
         }
@@ -3432,7 +3458,9 @@ Student Question: ${studentMsg}`;
         }
         showGateFeedback(
           "gate-req-feedback",
-          `<strong>Request Sent!</strong> An approval email with your details has been sent to the mentor. The moment they click <strong>Approve</strong>, your unique code is emailed to <strong>${escapeHtml(email)}</strong> AND this screen unlocks automatically (checking live every 4 seconds...).`,
+          `<strong>Request Sent!</strong> Once the mentor clicks <strong>Approve</strong>:<br>
+           1️⃣ <strong>Instant Unlock:</strong> Keep this tab open (checks every 4 seconds) OR come back anytime and enter <strong>${escapeHtml(email)}</strong> in the <em>Sign In (Email or Code)</em> tab to unlock directly.<br>
+           2️⃣ <strong>Email Backup:</strong> Your unique code is also emailed to <strong>${escapeHtml(email)}</strong> (please check your <strong>Spam / Promotions</strong> folder if using Yahoo/Gmail).`,
           true
         );
       } catch (_) {

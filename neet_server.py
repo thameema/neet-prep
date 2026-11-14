@@ -288,6 +288,7 @@ def send_outbound_email(
         try:
             ses_payload = json.dumps({
                 "from": f"{sender_name} <{sender_email}>",
+                "reply_to": sender_email,
                 "to": to_email,
                 "subject": subject,
                 "text": text_body,
@@ -300,6 +301,7 @@ def send_outbound_email(
                 "ses = boto3.client('sesv2', region_name=reg); "
                 "r = ses.send_email("
                 "FromEmailAddress=d['from'], "
+                "ReplyToAddresses=[d['reply_to']], "
                 "Destination={'ToAddresses': [d['to']]}, "
                 "Content={'Simple': {"
                 "'Subject': {'Data': d['subject'], 'Charset': 'UTF-8'}, "
@@ -1558,10 +1560,14 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                     conn.close()
 
                 api_base = (cfg.get("public_api_url") or f"http://localhost:{PORT}").rstrip("/")
+                frontend_url = (cfg.get("public_frontend_url") or "https://neet.memnos.net").rstrip("/")
+                admin_console_url = f"{frontend_url}/?admin={urllib.parse.quote(str(cfg.get('admin_key') or ''))}"
                 approve_sig = sign_admin_token(req_token, "approve")
                 reject_sig = sign_admin_token(req_token, "reject")
+                revoke_sig = sign_admin_token(req_token, "revoke")
                 approve_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=approve&sig={approve_sig}"
                 reject_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=reject&sig={reject_sig}"
+                revoke_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=revoke&sig={revoke_sig}"
 
                 owner_email = str(cfg.get("owner_notify_email") or "").strip()
                 notify_res = {"sent": False, "transport": "none"}
@@ -1582,15 +1588,18 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                       </table>
                       <div style="background:#f8fafc;padding:16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
                         <p style="margin:0 0 12px 0;font-size:12.5px;color:#334155;">
-                          Click below to automatically generate a unique <code>NEET-XXXXXX</code> code and send it to the student (your personal email is never revealed):
+                          Click below to approve, reject, or later revoke this student's access (once approved, their browser unlocks automatically or when they check status with their email):
                         </p>
-                        <a href="{approve_url}" style="background:#047857;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:800;font-size:14px;display:inline-block;margin-right:10px;">
-                          &#9989; 1-Click Approve &amp; Auto-Send Code
+                        <a href="{approve_url}" style="background:#047857;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:800;font-size:14px;display:inline-block;margin:4px;">
+                          &#9989; 1-Click Approve
                         </a>
-                        <a href="{reject_url}" style="background:#be123c;color:#ffffff;text-decoration:none;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13px;display:inline-block;">
-                          &#10060; Reject
+                        <a href="{revoke_url}" style="background:#be123c;color:#ffffff;text-decoration:none;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13px;display:inline-block;margin:4px;">
+                          &#128683; Revoke / Logout User
                         </a>
                       </div>
+                      <p style="margin:14px 0 0 0;font-size:12px;text-align:center;">
+                        <a href="{admin_console_url}" style="color:#0f766e;font-weight:700;text-decoration:none;">Open Full Gatekeeper Admin Console (View / Revoke Any User) &rarr;</a>
+                      </p>
                     </div>
                     """
                     owner_text = (
