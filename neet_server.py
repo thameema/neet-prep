@@ -239,7 +239,14 @@ def check_ip_rate_limit(ip: str, bucket_key: str, max_hits: int, window_sec: int
         return True
 
 
-def send_outbound_email(to_email: str, subject: str, html_body: str, text_body: str, is_owner_alert: bool = False) -> dict:
+def send_outbound_email(
+    to_email: str,
+    subject: str,
+    html_body: str,
+    text_body: str,
+    is_owner_alert: bool = False,
+    structured_fields: dict | None = None,
+) -> dict:
     """
     Sends an email without ever exposing the owner's personal email address to the requester.
     Supports:
@@ -338,14 +345,19 @@ def send_outbound_email(to_email: str, subject: str, html_body: str, text_body: 
         except Exception:
             pass
         try:
-            fs_payload = json.dumps({
+            fs_target = str(cfg.get("formsubmit_token") or to_email).strip()
+            payload_dict = {
                 "_subject": subject,
-                "_template": "box",
+                "_template": "table",
                 "_captcha": "false",
-                "message": text_body,
-            }).encode("utf-8")
+            }
+            if structured_fields and isinstance(structured_fields, dict):
+                payload_dict.update(structured_fields)
+            else:
+                payload_dict["message"] = text_body
+            fs_payload = json.dumps(payload_dict).encode("utf-8")
             req = urllib.request.Request(
-                f"https://formsubmit.co/ajax/{urllib.parse.quote(to_email)}",
+                f"https://formsubmit.co/ajax/{urllib.parse.quote(fs_target)}",
                 data=fs_payload,
                 headers={
                     "Content-Type": "application/json",
@@ -1541,7 +1553,22 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                         f"1-CLICK APPROVE & AUTO-SEND CODE:\n{approve_url}\n\n"
                         f"REJECT:\n{reject_url}\n"
                     )
-                    notify_res = send_outbound_email(owner_email, subj, owner_html, owner_text, is_owner_alert=True)
+                    notify_res = send_outbound_email(
+                        owner_email,
+                        subj,
+                        owner_html,
+                        owner_text,
+                        is_owner_alert=True,
+                        structured_fields={
+                            "Student_Name": name,
+                            "Student_Email": email,
+                            "District_or_School": district or "Not specified",
+                            "Purpose_for_Access": purpose,
+                            "Submitted_At": f"{now_str} (IP: {client_ip})",
+                            "1_CLICK_APPROVE_AND_SEND_CODE": approve_url,
+                            "1_CLICK_REJECT": reject_url,
+                        },
+                    )
 
                 self._send_json(
                     200,
