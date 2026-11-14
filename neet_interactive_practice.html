@@ -3530,13 +3530,19 @@ Student Question: ${studentMsg}`;
         }
         const data = await res.json();
         const ev = data.analytics_summary || {};
-        strip.innerHTML = Object.entries(ev).map(([k, v]) => `
-          <div style="background:#f8fafc;border:1px solid var(--border);padding:6px 10px;border-radius:7px;font-size:11.5px;">
-            <strong style="color:var(--navy);">${escapeHtml(k)}:</strong> <span style="color:var(--primary);font-weight:800;">${v}</span>
-          </div>
-        `).join("") || `<div style="font-size:12px;color:var(--text-muted);">No analytics events recorded yet.</div>`;
-
         const rows = data.requests || [];
+        const pendingCnt = rows.filter(r => r.status === "pending").length;
+        const approvedCnt = rows.filter(r => r.status === "approved").length;
+        const summaryPills = [
+          `<div style="background:${pendingCnt > 0 ? '#fef3c7' : '#f8fafc'};border:1px solid ${pendingCnt > 0 ? '#f59e0b' : 'var(--border)'};padding:6px 10px;border-radius:7px;font-size:11.5px;"><strong style="color:var(--navy);">Pending Approval:</strong> <span style="color:${pendingCnt > 0 ? '#b45309' : 'var(--primary)'};font-weight:800;">${pendingCnt}</span></div>`,
+          `<div style="background:#f0fdfa;border:1px solid #99f6e4;padding:6px 10px;border-radius:7px;font-size:11.5px;"><strong style="color:var(--navy);">Approved Users:</strong> <span style="color:#047857;font-weight:800;">${approvedCnt}</span></div>`,
+          ...Object.entries(ev).filter(([k]) => k !== "access_requested").map(([k, v]) => `
+            <div style="background:#f8fafc;border:1px solid var(--border);padding:6px 10px;border-radius:7px;font-size:11.5px;">
+              <strong style="color:var(--navy);">${escapeHtml(k)}:</strong> <span style="color:var(--primary);font-weight:800;">${v}</span>
+            </div>
+          `)
+        ];
+        strip.innerHTML = summaryPills.join("");
         if (!rows.length) {
           wrap.innerHTML = `<div style="padding:16px;font-size:13px;color:var(--text-sec);">No student access requests submitted yet.</div>`;
           return;
