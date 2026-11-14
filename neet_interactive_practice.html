@@ -3571,7 +3571,7 @@ Student Question: ${studentMsg}`;
     }
 
     async function initAccessGateAndAnalytics() {
-      let enforceGate = urlParams.get("gate") === "1";
+      let enforceGate = true;
       // Sync GA4 Measurement ID and auth_required flag from server config
       try {
         const r = await fetch(`${getApiBase()}/api/public_config`);

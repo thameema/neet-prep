@@ -1169,7 +1169,7 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
 
         if path == "/api/public_config":
             cfg = load_admin_secrets()
-            enforce_gate = bool(cfg.get("enforce_access_gate", False))
+            enforce_gate = bool(cfg.get("enforce_access_gate", True))
             self._send_json(
                 200,
                 {
@@ -1811,7 +1811,7 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
                 ua = (self.headers.get("User-Agent") or "")[:240]
 
                 cfg = load_admin_secrets()
-                enforce_gate = bool(cfg.get("enforce_access_gate", False))
+                enforce_gate = bool(cfg.get("enforce_access_gate", True))
 
                 if not custom_key and (enforce_gate or access_code):
                     auth_check = validate_student_access_code(
