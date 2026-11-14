@@ -30,6 +30,7 @@ import urllib.request
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.utils import formatdate, make_msgid
 
 PORT = int(os.environ.get("PORT", "8090"))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -248,18 +249,65 @@ def send_outbound_email(
     structured_fields: dict | None = None,
 ) -> dict:
     """
-    Sends an email without ever exposing the owner's personal email address to the requester.
+    Sends a rich HTML + plain-text email without ever exposing the owner's personal email address to the requester.
     Supports:
-      1. Resend API (resend_api_key in ~/.config/neet-prep/admin_secrets.json)
-      2. Google Apps Script Web App Relay (gas_webhook_url in ~/.config/neet-prep/admin_secrets.json)
+      1. Direct DKIM/SPF-verified Postfix Relay via ssh_mail_host (configured in ~/.config/neet-prep/admin_secrets.json)
+      2. Resend API (resend_api_key in ~/.config/neet-prep/admin_secrets.json)
       3. Custom SMTP (smtp_host / smtp_user / smtp_pass in ~/.config/neet-prep/admin_secrets.json)
-      4. FormSubmit AJAX fallback (only when is_owner_alert=True to notify owner_notify_email)
     """
     cfg = load_admin_secrets()
     sender_name = cfg.get("sender_display_name") or "Tamil Nadu NEET 720 Mastery Hub"
-    sender_email = cfg.get("sender_noreply_email") or "onboarding@resend.dev"
+    sender_email = cfg.get("sender_noreply_email") or "noreply@zrown.com"
+    sender_domain = sender_email.split("@")[-1] if "@" in sender_email else "zrown.com"
 
-    # 1. Resend API (https://api.resend.com/emails)
+    if is_owner_alert:
+        try:
+            subprocess.Popen(
+                [
+                    "osascript",
+                    "-e",
+                    f'display notification "{text_body[:140].replace(chr(34), chr(39))}" with title "NEET 720 Access Request"',
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+        except Exception:
+            pass
+
+    # 1. Direct DKIM/SPF-verified Postfix Relay via SSH mail host (e.g., host31)
+    ssh_mail_host = str(cfg.get("ssh_mail_host") or "").strip()
+    if ssh_mail_host and re.match(r"^[A-Za-z0-9._@-]+$", ssh_mail_host):
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = subject
+            msg["From"] = f"{sender_name} <{sender_email}>"
+            msg["To"] = to_email
+            msg["Date"] = formatdate(localtime=True)
+            msg["Message-ID"] = make_msgid(domain=sender_domain)
+            msg.attach(MIMEText(text_body, "plain", "utf-8"))
+            msg.attach(MIMEText(html_body, "html", "utf-8"))
+            raw_bytes = msg.as_bytes()
+            proc = subprocess.run(
+                [
+                    "ssh",
+                    "-o",
+                    "BatchMode=yes",
+                    "-o",
+                    "ConnectTimeout=8",
+                    ssh_mail_host,
+                    f"/usr/sbin/sendmail -t -i -f {sender_email}",
+                ],
+                input=raw_bytes,
+                capture_output=True,
+                timeout=14,
+            )
+            if proc.returncode == 0:
+                return {"sent": True, "transport": "direct_dkim_postfix"}
+            print(f"[NEET-Email] SSH Postfix warning: {proc.stderr.decode('utf-8', 'ignore')}", file=sys.stderr)
+        except Exception as exc:
+            print(f"[NEET-Email] SSH Postfix error: {exc}", file=sys.stderr)
+
+    # 2. Resend API (https://api.resend.com/emails)
     resend_key = str(cfg.get("resend_api_key") or os.environ.get("RESEND_API_KEY") or "").strip()
     if resend_key:
         try:
@@ -286,29 +334,6 @@ def send_outbound_email(
         except Exception as exc:
             print(f"[NEET-Email] Resend warning: {exc}", file=sys.stderr)
 
-    # 2. Google Apps Script Web App Relay (gas_webhook_url)
-    gas_url = str(cfg.get("gas_webhook_url") or os.environ.get("GAS_WEBHOOK_URL") or "").strip()
-    if gas_url:
-        try:
-            payload = json.dumps({
-                "to": to_email,
-                "subject": subject,
-                "htmlBody": html_body,
-                "textBody": text_body,
-                "senderName": sender_name,
-            }).encode("utf-8")
-            req = urllib.request.Request(
-                gas_url,
-                data=payload,
-                headers={"Content-Type": "application/json"},
-                method="POST",
-            )
-            with urllib.request.urlopen(req, timeout=12) as resp:
-                if 200 <= resp.status < 400:
-                    return {"sent": True, "transport": "google_apps_script"}
-        except Exception as exc:
-            print(f"[NEET-Email] GAS webhook warning: {exc}", file=sys.stderr)
-
     # 3. SMTP Relay
     smtp_host = str(cfg.get("smtp_host") or os.environ.get("SMTP_HOST") or "").strip()
     smtp_user = str(cfg.get("smtp_user") or os.environ.get("SMTP_USER") or "").strip()
@@ -320,59 +345,17 @@ def send_outbound_email(
             msg["Subject"] = subject
             msg["From"] = f"{sender_name} <{cfg.get('smtp_from_email') or sender_email}>"
             msg["To"] = to_email
+            msg["Date"] = formatdate(localtime=True)
+            msg["Message-ID"] = make_msgid(domain=sender_domain)
             msg.attach(MIMEText(text_body, "plain", "utf-8"))
             msg.attach(MIMEText(html_body, "html", "utf-8"))
             with smtplib.SMTP(smtp_host, smtp_port, timeout=12) as server:
                 server.starttls()
                 server.login(smtp_user, smtp_pass)
-                server.sendmail(msg["From"], [to_email], msg.as_string())
+                server.sendmail(sender_email, [to_email], msg.as_string())
             return {"sent": True, "transport": "smtp"}
         except Exception as exc:
             print(f"[NEET-Email] SMTP warning: {exc}", file=sys.stderr)
-
-    # 4. Owner alert fallback via FormSubmit.co AJAX + macOS notification banner
-    if is_owner_alert:
-        try:
-            subprocess.Popen(
-                [
-                    "osascript",
-                    "-e",
-                    f'display notification "{text_body[:140].replace(chr(34), chr(39))}" with title "NEET 720 Access Request"',
-                ],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-            )
-        except Exception:
-            pass
-        try:
-            fs_target = str(cfg.get("formsubmit_token") or to_email).strip()
-            payload_dict = {
-                "_subject": subject,
-                "_template": "table",
-                "_captcha": "false",
-            }
-            if structured_fields and isinstance(structured_fields, dict):
-                payload_dict.update(structured_fields)
-            else:
-                payload_dict["message"] = text_body
-            fs_payload = json.dumps(payload_dict).encode("utf-8")
-            req = urllib.request.Request(
-                f"https://formsubmit.co/ajax/{urllib.parse.quote(fs_target)}",
-                data=fs_payload,
-                headers={
-                    "Content-Type": "application/json",
-                    "Accept": "application/json",
-                    "Referer": cfg.get("public_frontend_url") or "https://neet.memnos.net",
-                    "Origin": cfg.get("public_frontend_url") or "https://neet.memnos.net",
-                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
-                },
-                method="POST",
-            )
-            with urllib.request.urlopen(req, timeout=8) as resp:
-                if 200 <= resp.status < 300:
-                    return {"sent": True, "transport": "formsubmit_ajax"}
-        except Exception as exc:
-            print(f"[NEET-Email] FormSubmit fallback note: {exc}", file=sys.stderr)
 
     return {"sent": False, "transport": "queued_in_db_and_live_poll"}
 

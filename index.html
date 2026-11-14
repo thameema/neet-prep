@@ -3424,12 +3424,15 @@ Student Question: ${studentMsg}`;
         }
 
         if (data.request_token) {
-          try { localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token); } catch (_) {}
-          startPendingApprovalPoll(data.request_token);
+          try {
+            localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token);
+            localStorage.setItem("tn_neet_pending_email_v1", email);
+          } catch (_) {}
+          startPendingApprovalPoll(data.request_token, email);
         }
         showGateFeedback(
           "gate-req-feedback",
-          `<strong>Request Sent!</strong> An approval alert has been sent to the mentor. Once approved with 1 click, your unique code will be emailed to <strong>${escapeHtml(email)}</strong> AND this screen will unlock automatically (listening live every 8 seconds...).`,
+          `<strong>Request Sent!</strong> An approval email with your details has been sent to the mentor. The moment they click <strong>Approve</strong>, your unique code is emailed to <strong>${escapeHtml(email)}</strong> AND this screen unlocks automatically (checking live every 4 seconds...).`,
           true
         );
       } catch (_) {
@@ -3439,23 +3442,34 @@ Student Question: ${studentMsg}`;
       }
     }
 
-    function startPendingApprovalPoll(reqToken) {
-      if (!reqToken) return;
-      if (pendingPollTimer) clearInterval(pendingPollTimer);
-      pendingPollTimer = setInterval(async () => {
-        try {
-          const res = await fetch(`${getApiBase()}/api/auth/check_request?request_token=${encodeURIComponent(reqToken)}`);
-          if (!res.ok) return;
-          const data = await res.json();
-          if (data.status === "approved" && data.access_code) {
+    async function checkSinglePendingPoll(reqToken, pendingEmail) {
+      try {
+        const q = reqToken
+          ? `request_token=${encodeURIComponent(reqToken)}`
+          : `email=${encodeURIComponent(pendingEmail || "")}`;
+        if (!q || q === "email=") return;
+        const res = await fetch(`${getApiBase()}/api/auth/check_request?${q}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data.status === "approved" && data.access_code) {
+          if (pendingPollTimer) {
             clearInterval(pendingPollTimer);
             pendingPollTimer = null;
-            showGateFeedback("gate-req-feedback", `<strong>Approved!</strong> Your code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
-            showGateFeedback("gate-code-feedback", `<strong>Approved!</strong> Your code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
-            await verifyCodeWithServer(data.access_code, false);
           }
-        } catch (_) {}
-      }, 8000);
+          showGateFeedback("gate-req-feedback", `<strong>Approved!</strong> Your personal code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
+          showGateFeedback("gate-code-feedback", `<strong>Approved!</strong> Your personal code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
+          await verifyCodeWithServer(data.access_code, false);
+        }
+      } catch (_) {}
+    }
+
+    function startPendingApprovalPoll(reqToken, pendingEmail) {
+      if (!reqToken && !pendingEmail) return;
+      if (pendingPollTimer) clearInterval(pendingPollTimer);
+      checkSinglePendingPoll(reqToken, pendingEmail);
+      pendingPollTimer = setInterval(() => {
+        checkSinglePendingPoll(reqToken, pendingEmail);
+      }, 4000);
     }
 
     async function loadAdminConsoleData() {
@@ -3572,8 +3586,9 @@ Student Question: ${studentMsg}`;
       // Otherwise show the First-Time Access Gate Modal
       document.getElementById("access-gate-modal").classList.add("open");
       const pendingTok = localStorage.getItem(STORAGE_KEYS.pendingToken);
-      if (pendingTok) {
-        startPendingApprovalPoll(pendingTok);
+      const pendingEm = localStorage.getItem("tn_neet_pending_email_v1");
+      if (pendingTok || pendingEm) {
+        startPendingApprovalPoll(pendingTok, pendingEm);
       }
     }
 
