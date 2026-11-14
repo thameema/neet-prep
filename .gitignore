@@ -1,6 +1,8 @@
 __pycache__/
 *.pyc
 .env
+.env.*
+*secret*
 neet_data.db
 neet_data.db-journal
 .DS_Store

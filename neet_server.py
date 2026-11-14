@@ -9,19 +9,27 @@ Tamil Nadu NEET-UG Mastery Hub & Bilingual (Tamil + English) Gemini AI Coach Ser
   (Cloud Gemini REST API via GEMINI_API_KEY, local Gemini via agy CLI, + offline NCERT fallback).
 """
 
+import hashlib
+import hmac
+import html
 import http.server
 import json
 import os
 import re
+import secrets
+import smtplib
 import socketserver
 import sqlite3
 import subprocess
 import sys
 import threading
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 PORT = int(os.environ.get("PORT", "8090"))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -30,8 +38,46 @@ LEDGER_PATH = os.path.join(BASE_DIR, "student_score_ledger.json")
 QUESTIONS_PATH = os.path.join(BASE_DIR, "questions_bank.json")
 PAST_PAPERS_PATH = os.path.join(BASE_DIR, "past_papers_archive.json")
 AGY_BIN = os.environ.get("AGY_BIN", os.path.expanduser("~/.local/bin/agy"))
+ADMIN_SECRETS_PATH = os.environ.get(
+    "NEET_ADMIN_SECRETS_PATH",
+    os.path.expanduser("~/.config/neet-prep/admin_secrets.json"),
+)
 
 DB_LOCK = threading.Lock()
+IP_RATE_LOCK = threading.Lock()
+IP_REQUEST_BUCKET = {}
+
+
+def load_admin_secrets() -> dict:
+    """Loads private owner config from outside the git repository (~/.config/neet-prep/admin_secrets.json)."""
+    defaults = {
+        "owner_notify_email": "",
+        "hmac_secret": "default-local-dev-hmac-change-me",
+        "admin_key": "",
+        "master_passcode": "",
+        "ga_measurement_id": "G-TNNEET720M",
+        "public_frontend_url": "https://neet.memnos.net",
+        "public_api_url": "https://noticed-queue-charitable-front.trycloudflare.com",
+        "daily_ai_limit_per_code": 40,
+        "max_devices_per_code": 2,
+        "sender_display_name": "Tamil Nadu NEET 720 Mastery Hub",
+        "sender_noreply_email": "noreply@memnos.net",
+        "resend_api_key": "",
+        "gas_webhook_url": "",
+        "smtp_host": "",
+        "smtp_port": 587,
+        "smtp_user": "",
+        "smtp_pass": "",
+    }
+    try:
+        if os.path.exists(ADMIN_SECRETS_PATH):
+            with open(ADMIN_SECRETS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, dict):
+                defaults.update(data)
+    except Exception as exc:
+        print(f"[NEET-Auth] Warning loading admin secrets: {exc}", file=sys.stderr)
+    return defaults
 
 # Load verified question bank + 2013-2026 official past papers archive at startup
 with open(QUESTIONS_PATH, "r", encoding="utf-8") as f:
@@ -111,8 +157,322 @@ def init_db():
             )
             """
         )
+        cur.execute(
+            """
+            CREATE TABLE IF NOT EXISTS access_requests (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                request_token TEXT UNIQUE NOT NULL,
+                name TEXT NOT NULL,
+                email TEXT NOT NULL,
+                district TEXT DEFAULT '',
+                purpose TEXT NOT NULL,
+                status TEXT NOT NULL DEFAULT 'pending',
+                access_code TEXT UNIQUE,
+                max_devices INTEGER NOT NULL DEFAULT 2,
+                daily_ai_limit INTEGER NOT NULL DEFAULT 40,
+                ip_address TEXT DEFAULT '',
+                user_agent TEXT DEFAULT '',
+                created_at TEXT NOT NULL,
+                approved_at TEXT DEFAULT ''
+            )
+            """
+        )
+        cur.execute(
+            """
+            CREATE TABLE IF NOT EXISTS access_devices (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                access_code TEXT NOT NULL,
+                device_id TEXT NOT NULL,
+                first_seen_at TEXT NOT NULL,
+                last_seen_at TEXT NOT NULL,
+                UNIQUE(access_code, device_id)
+            )
+            """
+        )
+        cur.execute(
+            """
+            CREATE TABLE IF NOT EXISTS analytics_events (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                event_name TEXT NOT NULL,
+                student_id TEXT DEFAULT '',
+                access_code TEXT DEFAULT '',
+                page_url TEXT DEFAULT '',
+                meta_json TEXT DEFAULT '{}',
+                ip_address TEXT DEFAULT '',
+                created_at TEXT NOT NULL
+            )
+            """
+        )
         conn.commit()
         conn.close()
+
+
+def sign_admin_token(request_token: str, action: str) -> str:
+    cfg = load_admin_secrets()
+    key = str(cfg.get("hmac_secret") or "neet-hmac").encode("utf-8")
+    msg = f"{request_token}:{action}".encode("utf-8")
+    return hmac.new(key, msg, hashlib.sha256).hexdigest()
+
+
+def verify_admin_token(request_token: str, action: str, sig: str) -> bool:
+    if not request_token or not action or not sig:
+        return False
+    expected = sign_admin_token(request_token, action)
+    return hmac.compare_digest(expected, str(sig).strip())
+
+
+def generate_unique_access_code() -> str:
+    alphabet = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ"
+    return "NEET-" + "".join(secrets.choice(alphabet) for _ in range(6))
+
+
+def check_ip_rate_limit(ip: str, bucket_key: str, max_hits: int, window_sec: int = 3600) -> bool:
+    now = time.time()
+    key = f"{bucket_key}:{ip}"
+    with IP_RATE_LOCK:
+        hits = [t for t in IP_REQUEST_BUCKET.get(key, []) if now - t < window_sec]
+        if len(hits) >= max_hits:
+            IP_REQUEST_BUCKET[key] = hits
+            return False
+        hits.append(now)
+        IP_REQUEST_BUCKET[key] = hits
+        return True
+
+
+def send_outbound_email(to_email: str, subject: str, html_body: str, text_body: str, is_owner_alert: bool = False) -> dict:
+    """
+    Sends an email without ever exposing the owner's personal email address to the requester.
+    Supports:
+      1. Resend API (resend_api_key in ~/.config/neet-prep/admin_secrets.json)
+      2. Google Apps Script Web App Relay (gas_webhook_url in ~/.config/neet-prep/admin_secrets.json)
+      3. Custom SMTP (smtp_host / smtp_user / smtp_pass in ~/.config/neet-prep/admin_secrets.json)
+      4. FormSubmit AJAX fallback (only when is_owner_alert=True to notify owner_notify_email)
+    """
+    cfg = load_admin_secrets()
+    sender_name = cfg.get("sender_display_name") or "Tamil Nadu NEET 720 Mastery Hub"
+    sender_email = cfg.get("sender_noreply_email") or "onboarding@resend.dev"
+
+    # 1. Resend API (https://api.resend.com/emails)
+    resend_key = str(cfg.get("resend_api_key") or os.environ.get("RESEND_API_KEY") or "").strip()
+    if resend_key:
+        try:
+            payload = json.dumps({
+                "from": f"{sender_name} <{sender_email}>",
+                "to": [to_email],
+                "subject": subject,
+                "html": html_body,
+                "text": text_body,
+            }).encode("utf-8")
+            req = urllib.request.Request(
+                "https://api.resend.com/emails",
+                data=payload,
+                headers={
+                    "Authorization": f"Bearer {resend_key}",
+                    "Content-Type": "application/json",
+                    "User-Agent": "TN-NEET-720-Hub/1.0",
+                },
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                if 200 <= resp.status < 300:
+                    return {"sent": True, "transport": "resend_api"}
+        except Exception as exc:
+            print(f"[NEET-Email] Resend warning: {exc}", file=sys.stderr)
+
+    # 2. Google Apps Script Web App Relay (gas_webhook_url)
+    gas_url = str(cfg.get("gas_webhook_url") or os.environ.get("GAS_WEBHOOK_URL") or "").strip()
+    if gas_url:
+        try:
+            payload = json.dumps({
+                "to": to_email,
+                "subject": subject,
+                "htmlBody": html_body,
+                "textBody": text_body,
+                "senderName": sender_name,
+            }).encode("utf-8")
+            req = urllib.request.Request(
+                gas_url,
+                data=payload,
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=12) as resp:
+                if 200 <= resp.status < 400:
+                    return {"sent": True, "transport": "google_apps_script"}
+        except Exception as exc:
+            print(f"[NEET-Email] GAS webhook warning: {exc}", file=sys.stderr)
+
+    # 3. SMTP Relay
+    smtp_host = str(cfg.get("smtp_host") or os.environ.get("SMTP_HOST") or "").strip()
+    smtp_user = str(cfg.get("smtp_user") or os.environ.get("SMTP_USER") or "").strip()
+    smtp_pass = str(cfg.get("smtp_pass") or os.environ.get("SMTP_PASS") or "").strip()
+    smtp_port = int(cfg.get("smtp_port") or os.environ.get("SMTP_PORT") or 587)
+    if smtp_host and smtp_user and smtp_pass:
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = subject
+            msg["From"] = f"{sender_name} <{cfg.get('smtp_from_email') or sender_email}>"
+            msg["To"] = to_email
+            msg.attach(MIMEText(text_body, "plain", "utf-8"))
+            msg.attach(MIMEText(html_body, "html", "utf-8"))
+            with smtplib.SMTP(smtp_host, smtp_port, timeout=12) as server:
+                server.starttls()
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(msg["From"], [to_email], msg.as_string())
+            return {"sent": True, "transport": "smtp"}
+        except Exception as exc:
+            print(f"[NEET-Email] SMTP warning: {exc}", file=sys.stderr)
+
+    # 4. Owner alert fallback via FormSubmit.co AJAX + macOS notification banner
+    if is_owner_alert:
+        try:
+            subprocess.Popen(
+                [
+                    "osascript",
+                    "-e",
+                    f'display notification "{text_body[:140].replace(chr(34), chr(39))}" with title "NEET 720 Access Request"',
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+        except Exception:
+            pass
+        try:
+            fs_payload = json.dumps({
+                "_subject": subject,
+                "_template": "box",
+                "_captcha": "false",
+                "message": text_body,
+            }).encode("utf-8")
+            req = urllib.request.Request(
+                f"https://formsubmit.co/ajax/{urllib.parse.quote(to_email)}",
+                data=fs_payload,
+                headers={
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Referer": cfg.get("public_frontend_url") or "https://neet.memnos.net",
+                    "Origin": cfg.get("public_frontend_url") or "https://neet.memnos.net",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+                },
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                if 200 <= resp.status < 300:
+                    return {"sent": True, "transport": "formsubmit_ajax"}
+        except Exception as exc:
+            print(f"[NEET-Email] FormSubmit fallback note: {exc}", file=sys.stderr)
+
+    return {"sent": False, "transport": "queued_in_db_and_live_poll"}
+
+
+def validate_student_access_code(
+    code: str,
+    device_id: str = "",
+    ip_addr: str = "",
+    user_agent: str = "",
+    consume_ai_quota: bool = False,
+) -> dict:
+    """
+    Validates an access code against SQLite + master_passcode, enforces max devices per code,
+    and optionally checks daily AI Coach quota so shared links/codes cannot abuse Gemini.
+    """
+    clean_code = str(code or "").strip().upper()
+    clean_dev = str(device_id or "default_device").strip()[:80]
+    if not clean_code:
+        return {"valid": False, "reason": "Access code required. Please enter your Access Code or request one."}
+
+    cfg = load_admin_secrets()
+    master_code = str(cfg.get("master_passcode") or "").strip().upper()
+    if master_code and hmac.compare_digest(clean_code, master_code):
+        return {
+            "valid": True,
+            "code": clean_code,
+            "name": "Verified Mentor",
+            "email": "",
+            "daily_ai_limit": 500,
+            "ai_used_today": 0,
+            "is_master": True,
+        }
+
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    today_prefix = datetime.now().strftime("%Y-%m-%d")
+
+    with DB_LOCK:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT * FROM access_requests WHERE UPPER(access_code) = ? LIMIT 1",
+            (clean_code,),
+        )
+        row = cur.fetchone()
+        if not row:
+            conn.close()
+            return {"valid": False, "reason": "Invalid Access Code. Please check the code or request a new one."}
+
+        rec = dict(row)
+        if rec.get("status") != "approved":
+            conn.close()
+            return {"valid": False, "reason": f"This access code is currently {rec.get('status')}."}
+
+        max_devs = int(rec.get("max_devices") or cfg.get("max_devices_per_code") or 2)
+        cur.execute(
+            "SELECT device_id FROM access_devices WHERE access_code = ?",
+            (clean_code,),
+        )
+        known_devs = [r["device_id"] for r in cur.fetchall()]
+        if clean_dev not in known_devs:
+            if len(known_devs) >= max_devs:
+                conn.close()
+                return {
+                    "valid": False,
+                    "reason": f"Device limit reached ({max_devs} devices max per student code). Access codes cannot be shared.",
+                }
+            cur.execute(
+                "INSERT OR IGNORE INTO access_devices (access_code, device_id, first_seen_at, last_seen_at) VALUES (?, ?, ?, ?)",
+                (clean_code, clean_dev, now_str, now_str),
+            )
+        else:
+            cur.execute(
+                "UPDATE access_devices SET last_seen_at = ? WHERE access_code = ? AND device_id = ?",
+                (now_str, clean_code, clean_dev),
+            )
+
+        daily_limit = int(rec.get("daily_ai_limit") or cfg.get("daily_ai_limit_per_code") or 40)
+        cur.execute(
+            "SELECT COUNT(*) AS cnt FROM analytics_events WHERE access_code = ? AND event_name = 'ai_coach_query' AND created_at LIKE ?",
+            (clean_code, f"{today_prefix}%"),
+        )
+        used_today = int(cur.fetchone()["cnt"] or 0)
+
+        if consume_ai_quota and used_today >= daily_limit:
+            conn.commit()
+            conn.close()
+            return {
+                "valid": False,
+                "quota_exceeded": True,
+                "reason": f"Daily AI Coach limit reached ({daily_limit} questions/day for this code). Offline NCERT explanations remain unlimited.",
+            }
+
+        if consume_ai_quota:
+            cur.execute(
+                "INSERT INTO analytics_events (event_name, student_id, access_code, page_url, meta_json, ip_address, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                ("ai_coach_query", rec.get("email", ""), clean_code, "/api/chat", "{}", "", now_str),
+            )
+            used_today += 1
+
+        conn.commit()
+        conn.close()
+
+    return {
+        "valid": True,
+        "code": clean_code,
+        "name": rec.get("name") or "NEET Aspirant",
+        "email": rec.get("email") or "",
+        "district": rec.get("district") or "Chennai",
+        "daily_ai_limit": daily_limit,
+        "ai_used_today": used_today,
+    }
 
 
 def sync_mentor_ledger():
@@ -683,7 +1043,10 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type, X-Gemini-Key")
+        self.send_header(
+            "Access-Control-Allow-Headers",
+            "Content-Type, X-Gemini-Key, X-Access-Code, X-Device-Id, X-Admin-Key",
+        )
         self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
         super().end_headers()
 
@@ -694,6 +1057,21 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    def _send_html(self, status_code: int, html_str: str):
+        body = html_str.encode("utf-8")
+        self.send_response(status_code)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _client_ip(self) -> str:
+        return (
+            self.headers.get("CF-Connecting-IP")
+            or self.headers.get("X-Forwarded-For", "").split(",")[0].strip()
+            or self.client_address[0]
+        )
 
     def _read_json_body(self) -> dict:
         length = int(self.headers.get("Content-Length", 0))
@@ -719,6 +1097,211 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
         parsed = urllib.parse.urlparse(self.path)
         path = parsed.path
         qs = urllib.parse.parse_qs(parsed.query)
+
+        if path == "/api/public_config":
+            cfg = load_admin_secrets()
+            self._send_json(
+                200,
+                {
+                    "ga_measurement_id": cfg.get("ga_measurement_id") or "G-TNNEET720M",
+                    "auth_required": True,
+                    "daily_ai_limit_per_code": int(cfg.get("daily_ai_limit_per_code") or 40),
+                    "max_devices_per_code": int(cfg.get("max_devices_per_code") or 2),
+                },
+            )
+            return
+
+        if path == "/api/auth/check_request":
+            req_token = (qs.get("request_token") or [""])[0].strip()
+            email_lookup = (qs.get("email") or [""])[0].strip().lower()
+            with DB_LOCK:
+                conn = sqlite3.connect(DB_PATH)
+                conn.row_factory = sqlite3.Row
+                cur = conn.cursor()
+                row = None
+                if req_token:
+                    cur.execute(
+                        "SELECT request_token, name, email, status, access_code, created_at, approved_at FROM access_requests WHERE request_token = ? LIMIT 1",
+                        (req_token,),
+                    )
+                    row = cur.fetchone()
+                elif email_lookup:
+                    cur.execute(
+                        "SELECT request_token, name, email, status, access_code, created_at, approved_at FROM access_requests WHERE LOWER(email) = ? ORDER BY id DESC LIMIT 1",
+                        (email_lookup,),
+                    )
+                    row = cur.fetchone()
+                conn.close()
+            if not row:
+                self._send_json(404, {"found": False, "status": "not_found"})
+                return
+            rec = dict(row)
+            self._send_json(
+                200,
+                {
+                    "found": True,
+                    "status": rec["status"],
+                    "name": rec["name"],
+                    "email": rec["email"],
+                    "request_token": rec["request_token"],
+                    "access_code": rec["access_code"] if rec["status"] == "approved" else None,
+                    "approved_at": rec["approved_at"],
+                },
+            )
+            return
+
+        if path == "/api/auth/admin_action":
+            req_token = (qs.get("token") or [""])[0].strip()
+            action = (qs.get("action") or [""])[0].strip().lower()
+            sig = (qs.get("sig") or [""])[0].strip()
+            if action not in ("approve", "reject", "revoke") or not verify_admin_token(req_token, action, sig):
+                self._send_html(
+                    403,
+                    "<html><body style='font-family:sans-serif;padding:30px;'><h2>403 Invalid or Expired Signature</h2></body></html>",
+                )
+                return
+
+            cfg = load_admin_secrets()
+            now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            with DB_LOCK:
+                conn = sqlite3.connect(DB_PATH)
+                conn.row_factory = sqlite3.Row
+                cur = conn.cursor()
+                cur.execute("SELECT * FROM access_requests WHERE request_token = ? LIMIT 1", (req_token,))
+                row = cur.fetchone()
+                if not row:
+                    conn.close()
+                    self._send_html(404, "<html><body style='font-family:sans-serif;padding:30px;'><h2>Request Not Found</h2></body></html>")
+                    return
+                rec = dict(row)
+                code = rec.get("access_code")
+                if action == "approve":
+                    if not code:
+                        code = generate_unique_access_code()
+                    cur.execute(
+                        "UPDATE access_requests SET status = 'approved', access_code = ?, approved_at = ? WHERE request_token = ?",
+                        (code, now_str, req_token),
+                    )
+                else:
+                    new_st = "rejected" if action == "reject" else "revoked"
+                    cur.execute(
+                        "UPDATE access_requests SET status = ? WHERE request_token = ?",
+                        (new_st, req_token),
+                    )
+                conn.commit()
+                conn.close()
+
+            email_result = {"sent": False, "transport": "none"}
+            frontend_url = (cfg.get("public_frontend_url") or "https://neet.memnos.net").rstrip("/")
+            magic_link = f"{frontend_url}/?code={urllib.parse.quote(code or '')}"
+
+            if action == "approve" and code:
+                subj = f"Your Access Code for Tamil Nadu NEET 720 Mastery Hub: {code}"
+                stu_html = f"""
+                <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:560px;margin:0 auto;padding:24px;border:1px solid #e2e8f0;border-radius:12px;background:#ffffff;color:#0f172a;">
+                  <div style="background:#0f172a;color:#ffffff;padding:14px 18px;border-radius:8px;margin-bottom:18px;">
+                    <strong style="color:#5eead4;font-size:12px;letter-spacing:0.6px;">TAMIL NADU NEET 720 MASTERY HUB</strong>
+                    <h2 style="margin:4px 0 0 0;font-size:18px;">Your Student Access Pass is Approved</h2>
+                  </div>
+                  <p style="font-size:14px;line-height:1.6;">Hello <strong>{html.escape(rec['name'])}</strong>,</p>
+                  <p style="font-size:14px;line-height:1.6;">Your request to access the <strong>Tamil Nadu NEET-UG 720 Mastery Hub &amp; Bilingual Gemini AI Coach</strong> has been approved.</p>
+                  <div style="background:#f0fdfa;border:2px dashed #0d9488;border-radius:10px;padding:16px;text-align:center;margin:18px 0;">
+                    <div style="font-size:11px;font-weight:700;color:#0f766e;text-transform:uppercase;letter-spacing:0.8px;">Your Personal Access Code</div>
+                    <div style="font-size:26px;font-weight:900;color:#0f172a;letter-spacing:2px;margin-top:6px;font-family:monospace;">{html.escape(code)}</div>
+                    <div style="font-size:11.5px;color:#475569;margin-top:6px;">Valid for up to {rec.get('max_devices', 2)} personal devices • {rec.get('daily_ai_limit', 40)} AI Coach queries/day</div>
+                  </div>
+                  <p style="text-align:center;margin:22px 0;">
+                    <a href="{magic_link}" style="background:#0f766e;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:700;font-size:14px;display:inline-block;">Open NEET 720 Hub &amp; Auto-Sign In &rarr;</a>
+                  </p>
+                  <p style="font-size:12px;color:#64748b;line-height:1.5;border-top:1px solid #e2e8f0;padding-top:12px;">
+                    Note: This is an automated system message. Please do not share your personal access code publicly, as it is device-limited to protect AI Coach capacity.
+                  </p>
+                </div>
+                """
+                stu_text = (
+                    f"Hello {rec['name']},\n\n"
+                    f"Your access request for the Tamil Nadu NEET 720 Mastery Hub has been approved.\n\n"
+                    f"Your Personal Access Code: {code}\n"
+                    f"Direct Sign-In Link: {magic_link}\n\n"
+                    f"(Valid for up to {rec.get('max_devices', 2)} devices. Automated message — do not reply.)"
+                )
+                email_result = send_outbound_email(rec["email"], subj, stu_html, stu_text, is_owner_alert=False)
+
+            revoke_sig = sign_admin_token(req_token, "revoke")
+            approve_sig = sign_admin_token(req_token, "approve")
+            api_base = (cfg.get("public_api_url") or "").rstrip("/")
+            revoke_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=revoke&sig={revoke_sig}"
+            reapprove_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=approve&sig={approve_sig}"
+
+            status_badge = "#047857" if action == "approve" else "#be123c"
+            transport_msg = (
+                f"Automated email sent to <strong>{html.escape(rec['email'])}</strong> via <code>{email_result['transport']}</code> (your personal email was completely hidden)."
+                if email_result.get("sent")
+                else f"Code is live! The student's browser on <code>neet.memnos.net</code> automatically unlocks on screen (and they can retrieve code <code>{html.escape(code or '')}</code> anytime by entering <strong>{html.escape(rec['email'])}</strong> on the sign-in screen)."
+            )
+
+            page_html = f"""<!DOCTYPE html>
+            <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>NEET 720 Admin Action — {action.upper()}</title></head>
+            <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#f8fafc;padding:24px;margin:0;">
+              <div style="max-width:540px;margin:20px auto;background:#ffffff;color:#0f172a;border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+                <div style="display:inline-block;background:{status_badge};color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:6px;text-transform:uppercase;">
+                  Request {html.escape(action.upper())}D
+                </div>
+                <h2 style="margin:10px 0 6px 0;font-size:20px;">{html.escape(rec['name'])} ({html.escape(rec['email'])})</h2>
+                <p style="font-size:13px;color:#475569;margin:0 0 14px 0;">
+                  <strong>District/School:</strong> {html.escape(rec.get('district') or 'N/A')} &nbsp;|&nbsp;
+                  <strong>Purpose:</strong> {html.escape(rec.get('purpose') or 'N/A')}
+                </p>
+                {f'''
+                <div style="background:#f0fdfa;border:2px solid #0d9488;border-radius:10px;padding:14px;text-align:center;margin-bottom:14px;">
+                  <div style="font-size:11px;font-weight:700;color:#0f766e;">GENERATED UNIQUE STUDENT CODE</div>
+                  <div id="code-box" style="font-size:26px;font-weight:900;font-family:monospace;letter-spacing:2px;margin:6px 0;">{html.escape(code)}</div>
+                  <button onclick="navigator.clipboard.writeText('{html.escape(magic_link)}');this.textContent='Copied Magic Sign-In Link!';" style="background:#0f766e;color:#fff;border:none;padding:8px 14px;border-radius:6px;font-weight:700;cursor:pointer;font-size:12px;">Copy 1-Click Magic Link</button>
+                </div>
+                <p style="font-size:13px;color:#334155;line-height:1.5;background:#f8fafc;padding:12px;border-radius:8px;border:1px solid #e2e8f0;">
+                  {transport_msg}
+                </p>
+                <div style="margin-top:16px;text-align:right;">
+                  <a href="{revoke_url}" style="color:#be123c;font-size:12px;font-weight:700;text-decoration:none;">Revoke This Code &rarr;</a>
+                </div>
+                ''' if action == "approve" else f'''
+                <p style="font-size:13.5px;color:#be123c;font-weight:600;">Access for this request has been {html.escape(action)}d.</p>
+                <a href="{reapprove_url}" style="display:inline-block;background:#0f766e;color:#fff;text-decoration:none;padding:9px 16px;border-radius:7px;font-size:13px;font-weight:700;">Re-Approve Instead</a>
+                '''}
+              </div>
+            </body></html>"""
+            self._send_html(200, page_html)
+            return
+
+        if path == "/api/auth/admin_list":
+            cfg = load_admin_secrets()
+            provided_key = (
+                self.headers.get("X-Admin-Key")
+                or (qs.get("admin_key") or [""])[0]
+            ).strip()
+            expected_key = str(cfg.get("admin_key") or "").strip()
+            if not expected_key or not provided_key or not hmac.compare_digest(provided_key, expected_key):
+                self._send_json(403, {"error": "Unauthorized admin key"})
+                return
+            with DB_LOCK:
+                conn = sqlite3.connect(DB_PATH)
+                conn.row_factory = sqlite3.Row
+                cur = conn.cursor()
+                cur.execute("SELECT * FROM access_requests ORDER BY id DESC LIMIT 200")
+                reqs = [dict(r) for r in cur.fetchall()]
+                cur.execute(
+                    "SELECT event_name, COUNT(*) AS cnt FROM analytics_events GROUP BY event_name"
+                )
+                ev_counts = {r["event_name"]: r["cnt"] for r in cur.fetchall()}
+                conn.close()
+            api_base = (cfg.get("public_api_url") or "").rstrip("/")
+            for r in reqs:
+                tok = r["request_token"]
+                r["approve_url"] = f"{api_base}/api/auth/admin_action?token={tok}&action=approve&sig={sign_admin_token(tok, 'approve')}"
+                r["revoke_url"] = f"{api_base}/api/auth/admin_action?token={tok}&action=revoke&sig={sign_admin_token(tok, 'revoke')}"
+            self._send_json(200, {"requests": reqs, "analytics_summary": ev_counts})
+            return
 
         if path == "/api/health":
             has_env_key = bool(os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY"))
@@ -821,6 +1404,244 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
         parsed = urllib.parse.urlparse(self.path)
         path = parsed.path
 
+        if path == "/api/auth/request_access":
+            try:
+                client_ip = self._client_ip()
+                if not check_ip_rate_limit(client_ip, "req_access", 6, 3600):
+                    self._send_json(429, {"error": "Too many access requests from this network. Please wait before trying again."})
+                    return
+
+                body = self._read_json_body()
+                name = str(body.get("name") or "").strip()[:120]
+                email = str(body.get("email") or "").strip().lower()[:160]
+                district = str(body.get("district") or "").strip()[:120]
+                purpose = str(body.get("purpose") or "").strip()[:500]
+                ua = (self.headers.get("User-Agent") or "")[:240]
+
+                if not name or not email or "@" not in email or not purpose:
+                    self._send_json(400, {"error": "Please enter your Name, a valid Email Address, and your Purpose for requesting access."})
+                    return
+
+                cfg = load_admin_secrets()
+                now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                max_dev = int(cfg.get("max_devices_per_code") or 2)
+                daily_lim = int(cfg.get("daily_ai_limit_per_code") or 40)
+
+                with DB_LOCK:
+                    conn = sqlite3.connect(DB_PATH)
+                    conn.row_factory = sqlite3.Row
+                    cur = conn.cursor()
+                    cur.execute(
+                        "SELECT * FROM access_requests WHERE LOWER(email) = ? ORDER BY id DESC LIMIT 1",
+                        (email,),
+                    )
+                    existing = cur.fetchone()
+                    if existing and existing["status"] == "approved" and existing["access_code"]:
+                        rec = dict(existing)
+                        conn.close()
+                        self._send_json(
+                            200,
+                            {
+                                "status": "approved",
+                                "request_token": rec["request_token"],
+                                "access_code": rec["access_code"],
+                                "message": "Your email is already approved! Signing you in automatically...",
+                            },
+                        )
+                        return
+
+                    if existing and existing["status"] == "pending":
+                        req_token = existing["request_token"]
+                        cur.execute(
+                            "UPDATE access_requests SET name = ?, district = ?, purpose = ?, ip_address = ?, user_agent = ? WHERE request_token = ?",
+                            (name, district, purpose, client_ip, ua, req_token),
+                        )
+                    else:
+                        req_token = secrets.token_hex(16)
+                        cur.execute(
+                            """
+                            INSERT INTO access_requests (
+                                request_token, name, email, district, purpose,
+                                status, max_devices, daily_ai_limit,
+                                ip_address, user_agent, created_at
+                            ) VALUES (?, ?, ?, ?, ?, 'pending', ?, ?, ?, ?, ?)
+                            """,
+                            (
+                                req_token,
+                                name,
+                                email,
+                                district,
+                                purpose,
+                                max_dev,
+                                daily_lim,
+                                client_ip,
+                                ua,
+                                now_str,
+                            ),
+                        )
+
+                    cur.execute(
+                        """
+                        INSERT INTO analytics_events (
+                            event_name, student_id, access_code, page_url, meta_json, ip_address, created_at
+                        ) VALUES ('access_requested', ?, '', '', ?, ?, ?)
+                        """,
+                        (
+                            email,
+                            json.dumps({"name": name, "district": district, "purpose": purpose[:120]}),
+                            client_ip,
+                            now_str,
+                        ),
+                    )
+                    conn.commit()
+                    conn.close()
+
+                api_base = (cfg.get("public_api_url") or f"http://localhost:{PORT}").rstrip("/")
+                approve_sig = sign_admin_token(req_token, "approve")
+                reject_sig = sign_admin_token(req_token, "reject")
+                approve_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=approve&sig={approve_sig}"
+                reject_url = f"{api_base}/api/auth/admin_action?token={req_token}&action=reject&sig={reject_sig}"
+
+                owner_email = str(cfg.get("owner_notify_email") or "").strip()
+                notify_res = {"sent": False, "transport": "none"}
+                if owner_email:
+                    subj = f"[NEET 720 Access Request] {name} ({district or 'TN'}) — {email}"
+                    owner_html = f"""
+                    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:560px;margin:0 auto;padding:22px;border:1px solid #cbd5e1;border-radius:12px;background:#ffffff;color:#0f172a;">
+                      <div style="background:#0f172a;color:#ffffff;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+                        <strong style="color:#5eead4;font-size:11px;letter-spacing:0.6px;">NEET 720 ACCESS GATEKEEPER</strong>
+                        <h2 style="margin:4px 0 0 0;font-size:17px;">New Student Access Code Request</h2>
+                      </div>
+                      <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:18px;">
+                        <tr><td style="padding:6px 0;color:#64748b;width:130px;"><strong>Name:</strong></td><td style="padding:6px 0;font-weight:700;">{html.escape(name)}</td></tr>
+                        <tr><td style="padding:6px 0;color:#64748b;"><strong>Email:</strong></td><td style="padding:6px 0;">{html.escape(email)}</td></tr>
+                        <tr><td style="padding:6px 0;color:#64748b;"><strong>District / School:</strong></td><td style="padding:6px 0;">{html.escape(district or 'Not specified')}</td></tr>
+                        <tr><td style="padding:6px 0;color:#64748b;"><strong>Purpose:</strong></td><td style="padding:6px 0;">{html.escape(purpose)}</td></tr>
+                        <tr><td style="padding:6px 0;color:#64748b;"><strong>Submitted At:</strong></td><td style="padding:6px 0;">{now_str} (IP: {html.escape(client_ip)})</td></tr>
+                      </table>
+                      <div style="background:#f8fafc;padding:16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
+                        <p style="margin:0 0 12px 0;font-size:12.5px;color:#334155;">
+                          Click below to automatically generate a unique <code>NEET-XXXXXX</code> code and send it to the student (your personal email is never revealed):
+                        </p>
+                        <a href="{approve_url}" style="background:#047857;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:800;font-size:14px;display:inline-block;margin-right:10px;">
+                          &#9989; 1-Click Approve &amp; Auto-Send Code
+                        </a>
+                        <a href="{reject_url}" style="background:#be123c;color:#ffffff;text-decoration:none;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13px;display:inline-block;">
+                          &#10060; Reject
+                        </a>
+                      </div>
+                    </div>
+                    """
+                    owner_text = (
+                        f"New NEET 720 Access Request\n"
+                        f"Name: {name}\n"
+                        f"Email: {email}\n"
+                        f"District/School: {district}\n"
+                        f"Purpose: {purpose}\n\n"
+                        f"1-CLICK APPROVE & AUTO-SEND CODE:\n{approve_url}\n\n"
+                        f"REJECT:\n{reject_url}\n"
+                    )
+                    notify_res = send_outbound_email(owner_email, subj, owner_html, owner_text, is_owner_alert=True)
+
+                self._send_json(
+                    200,
+                    {
+                        "status": "pending",
+                        "request_token": req_token,
+                        "notified": notify_res.get("sent", False),
+                        "message": "Your access request has been submitted! As soon as it is approved, your unique code will be emailed to you and this screen will unlock automatically.",
+                    },
+                )
+            except Exception as exc:
+                self._send_json(400, {"error": str(exc)})
+            return
+
+        if path == "/api/auth/verify_code":
+            try:
+                client_ip = self._client_ip()
+                if not check_ip_rate_limit(client_ip, "verify_code", 20, 600):
+                    self._send_json(429, {"valid": False, "reason": "Too many code verification attempts. Please wait 10 minutes."})
+                    return
+
+                body = self._read_json_body()
+                code = str(body.get("code") or "").strip().upper()
+                device_id = str(body.get("device_id") or "browser_default").strip()[:80]
+                ua = (self.headers.get("User-Agent") or "")[:240]
+
+                res = validate_student_access_code(
+                    code,
+                    device_id=device_id,
+                    ip_addr=client_ip,
+                    user_agent=ua,
+                    consume_ai_quota=False,
+                )
+                if res.get("valid"):
+                    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    with DB_LOCK:
+                        conn = sqlite3.connect(DB_PATH)
+                        cur = conn.cursor()
+                        cur.execute(
+                            """
+                            INSERT INTO analytics_events (
+                                event_name, student_id, access_code, page_url, meta_json, ip_address, created_at
+                            ) VALUES ('code_login_success', ?, ?, '', ?, ?, ?)
+                            """,
+                            (
+                                res.get("email") or res.get("name") or "",
+                                code,
+                                json.dumps({"device_id": device_id}),
+                                client_ip,
+                                now_str,
+                            ),
+                        )
+                        conn.commit()
+                        conn.close()
+                    self._send_json(200, res)
+                else:
+                    self._send_json(403, res)
+            except Exception as exc:
+                self._send_json(400, {"valid": False, "reason": str(exc)})
+            return
+
+        if path == "/api/analytics/track":
+            try:
+                client_ip = self._client_ip()
+                if not check_ip_rate_limit(client_ip, "analytics", 120, 60):
+                    self._send_json(200, {"status": "throttled"})
+                    return
+                body = self._read_json_body()
+                event_name = str(body.get("event_name") or "page_view").strip()[:64]
+                student_id = str(body.get("student_id") or "").strip()[:120]
+                access_code = str(body.get("access_code") or "").strip().upper()[:32]
+                page_url = str(body.get("page_url") or "").strip()[:240]
+                meta = body.get("meta") if isinstance(body.get("meta"), dict) else {}
+                now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with DB_LOCK:
+                    conn = sqlite3.connect(DB_PATH)
+                    cur = conn.cursor()
+                    cur.execute(
+                        """
+                        INSERT INTO analytics_events (
+                            event_name, student_id, access_code, page_url, meta_json, ip_address, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                        """,
+                        (
+                            event_name,
+                            student_id,
+                            access_code,
+                            page_url,
+                            json.dumps(meta)[:1000],
+                            client_ip,
+                            now_str,
+                        ),
+                    )
+                    conn.commit()
+                    conn.close()
+                self._send_json(200, {"status": "logged"})
+            except Exception as exc:
+                self._send_json(400, {"error": str(exc)})
+            return
+
         if path == "/api/profile":
             try:
                 body = self._read_json_body()
@@ -881,8 +1702,48 @@ class NEETMasteryHandler(http.server.SimpleHTTPRequestHandler):
 
         if path == "/api/chat":
             try:
+                client_ip = self._client_ip()
+                if not check_ip_rate_limit(client_ip, "ai_chat_ip", 35, 3600):
+                    self._send_json(
+                        429,
+                        {
+                            "error": "Hourly AI Coach rate limit reached for this network.",
+                            "reply": "**Rate Limit Reached:** Too many AI Coach requests from this network in the last hour. Please pause and review your current solutions before asking more questions.",
+                        },
+                    )
+                    return
+
                 body = self._read_json_body()
                 custom_key = self.headers.get("X-Gemini-Key", "").strip()
+                access_code = (
+                    self.headers.get("X-Access-Code", "").strip()
+                    or str(body.get("access_code") or "").strip()
+                )
+                device_id = (
+                    self.headers.get("X-Device-Id", "").strip()
+                    or str(body.get("device_id") or "browser_default").strip()
+                )
+                ua = (self.headers.get("User-Agent") or "")[:240]
+
+                if not custom_key:
+                    auth_check = validate_student_access_code(
+                        access_code,
+                        device_id=device_id,
+                        ip_addr=client_ip,
+                        user_agent=ua,
+                        consume_ai_quota=True,
+                    )
+                    if not auth_check.get("valid"):
+                        self._send_json(
+                            403,
+                            {
+                                "error": auth_check.get("reason", "Valid Access Code required."),
+                                "auth_required": True,
+                                "reply": f"**Access Code Required:** {auth_check.get('reason', 'Please sign in with your personal student access code to use the live AI Coach.')}",
+                            },
+                        )
+                        return
+
                 result = generate_gemini_coach_reply(body, custom_api_key=custom_key)
                 self._send_json(200, result)
             except Exception as exc:

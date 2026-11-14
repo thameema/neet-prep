@@ -8,6 +8,17 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.json">
   <title>Tamil Nadu NEET-UG Mastery Hub — OMR Mock Exams, Score Tracker & Bilingual Gemini Coach</title>
+  <!-- Google Analytics (GA4 gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNNEET720M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    (function() {
+      var savedGa = localStorage.getItem('tn_neet_ga_id') || 'G-TNNEET720M';
+      gtag('config', savedGa, { send_page_view: true });
+    })();
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous" onload="window.rerenderAllMath && window.rerenderAllMath()"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/mhchem.min.js" crossorigin="anonymous" onload="window.rerenderAllMath && window.rerenderAllMath()"></script>
@@ -1733,6 +1744,102 @@
     </div>
   </div>
 
+  <!-- FIRST-TIME STUDENT ACCESS CODE GATE & REQUEST MODAL -->
+  <div class="modal-backdrop" id="access-gate-modal" style="z-index:120;background:rgba(15,23,42,0.86);backdrop-filter:blur(6px);">
+    <div class="modal-card" style="max-width:520px;width:95%;padding:22px;border:1px solid #cbd5e1;">
+      <div style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#ffffff;padding:14px 16px;border-radius:10px;margin-bottom:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span style="background:var(--primary);color:#fff;font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:0.6px;">INVITE-ONLY STUDENT ACCESS</span>
+          <button type="button" onclick="openIntroVideoModal()" style="background:rgba(13,148,136,0.28);border:1px solid #14b8a6;color:#5eead4;font-size:11px;font-weight:800;padding:4px 9px;border-radius:6px;cursor:pointer;">
+            &#9654; Watch Intro Video (தமிழ் + EN)
+          </button>
+        </div>
+        <h3 style="margin:8px 0 3px 0;font-size:17px;color:#ffffff;">Tamil Nadu NEET-UG 720 Mastery Hub</h3>
+        <p style="margin:0;font-size:12px;color:#cbd5e1;line-height:1.45;">
+          Protected workspace &amp; 24/7 Bilingual Gemini AI Coach. Enter your personal Access Code or request a free student code below.
+        </p>
+      </div>
+
+      <!-- Mode Switcher Tabs -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#f1f5f9;padding:4px;border-radius:8px;margin-bottom:14px;">
+        <button type="button" id="gate-tab-code-btn" onclick="switchAccessGateTab('code')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:800;cursor:pointer;background:#0f766e;color:#ffffff;">
+          Have an Access Code?
+        </button>
+        <button type="button" id="gate-tab-req-btn" onclick="switchAccessGateTab('request')" style="padding:8px 10px;border-radius:6px;border:none;font-size:12.5px;font-weight:700;cursor:pointer;background:transparent;color:#334155;">
+          First Timer? Request Code
+        </button>
+      </div>
+
+      <!-- TAB 1: ENTER CODE OR CHECK APPROVED EMAIL -->
+      <div id="gate-pane-code">
+        <div class="form-group">
+          <label>Enter Your Unique Student Access Code</label>
+          <input type="text" id="gate-code-input" class="form-control" placeholder="e.g., NEET-7X9K2M" style="font-family:monospace;font-size:15px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;" onkeydown="if(event.key==='Enter') submitAccessCodeVerify()" />
+        </div>
+        <div id="gate-code-feedback" style="display:none;font-size:12px;padding:9px 11px;border-radius:7px;margin-bottom:10px;"></div>
+        <button type="button" class="btn-primary" style="width:100%;padding:10px 14px;font-size:13.5px;" onclick="submitAccessCodeVerify()">
+          Verify Code &amp; Unlock NEET 720 Hub &rarr;
+        </button>
+
+        <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);">
+          <div style="font-size:11.5px;font-weight:700;color:var(--text-sec);margin-bottom:6px;">
+            Already requested a code? Check your approval status by email:
+          </div>
+          <div style="display:flex;gap:6px;">
+            <input type="email" id="gate-lookup-email" class="form-control" placeholder="Enter your email address..." style="font-size:12.5px;" onkeydown="if(event.key==='Enter') lookupAccessByEmail()" />
+            <button type="button" class="btn-outline" style="white-space:nowrap;font-size:12px;padding:7px 12px;" onclick="lookupAccessByEmail()">Check Status</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: FIRST-TIME STUDENT REQUEST FORM -->
+      <div id="gate-pane-request" style="display:none;">
+        <div class="form-group">
+          <label>Your Full Name *</label>
+          <input type="text" id="req-name" class="form-control" placeholder="e.g., Kavin Kumar" />
+        </div>
+        <div class="form-group">
+          <label>Your Email Address * (Your unique code will be sent here)</label>
+          <input type="email" id="req-email" class="form-control" placeholder="e.g., student@gmail.com" />
+        </div>
+        <div class="form-group">
+          <label>Tamil Nadu District / School</label>
+          <input type="text" id="req-district" class="form-control" placeholder="e.g., Madurai — Govt Model Higher Sec School" />
+        </div>
+        <div class="form-group">
+          <label>Purpose for Requesting Access *</label>
+          <input type="text" id="req-purpose" class="form-control" placeholder="e.g., Preparing for NEET-UG 2026 (Class 12 / Dropper)" />
+        </div>
+        <div id="gate-req-feedback" style="display:none;font-size:12px;padding:10px 12px;border-radius:7px;margin-bottom:10px;line-height:1.45;"></div>
+        <button type="button" id="gate-req-submit-btn" class="btn-primary" style="width:100%;padding:10px 14px;font-size:13.5px;" onclick="submitFirstTimeAccessRequest()">
+          Request My Personal Access Code &rarr;
+        </button>
+      </div>
+
+      <div style="margin-top:12px;font-size:11px;color:var(--text-muted);text-align:center;line-height:1.4;">
+        Each access code is bound to your personal devices and includes a daily AI Coach quota to prevent spam and keep tutoring fast for genuine NEET aspirants.
+      </div>
+    </div>
+  </div>
+
+  <!-- OWNER ADMIN CONSOLE MODAL (Accessible via ?admin=KEY) -->
+  <div class="modal-backdrop" id="admin-access-modal" style="z-index:130;" onclick="if(event.target===this) document.getElementById('admin-access-modal').classList.remove('open')">
+    <div class="modal-card" style="max-width:860px;width:96%;padding:20px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div>
+          <h3 style="margin:0;color:var(--navy);font-size:17px;">NEET 720 Gatekeeper — Access Requests &amp; Analytics</h3>
+          <p style="margin:2px 0 0 0;font-size:12px;color:var(--text-sec);">1-click approve or revoke student access codes and inspect live platform usage.</p>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="btn-outline" style="font-size:12px;padding:5px 10px;" onclick="loadAdminConsoleData()">Refresh</button>
+          <button type="button" class="btn-outline" style="font-size:12px;padding:5px 10px;" onclick="document.getElementById('admin-access-modal').classList.remove('open')">Close</button>
+        </div>
+      </div>
+      <div id="admin-analytics-strip" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;"></div>
+      <div id="admin-requests-table-wrap" style="max-height:58vh;overflow-y:auto;border:1px solid var(--border);border-radius:8px;"></div>
+    </div>
+  </div>
+
   <script src="questions_database.js"></script>
   <script src="past_papers_database.js"></script>
   <script>
@@ -1782,8 +1889,45 @@
       session: "tn_neet_active_session_v1",
       localAttempts: "tn_neet_local_attempts_v1",
       mistakes: "tn_neet_mistake_ids_v1",
-      chat: "tn_neet_coach_chat_v1"
+      chat: "tn_neet_coach_chat_v1",
+      accessCode: "tn_neet_access_code_v1",
+      deviceId: "tn_neet_device_id_v1",
+      pendingToken: "tn_neet_pending_req_token_v1"
     };
+
+    function getDeviceId() {
+      let devId = localStorage.getItem(STORAGE_KEYS.deviceId);
+      if (!devId) {
+        devId = "dev_" + Math.random().toString(36).slice(2, 10) + "_" + Date.now().toString(36);
+        try { localStorage.setItem(STORAGE_KEYS.deviceId, devId); } catch (_) {}
+      }
+      return devId;
+    }
+
+    function getAccessCode() {
+      return (localStorage.getItem(STORAGE_KEYS.accessCode) || "").trim().toUpperCase();
+    }
+
+    function trackNeetEvent(eventName, metaObj) {
+      try {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", eventName, metaObj || {});
+        }
+      } catch (_) {}
+      try {
+        fetch(`${getApiBase()}/api/analytics/track`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            event_name: eventName,
+            student_id: profile.student_id || profile.name || "",
+            access_code: getAccessCode(),
+            page_url: window.location.pathname,
+            meta: metaObj || {}
+          })
+        }).catch(() => {});
+      } catch (_) {}
+    }
 
     let profile = {
       student_id: "tn_student_1",
@@ -1880,6 +2024,7 @@
       renderChat();
       renderPyqArchiveHub();
       checkServerHealth();
+      initAccessGateAndAnalytics();
     }
 
     async function checkServerHealth() {
@@ -2709,11 +2854,18 @@ Student Question: ${studentMsg}`;
           setTimeout(() => ctrl.abort(), 40000);
           const res = await fetch(`${getApiBase()}/api/chat`, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: {
+              "Content-Type": "application/json",
+              "X-Access-Code": getAccessCode(),
+              "X-Device-Id": getDeviceId(),
+              "X-Gemini-Key": profile.custom_gemini_key || ""
+            },
             signal: ctrl.signal,
             body: JSON.stringify({
               student_id: profile.student_id,
               student_name: profile.name,
+              access_code: getAccessCode(),
+              device_id: getDeviceId(),
               question_data: q,
               question_number: globalNum,
               user_choice: userChoice,
@@ -2725,6 +2877,13 @@ Student Question: ${studentMsg}`;
           if (res.ok) {
             const data = await res.json();
             replyText = data.reply;
+            trackNeetEvent("ai_coach_query", { subject: q ? q.subject : "General" });
+          } else if (res.status === 403 || res.status === 429) {
+            const errData = await res.json().catch(() => ({}));
+            replyText = errData.reply || (`**Access Pass Required:** ${errData.error || "Please verify your student access code."}`);
+            if (errData.auth_required) {
+              document.getElementById("access-gate-modal").classList.add("open");
+            }
           }
         } catch (_) {}
       }
@@ -3100,11 +3259,330 @@ Student Question: ${studentMsg}`;
 
     function closeProfileModal() { document.getElementById("profile-modal").classList.remove("open"); }
 
+    /* STUDENT ACCESS CODE GATE, 1-CLICK EMAIL APPROVAL POLLING & ADMIN CONSOLE */
+    let pendingPollTimer = null;
+
+    function switchAccessGateTab(tab) {
+      const codePane = document.getElementById("gate-pane-code");
+      const reqPane = document.getElementById("gate-pane-request");
+      const codeBtn = document.getElementById("gate-tab-code-btn");
+      const reqBtn = document.getElementById("gate-tab-req-btn");
+      if (tab === "request") {
+        codePane.style.display = "none";
+        reqPane.style.display = "block";
+        reqBtn.style.background = "#0f766e";
+        reqBtn.style.color = "#ffffff";
+        codeBtn.style.background = "transparent";
+        codeBtn.style.color = "#334155";
+      } else {
+        codePane.style.display = "block";
+        reqPane.style.display = "none";
+        codeBtn.style.background = "#0f766e";
+        codeBtn.style.color = "#ffffff";
+        reqBtn.style.background = "transparent";
+        reqBtn.style.color = "#334155";
+      }
+    }
+
+    function showGateFeedback(elId, msg, isSuccess) {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      el.style.display = "block";
+      el.style.background = isSuccess ? "#ecfdf5" : "#fff1f2";
+      el.style.border = isSuccess ? "1px solid #10b981" : "1px solid #f43f5e";
+      el.style.color = isSuccess ? "#065f46" : "#9f1239";
+      el.innerHTML = msg;
+    }
+
+    function unlockAppWithAccessCode(code, studentName, district) {
+      const cleanCode = String(code || "").trim().toUpperCase();
+      if (!cleanCode) return;
+      try {
+        localStorage.setItem(STORAGE_KEYS.accessCode, cleanCode);
+        localStorage.removeItem(STORAGE_KEYS.pendingToken);
+      } catch (_) {}
+      if (pendingPollTimer) {
+        clearInterval(pendingPollTimer);
+        pendingPollTimer = null;
+      }
+      if (studentName && studentName !== "Approved User" && (!profile.name || profile.name === "NEET Aspirant")) {
+        profile.name = studentName;
+        if (district) profile.district = district;
+        try { localStorage.setItem(STORAGE_KEYS.profile, JSON.stringify(profile)); } catch (_) {}
+        updateProfilePill();
+      }
+      document.getElementById("access-gate-modal").classList.remove("open");
+    }
+
+    async function verifyCodeWithServer(code, silentIfValid) {
+      const cleanCode = String(code || "").trim().toUpperCase();
+      if (!cleanCode) return { valid: false, reason: "Please enter your access code." };
+      try {
+        const res = await fetch(`${getApiBase()}/api/auth/verify_code`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code: cleanCode, device_id: getDeviceId() })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.valid) {
+          unlockAppWithAccessCode(cleanCode, data.name, data.district);
+          return { valid: true, data };
+        }
+        return { valid: false, reason: data.reason || "Invalid or expired access code." };
+      } catch (_) {
+        // If backend is temporarily unreachable and code matches NEET-XXXXXX format, allow cached session
+        if (/^NEET-[A-Z0-9]{4,10}$/.test(cleanCode) && silentIfValid) {
+          unlockAppWithAccessCode(cleanCode);
+          return { valid: true, offline: true };
+        }
+        return { valid: false, reason: "Could not reach verification server. Please check your connection." };
+      }
+    }
+
+    async function submitAccessCodeVerify() {
+      const inp = document.getElementById("gate-code-input");
+      const code = (inp.value || "").trim().toUpperCase();
+      if (!code) {
+        showGateFeedback("gate-code-feedback", "Please enter your personal access code (e.g., <code>NEET-XXXXXX</code>) or switch to <strong>First Timer? Request Code</strong>.", false);
+        return;
+      }
+      showGateFeedback("gate-code-feedback", "Verifying your access code...", true);
+      const res = await verifyCodeWithServer(code, false);
+      if (res.valid) {
+        showGateFeedback("gate-code-feedback", "Access code verified! Unlocking workspace...", true);
+        trackNeetEvent("code_login_success", { code });
+      } else {
+        showGateFeedback("gate-code-feedback", escapeHtml(res.reason), false);
+      }
+    }
+
+    async function lookupAccessByEmail() {
+      const email = (document.getElementById("gate-lookup-email").value || "").trim().toLowerCase();
+      if (!email || !email.includes("@")) {
+        showGateFeedback("gate-code-feedback", "Please enter the email address you used when requesting access.", false);
+        return;
+      }
+      try {
+        const res = await fetch(`${getApiBase()}/api/auth/check_request?email=${encodeURIComponent(email)}`);
+        if (!res.ok) {
+          showGateFeedback("gate-code-feedback", "No access request found for that email yet. Click <strong>First Timer? Request Code</strong> above to request one!", false);
+          return;
+        }
+        const data = await res.json();
+        if (data.status === "approved" && data.access_code) {
+          document.getElementById("gate-code-input").value = data.access_code;
+          showGateFeedback("gate-code-feedback", `Approved! Your personal code is <strong>${escapeHtml(data.access_code)}</strong>. Signing you in now...`, true);
+          await verifyCodeWithServer(data.access_code, false);
+        } else if (data.status === "pending") {
+          if (data.request_token) {
+            localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token);
+            startPendingApprovalPoll(data.request_token);
+          }
+          showGateFeedback("gate-code-feedback", "Your request is currently <strong>pending approval</strong>. Keep this tab open or check back shortly — as soon as the mentor clicks Approve, your code will appear automatically!", true);
+        } else {
+          showGateFeedback("gate-code-feedback", `Request status: ${escapeHtml(data.status)}.`, false);
+        }
+      } catch (_) {
+        showGateFeedback("gate-code-feedback", "Unable to check request status right now. Please try again in a moment.", false);
+      }
+    }
+
+    async function submitFirstTimeAccessRequest() {
+      const name = (document.getElementById("req-name").value || "").trim();
+      const email = (document.getElementById("req-email").value || "").trim().toLowerCase();
+      const district = (document.getElementById("req-district").value || "").trim();
+      const purpose = (document.getElementById("req-purpose").value || "").trim();
+
+      if (!name || !email || !email.includes("@") || !purpose) {
+        showGateFeedback("gate-req-feedback", "Please enter your <strong>Full Name</strong>, a valid <strong>Email Address</strong>, and your <strong>Purpose</strong>.", false);
+        return;
+      }
+
+      const btn = document.getElementById("gate-req-submit-btn");
+      btn.disabled = true;
+      btn.textContent = "Submitting Request...";
+
+      try {
+        const res = await fetch(`${getApiBase()}/api/auth/request_access`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, district, purpose })
+        });
+        const data = await res.json().catch(() => ({}));
+        btn.disabled = false;
+        btn.textContent = "Request My Personal Access Code →";
+
+        if (!res.ok) {
+          showGateFeedback("gate-req-feedback", escapeHtml(data.error || "Could not submit request."), false);
+          return;
+        }
+
+        if (data.status === "approved" && data.access_code) {
+          showGateFeedback("gate-req-feedback", `Your email is already approved! Your code is <strong>${escapeHtml(data.access_code)}</strong>. Unlocking now...`, true);
+          await verifyCodeWithServer(data.access_code, false);
+          return;
+        }
+
+        if (data.request_token) {
+          try { localStorage.setItem(STORAGE_KEYS.pendingToken, data.request_token); } catch (_) {}
+          startPendingApprovalPoll(data.request_token);
+        }
+        showGateFeedback(
+          "gate-req-feedback",
+          `<strong>Request Sent!</strong> An approval alert has been sent to the mentor. Once approved with 1 click, your unique code will be emailed to <strong>${escapeHtml(email)}</strong> AND this screen will unlock automatically (listening live every 8 seconds...).`,
+          true
+        );
+      } catch (_) {
+        btn.disabled = false;
+        btn.textContent = "Request My Personal Access Code →";
+        showGateFeedback("gate-req-feedback", "Network error while submitting request. Please try again.", false);
+      }
+    }
+
+    function startPendingApprovalPoll(reqToken) {
+      if (!reqToken) return;
+      if (pendingPollTimer) clearInterval(pendingPollTimer);
+      pendingPollTimer = setInterval(async () => {
+        try {
+          const res = await fetch(`${getApiBase()}/api/auth/check_request?request_token=${encodeURIComponent(reqToken)}`);
+          if (!res.ok) return;
+          const data = await res.json();
+          if (data.status === "approved" && data.access_code) {
+            clearInterval(pendingPollTimer);
+            pendingPollTimer = null;
+            showGateFeedback("gate-req-feedback", `<strong>Approved!</strong> Your code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
+            showGateFeedback("gate-code-feedback", `<strong>Approved!</strong> Your code is <code>${escapeHtml(data.access_code)}</code>. Unlocking workspace...`, true);
+            await verifyCodeWithServer(data.access_code, false);
+          }
+        } catch (_) {}
+      }, 8000);
+    }
+
+    async function loadAdminConsoleData() {
+      const adminKey = urlParams.get("admin") || sessionStorage.getItem("tn_neet_admin_key") || "";
+      if (!adminKey) return;
+      sessionStorage.setItem("tn_neet_admin_key", adminKey);
+      document.getElementById("admin-access-modal").classList.add("open");
+      const wrap = document.getElementById("admin-requests-table-wrap");
+      const strip = document.getElementById("admin-analytics-strip");
+      wrap.innerHTML = `<div style="padding:16px;font-size:13px;color:var(--text-sec);">Loading access requests &amp; analytics...</div>`;
+      try {
+        const res = await fetch(`${getApiBase()}/api/auth/admin_list?admin_key=${encodeURIComponent(adminKey)}`);
+        if (!res.ok) {
+          wrap.innerHTML = `<div style="padding:16px;color:var(--rose);font-weight:700;">Invalid Admin Key (403).</div>`;
+          return;
+        }
+        const data = await res.json();
+        const ev = data.analytics_summary || {};
+        strip.innerHTML = Object.entries(ev).map(([k, v]) => `
+          <div style="background:#f8fafc;border:1px solid var(--border);padding:6px 10px;border-radius:7px;font-size:11.5px;">
+            <strong style="color:var(--navy);">${escapeHtml(k)}:</strong> <span style="color:var(--primary);font-weight:800;">${v}</span>
+          </div>
+        `).join("") || `<div style="font-size:12px;color:var(--text-muted);">No analytics events recorded yet.</div>`;
+
+        const rows = data.requests || [];
+        if (!rows.length) {
+          wrap.innerHTML = `<div style="padding:16px;font-size:13px;color:var(--text-sec);">No student access requests submitted yet.</div>`;
+          return;
+        }
+        wrap.innerHTML = `
+          <table style="width:100%;border-collapse:collapse;font-size:12px;">
+            <thead>
+              <tr style="background:#f1f5f9;text-align:left;border-bottom:1px solid var(--border);">
+                <th style="padding:8px;">Student</th>
+                <th style="padding:8px;">District &amp; Purpose</th>
+                <th style="padding:8px;">Status / Code</th>
+                <th style="padding:8px;">AI Usage</th>
+                <th style="padding:8px;">1-Click Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(r => `
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:8px;">
+                    <strong>${escapeHtml(r.name)}</strong><br>
+                    <span style="color:var(--text-sec);">${escapeHtml(r.email)}</span>
+                  </td>
+                  <td style="padding:8px;">
+                    <strong>${escapeHtml(r.district || "-")}</strong><br>
+                    <span style="color:var(--text-sec);">${escapeHtml(r.purpose || "-")}</span>
+                  </td>
+                  <td style="padding:8px;">
+                    <span style="font-weight:800;color:${r.status === 'approved' ? '#047857' : (r.status === 'pending' ? '#b45309' : '#be123c')};text-transform:uppercase;">${escapeHtml(r.status)}</span>
+                    ${r.access_code ? `<br><code style="font-weight:800;font-size:12px;">${escapeHtml(r.access_code)}</code>` : ""}
+                  </td>
+                  <td style="padding:8px;">${r.ai_queries_today || 0}/${r.daily_ai_limit || 40} today<br><span style="color:var(--text-muted);">${r.ai_queries_total || 0} total</span></td>
+                  <td style="padding:8px;white-space:nowrap;">
+                    ${r.status !== "approved"
+                      ? `<a href="${escapeHtml(r.approve_url)}" target="_blank" style="background:#047857;color:#fff;text-decoration:none;padding:5px 9px;border-radius:5px;font-weight:700;display:inline-block;">Approve &amp; Send Code</a>`
+                      : `<a href="${escapeHtml(r.revoke_url)}" target="_blank" style="background:#be123c;color:#fff;text-decoration:none;padding:5px 9px;border-radius:5px;font-weight:700;display:inline-block;">Revoke</a>`
+                    }
+                  </td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        `;
+      } catch (_) {
+        wrap.innerHTML = `<div style="padding:16px;color:var(--rose);">Could not load admin console data.</div>`;
+      }
+    }
+
+    async function initAccessGateAndAnalytics() {
+      // Sync GA4 Measurement ID from server config if customized
+      try {
+        fetch(`${getApiBase()}/api/public_config`).then(r => r.ok ? r.json() : null).then(cfg => {
+          if (cfg && cfg.ga_measurement_id && cfg.ga_measurement_id !== localStorage.getItem("tn_neet_ga_id")) {
+            localStorage.setItem("tn_neet_ga_id", cfg.ga_measurement_id);
+            if (typeof window.gtag === "function") {
+              window.gtag("config", cfg.ga_measurement_id, { send_page_view: true });
+            }
+          }
+        }).catch(() => {});
+      } catch (_) {}
+
+      trackNeetEvent("page_view", { module: state.moduleId });
+
+      // Check if owner opened ?admin=ADMIN_KEY
+      if (urlParams.get("admin")) {
+        loadAdminConsoleData();
+      }
+
+      // Check if magic link ?code=NEET-XXXXXX was clicked
+      const urlCode = (urlParams.get("code") || "").trim().toUpperCase();
+      if (urlCode) {
+        const check = await verifyCodeWithServer(urlCode, true);
+        if (check.valid) {
+          try {
+            const cleanUrl = new URL(window.location.href);
+            cleanUrl.searchParams.delete("code");
+            window.history.replaceState({}, "", cleanUrl.toString());
+          } catch (_) {}
+          return;
+        }
+      }
+
+      // Check existing saved code in localStorage
+      const savedCode = getAccessCode();
+      if (savedCode) {
+        const check = await verifyCodeWithServer(savedCode, true);
+        if (check.valid) return;
+      }
+
+      // Otherwise show the First-Time Access Gate Modal
+      document.getElementById("access-gate-modal").classList.add("open");
+      const pendingTok = localStorage.getItem(STORAGE_KEYS.pendingToken);
+      if (pendingTok) {
+        startPendingApprovalPoll(pendingTok);
+      }
+    }
+
     // YouTube Embed URL for Introductory Explainer Video (falls back or toggles to built-in 1080p MP4 player)
     const INTRO_YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/ChJSZgvqAuY?autoplay=1&rel=0";
     let introUseLocalMp4 = false;
 
     function openIntroVideoModal() {
+      trackNeetEvent("intro_video_played", {});
       const modal = document.getElementById("intro-video-modal");
       const vid = document.getElementById("intro-explainer-player");
       const yt = document.getElementById("intro-youtube-iframe");
